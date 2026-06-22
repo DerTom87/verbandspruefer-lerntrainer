@@ -201,7 +201,14 @@
   <footer>
     <div>Fortschritt wird nur lokal in diesem Browser gespeichert.</div>
     <div style="margin-top:6px"><button class="resetlink" id="resetBtn">Fortschritt zurücksetzen</button></div>
-    <div style="margin-top:8px">Inhalte aus den Repetitorium-Skripten (HfF&amp;M) · Stand 2026</div>
+    <div style="margin-top:8px">Inhalte aufbereitet aus den Repetitorium-Skripten (HfF&amp;M) · Stand 2026</div>
+    <div style="margin-top:14px;padding-top:12px;border-top:1px solid var(--line);max-width:640px;margin-left:auto;margin-right:auto;text-align:left;font-size:.7rem;line-height:1.6;color:var(--muted)">
+      <div style="font-weight:600;color:var(--ink);text-align:center;margin-bottom:6px">© 2026 Tom Pasemann — Verbandsprüfer-Lerntrainer</div>
+      <div>Diese Lernanwendung wurde von <b>Tom Pasemann</b> in Eigenleistung zur persönlichen Vorbereitung auf das Verbandsprüferexamen 2026 erstellt. Alle Rechte vorbehalten.</div>
+      <div style="margin-top:5px"><b>Weitergabe</b> nur mit ausdrücklicher Zustimmung des Autors; Vervielfältigung oder Veröffentlichung ohne Genehmigung ist nicht gestattet.</div>
+      <div style="margin-top:5px"><b>Keine Gewähr:</b> Die Inhalte dienen ausschließlich Lernzwecken. Trotz sorgfältiger Aufbereitung wird keine Garantie für Richtigkeit, Vollständigkeit oder Aktualität übernommen; maßgeblich sind stets die geltenden Gesetze, Standards und die Hinweise der Dozenten.</div>
+      <div style="margin-top:5px">Hinweise auf <b>fehlerhafte Inhalte</b> sind ausdrücklich willkommen — bitte an Tom Pasemann melden, damit sie korrigiert werden können.</div>
+    </div>
   </footer>
 </div>
 
@@ -4400,6 +4407,656 @@ const Q_BWL = [
       {
         "frage": "Welches Maß ergänzt den VaR bei fat tails sinnvoll?",
         "antwort": "Der Expected Shortfall (Conditional VaR), der den erwarteten Verlust jenseits des VaR-Quantils erfasst und damit das Tail-Risiko besser abbildet."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Marktzinsmethode",
+    "frage": "Was misst der Konditionsbeitrag in der Marktzinsmethode inhaltlich?",
+    "optionen": [
+      "Den gesamten Zinsüberschuss der Bank über alle Geschäfte einer Periode hinweg",
+      "Den Erfolg aus der bewussten Fristentransformation der zentralen Disposition",
+      "Die Vertriebsleistung gegenüber dem fristengleichen Alternativgeschäft am Geldmarkt",
+      "Den Wertzuwachs des Eigenkapitals aus gestiegenen Marktzinssätzen am Kapitalmarkt"
+    ],
+    "richtig": 2,
+    "erkl": "Der Konditionsbeitrag bildet die Vertriebs-/Akquisitionsleistung ab: die Differenz zwischen dem Kundenzins und der laufzeitgleichen GKM-Opportunität. Der Fristentransformationserfolg ist dagegen der Strukturbeitrag.",
+    "vertiefung": "Im Treasury-Beispiel von Wiedemann wird der Konditionsbeitragsbarwert als „Mehrerfolg des Kreditgeschäftes gegenüber einem qualitätsgleichen Geld- und Kapitalmarktgeschäft“ definiert und fällt in den Verantwortungsbereich der dezentralen Vertriebseinheiten. Die Marktzinsmethode strebt damit eine verursachungsgerechte Trennung der Erfolgsbeiträge an: Vertrieb (Kondition) gegen zentrale Disposition (Struktur).",
+    "folgefragen": [
+      {
+        "frage": "Wem wird der Konditionsbeitrag zugeordnet?",
+        "antwort": "Den dezentralen Vertriebs-/Marktbereichen, weil er deren Akquisitionsleistung gegenüber der GKM-Opportunität abbildet."
+      },
+      {
+        "frage": "Mit welchem Vergleichsgeschäft wird gemessen?",
+        "antwort": "Mit dem struktur- bzw. laufzeitgleichen Geld- und Kapitalmarktgeschäft (GKM-Opportunität)."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Marktzinsmethode",
+    "frage": "Wodurch entsteht der Strukturbeitrag in der Marktzinsmethode?",
+    "optionen": [
+      "Durch das Erheben von Provisionen und Bearbeitungsentgelten im Kundengeschäft",
+      "Durch die Vereinnahmung von Risikoprämien für übernommene Adressenausfallrisiken",
+      "Durch eine besonders attraktive Kondition gegenüber dem einzelnen Kunden",
+      "Durch bewusste Fristentransformation, also das Eingehen offener Zinspositionen"
+    ],
+    "richtig": 3,
+    "erkl": "Der Strukturbeitrag (Fristentransformationsbeitrag) entsteht durch unterschiedliche Laufzeiten von Aktiv- und Passivseite und das damit verbundene Eingehen offener Zinspositionen. Margen am Kunden gehören dagegen zum Konditionsbeitrag.",
+    "vertiefung": "Wiedemann ordnet die Strukturbeiträge der Treasury (zentrale Struktursteuerung) zu: „Eine Treasury-Abteilung kann Erfolge nur durch bewusstes Eingehen von Risiken (d.h. von offenen Positionen) erwirtschaften.“ Der Strukturbeitrag trägt damit das Zinsänderungsrisiko, während der Konditionsbeitrag definitorisch zinsänderungsrisikofrei bleibt.",
+    "folgefragen": [
+      {
+        "frage": "Wer trägt das Zinsänderungsrisiko der Fristentransformation?",
+        "antwort": "Die zentrale Disposition/Treasury, der der Strukturbeitrag zugeordnet wird."
+      },
+      {
+        "frage": "Ist der Strukturbeitrag risikofrei?",
+        "antwort": "Nein, er resultiert gerade aus bewusst offenen Zinspositionen und trägt damit das Zinsänderungsrisiko."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Marktzinsmethode",
+    "frage": "Was versteht man unter dem Opportunitätszins (GKM-Satz) eines Kundengeschäfts?",
+    "optionen": [
+      "Den durchschnittlichen Effektivzins aller gleichartigen Kundengeschäfte der Bank",
+      "Den von der Notenbank vorgegebenen Leitzins zum Zeitpunkt des Geschäftsabschlusses",
+      "Den internen Verrechnungspreis, den der Vorstand jährlich für jede Sparte festlegt",
+      "Den Zins des laufzeitgleichen Alternativgeschäfts am Geld- und Kapitalmarkt"
+    ],
+    "richtig": 3,
+    "erkl": "Der Opportunitätszins ist der Zinssatz des fristen-/strukturgleichen Geld- und Kapitalmarktgeschäfts, das als Alternative zum Kundengeschäft denkbar wäre. Er bildet den Vergleichsmaßstab für den Konditionsbeitrag.",
+    "vertiefung": "Das Opportunitätsprinzip ist der Kern der Marktzinsmethode: Jedes Kundengeschäft wird einem strukturgleichen GKM-Geschäft gegenübergestellt. Wiedemann formuliert, die Einstandskonditionen orientierten sich an strukturidentischen GKM-Geschäften. Der GKM-Markt dient als Referenzmarkt, weil er jederzeit zugänglich und (annahmegemäß) beliebig teilbar ist.",
+    "folgefragen": [
+      {
+        "frage": "Warum eignet sich der GKM als Referenzmarkt?",
+        "antwort": "Weil er jederzeit zugänglich ist und ein tatsächlich realisierbares Alternativgeschäft liefert."
+      },
+      {
+        "frage": "Wie heißt das zugrundeliegende Prinzip?",
+        "antwort": "Das Opportunitätsprinzip - der Vergleich mit dem entgangenen alternativen GKM-Geschäft."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Warum wird ein Kundengeschäft mit der Opportunität GLEICHER Laufzeit verglichen?",
+    "optionen": [
+      "Damit der Strukturbeitrag möglichst groß und der Konditionsbeitrag möglichst klein ausfällt",
+      "Damit der Konditionsbeitrag frei von Fristentransformations- bzw. Zinsänderungseffekten bleibt",
+      "Weil die Aufsicht eine Bewertung ausschließlich zum jeweils kürzesten GKM-Satz vorschreibt",
+      "Weil nur gleich lange Geschäfte dieselben Provisionssätze und Gebühren auslösen"
+    ],
+    "richtig": 1,
+    "erkl": "Nur der laufzeitgleiche Vergleich isoliert die reine Vertriebsmarge: Der Konditionsbeitrag enthält dann keine Erfolge aus unterschiedlichen Laufzeiten. Diese werden bewusst getrennt im Strukturbeitrag erfasst.",
+    "vertiefung": "Würde man ein 4-jähriges Kundengeschäft mit einem 2-jährigen GKM-Satz vergleichen, vermischte man Vertriebsmarge und Fristentransformation. Erst die Aufspaltung in zwei strukturgleiche Teilvergleiche (Kondition + Struktur) erlaubt eine verursachungsgerechte Erfolgszuordnung - das Grundanliegen der Marktzinsmethode (Trennung der Erfolgsbeiträge).",
+    "folgefragen": [
+      {
+        "frage": "Was passiert bei Vergleich mit ungleicher Laufzeit?",
+        "antwort": "Vertriebsmarge und Fristentransformationserfolg würden vermischt - keine verursachungsgerechte Trennung mehr."
+      },
+      {
+        "frage": "Welches Grundanliegen verfolgt die Methode damit?",
+        "antwort": "Die saubere Trennung von Vertriebs- (Kondition) und Dispositionserfolg (Struktur)."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Wie wird der Konditionsbeitrag eines AKTIVgeschäfts (Kundenkredit) ermittelt?",
+    "optionen": [
+      "Durchschnittlicher Bilanzzins minus Kundenzins des betrachteten Kreditgeschäfts",
+      "Opportunitätszins minus Kundenzins, da der Kunde der Bank den Zins schuldet",
+      "Kundenzins minus laufzeitgleicher Opportunitätszins am GKM",
+      "Langfristiger GKM-Satz minus kurzfristiger GKM-Satz der jeweiligen Laufzeit"
+    ],
+    "richtig": 2,
+    "erkl": "Auf der Aktivseite erhält die Bank den (höheren) Kundenzins und stellt ihm den (niedrigeren) GKM-Einstand gegenüber: KB = Kundenzins − Opportunität. Die Differenz zweier GKM-Sätze wäre der Strukturbeitrag.",
+    "vertiefung": "Merkschema: Aktiv = Kundenzins − Opportunität, Passiv = Opportunität − Kundenzins. Im Wiedemann-Beispiel verzinst der 4-jährige Kundenkredit zu 8,0% bei einem 4-jährigen GKM-Satz von 7,0% - der Konditionsbeitrag ist positiv, weil der Kunde mehr zahlt als die fristengleiche Refinanzierung kostet.",
+    "folgefragen": [
+      {
+        "frage": "Wie lautet das Schema auf der Passivseite?",
+        "antwort": "Opportunität minus Kundenzins - die Bank zahlt dem Kunden weniger als die Alternativbeschaffung am GKM kostet."
+      },
+      {
+        "frage": "Warum unterscheiden sich die Vorzeichen?",
+        "antwort": "Weil die Bank Aktiv Zinsen vereinnahmt, Passiv aber Zinsen zahlt - die Marge entsteht jeweils zugunsten der Bank."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Wie wird der Konditionsbeitrag eines PASSIVgeschäfts (Kundeneinlage) ermittelt?",
+    "optionen": [
+      "Kurzfristiger GKM-Satz minus langfristiger GKM-Satz der Laufzeit",
+      "Kundenzins der Einlage minus laufzeitgleicher Opportunitätszins",
+      "Opportunitätszins minus Kundenzins der hereingenommenen Einlage",
+      "Durchschnittlicher Passivzins minus Kundenzins der einzelnen Einlage"
+    ],
+    "richtig": 2,
+    "erkl": "Bei einer Einlage spart die Bank gegenüber der GKM-Beschaffung: KB = Opportunität − Kundenzins. Zahlt sie dem Kunden weniger als die fristengleiche Refinanzierung am GKM kostet, ist der Konditionsbeitrag positiv.",
+    "vertiefung": "Die Vorzeichen ergeben sich aus der Bilanzseite: Aktiv = Kundenzins − Opportunität, Passiv = Opportunität − Kundenzins. Im Wiedemann-Beispiel kostet die 2-jährige Kundeneinlage 3,0%, während die 2-jährige GKM-Opportunität 5,0% beträgt - die Bank refinanziert sich also günstiger als am Markt, der Konditionsbeitrag ist positiv.",
+    "folgefragen": [
+      {
+        "frage": "Wann ist der Konditionsbeitrag einer Einlage positiv?",
+        "antwort": "Wenn der Kundenzins unter der laufzeitgleichen GKM-Opportunität liegt, die Einlage also billiger ist als Marktrefinanzierung."
+      },
+      {
+        "frage": "Welche Bilanzseite hat das umgekehrte Schema?",
+        "antwort": "Die Aktivseite: dort gilt Kundenzins minus Opportunität."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Was muss vor der Wahl des richtigen Konditionsbeitrags-Schemas zuerst geklärt werden?",
+    "optionen": [
+      "Ob es sich um ein Aktiv- oder um ein Passivgeschäft der Bank handelt",
+      "Ob das Geschäft endfällig oder mit laufender Tilgung ausgestattet ist",
+      "Ob eine normale oder eine inverse Zinsstrukturkurve am Markt vorliegt",
+      "Ob der Kunde ein Privat- oder ein Firmenkunde der Bank ist"
+    ],
+    "richtig": 0,
+    "erkl": "Das Vorzeichen-Schema hängt allein davon ab, ob das Geschäft auf der Aktiv- oder Passivseite steht. Erst danach gilt: Aktiv = Kundenzins − Opportunität, Passiv = Opportunität − Kundenzins.",
+    "vertiefung": "Die häufigste Fehlerquelle bei Klausuraufgaben ist das vertauschte Vorzeichen. Deshalb ordnet man jedes Geschäft zunächst der Bilanzseite zu und wählt erst dann das Schema. Tilgungsform und Zinsstruktur beeinflussen die Höhe, aber nicht die Grundlogik des Vergleichs.",
+    "folgefragen": [
+      {
+        "frage": "Welcher Schritt folgt nach der Einordnung der Bilanzseite?",
+        "antwort": "Die Auswahl des passenden Vorzeichen-Schemas und die Bestimmung des laufzeitgleichen Opportunitätszinses."
+      },
+      {
+        "frage": "Ändert die Zinsstruktur das Schema?",
+        "antwort": "Nein, sie ändert nur die Höhe des Opportunitätszinses, nicht die Grundformel."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "In welchem Zusammenhang stehen Zinsüberschuss, Konditions- und Strukturbeitrag?",
+    "optionen": [
+      "Der Konditionsbeitrag ergibt sich als Zinsüberschuss zuzüglich des Strukturbeitrags",
+      "Die Summe aus Konditionsbeiträgen und Strukturbeitrag ergibt den Zinsüberschuss",
+      "Der Zinsüberschuss entspricht dem Strukturbeitrag abzüglich aller Konditionsbeiträge",
+      "Strukturbeitrag und Zinsüberschuss sind identisch, der Konditionsbeitrag ist separat"
+    ],
+    "richtig": 1,
+    "erkl": "Der gesamte Zinsüberschuss wird verursachungsgerecht aufgeteilt: ZÜ = Summe der Konditionsbeiträge + Strukturbeitrag. Der Strukturbeitrag ist damit das Residuum aus ZÜ minus aller Konditionsbeiträge.",
+    "vertiefung": "Diese Identität ist das Kernergebnis der Marktzinsmethode: Der Markterfolg der Vertriebseinheiten (Summe KB) und der Erfolg der Fristentransformation (SB) addieren sich zum periodischen Zinsüberschuss. Umgestellt: SB = ZÜ − Summe KB. Damit lässt sich der Strukturbeitrag auch als Restgröße bestimmen, wenn alle Konditionsbeiträge bekannt sind.",
+    "folgefragen": [
+      {
+        "frage": "Wie lässt sich der Strukturbeitrag als Residuum berechnen?",
+        "antwort": "Als Zinsüberschuss minus der Summe aller Konditionsbeiträge: SB = ZÜ - Summe KB."
+      },
+      {
+        "frage": "Was bedeutet verursachungsgerechte Aufteilung hier?",
+        "antwort": "Jeder Ergebnisbeitrag wird der Stelle zugeordnet, die ihn erwirtschaftet hat - Vertrieb bzw. Treasury."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Welche Wirkung hat eine normale (steigende) Zinsstrukturkurve auf den Strukturbeitrag bei positiver Fristentransformation?",
+    "optionen": [
+      "Der Strukturbeitrag wird positiv, weil lange Sätze über kurzen Sätzen liegen",
+      "Der Strukturbeitrag entfällt, da bei normaler Struktur keine Fristen abweichen",
+      "Der Strukturbeitrag bleibt unverändert, weil er allein vom Kundenzins abhängt",
+      "Der Strukturbeitrag wird negativ, weil kurze Sätze über langen Sätzen liegen"
+    ],
+    "richtig": 0,
+    "erkl": "Bei normaler Zinsstruktur liegt der lange GKM-Satz über dem kurzen. Wer lange Aktiva mit kurzen Passiva refinanziert (positive Fristentransformation), vereinnahmt die positive Differenz als Strukturbeitrag.",
+    "vertiefung": "Im Wiedemann-Beispiel finanziert die Bank einen 4-jährigen Kredit (GKM 7%) mit einer 2-jährigen Einlage (GKM 5%) und erzielt einen positiven Fristentransformationsbeitrag. Die Kehrseite: Steigen die kurzen Sätze bei Anschlussrefinanzierung, kann sich der Erfolg umkehren - das ist das eingegangene Zinsänderungsrisiko.",
+    "folgefragen": [
+      {
+        "frage": "Was ist das Risiko dieser Position?",
+        "antwort": "Steigende kurzfristige Zinsen verteuern die Anschlussrefinanzierung und können den Strukturbeitrag aufzehren."
+      },
+      {
+        "frage": "Wie nennt man lange Aktiva bei kurzer Refinanzierung?",
+        "antwort": "Positive Fristentransformation."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Was gilt für den Strukturbeitrag aus positiver Fristentransformation bei inverser Zinsstrukturkurve?",
+    "optionen": [
+      "Er ist immer null, weil inverse Kurven keine Laufzeitunterschiede zulassen",
+      "Er wird tendenziell negativ, weil die kurzen Sätze über den langen liegen",
+      "Er entspricht exakt der Summe der vereinnahmten Konditionsbeiträge",
+      "Er bleibt stets positiv, solange überhaupt Fristen transformiert werden"
+    ],
+    "richtig": 1,
+    "erkl": "Bei inverser Zinsstruktur liegen kurze GKM-Sätze über langen. Wer dann lange Aktiva mit kurzen Passiva refinanziert, zahlt kurz mehr, als er lang erhält - der Fristentransformationsbeitrag wird tendenziell negativ.",
+    "vertiefung": "Die normale Zinsstruktur (steigend) belohnt positive Fristentransformation; die inverse Struktur (fallend) bestraft sie. Treasury muss daher die Strukturposition aktiv steuern. Schierenbeck stellt historische Zinsstrukturkurven dar, die sowohl normale als auch inverse Verläufe annehmen können - die Erfolgswirkung der Fristentransformation kehrt sich mit der Kurvenform um.",
+    "folgefragen": [
+      {
+        "frage": "Warum kehrt sich der Erfolg um?",
+        "antwort": "Weil bei inverser Kurve die kurze Refinanzierung teurer ist als der lange Aktivertrag."
+      },
+      {
+        "frage": "Welche Kurvenform begünstigt positive Fristentransformation?",
+        "antwort": "Die normale, steigende Zinsstrukturkurve."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Welcher Erfolgsbestandteil verbleibt, nachdem alle Konditionsbeiträge vom Zinsüberschuss abgezogen wurden?",
+    "optionen": [
+      "Der Verwaltungskostenüberschuss der dezentralen Vertriebseinheiten",
+      "Der Provisionsüberschuss aus dem Dienstleistungsgeschäft der Bank",
+      "Der Strukturbeitrag aus der Fristentransformation der Zentraldisposition",
+      "Die Summe der bereits berücksichtigten einzelnen Konditionsbeiträge"
+    ],
+    "richtig": 2,
+    "erkl": "Es verbleibt der Strukturbeitrag: SB = ZÜ − Summe KB. Er ist das Ergebnis der zentralen Fristentransformation und nicht Teil des Vertriebs- oder Provisionsergebnisses.",
+    "vertiefung": "Diese Residualbetrachtung ist eine gängige Klausurtechnik: Sind alle Konditionsbeiträge der Einzelgeschäfte ermittelt, lässt sich der Strukturbeitrag als Restgröße zum gesamten Zinsüberschuss bestimmen, ohne jede einzelne Fristentransformation explizit zu rechnen.",
+    "folgefragen": [
+      {
+        "frage": "Wie lautet die Gleichung umgestellt nach SB?",
+        "antwort": "SB = Zinsüberschuss - Summe aller Konditionsbeiträge."
+      },
+      {
+        "frage": "Gehört der Provisionsüberschuss zum Zinsüberschuss?",
+        "antwort": "Nein, er ist ein eigenständiger Erfolgsbestandteil außerhalb der Zinsspaltung."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Marktzinsmethode",
+    "frage": "Welche organisatorische Zuordnung ist in der Marktzinsmethode zutreffend?",
+    "optionen": [
+      "Konditionsbeitrag zum Vertrieb, Strukturbeitrag zur zentralen Disposition",
+      "Konditionsbeitrag zur Treasury, Strukturbeitrag zu den Vertriebseinheiten",
+      "Beide Beiträge gemeinsam zum Eigenhandel der Treasury-Abteilung gerechnet",
+      "Beide Beiträge gemeinsam zur aufsichtsrechtlichen Meldeabteilung der Bank"
+    ],
+    "richtig": 0,
+    "erkl": "Der Konditionsbeitrag bildet die Vertriebsleistung ab und wird den dezentralen Marktbereichen zugeordnet; der Strukturbeitrag entsteht aus der Fristentransformation und wird der zentralen Disposition (Treasury) zugeordnet.",
+    "vertiefung": "Wiedemann betont diese Trennung: Konditionsbeitragsbarwerte fallen in den Verantwortungsbereich der dezentralen Vertriebseinheiten, Strukturbeiträge werden der Treasury zugeordnet. Diese saubere Verantwortungsabgrenzung ist Voraussetzung für eine faire Vertriebssteuerung und eine eigenständige Risikosteuerung.",
+    "folgefragen": [
+      {
+        "frage": "Warum ist diese Trennung steuerungsrelevant?",
+        "antwort": "Sie verhindert, dass Vertriebserfolg und Fristentransformationswetten vermischt und falsche Anreize gesetzt werden."
+      },
+      {
+        "frage": "Wer steuert das Zinsänderungsrisiko?",
+        "antwort": "Die Treasury/zentrale Disposition über die Strukturposition."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Bankbilanz",
+    "frage": "Auf welcher Bilanzseite stehen Eigenanlagen einer Bank in Form von festverzinslichen Wertpapieren?",
+    "optionen": [
+      "Auf der Aktivseite, da sie Mittelverwendung (Vermögen) der Bank sind",
+      "Außerhalb der Bilanz als schwebendes Geschäft (nur im Anhang)",
+      "Sowohl aktiv als auch passiv, je nach Restlaufzeit (Mischausweis)",
+      "Auf der Passivseite, da sie Mittelherkunft (Refinanzierung) sind"
+    ],
+    "richtig": 0,
+    "erkl": "Eigenanlagen wie Schuldverschreibungen und festverzinsliche Wertpapiere sind Vermögensgegenstände und stehen auf der Aktivseite. In der Bilanz der Sparkasse Gelsenkirchen erscheinen sie unter Position 5 der Aktivseite.",
+    "vertiefung": "Die Aktivseite zeigt die Mittelverwendung: Barreserve, Forderungen an Kreditinstitute, Forderungen an Kunden (Kredite), Schuldverschreibungen und Wertpapiere, Aktien, Beteiligungen. Eigenanlagen sind das, was die Bank am Markt anlegt - also Vermögen, nicht Refinanzierung.",
+    "folgefragen": [
+      {
+        "frage": "Welche weiteren Positionen stehen auf der Aktivseite?",
+        "antwort": "Barreserve, Forderungen an Kreditinstitute und Kunden, Wertpapiere/Eigenanlagen, Beteiligungen."
+      },
+      {
+        "frage": "Was zeigt die Aktivseite grundsätzlich?",
+        "antwort": "Die Mittelverwendung - wofür die Bank ihre Mittel eingesetzt hat."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Bankbilanz",
+    "frage": "Wo werden täglich fällige Kundeneinlagen (Sichteinlagen) in der Bankbilanz ausgewiesen?",
+    "optionen": [
+      "Auf der Aktivseite innerhalb der Barreserve der Bank",
+      "Auf der Passivseite als Verbindlichkeiten gegenüber Kunden",
+      "Auf der Aktivseite als Forderungen an Kunden der Bank",
+      "Auf der Passivseite innerhalb des bilanziellen Eigenkapitals"
+    ],
+    "richtig": 1,
+    "erkl": "Sichteinlagen sind Verbindlichkeiten der Bank gegenüber dem Kunden und stehen auf der Passivseite. In der Sparkassenbilanz erscheinen sie unter Verbindlichkeiten gegenüber Kunden, Unterposten andere Verbindlichkeiten täglich fällig.",
+    "vertiefung": "Die Passivseite zeigt die Mittelherkunft: Verbindlichkeiten gegenüber Kreditinstituten, Verbindlichkeiten gegenüber Kunden (Spareinlagen und täglich fällige Gelder), verbriefte Verbindlichkeiten, Rückstellungen und Eigenkapital. Sichteinlagen sind also Refinanzierung, kein Vermögen.",
+    "folgefragen": [
+      {
+        "frage": "Warum sind Sichteinlagen kein Vermögen der Bank?",
+        "antwort": "Weil die Bank den Betrag dem Kunden schuldet - es ist Fremdkapital/Refinanzierung."
+      },
+      {
+        "frage": "Welches Kalkulationsschema gilt damit für Sichteinlagen?",
+        "antwort": "Das Passiv-Schema: Opportunität minus Kundenzins."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Bankbilanz",
+    "frage": "Wie ist das bilanzielle Eigenkapital einer Sparkasse einzuordnen?",
+    "optionen": [
+      "Als Teil der Barreserve auf der Aktivseite (liquide Mittel)",
+      "Als Aktivposten, weil es einsatzfähiges Vermögen (Anlage) ist",
+      "Als Forderung der Bank gegenüber den Eigentümern (Trägern)",
+      "Als Passivposten, weil es Mittelherkunft (Finanzierung) abbildet"
+    ],
+    "richtig": 3,
+    "erkl": "Eigenkapital steht auf der Passivseite, da es zur Mittelherkunft zählt. Bei der Sparkasse Gelsenkirchen erscheint es als Position 12 der Passivseite (u.a. Sicherheitsrücklage und Bilanzgewinn).",
+    "vertiefung": "Die Passivseite umfasst sowohl Fremd- als auch Eigenkapital. Bei Sparkassen besteht das Eigenkapital typischerweise aus Gewinnrücklagen (Sicherheitsrücklage) und Bilanzgewinn; dazu kommt der Fonds für allgemeine Bankrisiken (§ 340g HGB) als haftendes Vorsorgepolster. Eigenkapital ist unverzinslich überlassen und daher für die Opportunitätsbetrachtung besonders.",
+    "folgefragen": [
+      {
+        "frage": "Welche Eigenkapitalbestandteile nennt die Sparkassenbilanz?",
+        "antwort": "Gewinnrücklagen (Sicherheitsrücklage) und Bilanzgewinn; daneben der Fonds für allgemeine Bankrisiken."
+      },
+      {
+        "frage": "Warum steht Eigenkapital passivisch?",
+        "antwort": "Weil es Mittelherkunft ist - es finanziert das Aktivvermögen mit."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Bankbilanz",
+    "frage": "Was bildet die Aktivseite, was die Passivseite einer Bankbilanz grundsätzlich ab?",
+    "optionen": [
+      "Aktiv die Mittelverwendung (Vermögen), Passiv die Mittelherkunft (Finanzierung)",
+      "Aktiv die Mittelherkunft (Finanzierung), Passiv die Mittelverwendung (Vermögen)",
+      "Aktiv die Erträge der Periode, Passiv die Aufwendungen der Periode",
+      "Aktiv die kurzfristigen Posten, Passiv die langfristigen Posten der Bank"
+    ],
+    "richtig": 0,
+    "erkl": "Die Aktivseite zeigt, wofür die Mittel verwendet werden (Kredite, Wertpapiere, Barreserve), die Passivseite zeigt, woher sie stammen (Einlagen, Refinanzierung, Eigenkapital). Erträge und Aufwendungen gehören in die GuV.",
+    "vertiefung": "Diese Grundlogik bestimmt die Wahl des Konditionsbeitrags-Schemas: Aktivgeschäfte (Kredite, Eigenanlagen) folgen dem Schema Kundenzins minus Opportunität, Passivgeschäfte (Einlagen, Refinanzierung) dem Schema Opportunität minus Kundenzins. Wer die Bilanzseite kennt, kennt das Schema.",
+    "folgefragen": [
+      {
+        "frage": "Wohin gehören Erträge und Aufwendungen?",
+        "antwort": "In die Gewinn- und Verlustrechnung, nicht in die Bilanz."
+      },
+      {
+        "frage": "Wieso ist die Bilanzseite für die Kalkulation entscheidend?",
+        "antwort": "Sie legt das Vorzeichen-Schema des Konditionsbeitrags fest."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Bankbilanz",
+    "frage": "Wo erscheinen Verbindlichkeiten der Bank gegenüber anderen Kreditinstituten (Refinanzierung)?",
+    "optionen": [
+      "Auf der Aktivseite als Forderungen an Kreditinstitute",
+      "Innerhalb der Barreserve auf der Aktivseite der Bilanz",
+      "Auf der Passivseite als Verbindlichkeiten gegenüber Kreditinstituten",
+      "Im Eigenkapital, da Interbankengelder haftendes Kapital darstellen"
+    ],
+    "richtig": 2,
+    "erkl": "Aufgenommene Interbankenrefinanzierung ist eine Verbindlichkeit und steht passivisch. Die spiegelbildliche Position Forderungen an Kreditinstitute (ausgeliehene Gelder) steht dagegen auf der Aktivseite.",
+    "vertiefung": "In der Sparkassenbilanz stehen sich gegenüber: Aktiv Position 3 Forderungen an Kreditinstitute (täglich fällig / andere) und Passiv Position 1 Verbindlichkeiten gegenüber Kreditinstituten. Das Funding (Refinanzierung am Interbankenmarkt) ist eine klassische Treasury-Aufgabe.",
+    "folgefragen": [
+      {
+        "frage": "Wie heißt die spiegelbildliche Aktivposition?",
+        "antwort": "Forderungen an Kreditinstitute (ausgeliehene Interbankengelder)."
+      },
+      {
+        "frage": "Welche Treasury-Funktion betrifft die Refinanzierung?",
+        "antwort": "Das Funding - die Beschaffung von Fremd- und Eigenmitteln."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Bankbilanz",
+    "frage": "Wie wird die Barreserve (Kassenbestand und Guthaben bei der Bundesbank) eingeordnet?",
+    "optionen": [
+      "Als verbriefte Verbindlichkeit auf der Passivseite der Bilanz",
+      "Als Passivposten, weil sie eine Verbindlichkeit gegenüber der Bundesbank ist",
+      "Als Teil des Eigenkapitals, da sie als Haftungsmasse dient",
+      "Als Aktivposten, weil sie liquides Vermögen der Bank darstellt"
+    ],
+    "richtig": 3,
+    "erkl": "Die Barreserve ist liquides Vermögen und steht ganz oben auf der Aktivseite (Position 1). Sie umfasst Kassenbestand und Guthaben bei der Deutschen Bundesbank.",
+    "vertiefung": "Die Reihenfolge der Aktivseite folgt grob der Liquiditätsnähe: zuerst Barreserve, dann Forderungen an Kreditinstitute und Kunden, schließlich Wertpapiere und Beteiligungen. Guthaben bei der Bundesbank sind Forderungen der Bank - also Vermögen, kein Fremdkapital.",
+    "folgefragen": [
+      {
+        "frage": "Was umfasst die Barreserve konkret?",
+        "antwort": "Kassenbestand und Guthaben bei der Deutschen Bundesbank."
+      },
+      {
+        "frage": "Nach welchem Prinzip ist die Aktivseite geordnet?",
+        "antwort": "Grob nach abnehmender Liquiditätsnähe, beginnend mit der Barreserve."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Marktzinsmethode",
+    "frage": "Für welche Geschäfte wird die Methode der gleitenden Durchschnitte typischerweise eingesetzt?",
+    "optionen": [
+      "Für endfällige Festzinsdarlehen mit vertraglich fixierter Kapitalbindung",
+      "Für börsennotierte Aktien im Eigenhandelsbestand der Treasury",
+      "Für variabel verzinsliche Produkte wie Sicht- und Spareinlagen ohne feste Laufzeit",
+      "Für Devisentermingeschäfte mit fest vereinbartem Erfüllungstag"
+    ],
+    "richtig": 2,
+    "erkl": "Gleitende Durchschnitte modellieren variable Produkte (Sichteinlagen, Spareinlagen, Kontokorrentkredite, variable Darlehen), die keine feste Kapitalbindung haben. Festverzinsliche Geschäfte mit bekanntem Cashflow brauchen das Verfahren nicht.",
+    "vertiefung": "Variable Produkte zeichnen sich laut Risiko-Manager-Beitrag dadurch aus, dass die Bank den Zins ohne Beachtung von Fristen der Marktlage anpassen kann und der Kunde jederzeit verfügen darf. Über eine Ablauffiktion werden ihnen feste Cashflows in Laufzeitbänder zugeordnet, um sie wie Festzinsgeschäfte kalkulierbar zu machen.",
+    "folgefragen": [
+      {
+        "frage": "Warum brauchen variable Produkte eine Ablauffiktion?",
+        "antwort": "Weil ihr Cashflow nicht vertraglich fixiert ist und für die Kalkulation eine Laufzeitannahme getroffen werden muss."
+      },
+      {
+        "frage": "Nenne klassische variable Produkte.",
+        "antwort": "Sichteinlagen, Spareinlagen, Kontokorrentkredite und variable Darlehen."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Wie wird der Opportunitätszins einer n-Jahres-Tranche im Modell der gleitenden Durchschnitte gebildet?",
+    "optionen": [
+      "Durch Mittelung der n längsten am Markt verfügbaren Laufzeitsätze",
+      "Durch Mittelung von n Sätzen: dem heutigen und den n minus 1 historischen",
+      "Durch alleinige Verwendung des aktuellen n-Jahres-GKM-Satzes heute",
+      "Durch Mittelung sämtlicher GKM-Sätze der vergangenen zehn Jahre"
+    ],
+    "richtig": 1,
+    "erkl": "Für eine n-Jahres-Tranche werden n Sätze gemittelt: der heutige n-Jahres-Satz sowie die (n−1) entsprechenden Sätze der Vorjahre. So entsteht der geglättete (gleitende) Bewertungszins.",
+    "vertiefung": "Im Beispiel des Risiko-Manager-Beitrags wird ein revolvierendes Mischungsverhältnis unterstellt, bei dem das Verfahren auch in den Vorjahren schon eingesetzt wurde. Die Tranche ersetzt jedes Jahr nur den ältesten Teil durch eine neue zum aktuellen Satz - daher der Begriff gleitender Durchschnitt.",
+    "folgefragen": [
+      {
+        "frage": "Warum heißt das Verfahren gleitender Durchschnitt?",
+        "antwort": "Weil jedes Jahr nur die älteste Tranche durch eine neue zum aktuellen Satz ersetzt wird und der Schnitt mitwandert."
+      },
+      {
+        "frage": "Was unterstellt das Modell über die Vorjahre?",
+        "antwort": "Dass das Verfahren bereits in den Vorjahren angewandt wurde (revolvierender Bestand)."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Warum gehen in den gleitenden Durchschnitt auch historische Zinssätze ein?",
+    "optionen": [
+      "Weil so der gesamte Strukturbeitrag dem Vertrieb zugerechnet werden kann",
+      "Weil das Produkt aus revolvierenden Tranchen verschiedener Abschlusszeitpunkte besteht",
+      "Weil historische Sätze höher liegen und damit die Marge künstlich erhöhen",
+      "Weil die Aufsicht eine Bewertung zum reinen Tageszins ausdrücklich untersagt"
+    ],
+    "richtig": 1,
+    "erkl": "Der variable Bestand wird als Folge revolvierender Tranchen modelliert, die in verschiedenen Jahren zu den jeweils gültigen Sätzen abgeschlossen wurden. Der gleitende Durchschnitt bildet diese Mischung aus alten und neuen Sätzen ab und glättet so die Marge.",
+    "vertiefung": "Der Risiko-Manager-Beitrag weist zugleich auf eine Grenze hin: Bei Volumenzuwächsen können historische Sätze für NEUE Refinanzierungen nicht realisiert werden - eine Treasury kann zu diesen alten Zinsen am Markt keine Geschäfte mehr abschließen. Für das laufende Bestandsvolumen liefert die Mittelung historischer Sätze jedoch eine stabile, planbare Marge.",
+    "folgefragen": [
+      {
+        "frage": "Welcher Vorteil entsteht durch die Glättung?",
+        "antwort": "Eine möglichst konstante, planbare Marge zwischen Kunden- und Bewertungszins."
+      },
+      {
+        "frage": "Wo stößt die Verwendung historischer Sätze an Grenzen?",
+        "antwort": "Bei NEUEN Volumina, denn historische Zinsen sind am Markt nicht mehr realisierbar."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Marktzinsmethode",
+    "frage": "Was beschreibt der Zinsüberschuss einer Bank in der periodischen Betrachtung?",
+    "optionen": [
+      "Den Barwert aller künftigen Eigenkapitalrückflüsse der Bank",
+      "Die Differenz aus langfristigem und kurzfristigem GKM-Zinssatz",
+      "Den Saldo aus Zinserträgen und Zinsaufwendungen einer Periode",
+      "Den Saldo aus Provisionserträgen und Provisionsaufwendungen einer Periode"
+    ],
+    "richtig": 2,
+    "erkl": "Der Zinsüberschuss ist der periodische Saldo aus Zinserträgen und Zinsaufwendungen. Er wird in der Marktzinsmethode in Konditions- und Strukturbeitrag aufgespalten. Der Provisionssaldo ist davon getrennt zu betrachten.",
+    "vertiefung": "In der GuV der Sparkasse Gelsenkirchen ergibt sich der Zinsüberschuss aus Zinserträgen (Position 1) minus Zinsaufwendungen (Position 2). Schierenbeck zeigt, dass sich das wertorientierte Zinsergebnis über die Totalperiode in den periodischen Zinsüberschuss überführen lässt - für das Bestandsgeschäft besteht Identität.",
+    "folgefragen": [
+      {
+        "frage": "Wie wird der Zinsüberschuss in der Marktzinsmethode zerlegt?",
+        "antwort": "In die Summe der Konditionsbeiträge und den Strukturbeitrag."
+      },
+      {
+        "frage": "Gehört der Provisionssaldo zum Zinsüberschuss?",
+        "antwort": "Nein, er ist ein eigenständiger Bestandteil des Betriebsergebnisses."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Marktzinsmethode",
+    "frage": "Was bezeichnet der Begriff Fristentransformation im Bankgeschäft?",
+    "optionen": [
+      "Den Wechsel von festen zu variablen Verzinsungen bei Kundenkrediten",
+      "Die Umwandlung von Fremd- in Eigenkapital zur Stärkung der Haftungsbasis",
+      "Die Umrechnung von Fremdwährungspositionen in die Bilanzwährung Euro",
+      "Die Verwendung unterschiedlicher Laufzeiten auf der Aktiv- und der Passivseite"
+    ],
+    "richtig": 3,
+    "erkl": "Fristentransformation bedeutet, dass Aktiv- und Passivseite unterschiedliche Laufzeiten (Zinsbindungen) aufweisen - klassisch: lange Kredite, kurze Einlagen. Daraus entsteht der Strukturbeitrag, aber auch das Zinsänderungsrisiko.",
+    "vertiefung": "Die Risikotransformation - insbesondere die Fristentransformation - gehört laut Risiko-Manager-Beitrag zum Kern des Bankgeschäftsmodells; § 25a KWG verlangt deshalb ein angemessenes Risikomanagement. Im Wiedemann-Beispiel: 4-jähriger Kredit gegen 2-jährige Einlage ist positive Fristentransformation.",
+    "folgefragen": [
+      {
+        "frage": "Welcher Erfolgsbeitrag resultiert aus der Fristentransformation?",
+        "antwort": "Der Strukturbeitrag (Fristentransformationsbeitrag)."
+      },
+      {
+        "frage": "Welches Risiko ist damit untrennbar verbunden?",
+        "antwort": "Das Zinsänderungsrisiko aus den offenen Zinspositionen."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Wie hoch ist der Konditionsbeitrag einer unverzinslichen Position (z.B. Eigenkapital), wenn sie zum Anlagesatz disponiert wird?",
+    "optionen": [
+      "Er entspricht dem vollen Anlage-Opportunitätszins, da der Kundenzins null ist",
+      "Er entspricht dem Strukturbeitrag der gesamten Aktivseite der Bank",
+      "Er entspricht der halben Opportunität, da kein Zins gezahlt wird",
+      "Er ist null, weil ohne Kundenzins kein Konditionsbeitrag entstehen kann"
+    ],
+    "richtig": 0,
+    "erkl": "Bei einer unverzinslichen Passivposition ist der Kundenzins null. Nach dem Passiv-Schema (Opportunität − Kundenzins) bleibt der volle Opportunitätszins als Konditionsbeitrag übrig - die Bank legt kostenlos überlassene Mittel zum Marktsatz an.",
+    "vertiefung": "Eigenkapital und unverzinsliche Sichteinlagen sind besonders ertragreich, weil die Bank sie kostenlos erhält und zum Marktzins anlegen kann (sogenannter Anlagenutzen unverzinslicher Mittel). Im Modell der gleitenden Durchschnitte wird hierfür ein Mischungsverhältnis aus Laufzeitbändern angesetzt, das den Opportunitätszins liefert.",
+    "folgefragen": [
+      {
+        "frage": "Warum sind unverzinsliche Mittel besonders wertvoll?",
+        "antwort": "Weil die Bank den vollen Anlagesatz vereinnahmt, ohne dem Kunden Zinsen zu zahlen."
+      },
+      {
+        "frage": "Welches Schema kommt zur Anwendung?",
+        "antwort": "Das Passiv-Schema Opportunität minus Kundenzins - mit Kundenzins null."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Was besagt das Gegenpositionsprinzip bei der Bestimmung der Einstandskondition?",
+    "optionen": [
+      "Der Einstand richtet sich nach dem Leitzins der Notenbank zum Abschlusszeitpunkt",
+      "Jedem Kundengeschäft wird ein strukturgleiches GKM-Gegengeschäft zugeordnet",
+      "Jedes Kundengeschäft wird gegen den Durchschnittszins der Gesamtbank gestellt",
+      "Aktiv- und Passivgeschäfte werden ohne wechselseitigen Bezug einzeln bewertet"
+    ],
+    "richtig": 1,
+    "erkl": "Nach dem Gegenpositionsprinzip wird jedem Kundengeschäft ein laufzeit-/strukturgleiches Gegengeschäft am Geld- und Kapitalmarkt zugeordnet. Dessen Zins ist die Einstandskondition (Opportunität), gegen die der Konditionsbeitrag gemessen wird.",
+    "vertiefung": "Wiedemann fragt im Fallbeispiel ausdrücklich nach dem Gegenpositionsprinzip und stellt klar, dass sich die Einstandskonditionen an strukturidentischen GKM-Geschäften orientieren. Das Prinzip stellt sicher, dass der Vertriebserfolg gegen ein tatsächlich realisierbares Alternativgeschäft gemessen wird.",
+    "folgefragen": [
+      {
+        "frage": "Welcher Markt liefert das Gegengeschäft?",
+        "antwort": "Der Geld- und Kapitalmarkt (GKM) mit strukturidentischer Laufzeit."
+      },
+      {
+        "frage": "Was wäre die Folge eines nicht strukturgleichen Gegengeschäfts?",
+        "antwort": "Vertriebs- und Fristentransformationserfolg würden vermischt."
       }
     ]
   }
