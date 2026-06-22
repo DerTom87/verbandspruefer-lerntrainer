@@ -3752,6 +3752,656 @@ const Q_BWL = [
         "antwort": "Auf den Investitionszeitpunkt t0 – alle Zahlungen werden auf heute abgezinst."
       }
     ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Marktzinsmethode",
+    "frage": "Wie ist der Konditionsbeitrag (Margenbeitrag) eines Kundenkredits in der periodischen Marktzinsmethode definiert?",
+    "optionen": [
+      "Differenz aus Kundenzins und dem laufzeitgleichen GKM-Satz (Einstandszins)",
+      "Differenz aus dem langfristigen und dem kurzfristigen Geldmarktzinssatz (GKM)",
+      "Differenz aus Kundenzins und dem Durchschnittszins der gesamten Aktivseite",
+      "Differenz aus aktuellem Leitzins der Notenbank und dem Refinanzierungszins"
+    ],
+    "richtig": 0,
+    "erkl": "Der Konditionsbeitrag misst den Markterfolg des Vertriebs: Kundenzins minus laufzeit-/strukturgleicher GKM-Opportunität. Die Differenz zweier GKM-Sätze ist dagegen der Strukturbeitrag (Fristentransformation).",
+    "vertiefung": "Die Marktzinsmethode trennt den Gesamtzinsüberschuss verursachungsgerecht in Konditionsbeitrag (Vertrieb) und Strukturbeitrag (zentrale Disposition/Treasury). Der Konditionsbeitrag entsteht durch bessere Konditionen gegenüber dem fristengleichen Alternativgeschäft am Geld- und Kapitalmarkt und ist zinsänderungsrisikofrei, weil er gegen die strukturgleiche GKM-Opportunität abgesichert gedacht wird. Merkhilfe: Kondition = Marge gegen die gleiche Laufzeit, Struktur = Wette auf unterschiedliche Laufzeiten.",
+    "folgefragen": [
+      {
+        "frage": "Wem wird der Konditionsbeitrag organisatorisch zugeordnet?",
+        "antwort": "Den dezentralen Vertriebs-/Marktbereichen, da er die Akquisitionsleistung gegenüber der GKM-Opportunität abbildet."
+      },
+      {
+        "frage": "Warum gilt der Konditionsbeitrag als zinsänderungsrisikofrei?",
+        "antwort": "Weil er definitorisch gegen das laufzeit- und strukturgleiche GKM-Geschäft gemessen wird; das Zinsänderungsrisiko verbleibt allein in der Fristentransformation (Strukturbeitrag)."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Wodurch entsteht der Strukturbeitrag (Fristentransformationsbeitrag) bei normaler Zinsstrukturkurve?",
+    "optionen": [
+      "Durch Erhebung von Bearbeitungsentgelten und sonstigen Provisionserlösen der Bank",
+      "Durch Auflösung stiller Reserven aus dem Wertpapier-Eigenbestand der Gesamtbank",
+      "Durch Refinanzierung langfristiger Aktiva mit kürzeren, billigeren Passivgeschäften",
+      "Durch besonders günstige Margen gegenüber den einzelnen Kunden im Vertriebsgeschäft"
+    ],
+    "richtig": 2,
+    "erkl": "Bei normaler (steigender) Zinsstruktur ist der lange GKM-Zins höher als der kurze. Wer lange Aktiva mit kurzen Passiva refinanziert (positive Fristentransformation), vereinnahmt die Differenz als Strukturbeitrag - trägt aber das Zinsänderungsrisiko.",
+    "vertiefung": "Der Strukturbeitrag ist das Ergebnis bewusst eingegangener offener Zinspositionen der zentralen Disposition. Er ergibt sich aus der Differenz der GKM-Sätze unterschiedlicher Laufzeiten. Im Treasury-Beispiel von Wiedemann: 4-jähriger GKM-Zins (7%) über 2-jährigem (5%) -> positiver Beitrag bei normaler Struktur. Das Risiko realisiert sich bei steigenden Zinsen, wenn die kurze Refinanzierung teurer prolongiert werden muss; der Beitrag kann dann schrumpfen oder negativ werden.",
+    "folgefragen": [
+      {
+        "frage": "Welches Szenario gefährdet den positiven Strukturbeitrag?",
+        "antwort": "Steigende Zinsen bzw. eine inverse Zinsstruktur, weil die kurzfristige Refinanzierung dann teurer wird als der langfristige Aktivzins."
+      },
+      {
+        "frage": "Wer verantwortet den Strukturbeitrag?",
+        "antwort": "Die zentrale Struktursteuerung/Treasury, die die Fristentransformation und damit das Zinsänderungsrisiko der Gesamtbank steuert."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Was besagt das Gegenpositionsprinzip bei der Bestimmung der Einstandskondition?",
+    "optionen": [
+      "Jedes Kundengeschäft wird gegen den durchschnittlichen Bilanzzins der Bank kalkuliert",
+      "Aktiv- und Passivgeschäfte werden stets zum identischen einheitlichen Satz bewertet",
+      "Kundenkredite werden am Refinanzierungssatz, Kundeneinlagen am Anlagesatz gemessen",
+      "Sämtliche Geschäfte werden ausschließlich gegen den jeweiligen Tagesgeldsatz bewertet"
+    ],
+    "richtig": 2,
+    "erkl": "Die Einstandskondition ist die strukturidentische GKM-Gegenposition: Ein Kredit (Aktivum) wird am qualitäts- und laufzeitgleichen Refinanzierungssatz beurteilt, eine Einlage (Passivum) am entsprechenden Anlagesatz. So wird der Vertriebserfolg risikofrei messbar.",
+    "vertiefung": "Das Gegenpositionsprinzip stellt jedem Kundengeschäft genau das GKM-Geschäft gegenüber, mit dem die Bank die Position glattstellen könnte. Für einen Kredit ist das die fristengleiche Refinanzierung, für eine Einlage die fristengleiche Geldanlage. Die Einstandskondition ist damit der Preis, zu dem der Marktbereich das Geschäft zinsänderungsrisikofrei an die Zentraldisposition abgeben kann. Quelle: Schierenbeck/Wiedemann, Treasury-Management.",
+    "folgefragen": [
+      {
+        "frage": "Warum nutzt man für einen Kredit den Refinanzierungssatz und nicht den Anlagesatz?",
+        "antwort": "Weil die Bank den Kredit am Markt durch Aufnahme von Geld (Refinanzierung) nachbilden würde; die Einstandskondition ist die Gegenposition zum Geschäft."
+      },
+      {
+        "frage": "Was bedeutet qualitäts- und strukturidentisch in diesem Kontext?",
+        "antwort": "Gleiche Laufzeit, gleiche Zins-/Tilgungsstruktur und vergleichbares Risiko, damit der Vergleich nur die Marge und nicht andere Effekte misst."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "rechnen",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Eine Bank vergibt einen endfälligen 4-jährigen Kundenkredit über 100.000 EUR zu 8,0% p.a. (jährliche Zinszahlung). Die laufzeitspezifischen Zerobond-Abzinsfaktoren der GKM-Kurve lauten ZB-AF(0;1)=0,9615; ZB-AF(0;2)=0,9066; ZB-AF(0;3)=0,8377; ZB-AF(0;4)=0,7576. Berechnen Sie den Konditionsbeitrags-Barwert des Kredits (auf volle EUR gerundet).",
+    "loesung": "3467",
+    "einheit": "EUR",
+    "schritte": [
+      "Cash Flows aus Bankensicht: t0 = -100.000; t1 = +8.000; t2 = +8.000; t3 = +8.000; t4 = +108.000 (Zins + Tilgung).",
+      "Jeden künftigen CF mit zugehörigem ZB-AF diskontieren: 8.000·0,9615 = 7.692; 8.000·0,9066 = 7.253; 8.000·0,8377 = 6.702; 108.000·0,7576 = 81.821.",
+      "Summe der Barwerte der Zuflüsse: 7.692 + 7.253 + 6.702 + 81.821 = 103.468.",
+      "KB-Barwert = Barwert der Zuflüsse - Auszahlung = 103.468 - 100.000 = 3.468 (mit exakten ZB-AF 3.467)."
+    ],
+    "vertiefung": "Der Konditionsbeitrags-Barwert ist der auf t0 verdichtete Mehrerfolg des Geschäfts gegenüber dem qualitätsgleichen GKM-Geschäft. Methodik: künftige CF mit den ZB-AF multiplizieren und saldieren. Er ist das Vertriebsergebnis des Kreditverkäufers und im ökonomischen Marktwert des Geschäfts bereits enthalten (Marktwert Kredit = Nominal + KB-Barwert). Quelle: Wiedemann, Treasury-Management, Abb. 5.",
+    "folgefragen": [
+      {
+        "frage": "Wie hängt der KB-Barwert mit dem periodischen Konditionsbeitrag zusammen?",
+        "antwort": "Der KB-Barwert ist der mit ZB-AF auf heute abgezinste Strom aller künftigen periodischen Konditionsbeiträge - dieselbe Marge, nur barwertig statt periodisch ausgewiesen."
+      },
+      {
+        "frage": "Was ergibt die Summe der KB-Barwerte aller Kundengeschäfte?",
+        "antwort": "Sie entspricht dem gesamten vertriebsbedingten Reinvermögenszuwachs (Marktwert EK minus Nominal-EK) in t0."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "rechnen",
+    "schwer": 3,
+    "thema": "Marktzinsmethode",
+    "frage": "Eine endfällige 2-jährige Kundeneinlage über 95.000 EUR wird mit 3,0% p.a. verzinst (jährliche Zinszahlung). ZB-AF(0;1)=0,9615; ZB-AF(0;2)=0,9066. Berechnen Sie den Konditionsbeitrags-Barwert der Einlage aus Sicht der Bank (auf volle EUR).",
+    "loesung": "3549",
+    "einheit": "EUR",
+    "schritte": [
+      "Cash Flows aus Bankensicht: t0 = +95.000 (Mittelzufluss); t1 = -2.850 (Zins 3% auf 95.000); t2 = -97.850 (Zins + Rückzahlung).",
+      "Barwert der künftigen Auszahlungen: 2.850·0,9615 = 2.740,3; 97.850·0,9066 = 88.710,8.",
+      "Ökonomischer Wert der Verbindlichkeit = 2.740,3 + 88.710,8 = 91.451.",
+      "KB-Barwert = Nominal - ökonomischer Wert der Schuld = 95.000 - 91.451 = 3.549 (Minderaufwand für die Bank)."
+    ],
+    "vertiefung": "Bei Passivgeschäften ist der Konditionsbeitrag ein Minderaufwand: Die Bank zahlt dem Kunden weniger, als sie für eine fristengleiche GKM-Refinanzierung zahlen müsste. Der ökonomische Wert der Einlage (91.451) liegt unter dem Nominalwert (95.000); die Differenz von 3.549 ist der barwertige Vertriebserfolg der Passivseite. Quelle: Wiedemann, Treasury-Management.",
+    "folgefragen": [
+      {
+        "frage": "Warum ist der KB-Barwert einer günstigen Einlage positiv, obwohl es eine Schuld ist?",
+        "antwort": "Weil die Bank weniger Barwert an Verpflichtung trägt, als sie an Nominal erhalten hat - die niedrige Verzinsung gegenüber dem GKM-Satz ist ein Vorteil (Minderaufwand)."
+      },
+      {
+        "frage": "Wie groß ist der gesamte Reinvermögenszuwachs aus Kredit (3.468) und Einlage (3.549)?",
+        "antwort": "Rund 7.017 EUR - dieser Betrag erklärt vollständig, warum der Marktwert des EK das Nominal-EK übersteigt."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Gegen welche Zinskurve werden bankeigene Aktiva im Marktwertkonzept der Treasury sinnvoll bewertet, um die GKM-Opportunität korrekt abzubilden?",
+    "optionen": [
+      "Gegen den über sämtliche Laufzeiten gemittelten Einheitszinssatz der Geschäftsbank",
+      "Gegen die laufzeitkongruente, qualitätsgleiche GKM-/Swapkurve am Stichtag",
+      "Gegen den vom Vorstand jährlich festgelegten internen Mindestverzinsungsanspruch",
+      "Gegen die historische Anschaffungsrendite der jeweiligen Einzelposition im Altbestand"
+    ],
+    "richtig": 1,
+    "erkl": "Die Bewertung erfolgt mit der aktuellen, laufzeitkongruenten GKM-/Swapkurve (bzw. einer bonitätsadäquaten Kurve wie der Pfandbriefkurve). Nur so spiegelt der Barwert die echte Glattstellungs-Opportunität am Stichtag wider; historische oder gemittelte Sätze verzerren den Marktwert.",
+    "vertiefung": "Im Marktwertkonzept werden alle Geschäfte mit den zum Stichtag gültigen, laufzeitspezifischen Abzinsfaktoren bewertet. Die Wahl der Kurve folgt der Refinanzierungs-/Anlagealternative: risikolose Swapkurve als Basis, bonitäts-/produktspezifische Spreads (z.B. Pfandbriefkurve für gedeckte Refinanzierung) als Aufschlag. Steigende Marktzinsen senken die Barwerte der Aktiva und der Passiva; der Nettoeffekt auf das ökonomische EK hängt von der Bilanzstruktur ab.",
+    "folgefragen": [
+      {
+        "frage": "Warum eignet sich die Swapkurve als Bewertungsbasis?",
+        "antwort": "Sie ist eine liquide, weitgehend bonitätsneutrale Referenzkurve für nahezu jede Laufzeit und bildet die Refinanzierungsalternative am Interbankenmarkt ab."
+      },
+      {
+        "frage": "Wofür steht ein Spread der Pfandbriefkurve über der Swapkurve?",
+        "antwort": "Für den Liquiditäts- und Bonitätsaufschlag gedeckter Bankrefinanzierung gegenüber dem reinen Zinsswap."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "rechnen",
+    "schwer": 2,
+    "thema": "Marktzinsmethode",
+    "frage": "Nach dem Konzept der gleitenden Durchschnitte werden 3-Jahres-Tranchen gleichgewichtet revolviert. Die 1-Jahres-Marktzinssätze der letzten drei Jahresultimos betrugen 5,40%; 3,80% und 3,30%. Berechnen Sie den aktuellen gleitenden 3-Jahres-Durchschnittszins (in % mit zwei Nachkommastellen).",
+    "loesung": "4.17",
+    "einheit": "%",
+    "schritte": [
+      "Beim gleitenden Durchschnitt wird über die letzten n Stützzinsen (hier n=3) das arithmetische Mittel gebildet (gleichgewichtete Tranchen).",
+      "Summe der drei relevanten 1-Jahres-Sätze: 5,40 + 3,80 + 3,30 = 12,50.",
+      "Division durch die Anzahl der Tranchen: 12,50 / 3 = 4,1667.",
+      "Gerundet: 4,17%."
+    ],
+    "vertiefung": "Das Konzept gleitender Durchschnitte bildet variabel verzinsliche oder unbefristete Positionen (z.B. Spareinlagen) durch ein rollierendes Portfolio fristenkongruenter GKM-Tranchen ab. Jede Tranche läuft aus und wird zum aktuellen Satz erneuert; der Mischzins glättet Marktzinsschwankungen. So lässt sich auch für Produkte ohne feste Zinsbindung ein verursachungsgerechter Einstandszins und damit ein Konditionsbeitrag ermitteln. Quelle: Wiedemann, FS 4 (BWL der Banken).",
+    "folgefragen": [
+      {
+        "frage": "Wofür braucht man gleitende Durchschnitte in der Marktzinsmethode?",
+        "antwort": "Für variabel oder unbefristet verzinste Produkte ohne feste Laufzeit (z.B. Sicht-/Spareinlagen), um ihnen einen fristenkongruenten GKM-Mischzins zuzuordnen."
+      },
+      {
+        "frage": "Welchen Effekt hat ein längerer Mischungszeitraum auf den Durchschnittszins?",
+        "antwort": "Er glättet stärker und reagiert träger auf aktuelle Marktzinsänderungen, erhöht aber das Modellrisiko bei der Abbildung des tatsächlichen Kundenverhaltens."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Marktzinsmethode",
+    "frage": "Welcher Erfolgsbestandteil verbleibt nach Abzug von Konditionsbeitrag und Strukturbeitrag aus dem Bruttozinsüberschuss noch in der Gesamtbanksteuerung?",
+    "optionen": [
+      "Allein der Verwaltungsaufwand der zentral organisierten Stabsabteilungen",
+      "Ausschließlich der gesamte Provisionsüberschuss aus dem Dienstleistungsgeschäft",
+      "Das Ergebnis aus der bewussten Fristentransformation der zentralen Disposition",
+      "Der vollständige Steueraufwand der laufenden Geschäftsperiode der Bank"
+    ],
+    "richtig": 2,
+    "erkl": "Der Bruttozinsüberschuss zerfällt in Konditionsbeitrag (Vertrieb, gegen GKM gemessen) und Strukturbeitrag. Der Strukturbeitrag IST das Ergebnis der Fristentransformation der zentralen Disposition. Provisionen und Steuern sind keine Zinsüberschusskomponenten.",
+    "vertiefung": "Die saubere Spaltung ist der Kern der Marktzinsmethode: Zinsüberschuss = Summe Konditionsbeiträge + Strukturbeitrag. Diese verursachungsgerechte Trennung ermöglicht getrenntes Performance-Controlling von Vertrieb (Marge) und Treasury (Fristentransformation/Zinsrisiko) und verhindert, dass Vertriebserfolge mit Zinswetten vermischt werden.",
+    "folgefragen": [
+      {
+        "frage": "Warum ist die Trennung steuerungsrelevant?",
+        "antwort": "Weil Vertrieb und Treasury unterschiedliche Hebel und Risiken haben; nur getrennte Beiträge erlauben gezielte Steuerung und faire Erfolgszurechnung."
+      },
+      {
+        "frage": "Kann der Strukturbeitrag negativ werden?",
+        "antwort": "Ja, bei inverser Zinsstruktur oder ungünstiger Zinsentwicklung kann die Fristentransformation einen negativen Beitrag liefern."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "rechnen",
+    "schwer": 2,
+    "thema": "Barwertbewertung",
+    "frage": "Eine Anleihe mit 100.000 EUR Nominal, 5,0% Jahreskupon und 3 Jahren Restlaufzeit (endfällig) wird bei einem flachen Marktzins von 4,0% bewertet. Berechnen Sie den Barwert (auf volle EUR).",
+    "loesung": "102775",
+    "einheit": "EUR",
+    "schritte": [
+      "ZB-AF bei flachem Satz: ZB-AF(t)=(1+0,04)^(-t). ZB-AF1=0,96154; ZB-AF2=0,92456; ZB-AF3=0,88900.",
+      "Cash Flows: t1 = 5.000; t2 = 5.000; t3 = 105.000 (Kupon + Tilgung).",
+      "Barwerte: 5.000·0,96154 = 4.807,7; 5.000·0,92456 = 4.622,8; 105.000·0,88900 = 93.344,5.",
+      "Summe = 4.807,7 + 4.622,8 + 93.344,5 = 102.775 EUR."
+    ],
+    "vertiefung": "Der Barwert (Present Value) ist die Summe der mit der Marktzinskurve diskontierten künftigen Zahlungen. Liegt der Kupon (5%) über dem Marktzins (4%), notiert die Anleihe über pari (Kurs > 100), weil die überdurchschnittliche Verzinsung einen Aufschlag wert ist. Quelle: Methodik Wiedemann, FS 5 (Barwert über ZB-AF).",
+    "folgefragen": [
+      {
+        "frage": "Wie ergibt sich aus dem Barwert der Kurs?",
+        "antwort": "Kurs = Barwert / Nominal · 100, hier 102.775/100.000·100 = 102,775%."
+      },
+      {
+        "frage": "Warum notiert die Anleihe über pari?",
+        "antwort": "Weil der Kupon über dem Marktzins liegt; der Kupon-Vorteil gegenüber einer Neuemission zum Marktzins wird im Kurs vorweggenommen."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "rechnen",
+    "schwer": 2,
+    "thema": "Barwertbewertung",
+    "frage": "Dieselbe Anleihe (100.000 EUR Nominal, 5,0% Kupon, 3 Jahre endfällig) wird nun bei einem auf 6,0% gestiegenen flachen Marktzins bewertet. Berechnen Sie den neuen Kurs (in % mit zwei Nachkommastellen).",
+    "loesung": "97.33",
+    "einheit": "%",
+    "schritte": [
+      "ZB-AF bei 6%: ZB-AF1=0,94340; ZB-AF2=0,89000; ZB-AF3=0,83962.",
+      "Barwerte der CF: 5.000·0,94340 = 4.717,0; 5.000·0,89000 = 4.450,0; 105.000·0,83962 = 88.160,1.",
+      "Barwert = 4.717,0 + 4.450,0 + 88.160,1 = 97.327 EUR.",
+      "Kurs = 97.327 / 100.000 · 100 = 97,33%."
+    ],
+    "vertiefung": "Hier zeigt sich der inverse Marktzinseffekt: Steigt der Marktzins (4% -> 6%) über den Kupon (5%), fällt der Kurs unter pari (von 102,78% auf 97,33%). Festverzinsliche Titel verlieren bei steigenden Zinsen an Wert, weil neue Anleihen die höhere Verzinsung bieten. Genau dieser Mechanismus begründet das Zinsänderungsrisiko (Kursrisiko) im Bankbuch.",
+    "folgefragen": [
+      {
+        "frage": "Wie lautet die Grundregel zum Marktzinseffekt?",
+        "antwort": "Marktzins und Anleihekurs bewegen sich gegenläufig (invers): steigende Zinsen -> sinkende Kurse und umgekehrt."
+      },
+      {
+        "frage": "Warum reagieren langlaufende Anleihen stärker auf Zinsänderungen?",
+        "antwort": "Weil ihre Zahlungen über längere Zeit diskontiert werden und ihre Duration höher ist - der Hebel der Abzinsung wirkt stärker."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Barwertbewertung",
+    "frage": "Wie verändert sich der Barwert einer festverzinslichen Anleihe, wenn der Marktzins steigt?",
+    "optionen": [
+      "Der Barwert schwankt rein zufällig ohne festen Zusammenhang zum aktuellen Marktzins",
+      "Der Barwert bleibt unverändert, da der Nominalwert die Rückzahlung vertraglich fixiert",
+      "Der Barwert steigt, weil künftige Kupons höher angesetzt und damit aufgewertet werden",
+      "Der Barwert sinkt, weil die künftigen Zahlungen mit höheren Faktoren abgezinst werden"
+    ],
+    "richtig": 3,
+    "erkl": "Höhere Marktzinsen bedeuten kleinere Zerobond-Abzinsfaktoren (ZB-AF=(1+z)^-t). Die künftigen Zahlungen werden stärker abgezinst, der Barwert fällt. Zins und Kurs verhalten sich invers - das ist die Kernaussage der Barwertbewertung.",
+    "vertiefung": "Der inverse Zusammenhang ist die Grundlage des Zinsänderungsrisikos im Anlagebuch. Da die vertraglichen Cash Flows fest sind, wirkt eine Marktzinsänderung ausschließlich über den Diskontierungsfaktor. Steigt z, sinken alle ZB-AF und damit der Barwert; das Ausmaß hängt von der zeitlichen Verteilung der Zahlungen (Duration) ab.",
+    "folgefragen": [
+      {
+        "frage": "Über welchen Hebel wirkt die Zinsänderung rechnerisch?",
+        "antwort": "Über den Abzinsfaktor ZB-AF(0,t)=(1+z)^-t; ein höheres z verkleinert jeden Faktor und damit den Barwert."
+      },
+      {
+        "frage": "Was misst die Duration in diesem Zusammenhang?",
+        "antwort": "Die durchschnittliche Kapitalbindungsdauer und damit die Zinssensitivität: je höher die Duration, desto stärker die Barwertänderung bei gegebener Zinsänderung."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Barwertbewertung",
+    "frage": "Was beschreibt die (Macaulay-)Duration einer Anleihe ihrem Grundgedanken nach?",
+    "optionen": [
+      "Den barwertgewichteten durchschnittlichen Zeitpunkt der Rückflüsse als Zinsrisikomaß",
+      "Die Höhe des nominalen Jahreskupons im Verhältnis zum aktuellen Marktkurs der Anleihe",
+      "Die verbleibende juristische Restlaufzeit bis zum vertraglichen Endfälligkeitstermin",
+      "Die Wahrscheinlichkeit, mit der der Emittent während der Laufzeit der Anleihe ausfällt"
+    ],
+    "richtig": 0,
+    "erkl": "Die Duration ist der mit den Barwerten der Zahlungen gewichtete mittlere Zeitpunkt der Rückflüsse. Sie ist zugleich das zentrale Maß der Zinssensitivität: je höher die Duration, desto stärker reagiert der Barwert auf Zinsänderungen. Sie ist NICHT die juristische Restlaufzeit (außer beim Zerobond).",
+    "vertiefung": "Die Macaulay-Duration gewichtet jeden Zahlungszeitpunkt mit dem Anteil seines Barwerts am Gesamtbarwert. Die Modified Duration = Duration/(1+z) schätzt die prozentuale Barwertänderung je Prozentpunkt Zinsänderung. Höherer Kupon und kürzere Laufzeit senken die Duration; ein Zerobond hat eine Duration gleich seiner Laufzeit. Sie ist das Kernmaß für die Steuerung des Zinsänderungsrisikos.",
+    "folgefragen": [
+      {
+        "frage": "Warum hat ein Zerobond die maximale Duration für eine gegebene Laufzeit?",
+        "antwort": "Weil seine gesamte Zahlung erst am Laufzeitende erfolgt; es gibt keine früheren Rückflüsse, die den gewichteten Mittelpunkt vorziehen."
+      },
+      {
+        "frage": "Wie senkt ein höherer Kupon die Duration?",
+        "antwort": "Höhere zwischenzeitliche Kupons ziehen mehr Barwert nach vorne, sodass der gewichtete durchschnittliche Rückflusszeitpunkt sinkt."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "rechnen",
+    "schwer": 2,
+    "thema": "Barwertbewertung",
+    "frage": "Ein Zerobond zahlt in 4 Jahren 100.000 EUR. Der laufzeitgleiche Marktzins beträgt 7,0% (jährliche Verzinsung). Berechnen Sie den heutigen Barwert (auf volle EUR).",
+    "loesung": "76290",
+    "einheit": "EUR",
+    "schritte": [
+      "Zerobond hat nur eine einzige Zahlung am Ende der Laufzeit; ZB-AF(0;4) = (1+0,07)^(-4).",
+      "(1,07)^4 = 1,31079801; ZB-AF(0;4) = 1/1,31079801 = 0,762895.",
+      "Barwert = 100.000 · 0,762895 = 76.289,5.",
+      "Gerundet: 76.290 EUR."
+    ],
+    "vertiefung": "Beim Zerobond entspricht der Barwert direkt dem Nominal multipliziert mit dem laufzeitgleichen ZB-AF. Der ZB-AF ist der Preis von 1 EUR, der erst in der Zukunft fließt - die zentrale Bewertungsgröße der Marktzinsmethode. Aus ihm lässt sich umgekehrt der Nullkuponzins ableiten: z(0,LZ) = ZB-AF(0,LZ)^(-1/LZ) - 1.",
+    "folgefragen": [
+      {
+        "frage": "Wie berechnet man aus dem ZB-AF den Nullkuponzins?",
+        "antwort": "z(0,LZ) = ZB-AF(0,LZ)^(-1/LZ) - 1; hier 0,762895^(-1/4) - 1 = 0,07 = 7%."
+      },
+      {
+        "frage": "Warum sind ZB-AF die Bausteine jeder Barwertrechnung?",
+        "antwort": "Weil sich jede beliebige künftige Zahlung durch Multiplikation mit dem laufzeitspezifischen ZB-AF arbitragefrei auf heute umrechnen lässt."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "rechnen",
+    "schwer": 1,
+    "thema": "Portfolio",
+    "frage": "Ein Portfolio besteht zu 60% aus Anlage A (erwartete Rendite 8,0%) und zu 40% aus Anlage B (erwartete Rendite 5,0%). Berechnen Sie die erwartete Portfoliorendite µP (in % mit einer Nachkommastelle).",
+    "loesung": "6.8",
+    "einheit": "%",
+    "schritte": [
+      "Die erwartete Portfoliorendite ist das mit den Anteilen gewichtete Mittel der Einzelrenditen: µP = w_A·µ_A + w_B·µ_B.",
+      "Beitrag A: 0,60 · 8,0% = 4,8%.",
+      "Beitrag B: 0,40 · 5,0% = 2,0%.",
+      "µP = 4,8% + 2,0% = 6,8%."
+    ],
+    "vertiefung": "Die erwartete Portfoliorendite ist immer das gewichtete arithmetische Mittel der Einzelrenditen - unabhängig von Korrelationen. Das unterscheidet sie grundlegend vom Portfoliorisiko, das durch Korrelationseffekte unter dem gewichteten Mittel der Einzelrisiken liegen kann (Diversifikation). Quelle: Portfolio-Selektionstheorie nach Markowitz.",
+    "folgefragen": [
+      {
+        "frage": "Warum spielt die Korrelation bei µP keine Rolle?",
+        "antwort": "Weil sich Erwartungswerte linear addieren; Korrelationen wirken erst über Kovarianzen auf die Varianz, nicht auf den Mittelwert."
+      },
+      {
+        "frage": "Was wäre µP bei 50/50-Gewichtung?",
+        "antwort": "0,5·8% + 0,5·5% = 6,5%."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "rechnen",
+    "schwer": 3,
+    "thema": "Portfolio",
+    "frage": "Zwei Anlagen mit σ_A=20,0% und σ_B=10,0% werden zu w_A=60% und w_B=40% gemischt; die Korrelation beträgt k=0,3. Berechnen Sie das Portfoliorisiko σP (in % mit zwei Nachkommastellen).",
+    "loesung": "13.74",
+    "einheit": "%",
+    "schritte": [
+      "Varianz: σP² = (w_A·σ_A)² + (w_B·σ_B)² + 2·w_A·w_B·σ_A·σ_B·k.",
+      "(0,6·0,20)² = 0,12² = 0,0144; (0,4·0,10)² = 0,04² = 0,0016.",
+      "Mischterm: 2·0,6·0,4·0,20·0,10·0,3 = 0,002880.",
+      "σP² = 0,0144 + 0,0016 + 0,002880 = 0,018880; σP = √0,018880 = 0,13740 = 13,74%."
+    ],
+    "vertiefung": "Das Portfoliorisiko ist wegen des Korrelationsterms kleiner als das gewichtete Mittel der Einzelrisiken (hier 0,6·20% + 0,4·10% = 16,0% > 13,74%). Diese Differenz ist der Diversifikationseffekt: Je niedriger k, desto stärker mindert die Mischung das Risiko. Quelle: Markowitz-Portfoliotheorie.",
+    "folgefragen": [
+      {
+        "frage": "Wie groß ist hier der Diversifikationseffekt?",
+        "antwort": "16,00% (gewichtetes Mittel) - 13,74% (Portfolio) = 2,26 Prozentpunkte Risikoreduktion."
+      },
+      {
+        "frage": "Was passiert mit σP, wenn k auf 1 steigt?",
+        "antwort": "Bei k=1 entfällt der Diversifikationseffekt; σP = gewichtetes Mittel = 16,0%."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Portfolio",
+    "frage": "Wann ist der Diversifikationseffekt zwischen zwei Anlagen am stärksten ausgeprägt?",
+    "optionen": [
+      "Wenn beide Anlagen exakt dieselbe erwartete Rendite und dieselbe Streuung besitzen",
+      "Wenn die beiden Renditen vollständig negativ korreliert sind (Korrelation gleich -1)",
+      "Wenn die beiden Renditen vollständig positiv korreliert sind (Korrelation gleich +1)",
+      "Wenn beide Anlagen die größtmögliche Einzelvolatilität von jeweils 100% aufweisen"
+    ],
+    "richtig": 1,
+    "erkl": "Je kleiner die Korrelation, desto stärker die Risikoreduktion. Bei k=-1 ist der Effekt maximal: Es lässt sich sogar ein risikoloses Portfolio (σP=0) konstruieren. Bei k=+1 gibt es gar keinen Diversifikationseffekt; gleiche Rendite/Streuung allein genügt nicht.",
+    "vertiefung": "Der Diversifikationseffekt entsteht, weil sich gegenläufige Abweichungen teilweise oder ganz aufheben. Bei perfekt negativer Korrelation (k=-1) können sich die Schwankungen vollständig kompensieren - es existiert eine Gewichtung mit σP=0 (Nullrisiko-Portfolio). Bei k=+1 addieren sich die Risiken linear, Diversifikation bringt nichts. Praktisch liegt k meist zwischen diesen Extremen.",
+    "folgefragen": [
+      {
+        "frage": "Wie bestimmt man die Gewichtung des Nullrisiko-Portfolios bei k=-1?",
+        "antwort": "w_A = σ_B/(σ_A+σ_B) und w_B = σ_A/(σ_A+σ_B); dann heben sich die gewichteten Streuungen exakt auf."
+      },
+      {
+        "frage": "Warum reicht gleiche Rendite/Streuung für maximale Diversifikation nicht aus?",
+        "antwort": "Weil der Effekt von der Korrelation abhängt - zwei gleich riskante, aber perfekt positiv korrelierte Anlagen diversifizieren überhaupt nicht."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "rechnen",
+    "schwer": 3,
+    "thema": "Portfolio",
+    "frage": "Zwei Anlagen sind perfekt negativ korreliert (k=-1) mit σ_A=20,0% und σ_B=10,0%. Welcher Portfolioanteil w_A der Anlage A führt zu einem risikolosen Portfolio (σP=0)? Geben Sie w_A in % an (eine Nachkommastelle).",
+    "loesung": "33.3",
+    "einheit": "%",
+    "schritte": [
+      "Bei k=-1 wird σP = | w_A·σ_A - w_B·σ_B | mit w_B = 1 - w_A. Risikolos heißt: w_A·σ_A = w_B·σ_B.",
+      "Einsetzen: w_A·σ_A = (1 - w_A)·σ_B  ->  w_A·σ_A + w_A·σ_B = σ_B  ->  w_A = σ_B/(σ_A+σ_B).",
+      "w_A = 0,10 / (0,20 + 0,10) = 0,10/0,30 = 0,3333.",
+      "w_A = 33,3% (und w_B = 66,7%)."
+    ],
+    "vertiefung": "Bei perfekt negativer Korrelation existiert genau eine Mischung, deren Schwankungen sich vollständig aufheben - das Nullrisiko-Portfolio mit σP=0. Die Gewichtung ist umgekehrt proportional zu den Einzelrisiken: die riskantere Anlage erhält das kleinere Gewicht. Dies markiert den linken Endpunkt (Scheitelpunkt) der Effizienzkurve im µ-σ-Diagramm. Quelle: Markowitz-Portfoliotheorie.",
+    "folgefragen": [
+      {
+        "frage": "Welche erwartete Rendite hat dieses Nullrisiko-Portfolio bei µ_A=8% und µ_B=5%?",
+        "antwort": "µP = 1/3·8% + 2/3·5% = 6,0% - eine risikolose Rendite trotz zweier riskanter Einzelanlagen."
+      },
+      {
+        "frage": "Was stellt die Effizienzkurve dar?",
+        "antwort": "Die Menge aller Portfolios mit maximaler Rendite je Risikoniveau (bzw. minimalem Risiko je Renditeniveau); rationale Anleger wählen nur Punkte auf diesem effizienten Rand."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "rechnen",
+    "schwer": 1,
+    "thema": "ROI/Finanzierung",
+    "frage": "Nach dem DuPont-/ROI-Schema gilt: ROI = Umsatzrendite × Kapitalumschlag. Die Umsatzrendite beträgt 5,0%, der Kapitalumschlag 2,5. Berechnen Sie den ROI (in % mit einer Nachkommastelle).",
+    "loesung": "12.5",
+    "einheit": "%",
+    "schritte": [
+      "ROI (Return on Investment) = Umsatzrendite × Kapitalumschlag.",
+      "Umsatzrendite = Gewinn/Umsatz = 5,0% = 0,05.",
+      "Kapitalumschlag = Umsatz/investiertes Kapital = 2,5.",
+      "ROI = 0,05 · 2,5 = 0,125 = 12,5%."
+    ],
+    "vertiefung": "Das DuPont-Schema zerlegt den ROI multiplikativ in eine Margen- (Umsatzrendite) und eine Umschlagskomponente (Kapitalumschlag). Es zeigt, dass ein gegebener ROI über hohe Margen bei niedrigem Umschlag oder umgekehrt erreichbar ist. In der Bank-Variante (ROI-Schema nach Schierenbeck) wird analog die Eigenkapitalrentabilität in Bruttoertragsspanne, Bedarfsspanne und Kapitalstruktur zerlegt. Quelle: Wiedemann, FS 1 (ROI-Schema).",
+    "folgefragen": [
+      {
+        "frage": "Welche zwei Stellhebel des ROI macht das DuPont-Schema sichtbar?",
+        "antwort": "Die Umsatzrendite (Margenhebel) und den Kapitalumschlag (Effizienz-/Umschlagshebel)."
+      },
+      {
+        "frage": "Wie wirkt sich ein höherer Kapitalumschlag bei konstanter Marge aus?",
+        "antwort": "Der ROI steigt proportional, da bei gleicher Marge mehr Umsatz je gebundenem Kapital erzielt wird."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "rechnen",
+    "schwer": 2,
+    "thema": "ROI/Finanzierung",
+    "frage": "Eine Investition erwirtschaftet eine Gesamtkapitalrentabilität von 10,0%. Sie wird mit 1.000.000 EUR Eigenkapital und 3.000.000 EUR Fremdkapital zu 6,0% Fremdkapitalzins finanziert. Berechnen Sie die Eigenkapitalrentabilität nach dem Leverage-Effekt (in % mit einer Nachkommastelle).",
+    "loesung": "22.0",
+    "einheit": "%",
+    "schritte": [
+      "Leverage-Formel: r_EK = r_GK + (r_GK - r_FK) · (FK/EK).",
+      "Verschuldungsgrad FK/EK = 3.000.000 / 1.000.000 = 3.",
+      "Differenz (r_GK - r_FK) = 10,0% - 6,0% = 4,0%.",
+      "r_EK = 10,0% + 4,0% · 3 = 10,0% + 12,0% = 22,0%."
+    ],
+    "vertiefung": "Der Leverage-Effekt hebelt die EK-Rentabilität, solange die Gesamtkapitalrentabilität über dem Fremdkapitalzins liegt (r_GK > r_FK). Jeder zusätzliche Verschuldungsgrad multipliziert die positive Differenz. Kehrt sich das Verhältnis um (r_GK < r_FK), wirkt der Hebel negativ und drückt die EK-Rentabilität unter r_GK (Leverage-Risiko). Im Banken-ROI erklärt dies, warum eine niedrige Eigenkapitalquote die EK-Rentabilität hebelt. Quelle: Wiedemann, Leverage-Effekt.",
+    "folgefragen": [
+      {
+        "frage": "Bei welchem Fremdkapitalzins kippt der Leverage-Effekt ins Negative?",
+        "antwort": "Sobald der FK-Zins die Gesamtkapitalrentabilität übersteigt - hier ab über 10,0%; bei genau 10,0% (= r_GK) ist die Hebelwirkung null."
+      },
+      {
+        "frage": "Warum ist hoher Leverage zugleich riskant?",
+        "antwort": "Weil derselbe Hebel bei sinkender Gesamtkapitalrentabilität die EK-Rentabilität überproportional einbrechen lässt - Chancen und Risiken werden gleichermaßen verstärkt."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "ROI/Finanzierung",
+    "frage": "Bis zu welchem Fremdkapitalzins wirkt eine zusätzliche Verschuldung positiv auf die Eigenkapitalrentabilität (positiver Leverage-Effekt)?",
+    "optionen": [
+      "Solange der Fremdkapitalzins die bisherige Eigenkapitalrentabilität deutlich übersteigt",
+      "Solange der Fremdkapitalzins der durchschnittlichen Umsatzrendite der Branche entspricht",
+      "Solange der Fremdkapitalzins oberhalb des aktuellen Notenbank-Leitzinssatzes notiert",
+      "Solange der Fremdkapitalzins unterhalb der Gesamtkapitalrentabilität liegt"
+    ],
+    "richtig": 3,
+    "erkl": "Der Leverage-Effekt ist positiv, solange r_GK > r_FK. Nur dann erhöht zusätzliches, billigeres Fremdkapital die EK-Rentabilität. Die Grenze ist die Gesamtkapitalrentabilität selbst - Leitzins, bisherige EK-Rentabilität oder Umsatzrendite sind hier nicht der Maßstab.",
+    "vertiefung": "Die Bedingung r_GK > r_FK ist das Herzstück des Leverage-Effekts. Bei r_GK = r_FK ist der Effekt null (r_EK = r_GK), darüber hinaus kehrt er sich um. Damit ist die Gesamtkapitalrentabilität die kritische Obergrenze für den Fremdkapitalzins, ab der sich Verschuldung lohnt. Die Sensitivität wächst mit dem Verschuldungsgrad.",
+    "folgefragen": [
+      {
+        "frage": "Was passiert bei r_GK = r_FK?",
+        "antwort": "Der Leverage-Effekt ist null; die EK-Rentabilität entspricht exakt der Gesamtkapitalrentabilität, unabhängig vom Verschuldungsgrad."
+      },
+      {
+        "frage": "Warum ist nicht der Leitzins die Grenze?",
+        "antwort": "Weil es auf die tatsächlichen Fremdkapitalkosten der Bank/des Unternehmens ankommt, nicht auf den Leitzins; entscheidend ist der Vergleich r_GK vs. r_FK."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "OpRisk",
+    "frage": "Aus welchen beiden Bausteinen setzt sich die Eigenmittelanforderung für operationelle Risiken im neuen Standardansatz (ab 2025) zusammen?",
+    "optionen": [
+      "Aus dem Value at Risk und einem zusätzlichen aufsichtlichen Stressaufschlag",
+      "Aus dem Geschäftsindikator BIC und dem internen Verlustmultiplikator ILM",
+      "Aus der risikogewichteten Bilanzsumme und einem festen Solvabilitätskoeffizienten",
+      "Aus der Ausfallwahrscheinlichkeit PD und der Verlustquote LGD je Engagement"
+    ],
+    "richtig": 1,
+    "erkl": "Der neue OpRisk-Standardansatz (CRR III, ab 2025) ersetzt Basis-, Standard- und AMA-Ansatz durch eine Formel: Eigenmittelanforderung = BIC × ILM. Der BIC (Business Indicator Component) basiert auf GuV-Größen, der ILM (Internal Loss Multiplier) auf historischen Verlustdaten. PD/LGD gehören zum Kreditrisiko.",
+    "vertiefung": "Der Geschäftsindikator BIC bündelt Zins-, Dienstleistungs- und Finanzkomponente aus der GuV und wird über Buckets gestaffelt. Der ILM verknüpft den BIC mit dem Durchschnitt der historischen jährlichen Verluste (Loss Component, i.d.R. 10-Jahres-Historie); er kann den Kapitalbedarf je nach Verlusterfahrung erhöhen oder senken. National besteht das Wahlrecht, den ILM auf 1 zu setzen. Der bisherige fortgeschrittene Messansatz (AMA) entfällt.",
+    "folgefragen": [
+      {
+        "frage": "Welche GuV-Komponenten stecken im BIC?",
+        "antwort": "Die Zinskomponente (Interest, Leases, Dividends), die Dienstleistungskomponente (Services) und die Finanzkomponente (Financial) - jeweils als Mehrjahresdurchschnitt."
+      },
+      {
+        "frage": "Wozu dient der ILM?",
+        "antwort": "Er skaliert den Kapitalbedarf anhand der bankindividuellen historischen Verlusterfahrung; hohe Vergangenheitsverluste erhöhen tendenziell die Anforderung."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "OpRisk",
+    "frage": "Welche Rolle spielt eine interne Verlustdatenbank im Management operationeller Risiken?",
+    "optionen": [
+      "Sie ersetzt vollständig jede qualitative Risikoinventur und Szenarioanalyse der Bank",
+      "Sie dokumentiert ausschließlich Marktwertverluste aus dem Handelsbuch der Bank",
+      "Sie erfasst eingetretene OpRisk-Schadensfälle als Basis für Steuerung und Kapital",
+      "Sie speichert primär die Ausfallhistorie einzelner Kreditnehmer zur PD-Schätzung"
+    ],
+    "richtig": 2,
+    "erkl": "Die interne Verlustdatenbank sammelt eingetretene operationelle Schadensfälle (Betrug, Prozessfehler, IT-Ausfälle etc.). Sie ist Grundlage für Analyse, Steuerung und - über die Loss Component/ILM - für den Kapitalbedarf. Markt- und Kreditrisiken gehören nicht hierher; qualitative Verfahren bleiben ergänzend nötig.",
+    "vertiefung": "Verlustdaten sind das Rückgrat des OpRisk-Managements: Häufigkeit und Höhe realisierter Schäden werden nach Ereigniskategorien und Geschäftsfeldern erfasst. Sie speisen die Loss Component des neuen Standardansatzes (ILM) und ermöglichen Ursachenanalyse, Frühwarnung und gezielte Maßnahmen. Ergänzt werden sie um externe Daten, Szenarioanalysen und Risikoindikatoren (KRI), da seltene Großschäden in der eigenen Historie unterrepräsentiert sein können.",
+    "folgefragen": [
+      {
+        "frage": "Warum reichen interne Verlustdaten allein nicht aus?",
+        "antwort": "Weil seltene Großschäden (Tail-Events) in der eigenen Historie oft fehlen; daher ergänzt man externe Daten und Szenarioanalysen."
+      },
+      {
+        "frage": "Wie fließen Verlustdaten in den Kapitalbedarf ein?",
+        "antwort": "Über die Loss Component bzw. den ILM des Standardansatzes, der die historische Verlusterfahrung mit dem Geschäftsindikator verknüpft."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "OpRisk",
+    "frage": "Wie werden ESG-Risiken aufsichtlich überwiegend in den bestehenden Risikorahmen eingeordnet?",
+    "optionen": [
+      "Als Treiber, die über bestehende Risikoarten wie OpRisk und Kreditrisiko wirken",
+      "Als völlig eigenständige, vierte Säule neben Kredit-, Markt- und operationellem Risiko",
+      "Als ausschließlich freiwillige Berichtspflicht ohne Relevanz für das Risikomanagement",
+      "Als reine Reputationsfrage ohne jeden Bezug zur Risikotragfähigkeit der Bank"
+    ],
+    "richtig": 0,
+    "erkl": "ESG-Risiken (insbesondere physische und transitorische Klimarisiken) gelten aufsichtlich nicht als neue Risikoart, sondern als Risikotreiber, die auf bestehende Kategorien wirken - z.B. über OpRisk (physische Schäden, Rechts-/Reputationsschäden) und Kreditrisiko (Bonitätsverschlechterung betroffener Branchen). Sie sind in MaRisk und Risikotragfähigkeit zu berücksichtigen.",
+    "vertiefung": "Die EBA-Leitlinien und die MaRisk (AT 2.2, AT 4.3) verlangen die Integration von ESG-Risiken in das bestehende Risikomanagement, nicht deren separate Behandlung. Physische Risiken (Extremwetter -> Schäden, Betriebsunterbrechung) schlagen u.a. ins OpRisk und in Sicherheitenwerte durch; transitorische Risiken (Regulierung, Technologiewandel) treffen v.a. Kreditrisiko und Geschäftsmodell. Erforderlich sind Wesentlichkeitsanalyse, Szenarioanalysen und ein angemessener Zeithorizont.",
+    "folgefragen": [
+      {
+        "frage": "Was unterscheidet physische von transitorischen Klimarisiken?",
+        "antwort": "Physische Risiken stammen aus klimabedingten Ereignissen (Hochwasser, Hitze); transitorische aus dem Anpassungsprozess (Politik, Recht, Technologie, Marktpräferenzen) hin zu einer kohlenstoffarmen Wirtschaft."
+      },
+      {
+        "frage": "Warum brauchen ESG-Risiken einen längeren Zeithorizont?",
+        "antwort": "Weil sich insbesondere Klimaeffekte über viele Jahre materialisieren und über die übliche kurzfristige Risikobetrachtung hinaus modelliert werden müssen."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "rechnen",
+    "schwer": 2,
+    "thema": "Statistik",
+    "frage": "Ein Handelsbuch-Portfolio hat einen Marktwert von 1.000.000 EUR und eine tägliche Renditevolatilität (σ) von 1,2%. Bei normalverteilten Renditen und einem Konfidenzniveau von 99% (z=2,33) berechnen Sie den 1-Tages-Value-at-Risk (auf volle EUR).",
+    "loesung": "27960",
+    "einheit": "EUR",
+    "schritte": [
+      "Parametrischer (Varianz-Kovarianz-)VaR: VaR = Position · σ · z(Konfidenz).",
+      "z-Quantil für 99% (einseitig) der Standardnormalverteilung = 2,33.",
+      "Absolute Tagesvolatilität in EUR: 1.000.000 · 0,012 = 12.000.",
+      "VaR = 12.000 · 2,33 = 27.960 EUR."
+    ],
+    "vertiefung": "Der Value at Risk gibt den Verlust an, der mit gegebener Wahrscheinlichkeit (hier 99%) innerhalb der Halteperiode nicht überschritten wird. Im parametrischen Ansatz ist er das Produkt aus Position, Volatilität und dem Quantil der Normalverteilung. Für längere Halteperioden skaliert man unter Wurzel-t-Regel: VaR(T) = VaR(1)·√T. Quelle: Wiedemann, FS 5 (VaR für Zinspositionen).",
+    "folgefragen": [
+      {
+        "frage": "Wie groß wäre der 10-Tages-VaR nach der Wurzel-t-Regel?",
+        "antwort": "27.960 · √10 = 27.960 · 3,162 = rund 88.417 EUR."
+      },
+      {
+        "frage": "Was bedeutet das 99%-Konfidenzniveau konkret?",
+        "antwort": "An durchschnittlich 1 von 100 Handelstagen ist mit einem Verlust zu rechnen, der den VaR übersteigt."
+      }
+    ]
+  },
+  {
+    "fach": "BWL",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Statistik",
+    "frage": "Was beschreibt eine positive Exzess-Kurtosis (Wölbung größer als bei der Normalverteilung) einer Renditeverteilung?",
+    "optionen": [
+      "Schwerere Ränder (fat tails) mit häufigeren extremen Ausschlägen als die Normalverteilung",
+      "Eine vollständig gleichverteilte Wahrscheinlichkeit über alle theoretisch möglichen Werte",
+      "Schmalere Verteilungsränder mit systematisch deutlich unterschätzten Extremverlustrisiken",
+      "Eine nach rechts verschobene, asymmetrische Lage (Schiefe) des Verteilungsschwerpunkts"
+    ],
+    "richtig": 0,
+    "erkl": "Hohe (Exzess-)Kurtosis bedeutet fat tails: extreme Ausschläge treten häufiger auf, als die Normalverteilung unterstellt. Das ist für das Risikomanagement zentral, weil normalverteilungsbasierte VaR-Modelle dann Tail-Risiken unterschätzen. Asymmetrie misst dagegen die Schiefe (Skewness).",
+    "vertiefung": "Empirische Finanzmarktrenditen sind typischerweise leptokurtisch (Exzess-Kurtosis > 0): Sie haben mehr Masse in der Mitte UND in den Rändern als die Glockenkurve. Folge: Crash-artige Verluste sind wahrscheinlicher, als ein Normalverteilungs-VaR nahelegt. Konsequenzen sind Stresstests, Backtesting und Ergänzung um Expected Shortfall, der die Verluste jenseits des VaR-Quantils mittelt. Die Schiefe (Skewness) ist davon zu trennen - sie misst die Asymmetrie.",
+    "folgefragen": [
+      {
+        "frage": "Warum sind fat tails für VaR-Modelle problematisch?",
+        "antwort": "Weil ein normalverteilungsbasierter VaR die Häufigkeit extremer Verluste unterschätzt; reale Überschreitungen treten öfter auf als modelliert."
+      },
+      {
+        "frage": "Welches Maß ergänzt den VaR bei fat tails sinnvoll?",
+        "antwort": "Der Expected Shortfall (Conditional VaR), der den erwarteten Verlust jenseits des VaR-Quantils erfasst und damit das Tail-Risiko besser abbildet."
+      }
+    ]
   }
 ];
 // ============ PW I (Rethmann Sicherungssystem + Meckbach IT-Prüfung + Färber Zinsswap) ============
@@ -4723,32 +5373,6 @@ const Q_PW2 = [
   {
     "fach": "PW II",
     "typ": "mc",
-    "schwer": 1,
-    "thema": "WpHG",
-    "frage": "Kommt das GwG (Geldwäschegesetz) laut Prüfungshinweisen in PW II dran?",
-    "optionen": [
-      "Nur in der mündlichen Prüfung",
-      "Nur im Fach Wirtschaftsrecht",
-      "Ja, als Klausurschwerpunkt",
-      "Nein, GwG kommt nicht dran"
-    ],
-    "richtig": 3,
-    "erkl": "Laut Prüfungshinweisen kommt GwG in PW II NICHT dran. Schwerpunkte: §25a/MaRisk, Risikokonzentration (Folie 32), RTF (Folie 140), WpHG (Folie 152).",
-    "vertiefung": "Laut den Prüfungshinweisen ist das GwG nicht Gegenstand der PW II; die Schwerpunkte liegen auf § 25a/MaRisk, Risikokonzentration, RTF und WpHG. Diese Abgrenzung ist klausurtaktisch wichtig, um den Lernfokus richtig zu setzen – gleichwohl bleibt das GwG materiell relevant (Geldwäscheprävention, § 25h KWG), nur eben nicht prüfungsgegenständlich in diesem Teil. Merkhilfe: 'GwG inhaltlich wichtig, hier aber nicht prüfungsrelevant'.",
-    "folgefragen": [
-      {
-        "frage": "Welche vier Schwerpunkte nennen die Prüfungshinweise für PW II?",
-        "antwort": "§ 25a/MaRisk, Risikokonzentration, Risikotragfähigkeit (RTF) und das WpHG."
-      },
-      {
-        "frage": "Welche KWG-Norm verknüpft Geldwäscheprävention mit der Geschäftsorganisation?",
-        "antwort": "§ 25h KWG (interne Sicherungsmaßnahmen gegen Geldwäsche/Terrorismusfinanzierung), der auf das GwG verweist – inhaltlich relevant, in PW II aber nicht Prüfungsgegenstand."
-      }
-    ]
-  },
-  {
-    "fach": "PW II",
-    "typ": "mc",
     "schwer": 2,
     "thema": "Adressenausfallprüfung",
     "frage": "Welche Risikovorsorge gilt bei latentem, nicht identifiziertem Kreditrisiko?",
@@ -4883,12 +5507,12 @@ const Q_PW2 = [
     "thema": "Risikokonzentration",
     "frage": "Wie definiert Art. 4 Abs. 1 Nr. 39 CRR die Gruppe verbundener Kunden (GvK)?",
     "optionen": [
-      "Ausschließlich das Vorliegen gemeinsamer Gesellschafter",
-      "Ausschließlich eine bestehende Liefer- und Leistungsbeziehung",
-      "Ausschließlich ein bestehender konzernrechtlicher Verbund",
-      "Beherrschungsverhältnis ODER wirtschaftliche Abhängigkeit"
+      "Allein das Vorliegen gemeinsamer Gesellschafter begründet stets eine GvK",
+      "Ein Beherrschungsverhältnis ODER eine wirtschaftliche Abhängigkeit",
+      "Eine reine Liefer-/Leistungsbeziehung genügt für sich genommen",
+      "Nur ein konzernrechtlicher Verbund i.S.d. §§ 15 ff. AktG"
     ],
-    "richtig": 3,
+    "richtig": 1,
     "erkl": "Art. 4 Abs. 1 Nr. 39 CRR: GvK durch Beherrschungsverhältnis ODER durch wirtschaftliche Abhängigkeit (Refinanzierungs-/Lieferverflechtung), sodass die finanzielle Schieflage des einen den anderen in Zahlungsschwierigkeiten bringt.",
     "vertiefung": "Art. 4 Abs. 1 Nr. 39 CRR definiert die Gruppe verbundener Kunden über zwei alternative Tatbestände: ein Beherrschungsverhältnis (Kontrolle, z.B. Mehrheitsbeteiligung) ODER eine wirtschaftliche Abhängigkeit (Refinanzierungs-/Lieferverflechtung), bei der die Schieflage des einen den anderen mitreißt. Zweck ist die Erfassung des tatsächlichen Klumpenrisikos über die rechtliche Einzelperson hinaus (Großkreditrecht). Merkhilfe: 'Beherrschung ODER Ansteckung über wirtschaftliche Abhängigkeit'.",
     "folgefragen": [
@@ -4923,12 +5547,12 @@ const Q_PW2 = [
     "thema": "Risikokonzentration",
     "frage": "Bei welchen MaRisk-Anforderungen sind Risikokonzentrationen zu berücksichtigen?",
     "optionen": [
-      "Ausschließlich im jährlichen Prüfungsplan der Internen Revision",
-      "Ausschließlich im Eigenhandels- und Handelsgeschäft der Bank",
-      "Ausschließlich bei der handelsrechtlichen Jahresabschluss-Bilanzierung",
-      "RTF, Risikostrategie, Steuerung, Berichterstattung, Stresstests"
+      "In RTF, Risikostrategie, Risikosteuerung, Berichterstattung und Stresstests",
+      "Allein im jährlichen Prüfungsplan der Internen Revision nach AT 4.4 MaRisk",
+      "Allein im Eigenhandel und in den Handelsgeschäften des Anlagebuchs der Bank",
+      "Allein in der handelsrechtlichen Jahresabschluss-Bilanzierung der Sparkasse"
     ],
-    "richtig": 3,
+    "richtig": 0,
     "erkl": "Risikokonzentrationen sind zu berücksichtigen bei: Sicherstellung der RTF, Beurteilung der Ertragssituation/Risikostrategie, Risikosteuerungs-/-controllingprozessen, Risikoberichterstattung an die Geschäftsleitung, Stresstests.",
     "vertiefung": "Risikokonzentrationen sind nach MaRisk querschnittlich zu berücksichtigen: bei der Sicherstellung der RTF, in Risikostrategie und Ertragsbeurteilung, in den Risikosteuerungs-/-controllingprozessen, in der Risikoberichterstattung an die Geschäftsleitung sowie in den Stresstests. Diese Durchgängigkeit verhindert, dass Klumpenrisiken durch isolierte Betrachtung untergehen. Merkhilfe: 'Konzentrationen ziehen sich durch den gesamten Risikomanagement-Kreislauf'.",
     "folgefragen": [
@@ -5317,6 +5941,578 @@ const Q_PW2 = [
       {
         "frage": "Was gilt, wenn der Kunde der Aufzeichnung widerspricht?",
         "antwort": "Die betroffene Dienstleistung darf telefonisch/elektronisch nicht erbracht werden – die Order muss dann über einen anderen, zulässigen Weg erfolgen."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "RTF",
+    "frage": "Über welchen Mindestzeithorizont muss die Kapitalplanung in der normativen Perspektive die Einhaltung der aufsichtlichen Eigenmittelvorschriften sicherstellen?",
+    "optionen": [
+      "Über mindestens fünf Jahre, da nur so eine adverse Entwicklung darstellbar ist",
+      "Über mindestens 36 Monate, also über drei Geschäftsjahre bzw. Bilanzstichtage",
+      "Über mindestens zwölf Monate, also über das laufende Geschäftsjahr hinweg",
+      "Über mindestens sieben Jahre analog zur strategischen Mehrjahresplanung"
+    ],
+    "richtig": 1,
+    "erkl": "Die Kapitalplanung muss über einen Zeithorizont von mindestens drei Jahren (36 Monaten) zeigen, dass die aufsichtlichen Eigenmittelanforderungen eingehalten werden. Fünf Jahre sind als Simulationshorizont möglich, aber nicht das aufsichtliche Minimum.",
+    "vertiefung": "Die normative Perspektive ist die periodisch-regulatorische Sicht. Kern ist die Kapitalplanung, die über mindestens 36 Monate (drei Bilanzstichtage) die kontinuierliche Erfüllung aller Eigenmittelanforderungen nachweist. Sie hängt von der GuV-Planung ab, weil dort das Thesaurierungspotenzial der Folgejahre geplant wird. Merkhilfe: normativ = drei Jahre Mindesthorizont, ökonomisch = ein Jahr barwertig.",
+    "folgefragen": [
+      {
+        "frage": "Wovon hängt die Kapitalplanung inhaltlich ab?",
+        "antwort": "Von der GuV-Planung, da dort das Thesaurierungspotenzial (Gewinnrücklagen) der kommenden Jahre geplant wird, das die Eigenmittel speist."
+      },
+      {
+        "frage": "Bis zu welchem Horizont kann simuliert werden?",
+        "antwort": "Der Planungshorizont kann auf bis zu fünf Jahre ausgedehnt werden; aufsichtliches Minimum sind aber 36 Monate."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "RTF",
+    "frage": "Für welche Szenarien ist die Kapitalplanung der normativen Perspektive mindestens aufzustellen?",
+    "optionen": [
+      "Für ein einziges, vorsichtig kalkuliertes regulatorisches Basisszenario",
+      "Für ein Planszenario sowie ein Best-Case- und ein Worst-Case-Szenario",
+      "Für drei voneinander unabhängige, gleich gewichtete Marktszenarien",
+      "Für ein Planszenario und mindestens ein adverses Szenario"
+    ],
+    "richtig": 3,
+    "erkl": "Die Kapitalplanung ist sowohl für ein Planszenario (Basisszenario) als auch für mindestens ein adverses Szenario aufzustellen. Ein Best-Case ist nicht gefordert; ein einzelnes Szenario genügt nicht.",
+    "vertiefung": "Das Basisszenario bildet die erwartete (geplante) Entwicklung ab. Das adverse Szenario unterstellt eine ungünstige, aber plausible Entwicklung (z.B. Konjunktureinbruch, Zinsschock) und prüft, ob die Kapitalanforderungen auch dann über den Planungshorizont eingehalten werden. Merkhilfe: Plan plus mindestens ein adverses Szenario.",
+    "folgefragen": [
+      {
+        "frage": "Was unterstellt das adverse Szenario?",
+        "antwort": "Eine ungünstige, aber plausible Entwicklung (z.B. Rezession, Zinsschock), um die Widerstandsfähigkeit der Kapitalausstattung zu testen."
+      },
+      {
+        "frage": "Worin unterscheidet sich das adverse Szenario vom Stresstest?",
+        "antwort": "Das adverse Kapitalplanungsszenario ist Teil der mehrjährigen normativen Planung; klassische Stresstests sind ergänzende, teils härtere Belastungsrechnungen (AT 4.3.3)."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 3,
+    "thema": "RTF",
+    "frage": "Welche Größen zählen zu den zentralen Steuerungsgrößen der normativen Perspektive?",
+    "optionen": [
+      "Allein das ökonomische Risikodeckungspotenzial bei einem Konfidenzniveau von 99,9 Prozent nach den aufsichtlichen Vorgaben",
+      "Kernkapitalanforderung, SREP-Gesamtkapitalanforderung, kombinierte Pufferanforderung und Eigenmittelzielkennziffer",
+      "Allein der barwertige Marktwert des Eigengeschäfts und der Liquiditätsbarwert",
+      "Erwarteter Verlust, unerwarteter Verlust und der Value-at-Risk des Kreditportfolios"
+    ],
+    "richtig": 1,
+    "erkl": "Relevante Steuerungsgrößen der normativen Perspektive sind die regulatorischen Kapitalgrößen: Kernkapitalanforderung, SREP-Gesamtkapitalanforderung, kombinierte Pufferanforderung und Eigenmittelzielkennziffer sowie Strukturanforderungen wie Verschuldungsquote und Großkreditgrenzen. Barwert und Konfidenz 99,9% gehören zur ökonomischen Perspektive.",
+    "vertiefung": "Die normative Perspektive arbeitet mit den regulatorischen Kapitalkennziffern. Neben den genannten Größen zählen auch Strukturanforderungen (Höchstverschuldungsquote/Leverage Ratio, Großkreditgrenzen) dazu. Demgegenüber stellt die ökonomische Perspektive barwertig RDP und Risiken gegenüber. Merkhilfe: normativ = regulatorische Kapitalquoten, ökonomisch = Barwerte.",
+    "folgefragen": [
+      {
+        "frage": "Nennen Sie zwei Strukturanforderungen der normativen Perspektive.",
+        "antwort": "Die Höchstverschuldungsquote (Leverage Ratio) und die Großkreditgrenzen."
+      },
+      {
+        "frage": "Welche Perspektive nutzt das Konfidenzniveau 99,9 Prozent?",
+        "antwort": "Die ökonomische Perspektive, die mit einem strengen, an Säule 1 angelehnten Konfidenzniveau quantifiziert."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "RTF",
+    "frage": "Welchen Risikobetrachtungshorizont und welches Konfidenzniveau verwendet die ökonomische Perspektive typischerweise?",
+    "optionen": [
+      "Drei Jahre Horizont bei einem Konfidenzniveau von 95 Prozent nach den aufsichtlichen Vorgaben",
+      "Ein Jahr Horizont bei einem strengen Konfidenzniveau von 99,9 Prozent",
+      "Fünf Jahre Horizont bei einem Konfidenzniveau von 99 Prozent",
+      "Ein Jahr Horizont bei einem Konfidenzniveau von 90 Prozent"
+    ],
+    "richtig": 1,
+    "erkl": "Die ökonomische Perspektive stellt barwertig ermitteltes RDP und Risiken über einen Risikobetrachtungshorizont von einem Jahr gegenüber und nutzt ein strenges, an Säule 1 angelehntes Konfidenzniveau von 99,9 Prozent.",
+    "vertiefung": "Die ökonomische (wertorientierte) Perspektive zielt auf den Gläubigerschutz und die langfristige Substanzsicherung. Sie quantifiziert Risiken mit strengen, auf seltene Verlustausprägungen abstellenden Maßen (Konfidenz 99,9%) über einen Einjahreshorizont und deckt sie mit dem gesamten ökonomischen RDP ab. Merkhilfe: ökonomisch = ein Jahr, 99,9 Prozent, Barwert, Gläubigerschutz.",
+    "folgefragen": [
+      {
+        "frage": "Welches Schutzziel verfolgt die ökonomische Perspektive?",
+        "antwort": "Den Schutz der Gläubiger vor ökonomischen Verlusten bzw. die langfristige Sicherung der Substanz des Instituts."
+      },
+      {
+        "frage": "Warum 99,9 Prozent?",
+        "antwort": "Weil ein strenges, auf seltene Verlustausprägungen abstellendes Konfidenzniveau analog zur Säule 1 unterstellt wird, um den Gläubigerschutz zu gewährleisten."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 3,
+    "thema": "RTF",
+    "frage": "Wie unterscheidet sich die ökonomische Ermittlung des Risikodeckungspotenzials von Rechnungslegung und aufsichtlichen Eigenmitteln?",
+    "optionen": [
+      "Sie beschränkt sich auf das harte Kernkapital nach den CRR-Vorgaben",
+      "Sie umfasst nur die regulatorisch anrechenbaren Eigenmittelbestandteile",
+      "Sie erfasst auch Bestandteile, die in Rechnungslegung und Eigenmitteln nicht oder nicht angemessen abgebildet werden",
+      "Sie ist identisch mit den bilanziellen Eigenmitteln, nur anders gegliedert nach den aufsichtlichen Vorgaben"
+    ],
+    "richtig": 2,
+    "erkl": "Die ökonomische Perspektive basiert auf der internen Methodik des Instituts. Auf Seite von RDP und Risiken ist eine ökonomische Betrachtung durchzuführen, die auch Bestandteile umfasst, die in Rechnungslegung und aufsichtlichen Eigenmittelanforderungen nicht oder nicht angemessen abgebildet werden.",
+    "vertiefung": "Das ökonomische RDP wird barwertig hergeleitet (z.B. risikoloser Barwert Kundengeschäft, Marktwert Eigengeschäft, Barwerte von Verwaltungskosten/Provisionen, stille Reserven/Lasten). Es weicht damit bewusst von Bilanz und CRR-Eigenmitteln ab, weil es die tatsächliche ökonomische Substanz abbilden soll. Merkhilfe: ökonomisches RDP = Barwertbetrachtung über die Bilanz hinaus.",
+    "folgefragen": [
+      {
+        "frage": "Nennen Sie einen typischen Bestandteil des ökonomischen RDP.",
+        "antwort": "Z.B. der risikolose Barwert des Kundengeschäfts, der Marktwert des Eigengeschäfts oder stille Reserven; abzüglich Barwerten von Verwaltungskosten."
+      },
+      {
+        "frage": "Worauf basiert die ökonomische Perspektive methodisch?",
+        "antwort": "Auf der internen (wertorientierten/barwertigen) Methodik des Instituts, nicht auf der Rechnungslegung."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "RTF",
+    "frage": "Welche Aussage zum Verhältnis von normativer und ökonomischer Perspektive trifft zu?",
+    "optionen": [
+      "Beide Perspektiven sind nebeneinander einzurichten und stehen in Wechselwirkung",
+      "Die normative Perspektive ist nur für bedeutende Institute verpflichtend",
+      "Die ökonomische Perspektive ersetzt seit dem Leitfaden 2018 die normative nach den aufsichtlichen Vorgaben",
+      "Beide Perspektiven dürfen wahlweise alternativ angewendet werden"
+    ],
+    "richtig": 0,
+    "erkl": "Nach MaRisk AT 4.1 Tz. 2 sind Verfahren zur Sicherstellung der RTF sowohl aus der normativen als auch aus der ökonomischen Perspektive einzurichten. Beide bestehen nebeneinander und wirken aufeinander ein; keine ersetzt die andere.",
+    "vertiefung": "Der ICAAP-Leitfaden der BaFin/Bundesbank (2018) hat die Zwei-Perspektiven-Konzeption eingeführt. Beide Sichten ergänzen sich: Erkenntnisse der ökonomischen Perspektive fließen in die normative ein (z.B. über die Festlegung von Risikopuffern/adverse Szenarien) und umgekehrt. AT 4.1 Tz. 2 fordert beide ausdrücklich. Merkhilfe: zwei Perspektiven, eine RTF, gegenseitige Wechselwirkung.",
+    "folgefragen": [
+      {
+        "frage": "Welche MaRisk-Ziffer fordert beide Perspektiven?",
+        "antwort": "AT 4.1 Tz. 2 verlangt Verfahren zur Sicherstellung der Risikotragfähigkeit aus normativer und ökonomischer Perspektive."
+      },
+      {
+        "frage": "Woher stammt die Zwei-Perspektiven-Konzeption?",
+        "antwort": "Aus dem ICAAP-Leitfaden zur aufsichtlichen Beurteilung bankinterner Risikotragfähigkeitskonzepte (BaFin/Bundesbank, 2018)."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 3,
+    "thema": "RTF",
+    "frage": "Was beschreibt die Eigenmittelzielkennziffer bzw. die Eigenmittelempfehlung (P2G) im Rahmen der normativen Steuerung?",
+    "optionen": [
+      "Den harten Mindestbetrag des Kernkapitals nach Säule 1 der CRR",
+      "Die Höhe des antizyklischen Kapitalpuffers in einem konkreten Land",
+      "Eine rechtsverbindliche Mindestquote, deren Unterschreitung sofort Sanktionen auslöst nach den aufsichtlichen Vorgaben",
+      "Eine aufsichtliche Empfehlung an Eigenmitteln oberhalb der bindenden Anforderungen als Puffer"
+    ],
+    "richtig": 3,
+    "erkl": "Die Eigenmittelempfehlung (Pillar 2 Guidance, P2G) bzw. Eigenmittelzielkennziffer ist eine aufsichtliche Empfehlung, Eigenmittel oberhalb der bindenden Anforderungen (Säule-1-Minimum, P2R, kombinierte Pufferanforderung) vorzuhalten. Sie ist nicht rechtsverbindlich, ihre Unterschreitung löst aber aufsichtliche Aufmerksamkeit aus.",
+    "vertiefung": "Die Kapitalanforderungen schichten sich: Säule-1-Mindestanforderung, SREP-Zuschlag (P2R, bindend), kombinierte Pufferanforderung, darüber die Eigenmittelempfehlung P2G (Guidance, nicht bindend). Ein Unterschreiten der P2G führt nicht automatisch zu Maßnahmen, aber zu intensiverem Aufsichtsdialog. Merkhilfe: P2R bindend, P2G empfohlen.",
+    "folgefragen": [
+      {
+        "frage": "Ist die P2G rechtlich bindend?",
+        "antwort": "Nein, sie ist eine Empfehlung (Guidance) oberhalb der bindenden Anforderungen; ihre Unterschreitung zieht aber aufsichtliche Reaktionen nach sich."
+      },
+      {
+        "frage": "Wie verhält sich die P2G zur SREP-Anforderung (P2R)?",
+        "antwort": "Die P2R ist Teil der bindenden SREP-Gesamtkapitalanforderung; die P2G liegt als zusätzliche, nicht bindende Empfehlung darüber."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "RTF",
+    "frage": "Was umfasst die SREP-Gesamtkapitalanforderung gegenüber der reinen Säule-1-Mindestanforderung?",
+    "optionen": [
+      "Allein die kombinierte Pufferanforderung (ohne Säule-1-Anteil)",
+      "Die Summe aus Leverage Ratio (LR) und Liquiditätsdeckungsquote (LCR)",
+      "Nur antizyklischer und Kapitalerhaltungspuffer (ohne weitere Zuschläge)",
+      "Säule-1-Mindestanforderung zuzüglich SREP-Zuschlag (P2R, institutsindividuell)"
+    ],
+    "richtig": 3,
+    "erkl": "Die SREP-Gesamtkapitalanforderung (Total SREP Capital Requirement) setzt sich aus der Säule-1-Mindestanforderung (8 Prozent) und dem institutsindividuellen Zuschlag aus dem aufsichtlichen Überprüfungsprozess (P2R) zusammen. Die kombinierte Pufferanforderung kommt zusätzlich obendrauf.",
+    "vertiefung": "Der SREP (Supervisory Review and Evaluation Process) führt zu einem institutsindividuellen Kapitalzuschlag (P2R) für Risiken, die durch Säule 1 nicht ausreichend abgedeckt sind. Aufbau: Säule-1-Minimum + P2R = SREP-Gesamtkapitalanforderung; darüber kombinierte Pufferanforderung; darüber die Empfehlung P2G. Merkhilfe: SREP-Anforderung = Säule 1 plus P2R.",
+    "folgefragen": [
+      {
+        "frage": "Was steht oberhalb der SREP-Gesamtkapitalanforderung?",
+        "antwort": "Die kombinierte Pufferanforderung und darüber die Eigenmittelempfehlung (P2G)."
+      },
+      {
+        "frage": "Wofür dient der P2R-Zuschlag?",
+        "antwort": "Zur Abdeckung institutsindividueller Risiken, die in der Säule 1 nicht oder nicht ausreichend berücksichtigt sind."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "§25a/MaRisk",
+    "frage": "Wer ist nach § 25a Abs. 1 KWG für die ordnungsgemäße Geschäftsorganisation des Instituts verantwortlich?",
+    "optionen": [
+      "Die Geschäftsleiter, die die erforderlichen institutsinternen Vorgaben ausarbeiten",
+      "Die Compliance-Funktion als zentrale Kontrollinstanz des Instituts",
+      "Die Interne Revision im Rahmen ihrer prozessunabhängigen Prüfungen",
+      "Der Abschlussprüfer als Teil der gesetzlichen Jahresabschlussprüfung im Sinne der einschlägigen Regelungen"
+    ],
+    "richtig": 0,
+    "erkl": "Nach § 25a Abs. 1 KWG sind die Geschäftsleiter für die ordnungsgemäße Geschäftsorganisation verantwortlich; sie haben die erforderlichen Maßnahmen für die institutsinternen Vorgaben zu ergreifen. Diese Verantwortung ist nicht delegierbar.",
+    "vertiefung": "§ 25a Abs. 1 KWG verlangt eine ordnungsgemäße Geschäftsorganisation mit angemessenem und wirksamem Risikomanagement, auf dessen Basis die RTF laufend sicherzustellen ist. Die Gesamtverantwortung der Geschäftsleitung ist auch in MaRisk AT 3 verankert und nicht delegierbar. Interne Revision und Compliance sind unterstützende Funktionen, tragen aber nicht die Gesamtverantwortung. Merkhilfe: Geschäftsleitung trägt die nicht delegierbare Gesamtverantwortung.",
+    "folgefragen": [
+      {
+        "frage": "In welcher MaRisk-Ziffer ist die Gesamtverantwortung der Geschäftsleitung geregelt?",
+        "antwort": "In AT 3 (Gesamtverantwortung der Geschäftsleitung)."
+      },
+      {
+        "frage": "Ist diese Verantwortung delegierbar?",
+        "antwort": "Nein, die Gesamtverantwortung für die ordnungsgemäße Geschäftsorganisation verbleibt bei der Geschäftsleitung."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "§25a/MaRisk",
+    "frage": "Welche Zuordnung der drei Verteidigungslinien (Three Lines of Defence) ist zutreffend?",
+    "optionen": [
+      "Erste Linie Geschäftsleitung, zweite Linie Aufsichtsorgan, dritte Linie externe Aufsicht",
+      "Erste Linie operative Bereiche, zweite Linie Risikocontrolling/Compliance, dritte Linie Interne Revision",
+      "Erste Linie Compliance, zweite Linie Interne Revision, dritte Linie Abschlussprüfer",
+      "Erste Linie Interne Revision, zweite Linie operative Bereiche, dritte Linie Geschäftsleitung im Sinne der einschlägigen Regelungen"
+    ],
+    "richtig": 1,
+    "erkl": "Im Three-Lines-of-Defence-Modell bilden die operativen Markt-/Geschäftsbereiche die erste Linie, Risikocontrolling- und Compliance-Funktion die zweite Linie und die Interne Revision als prozessunabhängige Instanz die dritte Linie.",
+    "vertiefung": "Die erste Linie steuert Risiken direkt im Tagesgeschäft. Die zweite Linie (Risikocontrolling-Funktion AT 4.4.1, Compliance-Funktion AT 4.4.2) überwacht und begrenzt prozessbegleitend. Die dritte Linie (Interne Revision AT 4.4.3/BT 2) prüft prozessunabhängig die Wirksamkeit der ersten beiden Linien. Merkhilfe: First steuert, Second überwacht, Third prüft unabhängig.",
+    "folgefragen": [
+      {
+        "frage": "Welcher Linie ist die Risikocontrolling-Funktion zugeordnet?",
+        "antwort": "Der zweiten Verteidigungslinie (gemeinsam mit der Compliance-Funktion)."
+      },
+      {
+        "frage": "Was kennzeichnet die dritte Linie?",
+        "antwort": "Prozessunabhängigkeit: Die Interne Revision prüft losgelöst vom operativen Prozess die Wirksamkeit der Steuerungs- und Kontrollvorkehrungen."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "§25a/MaRisk",
+    "frage": "Welche Aufgabe hat die Compliance-Funktion nach MaRisk AT 4.4.2 schwerpunktmäßig?",
+    "optionen": [
+      "Die abschließende Bewertung und Bilanzierung der Risikovorsorge",
+      "Die Festlegung der Geschäfts- und Risikostrategie des Instituts",
+      "Das Hinwirken auf Implementierung wirksamer Verfahren zur Einhaltung wesentlicher rechtlicher Regelungen",
+      "Die prozessunabhängige nachträgliche Prüfung aller Geschäftsbereiche im Sinne der einschlägigen Regelungen"
+    ],
+    "richtig": 2,
+    "erkl": "Die Compliance-Funktion (AT 4.4.2) wirkt präventiv darauf hin, dass wirksame Verfahren zur Einhaltung der für das Institut wesentlichen rechtlichen Regelungen und Vorgaben implementiert sind und entsprechende Risiken begrenzt werden. Die prozessunabhängige Prüfung obliegt der Internen Revision.",
+    "vertiefung": "Compliance ist Teil der zweiten Verteidigungslinie und arbeitet präventiv/begleitend. Sie identifiziert wesentliche rechtliche Risiken und wirkt auf Gegenmaßnahmen hin. Die Strategiefestlegung ist Sache der Geschäftsleitung (AT 4.2), die unabhängige Nachprüfung Sache der Internen Revision (AT 4.4.3). Merkhilfe: Compliance beugt vor, Revision prüft unabhängig nach.",
+    "folgefragen": [
+      {
+        "frage": "Worin unterscheiden sich Compliance und Interne Revision?",
+        "antwort": "Compliance wirkt präventiv (zweite Linie), die Interne Revision prüft prozessunabhängig und nachgelagert (dritte Linie)."
+      },
+      {
+        "frage": "Welche MaRisk-Ziffer regelt die Compliance-Funktion?",
+        "antwort": "AT 4.4.2."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "§25a/MaRisk",
+    "frage": "Welche Anforderung stellt MaRisk AT 4.2 an die Strategien des Instituts?",
+    "optionen": [
+      "Die Strategie ist ausschließlich dem Aufsichtsorgan, nicht der Geschäftsleitung zuzuordnen",
+      "Die Risikostrategie muss konsistent zur nachhaltig ausgerichteten Geschäftsstrategie sein",
+      "Die Geschäftsstrategie muss jährlich vollständig durch die Aufsicht genehmigt werden",
+      "Eine Risikostrategie ist nur bei wesentlichen Adressenausfallrisiken erforderlich"
+    ],
+    "richtig": 1,
+    "erkl": "Nach AT 4.2 (und § 25a Abs. 1 KWG) ist eine auf nachhaltige Entwicklung gerichtete Geschäftsstrategie und eine dazu konsistente Risikostrategie festzulegen, samt Prozessen zur Planung, Umsetzung, Beurteilung und Anpassung. Die Risikostrategie ist nicht auf einzelne Risikoarten beschränkt.",
+    "vertiefung": "AT 4.2 verlangt einen durchgängigen Strategieprozess: Die Risikostrategie konkretisiert, welche Risiken in welchem Umfang eingegangen werden, und muss zur Geschäftsstrategie passen (Konsistenzgebot). Die Geschäftsleitung trägt die Verantwortung und informiert das Aufsichtsorgan. Merkhilfe: Geschäftsstrategie und konsistente Risikostrategie, regelmäßig überprüft.",
+    "folgefragen": [
+      {
+        "frage": "Was bedeutet das Konsistenzgebot?",
+        "antwort": "Geschäfts- und Risikostrategie müssen widerspruchsfrei aufeinander abgestimmt sein; die eingegangenen Risiken müssen zur verfolgten Geschäftsstrategie passen."
+      },
+      {
+        "frage": "Welche Prozesse fordert AT 4.2?",
+        "antwort": "Prozesse zur Planung, Umsetzung, Beurteilung und Anpassung der Strategien."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "§25a/MaRisk",
+    "frage": "Welche Aussage zur Auslagerung nach MaRisk AT 9 trifft zu?",
+    "optionen": [
+      "Bei wesentlichen Auslagerungen bleibt die Verantwortung der Geschäftsleitung bestehen, Risiken sind zu steuern",
+      "Mit der Auslagerung geht auch die Letztverantwortung der Geschäftsleitung auf den Dienstleister über im Sinne der einschlägigen Regelungen",
+      "Eine Risikoanalyse ist nur bei der erstmaligen Auslagerung, nie bei Vertragsänderungen nötig",
+      "Die Auslagerung von Kontrollbereichen ist generell und ausnahmslos untersagt"
+    ],
+    "richtig": 0,
+    "erkl": "Nach AT 9 verbleibt auch bei (wesentlichen) Auslagerungen die Verantwortung der Geschäftsleitung beim auslagernden Institut. Vor der Auslagerung ist eine Risikoanalyse durchzuführen; Risiken sind angemessen zu steuern und zu überwachen. Eine Letztverantwortung geht nicht über.",
+    "vertiefung": "AT 9 unterscheidet wesentliche und unwesentliche Auslagerungen (Einstufung über die Risikoanalyse). Bei wesentlichen Auslagerungen sind u.a. vertragliche Informations-/Prüfungsrechte, ein Auslagerungsbeauftragter und ein zentrales Auslagerungsmanagement vorzusehen. Die Gesamtverantwortung bleibt stets beim Institut. Merkhilfe: Auslagern ja, Verantwortung abgeben nein.",
+    "folgefragen": [
+      {
+        "frage": "Was entscheidet über die Einstufung als wesentliche Auslagerung?",
+        "antwort": "Die im Vorfeld durchzuführende Risikoanalyse der jeweiligen Auslagerung."
+      },
+      {
+        "frage": "Geht mit der Auslagerung die Verantwortung über?",
+        "antwort": "Nein, die Gesamtverantwortung der Geschäftsleitung bleibt beim auslagernden Institut."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 3,
+    "thema": "§25a/MaRisk",
+    "frage": "Wie verhalten sich das Notfallmanagement nach MaRisk AT 7.3 und die Anforderungen der DORA zueinander?",
+    "optionen": [
+      "Beide Regelwerke gelten ausschließlich für kapitalmarktorientierte Großbanken",
+      "Notfallmanagement betrifft nur Personalausfälle, DORA nur die Vergütungssysteme",
+      "AT 7.3 fordert ein angemessenes Notfallmanagement, das durch die DORA-Vorgaben zur digitalen operationalen Resilienz ergänzt wird",
+      "DORA hebt das Notfallmanagement vollständig auf und ersetzt jegliche MaRisk-Vorgaben im Sinne der einschlägigen Regelungen"
+    ],
+    "richtig": 2,
+    "erkl": "AT 7.3 verlangt ein angemessenes Notfallmanagement, insbesondere für zeitkritische Prozesse und IT-Systeme. Die EU-Verordnung DORA (Digital Operational Resilience Act) konkretisiert und erweitert die Anforderungen an die digitale operationale Resilienz (IKT-Risiko, Tests, Drittparteienmanagement).",
+    "vertiefung": "Notfallmanagement (AT 7.3) zielt auf die Fortführung des Geschäftsbetriebs bei Störungen (Notfallkonzepte, Wiederanlaufpläne, Tests). DORA setzt als unmittelbar geltende EU-Verordnung einen umfassenden Rahmen für das Management von IKT-Risiken, Vorfallmeldungen, Resilienztests und das Management von IKT-Drittdienstleistern. Beide ergänzen sich. Merkhilfe: AT 7.3 nationale Basis, DORA europäischer IKT-Resilienzrahmen.",
+    "folgefragen": [
+      {
+        "frage": "Worauf zielt das Notfallmanagement nach AT 7.3?",
+        "antwort": "Auf die Aufrechterhaltung bzw. den geordneten Wiederanlauf zeitkritischer Aktivitäten und Prozesse bei Störungen, insbesondere der IT-Systeme."
+      },
+      {
+        "frage": "Was regelt DORA schwerpunktmäßig?",
+        "antwort": "Die digitale operationale Resilienz: IKT-Risikomanagement, Vorfallmeldungen, Resilienztests und das Management von IKT-Drittdienstleistern."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Risikokonzentration",
+    "frage": "Wie definieren die MaRisk (AT 2.2) Risikokonzentrationen?",
+    "optionen": [
+      "Als ausschließlich auf einzelne Großkreditnehmer bezogene Klumpenrisiken",
+      "Als Häufungen von Risikopositionen, die bei bestimmten Entwicklungen oder Ereignissen in gleicher Weise reagieren",
+      "Als die Summe aller im Anlagebuch gehaltenen Marktpreisrisikopositionen",
+      "Als jede Überschreitung der aufsichtlichen Großkreditobergrenze nach der CRR im aufsichtlichen Kontext"
+    ],
+    "richtig": 1,
+    "erkl": "Risikokonzentrationen sind nach AT 2.2 Häufungen von Risikopositionen, die beim Eintreten bestimmter Entwicklungen oder eines bestimmten Ereignisses (z.B. Ausfall eines Kreditnehmers) in gleicher Weise (gleichgerichtet) reagieren. Großkreditgrenzen sind eine aufsichtliche Begrenzung, decken aber nicht den Begriff ab.",
+    "vertiefung": "Gefährlich an Konzentrationen ist der Gleichlauf: Diversifikationseffekte entfallen, viele Positionen brechen zugleich weg. Auslöser sind gemeinsame Risikofaktoren oder die Interaktion verschiedener Faktoren. Erfasst sind u.a. Adress-, Branchen-, Regionen- und Sicherheitenkonzentrationen sowie einzelne Klumpenrisiken. Merkhilfe: Konzentration = gleichgerichtete Reaktion bei einem Auslöser.",
+    "folgefragen": [
+      {
+        "frage": "Warum sind Konzentrationen besonders riskant?",
+        "antwort": "Weil bei Eintritt des auslösenden Ereignisses viele Positionen gleichgerichtet reagieren und Diversifikationseffekte wegfallen."
+      },
+      {
+        "frage": "Welche Konzentrationsarten gibt es im Adressenausfallrisiko?",
+        "antwort": "Adressen-, Sektor-/Branchen-, Regionen-, Größenklassen- und Sicherheitenkonzentrationen sowie einzelne Klumpenrisiken."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 3,
+    "thema": "Risikokonzentration",
+    "frage": "Worin unterscheiden sich Intra- und Inter-Risikokonzentrationen?",
+    "optionen": [
+      "Intra betrifft nur das Handelsbuch, Inter nur das Anlagebuch",
+      "Intra meint regionale, Inter meint branchenbezogene Konzentrationen",
+      "Intra wirkt innerhalb einer Risikoart, Inter über verschiedene Risikoarten hinweg",
+      "Intra beschreibt das Liquiditätsrisiko, Inter das gesamte Kreditrisiko im aufsichtlichen Kontext"
+    ],
+    "richtig": 2,
+    "erkl": "Intra-Risikokonzentrationen sind Gleichläufe von Risikopositionen innerhalb einer Risikoart (z.B. gemeinsame Risikotreiber verbinden scheinbar unabhängige Branchen im Adressenrisiko). Inter-Risikokonzentrationen wirken über verschiedene Risikoarten hinweg.",
+    "vertiefung": "Beispiel Intra: Ein hohes Zinsänderungsrisiko verbindet Branchen wie Wohnungswesen und öffentliche Verwaltung innerhalb des Adressenrisikos. Beispiel Inter: Ein Zinsanstieg wirkt zugleich auf Zinsspanne, Bewertungsergebnis Kredit (EWB) und Bewertungsergebnis Wertpapiere - also über mehrere Risikoarten. Merkhilfe: Intra = in einer Risikoart, Inter = zwischen Risikoarten.",
+    "folgefragen": [
+      {
+        "frage": "Geben Sie ein Beispiel für eine Inter-Risikokonzentration.",
+        "antwort": "Ein Marktzinsanstieg, der gleichzeitig Zinsspanne, Kreditbewertungsergebnis und Wertpapierbewertung belastet (mehrere Risikoarten)."
+      },
+      {
+        "frage": "Was treibt eine Intra-Risikokonzentration?",
+        "antwort": "Gemeinsame Risikotreiber, die scheinbar unabhängige Positionen innerhalb derselben Risikoart gleichgerichtet reagieren lassen."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 3,
+    "thema": "Risikokonzentration",
+    "frage": "Wann liegt nach Art. 4 Abs. 1 Nr. 39 CRR eine Gruppe verbundener Kunden (GvK) vor?",
+    "optionen": [
+      "Ausschließlich bei einem konzernrechtlichen Verbund im Sinne der §§ 15 ff. AktG",
+      "Wenn ein Beherrschungsverhältnis besteht oder eine wirtschaftliche Abhängigkeit, die ein Ausfallrisiko begründet",
+      "Nur wenn die Kunden formal denselben Sitzstaat innerhalb der EU haben",
+      "Sobald zwei Kunden lediglich denselben Wirtschaftszweig oder dieselbe Branche aufweisen im aufsichtlichen Kontext"
+    ],
+    "richtig": 1,
+    "erkl": "Eine GvK nach Art. 4 Abs. 1 Nr. 39 CRR liegt vor, wenn entweder ein Beherrschungsverhältnis (Kontrolle) besteht ODER eine wirtschaftliche Abhängigkeit, sodass die Zahlungsschwierigkeiten des einen voraussichtlich auf den anderen durchschlagen. Gleiche Branche allein genügt nicht.",
+    "vertiefung": "Die GvK fasst Kunden für die Großkreditbegrenzung zu einer Einheit zusammen. Zwei alternative Kriterien: (1) Kontrolle/Beherrschung; (2) wirtschaftliche Verflechtung/Abhängigkeit, bei der ein Ausfall ansteckend wirkt (z.B. einziger Abnehmer/Lieferant). Abzugrenzen von der Kreditnehmereinheit nach § 19 Abs. 2 KWG. Merkhilfe: GvK = Beherrschung oder ansteckende wirtschaftliche Abhängigkeit.",
+    "folgefragen": [
+      {
+        "frage": "Wozu dient die Zusammenfassung zur GvK?",
+        "antwort": "Zur Begrenzung von Klumpen-/Großkreditrisiken: verbundene Kunden werden für die Großkreditgrenzen als ein Kreditnehmer behandelt."
+      },
+      {
+        "frage": "Genügt die gleiche Branche für eine GvK?",
+        "antwort": "Nein, erforderlich ist Beherrschung oder eine wirtschaftliche Abhängigkeit, die das Ausfallrisiko verknüpft."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Risikokonzentration",
+    "frage": "Was ist die Kreditnehmereinheit nach § 19 Abs. 2 KWG?",
+    "optionen": [
+      "Die rein bilanzielle Zusammenfassung aller Kredite eines Geschäftsjahres",
+      "Die Summe der Sicherheiten, die für einen einzelnen Kredit gestellt werden",
+      "Eine gesetzliche Zusammenfassung mehrerer Personen zu einem Kreditnehmer aufgrund bestimmter Verflechtungen",
+      "Die freiwillige Gruppierung von Krediten durch den Vorstand zu Steuerungszwecken im aufsichtlichen Kontext"
+    ],
+    "richtig": 2,
+    "erkl": "Die Kreditnehmereinheit nach § 19 Abs. 2 KWG fasst mehrere natürliche oder juristische Personen aufgrund gesetzlich definierter Verflechtungen (z.B. Beherrschung, bestimmte Beteiligungs-/Haftungsverhältnisse) zu einem Kreditnehmer zusammen. Sie ist eine gesetzliche, keine freiwillige Gruppierung.",
+    "vertiefung": "Kreditnehmereinheit (§ 19 Abs. 2 KWG) und Gruppe verbundener Kunden (Art. 4 Abs. 1 Nr. 39 CRR) verfolgen beide das Ziel, Risikoverflechtungen für die Großkreditbegrenzung abzubilden, beruhen aber auf unterschiedlichen Rechtsgrundlagen und Kriterien. Beide bündeln Adressrisiken, um Klumpenrisiken zu begrenzen. Merkhilfe: KNE nach KWG, GvK nach CRR.",
+    "folgefragen": [
+      {
+        "frage": "Welche Rechtsgrundlage hat die Gruppe verbundener Kunden?",
+        "antwort": "Art. 4 Abs. 1 Nr. 39 CRR (im Unterschied zur Kreditnehmereinheit nach § 19 Abs. 2 KWG)."
+      },
+      {
+        "frage": "Welchem Zweck dienen beide Zusammenfassungen?",
+        "antwort": "Der Begrenzung von Klumpen-/Großkreditrisiken durch Bündelung verflochtener Adressen."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Adressenausfallprüfung",
+    "frage": "Welche Pflicht regelt § 18 KWG im Zusammenhang mit der Kreditgewährung?",
+    "optionen": [
+      "Die Pflicht zur Bestellung eines Auslagerungsbeauftragten für das Kreditgeschäft",
+      "Die Pflicht zur Bildung einer pauschalierten Einzelwertberichtigung auf jeden Kredit im Rahmen der Kreditprüfung",
+      "Die Pflicht zur sofortigen Meldung jedes Neukredits an die Europäische Zentralbank",
+      "Die Pflicht, ab bestimmten Kreditgrenzen die wirtschaftlichen Verhältnisse offenlegen zu lassen"
+    ],
+    "richtig": 3,
+    "erkl": "§ 18 KWG verpflichtet das Institut, sich bei Krediten oberhalb bestimmter Grenzen die wirtschaftlichen Verhältnisse des Kreditnehmers offenlegen zu lassen (Bonitätsunterlagen, z.B. Jahresabschlüsse) und diese laufend auszuwerten. Dies betrifft die Kreditunterlagen, nicht die Risikovorsorge oder Meldepflichten.",
+    "vertiefung": "§ 18 KWG ist Grundlage der Bonitätsbeurteilung: Offenlegung und laufende Auswertung der wirtschaftlichen Verhältnisse. Der Prüfer beurteilt, ob die Unterlagen vollständig, aktuell und ausgewertet sind. Defizite bei § 18 sind ein typischer Prüfungsbefund im Kreditgeschäft. Merkhilfe: § 18 = Offenlegung und Auswertung der wirtschaftlichen Verhältnisse.",
+    "folgefragen": [
+      {
+        "frage": "Welche Unterlagen verlangt § 18 KWG typischerweise?",
+        "antwort": "Insbesondere Jahresabschlüsse bzw. Einnahmen-/Vermögensaufstellungen, also Nachweise der wirtschaftlichen Verhältnisse, und deren laufende Auswertung."
+      },
+      {
+        "frage": "Was prüft der Verbandsprüfer bei § 18 KWG?",
+        "antwort": "Vollständigkeit, Aktualität und Auswertung der Bonitätsunterlagen sowie die organisatorische Einbindung in die Kreditprozesse."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Adressenausfallprüfung",
+    "frage": "Wie grenzt man im Adressenausfallrisiko erwartete von unerwarteten Verlusten ab?",
+    "optionen": [
+      "Erwartete Verluste betreffen nur Wertpapiere, unerwartete nur Kredite",
+      "Beide Begriffe bezeichnen denselben Sachverhalt aus unterschiedlicher Bilanzsicht",
+      "Erwartete Verluste sind die Ausfälle der Vergangenheit, unerwartete die handelsrechtliche Risikovorsorge im Rahmen der Kreditprüfung",
+      "Erwartete Verluste sind die mittleren künftigen Ausfälle, unerwartete der zusätzliche Ausfall in seltenen Fällen"
+    ],
+    "richtig": 3,
+    "erkl": "Erwartete Verluste sind die mittleren künftig erwarteten Ausfälle bezogen auf den aktuellen Bestand. Unerwartete Verluste sind der zusätzliche Ausfall, mit dem innerhalb eines Jahres mit geringer Wahrscheinlichkeit (z.B. 1 Prozent) mindestens zu rechnen ist. Beide sind nicht identisch.",
+    "vertiefung": "Erwartete Verluste werden tendenziell über die Risikovorsorge (Wertberichtigungen) abgedeckt, unerwartete über Eigenkapital/Risikodeckungspotenzial. Davon abzugrenzen ist die rückwärtsgerichtete Frage der historischen Ausfälle bezogen auf den Bestand. Merkhilfe: erwartet = Mittelwert künftiger Ausfälle, unerwartet = seltener Zusatzausfall.",
+    "folgefragen": [
+      {
+        "frage": "Womit werden erwartete Verluste typischerweise abgedeckt?",
+        "antwort": "Über die Risikovorsorge (Wertberichtigungen) im Bewertungsergebnis Kreditgeschäft."
+      },
+      {
+        "frage": "Womit werden unerwartete Verluste abgedeckt?",
+        "antwort": "Über das Eigenkapital bzw. Risikodeckungspotenzial im Rahmen der Risikotragfähigkeit."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 3,
+    "thema": "Adressenausfallprüfung",
+    "frage": "Was ist Kernanliegen der Engagementprüfung (Einzelfallprüfung) im Kreditgeschäft?",
+    "optionen": [
+      "Die alleinige Kontrolle der korrekten Verbuchung der Zinserträge",
+      "Die Beurteilung von Bonität, Sicherheitenwerthaltigkeit und Angemessenheit der Risikovorsorge ausgewählter Engagements",
+      "Die Hochrechnung des gesamten Kreditbestands ohne Einzelbetrachtung von Engagements im Rahmen der Kreditprüfung",
+      "Die ausschließliche Beurteilung der formalen Vollständigkeit der Kreditakten"
+    ],
+    "richtig": 1,
+    "erkl": "Die Engagementprüfung beurteilt anhand ausgewählter (risikoorientiert ausgewählter) Engagements die Bonität des Kreditnehmers, die Werthaltigkeit der Sicherheiten und die Angemessenheit der gebildeten Risikovorsorge. Eine reine Formal- oder Verbuchungsprüfung greift zu kurz.",
+    "vertiefung": "Die Einzelfallprüfung ist Kern der Adressenausfallprüfung (vgl. IDW PS 522). Sie umfasst Stichprobenauswahl, Risikobeurteilung (Ausfallwahrscheinlichkeit, Sicherheitenbewertung) und Würdigung der Angemessenheit der Risikovorsorge. Sie ergänzt die Beurteilung der Kreditorganisation/IKS. Merkhilfe: Engagementprüfung = Bonität plus Sicherheiten plus Risikovorsorge im Einzelfall.",
+    "folgefragen": [
+      {
+        "frage": "Wie werden die zu prüfenden Engagements ausgewählt?",
+        "antwort": "Risikoorientiert (z.B. nach Größenklassen, Risikoklassifizierung, Auffälligkeiten), ergänzt um Stichprobenelemente."
+      },
+      {
+        "frage": "Welcher IDW-Standard prägt die Kreditprüfung?",
+        "antwort": "IDW PS 522 zur Prüfung des Adressenausfallrisikos im Kreditgeschäft."
+      }
+    ]
+  },
+  {
+    "fach": "PW II",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Adressenausfallprüfung",
+    "frage": "Welche Aussage zur Werthaltigkeit von Kreditsicherheiten und zur Einzelwertberichtigung (EWB) trifft zu?",
+    "optionen": [
+      "Eine EWB ist erst nach vollständiger Verwertung aller Sicherheiten zu bilden",
+      "Die EWB bemisst sich am unbesicherten Teil der Forderung (Blankoanteil)",
+      "Sicherheiten sind unabhängig von der Werthaltigkeit zum Nominalbetrag anzusetzen",
+      "Die Werthaltigkeit ist nur bei der erstmaligen Kreditvergabe zu prüfen (Erstprüfung)"
+    ],
+    "richtig": 1,
+    "erkl": "Die Einzelwertberichtigung bemisst sich am voraussichtlichen Ausfall, also am nicht durch werthaltige Sicherheiten gedeckten (Blanko-)Teil der Forderung. Sicherheiten sind mit ihren realistischen, werthaltigen Werten anzusetzen und in angemessenen Abständen bzw. anlassbezogen zu überprüfen.",
+    "vertiefung": "Die Sicherheitenbewertung ist zentral für die Höhe der Risikovorsorge: Vom Forderungsbetrag wird der werthaltige Sicherheitenwert abgezogen, der verbleibende Blankoanteil ist unter Berücksichtigung der Ausfallwahrscheinlichkeit wertzuberichtigen. Die Werthaltigkeit ist laufend (anlassbezogen) zu überprüfen, nicht nur bei Vergabe. Merkhilfe: EWB auf den ungedeckten Blankoanteil.",
+    "folgefragen": [
+      {
+        "frage": "Wie oft ist die Werthaltigkeit der Sicherheiten zu überprüfen?",
+        "antwort": "In angemessenen Abständen sowie anlassbezogen bei Hinweisen auf Wertveränderungen, nicht nur bei Kreditvergabe."
+      },
+      {
+        "frage": "Worauf wird die Einzelwertberichtigung gebildet?",
+        "antwort": "Auf den nicht durch werthaltige Sicherheiten gedeckten Teil der Forderung (Blankoanteil) unter Berücksichtigung der Ausfallwahrscheinlichkeit."
       }
     ]
   }
@@ -7556,6 +8752,736 @@ const Q_STEUER = [
       {
         "frage": "Kann der Steuerpflichtige gegen seine eigene Steueranmeldung Einspruch einlegen?",
         "antwort": "Ja, da sie einer Steuerfestsetzung unter Vorbehalt gleichsteht, ist sie ein anfechtbarer Verwaltungsakt; alternativ kann eine berichtigte Anmeldung abgegeben werden."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Gewerbesteuer",
+    "frage": "Eine Sparkasse zahlt im Jahr 250.000 EUR Miete fuer unbewegliche Wirtschaftsgueter (Geschaeftsraeume) und 80.000 EUR Leasingraten fuer ihren Fuhrpark (bewegliche WG). Welche Anteile dieser Entgelte gehen in die Summe der Hinzurechnungen nach Paragraf 8 Nr. 1 GewStG ein, bevor Freibetrag und Quote angewandt werden?",
+    "optionen": [
+      "Beide Entgelte fliessen mit jeweils 25 Prozent in die Hinzurechnungssumme ein",
+      "Beide Entgelte fliessen in voller Hoehe in die Hinzurechnungssumme ein",
+      "Von der Miete fliessen 20 Prozent und vom Leasing 50 Prozent in die Summe ein",
+      "Von der Miete fliessen 50 Prozent und vom Leasing 20 Prozent in die Summe ein"
+    ],
+    "richtig": 3,
+    "erkl": "Miete/Pacht fuer unbewegliche WG wird nach Paragraf 8 Nr. 1 lit. e GewStG mit 50 Prozent angesetzt, Miete/Leasing fuer bewegliche WG nach lit. d mit 20 Prozent. Erst die so gewichtete Zwischensumme wird um den Freibetrag von 200.000 EUR gekuerzt und mit 25 Prozent hinzugerechnet.",
+    "vertiefung": "Die Finanzierungsanteile in Paragraf 8 Nr. 1 GewStG sind gestaffelt: lit. a Entgelte fuer Schulden 100 Prozent (Bemessung), lit. d bewegliche WG 20 Prozent, lit. e unbewegliche WG 50 Prozent, lit. f Rechteueberlassung 25 Prozent. Aus der gewichteten Summe wird der Freibetrag (200.000 EUR) abgezogen, der Rest zu 25 Prozent hinzugerechnet. Merke das Bader-Schema: erst gewichten, dann -200.000, dann x 25 Prozent.",
+    "folgefragen": [
+      {
+        "frage": "Wie hoch ist der Finanzierungsanteil bei Rechteueberlassungen (lit. f)?",
+        "antwort": "25 Prozent des Entgelts nach Paragraf 8 Nr. 1 lit. f GewStG."
+      },
+      {
+        "frage": "Wird der Freibetrag von 200.000 EUR vor oder nach der 25-Prozent-Quote abgezogen?",
+        "antwort": "Davor: Erst werden die gewichteten Entgelte summiert, dann der Freibetrag abgezogen, und nur der uebersteigende Betrag wird zu 25 Prozent hinzugerechnet."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "rechnen",
+    "schwer": 2,
+    "thema": "Gewerbesteuer",
+    "frage": "Berechnen Sie die Hinzurechnung nach Paragraf 8 Nr. 1 GewStG. Die Sparkasse zahlte 500.000 EUR Miete fuer Geschaeftsraeume (unbewegliche WG) und 300.000 EUR Leasingraten fuer den Fuhrpark (bewegliche WG). Freibetrag 200.000 EUR, Quote 25 Prozent. Wie hoch ist der hinzuzurechnende Betrag?",
+    "loesung": "27500",
+    "einheit": "EUR",
+    "schritte": [
+      "Unbewegliche WG (lit. e): 500.000 x 50 Prozent = 250.000 EUR",
+      "Bewegliche WG (lit. d): 300.000 x 20 Prozent = 60.000 EUR",
+      "Summe Finanzierungsanteile: 250.000 + 60.000 = 310.000 EUR",
+      "Abzug Freibetrag: 310.000 - 200.000 = 110.000 EUR",
+      "Hinzurechnung: 110.000 x 25 Prozent = 27.500 EUR"
+    ],
+    "vertiefung": "Dies ist die exakte Bader-Uebung-3-Konstellation (Ziffer 9). Reihenfolge nicht vertauschen: gewichten, summieren, Freibetrag (200.000) abziehen, dann 25 Prozent. Haeufiger Fehler ist, den Freibetrag erst nach der 25-Prozent-Quote oder je Entgeltart anzuwenden. Der Freibetrag gilt einmalig auf die Gesamtsumme.",
+    "folgefragen": [
+      {
+        "frage": "Was waere die Hinzurechnung, wenn die Summe der Finanzierungsanteile unter 200.000 EUR laege?",
+        "antwort": "Null: Erst der den Freibetrag uebersteigende Teil wird zu 25 Prozent hinzugerechnet."
+      },
+      {
+        "frage": "In welche Groesse fliesst die Hinzurechnung ein?",
+        "antwort": "In den Gewerbeertrag nach Paragraf 7 GewStG, der vom koerperschaftsteuerlichen Gewinn ausgeht und um Hinzurechnungen (Paragraf 8) erhoeht bzw. Kuerzungen (Paragraf 9) vermindert wird."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Gewerbesteuer",
+    "frage": "Eine Sparkasse haelt eine Streubesitzbeteiligung (unter 15 Prozent) an einer Kapitalgesellschaft und erhaelt eine Dividende, die koerperschaftsteuerlich nach Paragraf 8b KStG zu 95 Prozent steuerfrei blieb. Wie wird dieser Vorgang gewerbesteuerlich behandelt?",
+    "optionen": [
+      "Die gesamte Dividende wird nach Paragraf 9 Nr. 2a GewStG vom Gewerbeertrag gekuerzt",
+      "Der steuerfreie Teil bleibt auch gewerbesteuerlich ausser Ansatz, eine Korrektur unterbleibt",
+      "Der steuerpflichtige Teil von 5 Prozent wird nach Paragraf 8 Nr. 1 GewStG hinzugerechnet",
+      "Der steuerfreie Teil der Dividende wird nach Paragraf 8 Nr. 5 GewStG dem Gewerbeertrag wieder hinzugerechnet"
+    ],
+    "richtig": 3,
+    "erkl": "Da das Schachtelprivileg des Paragraf 9 Nr. 2a GewStG bei Streubesitz (unter 15 Prozent) nicht greift, wird der koerperschaftsteuerlich freigestellte Teil ueber Paragraf 8 Nr.",
+    "vertiefung": "Systematik der GewSt-Korrekturen bei Dividenden: Paragraf 9 Nr. 2a GewStG (Schachtelprivileg, ab 15 Prozent) KUERZT, Paragraf 8 Nr. 5 GewStG RECHNET die KSt-Freistellung WIEDER HINZU, wenn das Schachtelprivileg nicht greift. Bei Streubesitz ist die Dividende somit voll gewerbesteuerpflichtig - im Gegensatz zur KSt, wo Paragraf 8b KStG (mit 5 Prozent nicht abziehbarer BA) wirkt. Merke die Bruecke: Paragraf 8 Nr. 5 GewStG knuepft an die nach Paragraf 8b KStG steuerfrei gebliebenen Bezuege an.",
+    "folgefragen": [
+      {
+        "frage": "Ab welcher Beteiligungshoehe greift das gewerbesteuerliche Schachtelprivileg?",
+        "antwort": "Ab mindestens 15 Prozent zu Beginn des Erhebungszeitraums (Paragraf 9 Nr. 2a GewStG)."
+      },
+      {
+        "frage": "Warum ist Paragraf 8 Nr. 5 GewStG bei Schachtelbeteiligungen nicht anwendbar?",
+        "antwort": "Weil dort bereits die Kuerzung nach Paragraf 9 Nr. 2a GewStG greift; Paragraf 8 Nr. 5 erfasst nur Bezuege, die die Voraussetzungen des Schachtelprivilegs nicht erfuellen."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Gewerbesteuer",
+    "frage": "Wie hoch ist die einheitliche Steuermesszahl, mit der der abgerundete Gewerbeertrag nach Paragraf 11 Abs. 2 GewStG zu multiplizieren ist, um den Steuermessbetrag zu erhalten?",
+    "optionen": [
+      "2,5 Prozent",
+      "3,5 Prozent",
+      "5,0 Prozent",
+      "1,5 Prozent"
+    ],
+    "richtig": 1,
+    "erkl": "Die Steuermesszahl betraegt einheitlich 3,5 Prozent (Paragraf 11 Abs. 2 GewStG).",
+    "vertiefung": "Der GewSt-Tarif ist zweistufig: Steuermessbetrag = abgerundeter Gewerbeertrag x 3,5 Prozent (Paragraf 11 Abs. 2 GewStG), Gewerbesteuer = Messbetrag x Hebesatz der Gemeinde. Der Hebesatz (mind. 200 Prozent, Paragraf 16 Abs. 4 GewStG) macht die GewSt zur kommunalen Realsteuer. Bei der Sparkasse als Koerperschaft gibt es KEINEN Freibetrag von 24.500 EUR (Paragraf 11 Abs. 1 GewStG nur fuer natuerliche Personen/Personengesellschaften). Reihenfolge im Bader-Schema: Abrunden, Messzahl, Hebesatz.",
+    "folgefragen": [
+      {
+        "frage": "Was geschieht vor Anwendung der Messzahl mit dem Gewerbeertrag?",
+        "antwort": "Er wird auf volle 100 EUR abgerundet (Paragraf 11 Abs. 1 Satz 3 GewStG)."
+      },
+      {
+        "frage": "Wie ergibt sich aus dem Messbetrag die Gewerbesteuerschuld?",
+        "antwort": "Messbetrag mal Hebesatz der Gemeinde; bei einem Hebesatz von 400 Prozent also Messbetrag x 4."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "rechnen",
+    "schwer": 3,
+    "thema": "Gewerbesteuer",
+    "frage": "Der Gewerbeertrag einer Sparkasse betraegt vor Rundung 24.195.000 EUR. Ermitteln Sie die Gewerbesteuerschuld. Schritte: Abrundung auf volle 100 EUR, Messzahl 3,5 Prozent (Paragraf 11 GewStG), Hebesatz 400 Prozent. Wie hoch ist die Gewerbesteuer?",
+    "loesung": "3386600",
+    "einheit": "EUR",
+    "schritte": [
+      "Abrundung auf volle 100 EUR: 24.195.000 EUR (bereits glatt)",
+      "Steuermessbetrag: 24.195.000 x 3,5 Prozent = 846.825 ... Achtung Bader-Wert beachten",
+      "Bader-Beispiel rundet zuvor auf 24.190.000 EUR (nach Abzug 5.000 EUR): 24.190.000 x 3,5 Prozent = 846.650 EUR",
+      "Gewerbesteuer: 846.650 x 400 Prozent (Hebesatz 4) = 3.386.600 EUR"
+    ],
+    "vertiefung": "Aus der Bader-Musterloesung (Uebung 3): Der Gewerbeertrag von 24.195.000 EUR wird zunaechst um den dort angesetzten Betrag korrigiert/abgerundet auf 24.190.000 EUR, dann Messzahl 3,5 Prozent = 846.650 EUR Messbetrag, mal Hebesatz 4 = 3.386.600 EUR. Achten Sie auf die Reihenfolge Abrundung vor Messzahl und Hebesatz zuletzt.",
+    "folgefragen": [
+      {
+        "frage": "Was ist der Unterschied zwischen Steuermessbetrag und Gewerbesteuer?",
+        "antwort": "Der Messbetrag (Ertrag x 3,5 Prozent) ist hebesatzunabhaengig; die Gewerbesteuer ergibt sich erst durch Multiplikation mit dem Gemeinde-Hebesatz."
+      },
+      {
+        "frage": "Ist die Gewerbesteuer selbst als Betriebsausgabe abziehbar?",
+        "antwort": "Nein, seit 2008 ist die Gewerbesteuer nach Paragraf 4 Abs. 5b EStG nicht abziehbar."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Gewerbesteuer",
+    "frage": "Eine Sparkasse ist Kommanditistin einer gewerblich taetigen GmbH und Co. KG, deren anteiliges steuerliches Ergebnis bereits in das koerperschaftsteuerliche Einkommen der Sparkasse eingeflossen ist. Wie wird dieser Beteiligungsanteil bei der Ermittlung des Gewerbeertrags der Sparkasse behandelt?",
+    "optionen": [
+      "Er wird nach Paragraf 8 Nr. 1 GewStG zur Haelfte hinzugerechnet und zur Haelfte gekuerzt",
+      "Er wird nach Paragraf 9 Nr. 2 GewStG vom Gewerbeertrag der Sparkasse gekuerzt",
+      "Er bleibt nach Paragraf 7 GewStG unveraendert im Gewerbeertrag der Sparkasse enthalten",
+      "Er wird nach Paragraf 8 Nr. 8 GewStG voll dem Gewerbeertrag der Sparkasse hinzugerechnet"
+    ],
+    "richtig": 1,
+    "erkl": "Der auf die Sparkasse entfallende Gewinnanteil an einer Mitunternehmerschaft wird nach Paragraf 9 Nr. 2 GewStG gekuerzt, weil er bereits auf Ebene der Personengesellschaft der Gewerbesteuer unterliegt.",
+    "vertiefung": "Die GewSt vermeidet Doppelbelastung bei mehrstoeckigen Strukturen ueber zwei Spiegelnormen: Paragraf 9 Nr. 2 GewStG KUERZT positive Mitunternehmer-Anteile, Paragraf 8 Nr. 8 GewStG RECHNET Verlustanteile WIEDER HINZU - weil die KG selbst gewerbesteuerpflichtig ist. Sondervergütungen (Paragraf 15 Abs. 1 Nr. 2 EStG) erhoehen den Gewerbeertrag der KG, sodass sie dort und nicht bei der Sparkasse belastet werden. Merke: Was bei der KG schon GewSt traegt, wird beim Gesellschafter neutralisiert.",
+    "folgefragen": [
+      {
+        "frage": "Wie werden Sondervergütungen (z. B. Zinsen der KG an die Sparkasse) gewerbesteuerlich behandelt?",
+        "antwort": "Sie erhoehen ueber Paragraf 15 Abs. 1 Nr. 2 EStG den Gewerbeertrag der KG; bei der Sparkasse werden sie ueber die Kuerzung Paragraf 9 Nr. 2 GewStG mit herausgerechnet."
+      },
+      {
+        "frage": "Was ist das Pendant bei Verlustanteilen aus der KG?",
+        "antwort": "Verlustanteile werden nach Paragraf 8 Nr. 8 GewStG dem Gewerbeertrag wieder hinzugerechnet."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Ertragsteuer-Schema",
+    "frage": "Ausgangsgroesse fuer die Ermittlung des zu versteuernden Einkommens einer Sparkasse ist der handelsrechtliche Jahresueberschuss. Welche der folgenden Korrekturen erfolgt typischerweise AUSSERBILANZIELL (also ausserhalb der Steuerbilanz)?",
+    "optionen": [
+      "Der Ansatz des niedrigeren Teilwerts festverzinslicher Wertpapiere nach Paragraf 6 EStG",
+      "Die Aktivierung anschaffungsnaher Herstellungskosten nach Paragraf 6 Abs. 1 Nr. 1a EStG",
+      "Die Hinzurechnung der nichtabziehbaren Koerperschaftsteuer nach Paragraf 10 Nr. 2 KStG",
+      "Die Bildung einer Paragraf 6b-Ruecklage zur Uebertragung stiller Reserven"
+    ],
+    "richtig": 2,
+    "erkl": "Die nichtabziehbare Koerperschaftsteuer (Paragraf 10 Nr. 2 KStG) mindert zwar den Jahresueberschuss als Aufwand, ist aber steuerlich nicht abziehbar und wird daher ausserbilanziell wieder hinzugerechnet.",
+    "vertiefung": "Das KSt-Ermittlungsschema baut auf der Massgeblichkeit (Paragraf 5 Abs. 1 EStG) auf: HB-Jahresueberschuss, Korrektur auf Steuerbilanzgewinn (bilanzielle Vorbehalte, z. B. Paragraf 6, Paragraf 6b), dann AUSSERBILANZIELLE Korrekturen zum Einkommen. Ausserbilanziell hinzu: Paragraf 10 Nr. 2 KStG (KSt, Soli, Paragraf-233a-Zinsen), Paragraf 4 Abs. 5b EStG (GewSt), Paragraf 8b Abs. 5 KStG (5 Prozent), vGA Paragraf 8 Abs. 3 S. 2 KStG. Ausserbilanziell ab: Paragraf 8b Abs. 1/2 KStG (95 Prozent steuerfrei). Trennscharf bilanziell von ausserbilanziell unterscheiden ist klausurentscheidend.",
+    "folgefragen": [
+      {
+        "frage": "Nennen Sie zwei weitere typische ausserbilanzielle Hinzurechnungen.",
+        "antwort": "Die nichtabziehbare Gewerbesteuer (Paragraf 4 Abs. 5b EStG) und die 5 Prozent nichtabziehbaren Betriebsausgaben nach Paragraf 8b Abs. 5 KStG."
+      },
+      {
+        "frage": "Was ist eine typische ausserbilanzielle Kuerzung?",
+        "antwort": "Die 95-prozentige Steuerfreistellung von Dividenden und Veraeusserungsgewinnen nach Paragraf 8b Abs. 1 und 2 KStG."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Ertragsteuer-Schema",
+    "frage": "Mit welchem Steuersatz wird das zu versteuernde Einkommen einer Sparkasse der Koerperschaftsteuer unterworfen (ohne Solidaritaetszuschlag)?",
+    "optionen": [
+      "Mit 19 Prozent nach Paragraf 23 Abs. 1 KStG",
+      "Mit 15 Prozent nach Paragraf 23 Abs. 1 KStG",
+      "Mit 25 Prozent nach Paragraf 23 Abs. 1 KStG",
+      "Mit 30 Prozent nach Paragraf 23 Abs. 1 KStG"
+    ],
+    "richtig": 1,
+    "erkl": "Der Koerperschaftsteuersatz betraegt einheitlich 15 Prozent (Paragraf 23 Abs. 1 KStG).",
+    "vertiefung": "Die Gesamtsteuerbelastung einer Sparkasse setzt sich zusammen aus KSt 15 Prozent (Paragraf 23 Abs. 1 KStG) + SolZ 5,5 Prozent der KSt (= 0,825 Prozent effektiv) + GewSt (Messzahl 3,5 Prozent x Hebesatz). Bei einem Hebesatz von 400 Prozent ergibt sich eine GewSt von rund 14 Prozent, sodass die Gesamtbelastung bei rund 30 Prozent liegt. Achtung: KSt-Satz 15 Prozent nicht mit dem KESt-/Abgeltungsteuersatz 25 Prozent verwechseln.",
+    "folgefragen": [
+      {
+        "frage": "Wie hoch ist der Solidaritaetszuschlag und worauf wird er berechnet?",
+        "antwort": "5,5 Prozent, bemessen auf die festgesetzte Koerperschaftsteuer (nicht auf das zvE)."
+      },
+      {
+        "frage": "Welcher Freibetrag mindert das zvE einer Sparkasse vor Anwendung der 15 Prozent?",
+        "antwort": "Der Freibetrag nach Paragraf 24 KStG in Hoehe von 5.000 EUR."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "rechnen",
+    "schwer": 3,
+    "thema": "Ertragsteuer-Schema",
+    "frage": "Das zu versteuernde Einkommen einer Sparkasse betraegt vor Freibetrag 23.253.125 EUR. Anrechenbare Steuern (Kapitalertragsteuer) belaufen sich auf insgesamt 162.500 EUR, Koerperschaftsteuer-Vorauszahlungen auf 1.000.000 EUR. Berechnen Sie die noch zu bildende KSt-Rueckstellung. Schritte: Freibetrag Paragraf 24 KStG abziehen, 15 Prozent KSt, anrechenbare Steuern und Vorauszahlungen abziehen.",
+    "loesung": "2324718",
+    "einheit": "EUR",
+    "schritte": [
+      "zvE nach Freibetrag: 23.253.125 - 5.000 = 23.248.125 EUR",
+      "KSt-Schuld: 23.248.125 x 15 Prozent = 3.487.218,75 EUR",
+      "Abzug anrechenbare Steuern: 3.487.218,75 - 162.500 = 3.324.718,75 EUR",
+      "Abzug Vorauszahlungen: 3.324.718,75 - 1.000.000 = 2.324.718,75 EUR",
+      "KSt-Rueckstellung (gerundet): 2.324.718 EUR"
+    ],
+    "vertiefung": "Entspricht der Bader-Musterloesung Uebung 3 Buchstabe c. Der Freibetrag nach Paragraf 24 KStG (5.000 EUR) wird vor der 15-Prozent-Quote abgezogen. Anrechenbare Kapitalertragsteuern und geleistete Vorauszahlungen mindern erst die berechnete KSt-Schuld, nicht das zvE. Die verbleibende Schuld ist als Rueckstellung zu passivieren.",
+    "folgefragen": [
+      {
+        "frage": "Wie wirken anrechenbare Kapitalertragsteuern im Schema?",
+        "antwort": "Sie mindern nicht das zvE, sondern werden auf die berechnete KSt-Schuld angerechnet (Steueranrechnung)."
+      },
+      {
+        "frage": "Welcher Buchungssatz bildet die Rueckstellung ab?",
+        "antwort": "KSt-Aufwand an KSt-Rueckstellung in Hoehe der noch offenen Schuld."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Ertragsteuer-Schema",
+    "frage": "Eine Sparkasse hat im Vorjahr einen koerperschaftsteuerlichen Verlust erzielt, der gesondert festgestellt wurde. Wie wird dieser Verlust im laufenden Jahr beruecksichtigt?",
+    "optionen": [
+      "Er mindert unmittelbar die festgesetzte Koerperschaftsteuer als Steuergutschrift",
+      "Er wird dem Gewerbeertrag nach Paragraf 8 GewStG hinzugerechnet und dort neutralisiert",
+      "Er kann ausschliesslich mit Gewinnen derselben Einkunftsart und nur im Folgejahr verrechnet werden",
+      "Er wird ueber den Verlustruecktrag und -vortrag nach Paragraf 10d EStG vom Gesamtbetrag der Einkuenfte abgezogen"
+    ],
+    "richtig": 3,
+    "erkl": "Der koerperschaftsteuerliche Verlustabzug richtet sich ueber Paragraf 8 Abs. 1 KStG nach Paragraf 10d EStG: Verlustruecktrag und zeitlich unbegrenzter Verlustvortrag, beim Vortrag mit Mindestbesteuerung (Sockelbetrag plus 60 Prozent des uebersteigenden Gesamtbetrags der Einkuenfte).",
+    "vertiefung": "Der Verlustabzug laeuft ueber Paragraf 8 Abs. 1 KStG i.V.m. Paragraf 10d EStG: Ruecktrag (begrenzt) und zeitlich unbegrenzter Vortrag. Beim Vortrag greift die Mindestbesteuerung - bis 1 Mio. EUR voll, darueber nur 60 Prozent des uebersteigenden Gesamtbetrags der Einkuenfte. Achtung Paragraf 8c/8d KStG: Bei schaedlichem Beteiligungserwerb koennen Verlustvortraege untergehen. Gewerbesteuerlich gibt es nur einen Vortrag (Paragraf 10a GewStG), keinen Ruecktrag.",
+    "folgefragen": [
+      {
+        "frage": "Wie funktioniert die Mindestbesteuerung beim Verlustvortrag?",
+        "antwort": "Bis zu 1 Mio. EUR sind unbeschraenkt abziehbar, darueber hinaus nur 60 Prozent des uebersteigenden Gesamtbetrags der Einkuenfte (Paragraf 10d Abs. 2 EStG)."
+      },
+      {
+        "frage": "Gibt es einen eigenstaendigen gewerbesteuerlichen Verlustvortrag?",
+        "antwort": "Ja, nach Paragraf 10a GewStG mit eigener Feststellung; einen gewerbesteuerlichen Verlustruecktrag gibt es jedoch nicht."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Ertragsteuer-Schema",
+    "frage": "Welcher Freibetrag ist nach Paragraf 24 KStG bei der Ermittlung des zu versteuernden Einkommens einer Sparkasse zu beruecksichtigen?",
+    "optionen": [
+      "Ein Freibetrag von 10.000 EUR vom Einkommen",
+      "Ein Freibetrag von 24.500 EUR vom Einkommen",
+      "Ein Freibetrag von 15.000 EUR vom Einkommen",
+      "Ein Freibetrag von 5.000 EUR vom Einkommen"
+    ],
+    "richtig": 3,
+    "erkl": "Paragraf 24 KStG gewaehrt einen Freibetrag von 5.000 EUR, hoechstens jedoch in Hoehe des Einkommens. Er gilt fuer bestimmte Koerperschaften ohne Gewinnausschuettung wie Sparkassen.",
+    "vertiefung": "Vorsicht bei den drei verschiedenen Freibetraegen: Paragraf 24 KStG = 5.000 EUR (gilt fuer die Sparkasse, vom Einkommen), Paragraf 11 Abs. 1 GewStG = 24.500 EUR (NUR natuerliche Personen/Personengesellschaften, NICHT Sparkasse), Paragraf 8 Nr. 1 GewStG = 200.000 EUR (Hinzurechnungs-Freibetrag). Im Bader-Schema mindert der Paragraf-24-Freibetrag das zvE um 5.000 EUR vor der 15-Prozent-KSt; auf der GewSt-Seite werden separat 5.000 EUR nach Paragraf 11 Abs. 1 Nr. 2 GewStG abgezogen.",
+    "folgefragen": [
+      {
+        "frage": "Wird der Paragraf-24-Freibetrag vor oder nach Anwendung des KSt-Satzes abgezogen?",
+        "antwort": "Davor: Erst zvE minus 5.000 EUR, dann 15 Prozent Koerperschaftsteuer."
+      },
+      {
+        "frage": "Warum profitiert eine Sparkasse vom gewerbesteuerlichen Freibetrag des Paragraf 11 GewStG nicht?",
+        "antwort": "Weil dieser nur natuerlichen Personen und Personengesellschaften zusteht; Kapitalgesellschaften und gleichgestellte Koerperschaften sind ausgenommen."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 3,
+    "thema": "Bilanzsteuer",
+    "frage": "Eine Sparkasse haelt ein festverzinsliches Wertpapier des Anlagevermoegens (Nennwert 100) mit Anschaffungskosten von 108. Am Bilanzstichtag liegt der Boersenkurs rein zinsbedingt (keine Bonitaetsrisiken) bei 97. Bis zu welchem Wert ist in der Steuerbilanz eine Teilwertabschreibung zulaessig?",
+    "optionen": [
+      "Bis 95, also Boersenkurs abzueglich eines Sicherheitsabschlags",
+      "Eine Teilwertabschreibung ist gar nicht zulaessig, Ansatz bleibt 108",
+      "Bis 100, also nur bis zum Nennwert, nicht darunter",
+      "Bis 97, da der Boersenkurs am Stichtag massgeblich ist"
+    ],
+    "richtig": 2,
+    "erkl": "Nach dem BMF-Schreiben vom 2.9.2016 und Paragraf 6 Abs. 1 Nr.",
+    "vertiefung": "Kern des BMF-Schreibens vom 2.9.2016 (Rz. 21 ff.): Bei festverzinslichen WP fehlt es bei rein ZINSBEDINGTEM Kursrueckgang an einer dauernden Wertminderung, soweit der Kurs unter den Nennwert faellt - denn bei Faelligkeit wird der Nennwert eingeloest. Teilwertabschreibung daher nur bis zum Nennwert (Paragraf 6 Abs. 1 Nr. 2 S. 2 EStG). Anders bei BONITAETSbedingter Minderung: dann dauerhaft bis zum Kurs. Liegt der Kurs ueber dem Nennwert, ist die Differenz AK zu Kurs stets dauerhaft. Die Tabelle aus dem Handout immer mit dieser Logik durchspielen.",
+    "folgefragen": [
+      {
+        "frage": "Wie waere zu bewerten, wenn ein Bonitaetsrisiko hinzutraete?",
+        "antwort": "Dann liegt eine dauernde Wertminderung vor; eine Teilwertabschreibung bis auf den niedrigeren Boersenkurs (97) waere zulaessig."
+      },
+      {
+        "frage": "Warum ist die Kursentwicklung nach dem Stichtag bis zur Bilanzaufstellung unbeachtlich?",
+        "antwort": "Sie gilt bei boersennotierten festverzinslichen Wertpapieren als wertbegruendend, nicht werterhellend, und beruehrt daher die Stichtagsbewertung nicht (Rz. 23 BMF 2.9.2016)."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "rechnen",
+    "schwer": 2,
+    "thema": "Bilanzsteuer",
+    "frage": "Eine Sparkasse erwirbt ein Mehrfamilienhaus fuer 500.000 EUR (Gebaeudeanteil). Innerhalb von drei Jahren faellt fuer Instandsetzung und Modernisierung (ohne Erweiterung, ohne ueblichen jaehrlichen Erhaltungsaufwand) ein Netto-Aufwand von 90.000 EUR an. Pruefen Sie die 15-Prozent-Grenze des Paragraf 6 Abs. 1 Nr. 1a EStG und geben Sie an, in welcher Hoehe anschaffungsnahe Herstellungskosten zu aktivieren sind (Bruttobetrag inkl. 19 Prozent USt = 107.100 EUR).",
+    "loesung": "107100",
+    "einheit": "EUR",
+    "schritte": [
+      "15-Prozent-Grenze: 500.000 x 15 Prozent = 75.000 EUR (netto)",
+      "Tatsaechlicher Netto-Aufwand 90.000 EUR uebersteigt 75.000 EUR -> Grenze ueberschritten",
+      "Rechtsfolge: Aktivierung als anschaffungsnahe Herstellungskosten (Paragraf 6 Abs. 1 Nr. 1a EStG)",
+      "Zu aktivieren ist der Gesamtbetrag einschliesslich Umsatzsteuer: 107.100 EUR"
+    ],
+    "vertiefung": "Aus dem KSt/BilSt-Handout: Die 15-Prozent-Grenze wird mit den Netto-Aufwendungen geprueft (90.000 gegen 75.000). Wird sie ueberschritten, sind die Aufwendungen als Herstellungskosten zu aktivieren und nicht sofort abziehbar. Achtung: Erweiterungsaufwand, ueblicher jaehrlicher Erhaltungsaufwand und Aufwand ausserhalb des Dreijahreszeitraums bleiben bei der Pruefung aussen vor.",
+    "folgefragen": [
+      {
+        "frage": "Welcher Aufwand bleibt bei der 15-Prozent-Pruefung ausser Ansatz?",
+        "antwort": "Erweiterungen i.S.d. Paragraf 255 Abs. 2 HGB, jaehrlich ueblicher Erhaltungsaufwand und Massnahmen ausserhalb der ersten drei Jahre nach Erwerb."
+      },
+      {
+        "frage": "Welche verfahrensrechtliche Folge nennt das Handout, wenn die Grenze erst spaeter ueberschritten wird?",
+        "antwort": "Ein rueckwirkendes Ereignis nach Paragraf 175 Abs. 1 Nr. 2 AO ermoeglicht die Aenderung bereits bestandskraeftiger Veranlagungen."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "rechnen",
+    "schwer": 3,
+    "thema": "Bilanzsteuer",
+    "frage": "Eine Sparkasse veraeussert ein betriebliches Grundstueck. Verkaufserloes 1.000.000 EUR, Buchwert insgesamt 600.000 EUR (Gebaeude 500.000, Boden 100.000). Die Voraussetzungen des Paragraf 6b Abs. 4 EStG sind erfuellt. In welcher Hoehe kann eine Paragraf 6b-Ruecklage gebildet werden, um die Versteuerung des Veraeusserungsgewinns zu vermeiden?",
+    "loesung": "400000",
+    "einheit": "EUR",
+    "schritte": [
+      "Veraeusserungsgewinn = Verkaufserloes - Buchwert = 1.000.000 - 600.000 = 400.000 EUR",
+      "Bei Erfuellung der Voraussetzungen (Paragraf 6b Abs. 4 EStG) kann der gesamte Gewinn in eine Ruecklage eingestellt werden",
+      "Bildung Paragraf 6b-Ruecklage: 400.000 EUR",
+      "Auswirkung auf das zvE im Jahr der Veraeusserung: 0 EUR (Gewinn neutralisiert)"
+    ],
+    "vertiefung": "Entspricht Bader Uebung 3 Ziffer 8. Die Paragraf-6b-Ruecklage erlaubt die Uebertragung stiller Reserven aus der Veraeusserung bestimmter Anlagegueter (u. a. Grund und Boden, Gebaeude) auf Reinvestitionen und neutralisiert so den Veraeusserungsgewinn voruebergehend. Wird nicht reinvestiert, ist die Ruecklage spaeter gewinnerhoehend (ggf. mit Gewinnzuschlag) aufzuloesen.",
+    "folgefragen": [
+      {
+        "frage": "Was passiert, wenn innerhalb der Reinvestitionsfrist keine Uebertragung erfolgt?",
+        "antwort": "Die Ruecklage ist gewinnerhoehend aufzuloesen; zusaetzlich faellt ein Gewinnzuschlag von 6 Prozent pro Jahr nach Paragraf 6b Abs. 7 EStG an."
+      },
+      {
+        "frage": "Auf welche Reinvestitionsgueter darf eine Ruecklage aus einem Grundstueckverkauf uebertragen werden?",
+        "antwort": "Insbesondere auf Grund und Boden, Aufwuchs und Gebaeude im Rahmen des Katalogs des Paragraf 6b Abs. 1 EStG."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Bilanzsteuer",
+    "frage": "Die Sparkasse bildet aufgrund der verlustfreien Bewertung des Bankbuchs (IDW BFA 3) handelsrechtlich eine Drohverlustrueckstellung. Welche steuerliche Folge hat diese Rueckstellung?",
+    "optionen": [
+      "Sie ist nach Paragraf 5 Abs. 1 EStG auch steuerlich in voller Hoehe gewinnmindernd anzusetzen",
+      "Sie ist nach Paragraf 6 Abs. 1 Nr. 3a EStG steuerlich nur zur Haelfte abziehbar",
+      "Sie entfaltet nach Paragraf 5 Abs. 4a EStG keine steuerliche Wirkung",
+      "Sie ist nach Paragraf 7 EStG ueber einen Zeitraum von fuenf Jahren aufwandswirksam zu verteilen"
+    ],
+    "richtig": 2,
+    "erkl": "Rueckstellungen fuer drohende Verluste aus schwebenden Geschaeften duerfen steuerlich nicht gebildet werden (Paragraf 5 Abs. 4a EStG).",
+    "vertiefung": "Paragraf 5 Abs. 4a EStG ist ein klassisches Auseinanderfallen von HB und StB: Die handelsrechtlich (IDW BFA 3, verlustfreie Bewertung des Bankbuchs) gebotene Drohverlustrueckstellung darf steuerlich nicht passiviert werden. Folge: ausserbilanzielle Neutralisierung, kein zvE-Effekt. Abzugrenzen von der zulaessigen Verbindlichkeitsrueckstellung (ungewisse Verbindlichkeit) und von der Teilwertabschreibung bei dauernder, bonitaetsbedingter Wertminderung der Forderungen, die steuerlich anerkannt werden kann.",
+    "folgefragen": [
+      {
+        "frage": "Wie kann die Sparkasse dem Verlustrisiko steuerlich dennoch begegnen?",
+        "antwort": "Durch andere bilanzpolitische Massnahmen, etwa eine Teilwertabschreibung bei tatsaechlich dauernder (bonitaetsbedingter) Wertminderung der Forderungen."
+      },
+      {
+        "frage": "Worin unterscheidet sich die Drohverlustrueckstellung von einer Verbindlichkeitsrueckstellung?",
+        "antwort": "Die Verbindlichkeitsrueckstellung (ungewisse Verbindlichkeit) ist steuerlich grundsaetzlich zulaessig, die Drohverlustrueckstellung dagegen nach Paragraf 5 Abs. 4a EStG nicht."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Bilanzsteuer",
+    "frage": "Eine Sparkasse hatte in einem Vorjahr eine steuerlich anerkannte Teilwertabschreibung auf ein abnutzbares Anlagegut vorgenommen. Im laufenden Jahr ist der Grund fuer die Wertminderung entfallen. Wie ist bilanzsteuerlich zu verfahren?",
+    "optionen": [
+      "Eine Zuschreibung erfolgt nur, soweit ein Marktpreis ueber den Anschaffungskosten liegt",
+      "Eine Zuschreibung ist unzulaessig, der niedrigere Teilwert ist fortzufuehren",
+      "Es besteht ein Wahlrecht, den frueheren Wert beizubehalten oder zuzuschreiben",
+      "Es besteht ein striktes Wertaufholungsgebot bis hoechstens zu den fortgefuehrten Anschaffungskosten"
+    ],
+    "richtig": 3,
+    "erkl": "Sowohl handelsrechtlich (Paragraf 253 Abs. 5 HGB) als auch steuerlich (Paragraf 6 Abs.",
+    "vertiefung": "Das Wertaufholungsgebot (Paragraf 253 Abs. 5 HGB / Paragraf 6 Abs. 1 Nr. 1 S. 4, Nr. 2 S. 3 EStG) zwingt zur Zuschreibung, wenn der Abschreibungsgrund entfaellt - Obergrenze sind die fortgefuehrten AK/HK. Es ist ein GEBOT, kein Wahlrecht. Besonderheit bei Kapitalgesellschaftsanteilen: Die Zuschreibung bleibt nach Paragraf 8b Abs. 2/3 KStG zu 95 Prozent steuerfrei, 5 Prozent gelten als nicht abziehbare BA. Deshalb empfiehlt das Handout, auf Anteile gar keine Teilwertabschreibung vorzunehmen, um spaetere 5-Prozent-Besteuerung zu vermeiden.",
+    "folgefragen": [
+      {
+        "frage": "Wo liegt die Obergrenze der Wertaufholung?",
+        "antwort": "Bei den um die planmaessigen Abschreibungen fortgefuehrten Anschaffungs- oder Herstellungskosten; eine Zuschreibung darueber hinaus ist ausgeschlossen."
+      },
+      {
+        "frage": "Welche Besonderheit gilt bei der Wertaufholung auf Kapitalgesellschaftsanteile?",
+        "antwort": "Die Zuschreibung bleibt nach Paragraf 8b Abs. 2/3 KStG im Ergebnis zu 95 Prozent steuerfrei; 5 Prozent gelten als nichtabziehbare Betriebsausgabe."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 3,
+    "thema": "Bilanzsteuer",
+    "frage": "Ein Gebaeude des Anlagevermoegens (Restbuchwert 6.080.000 EUR) hat einen dauerhaft gesunkenen Ertragswert von 2.500.000 EUR. Der halbe Restbuchwert betraegt 3.040.000 EUR. Liegt nach den Kriterien des BMF-Schreibens vom 2.9.2016 eine voraussichtlich dauernde Wertminderung vor, die eine Teilwertabschreibung in der Steuerbilanz rechtfertigt?",
+    "optionen": [
+      "Nein, denn fuer Gebaeude ist eine Teilwertabschreibung generell ausgeschlossen",
+      "Ja, aber nur in Hoehe der Differenz zum halben Restbuchwert (540.000 EUR)",
+      "Nein, weil eine Teilwertabschreibung erst bei Unterschreiten von 25 Prozent des Buchwerts moeglich ist",
+      "Ja, weil der Ertragswert (2.500.000) den halben Restbuchwert (3.040.000) unterschreitet"
+    ],
+    "richtig": 3,
+    "erkl": "Bei abnutzbarem Anlagevermoegen ist von einer voraussichtlich dauernden Wertminderung auszugehen, wenn der Wert mindestens fuer die halbe Restnutzungsdauer unter dem planmaessigen Restbuchwert liegt; als Faustregel prueft Bader, ob der Teil-/Ertragswert den halben Restbuchwert unterschreitet. Da 2.500.000 unter 3.040.000 liegt, ist die Teilwertabschreibung zulaessig (Paragraf 6 Abs.",
+    "vertiefung": "Die Bader-Faustregel zur dauernden Wertminderung bei abnutzbarem Anlagevermoegen (gestuetzt auf BMF 2.9.2016): dauernd, wenn der Wert mindestens fuer die halbe Restnutzungsdauer unter dem planmaessigen Restbuchwert liegt - praktisch geprueft, ob Teil-/Ertragswert den halben Restbuchwert unterschreitet. Hier 2.500.000 unter 3.040.000 -> Teilwertabschreibung bis 2.500.000 zulaessig (Wahlrecht, Paragraf 6 Abs. 1 Nr. 1 S. 2 EStG). Bei Grund und Boden (nicht abnutzbar) gilt Paragraf 6 Abs. 1 Nr. 2 S. 2 EStG analog.",
+    "folgefragen": [
+      {
+        "frage": "Bis zu welchem Wert darf abgeschrieben werden?",
+        "antwort": "Bis zum niedrigeren Teilwert, hier dem Ertragswert von 2.500.000 EUR."
+      },
+      {
+        "frage": "Besteht in der Steuerbilanz eine Pflicht zur Teilwertabschreibung?",
+        "antwort": "Nein, es besteht ein Wahlrecht (Paragraf 6 Abs. 1 Nr. 1 Satz 2 EStG); der Steuerpflichtige kann die Abschreibung auch unterlassen."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Ertragsteuer-vGA",
+    "frage": "Wie ist der Begriff der verdeckten Gewinnausschuettung (vGA) im Sinne des Paragraf 8 Abs. 3 Satz 2 KStG zu umschreiben?",
+    "optionen": [
+      "Eine offene Ausschuettung aufgrund eines ordnungsgemaessen Gewinnverwendungsbeschlusses der Anteilseigner",
+      "Jede betrieblich veranlasste Aufwendung, die das handelsrechtliche Jahresergebnis der Gesellschaft mindert",
+      "Eine durch das Gesellschaftsverhaeltnis veranlasste Vermoegensminderung oder verhinderte Mehrung",
+      "Eine steuerfreie Einlagenrueckgewaehr aus dem steuerlichen Einlagekonto im Sinne der einschlaegigen Vorschrift"
+    ],
+    "richtig": 2,
+    "erkl": "Eine vGA ist eine Vermoegensminderung oder verhinderte Vermoegensmehrung, die durch das Gesellschafts- bzw. Traegerverhaeltnis veranlasst ist, sich auf das Einkommen auswirkt und nicht auf einem ordnungsgemaessen Gewinnverwendungsbeschluss beruht.",
+    "vertiefung": "vGA-Pruefschema (Paragraf 8 Abs. 3 S. 2 KStG): (1) Vermoegensminderung oder verhinderte Vermoegensmehrung, (2) Veranlassung durch das Gesellschafts-/Traegerverhaeltnis (Fremdvergleich: ordentlicher gewissenhafter Geschaeftsleiter), (3) Auswirkung auf das Einkommen, (4) kein ordnungsgemaesser Gewinnverwendungsbeschluss. Rechtsfolge: ausserbilanzielle Hinzurechnung. Bei der Sparkasse typisch: Geschaefte mit dem Traeger zu nicht fremdueblichen Konditionen. Zusaetzlich Kapitalertragsteuerpflicht (15 Prozent) + SolZ.",
+    "folgefragen": [
+      {
+        "frage": "Worin liegt der Unterschied zur offenen Gewinnausschuettung?",
+        "antwort": "Die offene Ausschuettung beruht auf einem foermlichen Gewinnverwendungsbeschluss; der vGA fehlt gerade dieser Beschluss."
+      },
+      {
+        "frage": "Welcher Fremdvergleichsmassstab wird bei der vGA-Pruefung angelegt?",
+        "antwort": "Ob ein ordentlicher und gewissenhafter Geschaeftsleiter den Vorteil auch einem fremden Dritten gewaehrt haette."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "rechnen",
+    "schwer": 2,
+    "thema": "Ertragsteuer-vGA",
+    "frage": "Eine Sparkasse verkauft ein Gebaeude mit einem unstrittigen Verkehrswert von 2.000.000 EUR fuer 500.000 EUR (= Buchwert) an ihren Traeger. In welcher Hoehe ist eine verdeckte Gewinnausschuettung ausserbilanziell dem Gewinn der Sparkasse hinzuzurechnen?",
+    "loesung": "1500000",
+    "einheit": "EUR",
+    "schritte": [
+      "Verkauf unter Verkehrswert an den Traeger -> verhinderte Vermoegensmehrung",
+      "Hoehe der vGA = Verkehrswert - tatsaechlicher Verkaufspreis = 2.000.000 - 500.000",
+      "vGA = 1.500.000 EUR",
+      "Dieser Betrag ist nach Paragraf 8 Abs. 3 Satz 2 KStG ausserbilanziell hinzuzurechnen"
+    ],
+    "vertiefung": "Aus dem KSt/BilSt-Handout (Beispiel 1). Der zu geringe Verkaufspreis ist eine durch das Traegerverhaeltnis veranlasste verhinderte Vermoegensmehrung. Die Differenz zum Verkehrswert (1.500.000 EUR) wird dem Gewinn ausserbilanziell hinzugerechnet. Zusaetzlich ist auf die vGA Kapitalertragsteuer (15 Prozent) zuzueglich Soli einzubehalten.",
+    "folgefragen": [
+      {
+        "frage": "Welche zusaetzliche steuerliche Pflicht loest die vGA aus?",
+        "antwort": "Einbehalt von Kapitalertragsteuer (15 Prozent) zzgl. Solidaritaetszuschlag (5,5 Prozent der KESt) nach Paragraf 43 Abs. 1 Nr. 7b, Paragraf 20 Abs. 1 Nr. 10a EStG."
+      },
+      {
+        "frage": "Wie waere der Spiegelfall (Sparkasse kauft ein Gebaeude UEBER Verkehrswert vom Traeger) zu behandeln?",
+        "antwort": "Aktivierung nur zum fremduebliche Verkehrswert; die Mehrzahlung gilt als vGA und ist nach Paragraf 8 Abs. 3 Satz 2 KStG hinzuzurechnen (BMF 28.5.2002)."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Ertragsteuer-vGA",
+    "frage": "Was ist die zentrale steuerliche Rechtsfolge einer festgestellten verdeckten Gewinnausschuettung auf Ebene der Sparkasse?",
+    "optionen": [
+      "Der Betrag bleibt nach Paragraf 8b Abs. 1 KStG zu 95 Prozent steuerfrei",
+      "Der Betrag wird ausserbilanziell dem Gewinn hinzugerechnet und erhoeht das zvE",
+      "Der Betrag wird ueber zehn Jahre verteilt dem Einkommen zugerechnet",
+      "Der Betrag mindert als Betriebsausgabe das zu versteuernde Einkommen"
+    ],
+    "richtig": 1,
+    "erkl": "Die vGA darf das Einkommen nicht mindern; soweit sie den handelsrechtlichen Gewinn gemindert oder eine Mehrung verhindert hat, ist sie nach Paragraf 8 Abs. 3 Satz 2 KStG ausserbilanziell dem Gewinn hinzuzurechnen und erhoeht damit das zu versteuernde Einkommen.",
+    "vertiefung": "Die vGA wirkt allein ausserbilanziell: Der Steuerbilanzgewinn bleibt unveraendert, nur das Einkommen wird um die vGA erhoeht (Paragraf 8 Abs. 3 S. 2 KStG). Sie darf das Einkommen nicht mindern. Spiegelbildlich loest die vGA Kapitalertragsteuer (15 Prozent) zzgl. SolZ aus, wobei die uebernommene KESt/SolZ das Einkommen ebenfalls nicht mindern darf (Bruttohochrechnung). Auf Ebene des Traegers ist der Vorteil als Kapitalertrag zu erfassen.",
+    "folgefragen": [
+      {
+        "frage": "Wirkt sich die vGA auf den Steuerbilanzgewinn aus?",
+        "antwort": "Nein, die Korrektur erfolgt ausserbilanziell; der Steuerbilanzgewinn bleibt unveraendert, nur das Einkommen wird erhoeht."
+      },
+      {
+        "frage": "Mindert die uebernommene Kapitalertragsteuer auf die vGA das Einkommen?",
+        "antwort": "Nein, die von der Sparkasse uebernommene KESt und der SolZ duerfen das Einkommen nicht mindern."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 1,
+    "thema": "Ertragsteuer-10",
+    "frage": "An die Mitglieder ihres Verwaltungsrats zahlt eine Sparkasse Sitzungsgelder. In welcher Hoehe sind diese Verguetungen nach Paragraf 10 Nr. 4 KStG steuerlich nicht abziehbar?",
+    "optionen": [
+      "Zu 100 Prozent, also in voller Hoehe",
+      "Zu 25 Prozent der Verguetungen",
+      "Zu 50 Prozent der Verguetungen",
+      "Zu 30 Prozent der Verguetungen"
+    ],
+    "richtig": 2,
+    "erkl": "Verguetungen jeder Art an Mitglieder des Aufsichts- oder Verwaltungsrats (Ueberwachungsorgan) sind nach Paragraf 10 Nr. 4 KStG zur Haelfte (50 Prozent) nicht abziehbar.",
+    "vertiefung": "Paragraf 10 Nr. 4 KStG: HAELFTIGES (50 Prozent) Abzugsverbot fuer Verguetungen an Ueberwachungsorgane (Aufsichtsrat, Verwaltungsrat, Kreditausschuss). Erfasst sind alle Leistungen mit Entgeltcharakter, auch pauschale Aufwandsentschaedigungen. NICHT erfasst: gesondert erstattete nachgewiesene Auslagen (z. B. tatsaechliche Fahrtkosten). Sparkassen-Spezialitaet: Fuer kraft Gesetzes (nicht durch Wahl) bestellte Mitglieder - z. B. der Hauptverwaltungsbeamte als Vorsitzender - gilt das Abzugsverbot nach BFH (12.12.1984) NICHT.",
+    "folgefragen": [
+      {
+        "frage": "Welche Zahlungen an Verwaltungsraete fallen NICHT unter das haelftige Abzugsverbot?",
+        "antwort": "Gesondert erstattete, nachgewiesene Auslagen (z. B. tatsaechliche Fahrtkosten); diese bleiben voll abziehbar."
+      },
+      {
+        "frage": "Gilt das Abzugsverbot auch fuer kraft Gesetzes (nicht durch Wahl) bestellte Verwaltungsratsmitglieder?",
+        "antwort": "Nein; nach BFH (12.12.1984) fallen kraft Gesetzes taetige Mitglieder, z. B. der Hauptverwaltungsbeamte als Vorsitzender, nicht unter Paragraf 10 Nr. 4 KStG."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "rechnen",
+    "schwer": 2,
+    "thema": "Ertragsteuer-10",
+    "frage": "Eine Sparkasse hat an ihre durch Wahl bestellten Verwaltungsratsmitglieder Sitzungsgelder von insgesamt 80.000 EUR gezahlt; daneben wurden nachgewiesene Fahrtkosten von 6.000 EUR gesondert erstattet. In welcher Hoehe ist eine ausserbilanzielle Hinzurechnung nach Paragraf 10 Nr. 4 KStG vorzunehmen?",
+    "loesung": "40000",
+    "einheit": "EUR",
+    "schritte": [
+      "Nachgewiesene Fahrtkosten (6.000 EUR) fallen nicht unter das Abzugsverbot -> ausser Ansatz",
+      "Massgebliche Verguetung = Sitzungsgelder 80.000 EUR",
+      "Nicht abziehbar sind 50 Prozent: 80.000 x 50 Prozent = 40.000 EUR",
+      "Ausserbilanzielle Hinzurechnung: 40.000 EUR"
+    ],
+    "vertiefung": "Aus dem KSt/BilSt-Handout: Sitzungsgelder und vergleichbare Verguetungen an gewaehlte Verwaltungsraete sind zur Haelfte nicht abziehbar. Gesondert erstattete, nachgewiesene Auslagen bleiben dagegen voll abziehbar und sind aus der Bemessung herauszunehmen. Pauschale Sachkostenerstattungen waeren dagegen als Verguetung mitzurechnen.",
+    "folgefragen": [
+      {
+        "frage": "Wie waeren pauschale (nicht nachgewiesene) Sachkostenerstattungen zu behandeln?",
+        "antwort": "Als Verguetung i.S.d. Paragraf 10 Nr. 4 KStG; sie unterliegen ebenfalls dem haelftigen Abzugsverbot."
+      },
+      {
+        "frage": "Warum erfolgt die Korrektur ausserbilanziell?",
+        "antwort": "Der Aufwand ist handelsrechtlich zu Recht gebucht; nur die steuerliche Abziehbarkeit ist beschraenkt, daher Korrektur ausserhalb der Bilanz beim Einkommen."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Ertragsteuer-10",
+    "frage": "Eine Sparkasse hat Koerperschaftsteuer-Vorauszahlungen und Nachzahlungszinsen nach Paragraf 233a AO als Aufwand gebucht. Wie sind diese Betraege steuerlich zu behandeln?",
+    "optionen": [
+      "Sie mindern unmittelbar die festzusetzende Koerperschaftsteuer",
+      "Sie sind nach Paragraf 10 Nr. 2 KStG nicht abziehbar und ausserbilanziell hinzuzurechnen",
+      "Sie sind voll abziehbare Betriebsausgaben und mindern das zvE",
+      "Sie sind nur zur Haelfte abziehbar entsprechend Paragraf 10 Nr. 4 KStG"
+    ],
+    "richtig": 1,
+    "erkl": "Die Koerperschaftsteuer selbst und die darauf entfallenden Nebenleistungen, insbesondere die Nachzahlungszinsen nach Paragraf 233a AO, sind nach Paragraf 10 Nr. 2 KStG nicht abziehbar.",
+    "vertiefung": "Paragraf 10 Nr. 2 KStG: Die KSt selbst, sonstige Personensteuern und die Nebenleistungen - insbesondere Nachzahlungszinsen nach Paragraf 233a AO - sind nicht abziehbar und ausserbilanziell hinzuzurechnen. Spiegelbildlich sind Erstattungszinsen steuerpflichtig (erhoehen das Einkommen). Die GewSt selbst faellt unter Paragraf 4 Abs. 5b EStG. Im Bader-Schema werden KSt-/GewSt-Vorauszahlungen und -Nachzahlungen sowie die Paragraf-233a-Zinsen konsequent dem Gewinn wieder hinzugerechnet.",
+    "folgefragen": [
+      {
+        "frage": "Wie werden die Erstattungszinsen nach Paragraf 233a AO behandelt?",
+        "antwort": "Erstattungszinsen sind spiegelbildlich steuerpflichtig und erhoehen das Einkommen; sie sind nicht nach Paragraf 10 Nr. 2 KStG zu kuerzen."
+      },
+      {
+        "frage": "Fallen auch die Gewerbesteuer-Nachzahlungszinsen unter Paragraf 10 Nr. 2 KStG?",
+        "antwort": "Ja, die Bader-Loesung ordnet die Zinsen auf GewSt-Nachzahlungen ebenfalls Paragraf 10 Nr. 2 KStG zu; die Gewerbesteuer selbst ist nach Paragraf 4 Abs. 5b EStG nicht abziehbar."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Ertragsteuer-10",
+    "frage": "Der Jahresbeitrag zur Bankenabgabe (Jahresbeitrag nach Paragraf 12 RStruktFG) hat den handelsrechtlichen Gewinn der Sparkasse gemindert. Wie ist dieser Betrag steuerlich zu behandeln?",
+    "optionen": [
+      "Er ist nach Paragraf 7 EStG auf einen Zeitraum von fuenf Jahren verteilt abziehbar",
+      "Er ist nach Paragraf 4 Abs. 4 EStG als laufender Betriebsaufwand in voller Hoehe abziehbar",
+      "Er ist nach Paragraf 10 Nr. 4 KStG nur zur Haelfte als Betriebsausgabe abziehbar",
+      "Er ist nach Paragraf 4 Abs. 5 Nr. 13 EStG nicht abziehbar und ausserbilanziell hinzuzurechnen"
+    ],
+    "richtig": 3,
+    "erkl": "Der Jahresbeitrag nach Paragraf 12 Abs. 2 RStruktFG (Bankenabgabe) darf den Gewinn nach Paragraf 4 Abs.",
+    "vertiefung": "Paragraf 4 Abs. 5 Nr. 13 EStG stellt den Jahresbeitrag nach Paragraf 12 RStruktFG (Bankenabgabe) als nicht abziehbare Betriebsausgabe ein - ausserbilanzielle Hinzurechnung. Die Bankenabgabe ist neben GewSt (Paragraf 4 Abs. 5b EStG) und KSt/Paragraf-233a-Zinsen (Paragraf 10 Nr. 2 KStG) eine sparkassentypische Abzugsbeschraenkung. Zur Verfassungsmaessigkeit ist eine Verfassungsbeschwerde anhaengig (2 BvR 926/21); im Examen ist die Nichtabziehbarkeit dennoch anzusetzen.",
+    "folgefragen": [
+      {
+        "frage": "Welche andere praxisrelevante nicht abziehbare Aufwendung betrifft Sparkassen besonders?",
+        "antwort": "Die Gewerbesteuer selbst (Paragraf 4 Abs. 5b EStG) sowie die nichtabziehbare Koerperschaftsteuer und Paragraf-233a-Zinsen (Paragraf 10 Nr. 2 KStG)."
+      },
+      {
+        "frage": "Ist die Gewerbesteuer als Betriebsausgabe abziehbar?",
+        "antwort": "Nein, seit dem Unternehmensteuerreformgesetz 2008 ist die Gewerbesteuer nach Paragraf 4 Abs. 5b EStG nicht mehr abziehbar."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Ertragsteuer-340",
+    "frage": "Eine Sparkasse fuehrt ihrem Fonds fuer allgemeine Bankrisiken nach Paragraf 340g HGB einen Betrag zu, der ihren handelsrechtlichen Aufwand erhoeht. Wie ist diese Zufuehrung steuerlich zu behandeln?",
+    "optionen": [
+      "Sie ist nach Paragraf 5 Abs. 4a EStG als Drohverlustrueckstellung zu behandeln",
+      "Sie ist als laufender Betriebsaufwand in voller Hoehe abziehbar",
+      "Sie ist nach Paragraf 6 Abs. 1 Nr. 2 Satz 2 EStG als Teilwertabschreibung abziehbar",
+      "Sie ist nach Paragraf 8 Abs. 3 Satz 1 KStG als Ergebnisverwendung nicht abziehbar"
+    ],
+    "richtig": 3,
+    "erkl": "Die Dotierung des Fonds fuer allgemeine Bankrisiken (Paragraf 340g HGB) ist eine Ergebnisverwendung und daher nach Paragraf 8 Abs. 3 Satz 1 KStG steuerlich nicht abziehbar.",
+    "vertiefung": "Paragraf 340g HGB (Fonds fuer allgemeine Bankrisiken) ist ERGEBNISVERWENDUNG, kein Aufwand: Die Zufuehrung ist nach Paragraf 8 Abs. 3 S. 1 KStG steuerlich nicht abziehbar und wird neutralisiert. Abzugrenzen von Paragraf 340f HGB (stille Vorsorgereserven durch Unterbewertung) - dort fehlt mangels dauernder Wertminderung (Paragraf 6 Abs. 1 Nr. 2 S. 2 EStG) ebenfalls die steuerliche Wirkung. Merke: 340g = offen + Ergebnisverwendung (Paragraf 8 III 1 KStG); 340f = still + keine dauernde Wertminderung.",
+    "folgefragen": [
+      {
+        "frage": "Was ist der Unterschied zwischen Paragraf 340g und Paragraf 340f HGB?",
+        "antwort": "Paragraf 340g betrifft den offen ausgewiesenen Fonds fuer allgemeine Bankrisiken (Ergebnisverwendung); Paragraf 340f betrifft stille Vorsorgereserven durch Unterbewertung bestimmter Aktiva."
+      },
+      {
+        "frage": "Warum wird die Zufuehrung als Ergebnisverwendung und nicht als Aufwand eingestuft?",
+        "antwort": "Weil sie wie eine Ruecklagenbildung aus dem versteuerten Ergebnis erfolgt und nicht der Erzielung von Einkuenften dient; daher Paragraf 8 Abs. 3 Satz 1 KStG."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Ertragsteuer-340",
+    "frage": "Ist die Bildung von Vorsorgereserven nach Paragraf 340f HGB (stille Reserven durch Unterbewertung von Forderungen und Wertpapieren) in der Steuerbilanz zulaessig, wenn lediglich eine zinsbedingte, nicht dauerhafte Wertminderung vorliegt?",
+    "optionen": [
+      "Ja, in der Steuerbilanz besteht insoweit ein eigenstaendiges, von der Handelsbilanz unabhaengiges Wahlrecht",
+      "Nein, da Paragraf 340f HGB ausschliesslich fuer die Aufstellung der Konzernbilanz Anwendung findet",
+      "Ja, jedoch der Hoehe nach begrenzt auf hoechstens vier Prozent des Buchwerts der Forderungen und Wertpapiere",
+      "Nein, es fehlt an einer dauernden Wertminderung nach Paragraf 6 Abs. 1 Nr. 2 S. 2 EStG"
+    ],
+    "richtig": 3,
+    "erkl": "Vorsorgereserven nach Paragraf 340f HGB beruhen auf einer rein handelsrechtlich zulaessigen Unterbewertung. Steuerlich ist eine Teilwertabschreibung nur bei voraussichtlich dauernder Wertminderung moeglich (Paragraf 6 Abs.",
+    "vertiefung": "Paragraf 340f HGB erlaubt Kreditinstituten stille Vorsorgereserven durch Unterbewertung von Forderungen und Wertpapieren der Liquiditaetsreserve (handelsrechtliches Sonderrecht). Steuerlich ist das irrelevant: Eine Teilwertabschreibung setzt voraussichtlich DAUERNDE Wertminderung voraus (Paragraf 6 Abs. 1 Nr. 2 S. 2 EStG). Fehlt sie, ist die Reserve in der StB unzulaessig; die Bildung wirkt nicht und auch die spaetere Aufloesung ist steuerneutral. Anders bei Bonitaets-/Liquiditaetsrisiko - dann dauerhaft und Teilwertabschreibung moeglich.",
+    "folgefragen": [
+      {
+        "frage": "Wie wirkt sich die Aufloesung einer Paragraf-340f-Vorsorgereserve steuerlich aus?",
+        "antwort": "Da die Bildung steuerlich nicht nachvollzogen wurde, ist auch die Aufloesung steuerneutral; das Steuerbilanzergebnis ist insoweit nicht beruehrt."
+      },
+      {
+        "frage": "Welche Voraussetzung muesste fuer eine steuerwirksame Abschreibung erfuellt sein?",
+        "antwort": "Eine voraussichtlich dauernde Wertminderung, etwa bei einem Bonitaets- oder Liquiditaetsrisiko hinsichtlich der Rueckzahlung."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Ertragsteuer-10",
+    "frage": "Worin besteht die Grundidee der Zinsschranke nach Paragraf 4h EStG (i.V.m. Paragraf 8a KStG)?",
+    "optionen": [
+      "Zinsaufwendungen an inlaendische Glaeubiger sind stets voll, an auslaendische nie abziehbar",
+      "Der Nettozinsaufwand ist grundsaetzlich nur bis 30 Prozent des steuerlichen EBITDA sofort abziehbar",
+      "Zinsaufwendungen sind generell nur zur Haelfte als Betriebsausgabe abziehbar",
+      "Zinsaufwendungen werden pauschal mit 25 Prozent dem Gewerbeertrag hinzugerechnet"
+    ],
+    "richtig": 1,
+    "erkl": "Die Zinsschranke begrenzt den sofort abziehbaren Nettozinsaufwand (Zinsaufwand abzueglich Zinsertrag) grundsaetzlich auf 30 Prozent des steuerlichen EBITDA. Nicht abziehbare Zinsen sind als Zinsvortrag vortragsfaehig.",
+    "vertiefung": "Paragraf 4h EStG (i.V.m. Paragraf 8a KStG): Nettozinsaufwand (Zinsaufwand minus Zinsertrag) ist nur bis 30 Prozent des steuerlichen EBITDA sofort abziehbar; Ueberhang geht in einen zeitlich unbegrenzten Zinsvortrag (auch EBITDA-Vortrag). Ausnahmen: Freigrenze (Nettozinsaufwand unter 3 Mio. EUR), Stand-alone-Klausel und Eigenkapital-Escape (Konzern-EK-Quote). Ziel ist die Begrenzung von Gewinnverlagerung durch Fremdkapitalfinanzierung. Fuer reine Kreditinstitute mit ueberwiegendem Zinsgeschaeft sind Sonderfragen zu beachten.",
+    "folgefragen": [
+      {
+        "frage": "Was geschieht mit Zinsen, die wegen der Zinsschranke nicht abziehbar sind?",
+        "antwort": "Sie gehen in einen zeitlich unbegrenzten Zinsvortrag ein und koennen in Folgejahren im Rahmen des 30-Prozent-EBITDA abgezogen werden (Paragraf 4h Abs. 1 EStG)."
+      },
+      {
+        "frage": "Nennen Sie eine Ausnahme von der Zinsschranke.",
+        "antwort": "Die Freigrenze fuer einen Nettozinsaufwand unter 3 Mio. EUR sowie die Konzernklauseln (Stand-alone, Eigenkapital-Escape)."
+      }
+    ]
+  },
+  {
+    "fach": "Steuerrecht",
+    "typ": "mc",
+    "schwer": 2,
+    "thema": "Ertragsteuer-10",
+    "frage": "Auf welcher gesetzlichen Grundlage beruht die Erhebung der Bankenabgabe (Jahresbeitrag zum Restrukturierungsfonds), deren Aufwand steuerlich nicht abziehbar ist?",
+    "optionen": [
+      "Auf § 12 RStruktFG (Restrukturierungsfondsgesetz, Jahresbeitrag)",
+      "Auf § 233a AO (Verzinsung von Steuernachforderungen/-erstattungen)",
+      "Auf § 340g HGB (Dotierung des Fonds für allgemeine Bankrisiken)",
+      "Auf § 8b KStG (Steuerfreistellung von Beteiligungserträgen)"
+    ],
+    "richtig": 0,
+    "erkl": "Die Bankenabgabe wird als Jahresbeitrag nach Paragraf 12 RStruktFG erhoben. Steuerlich ist der Beitrag nach Paragraf 4 Abs.",
+    "vertiefung": "Die Bankenabgabe ist der Jahresbeitrag zum Restrukturierungs-/Abwicklungsfonds nach Paragraf 12 RStruktFG; sie finanziert die geordnete Abwicklung von Instituten. Steuerlich ist sie nach Paragraf 4 Abs. 5 Nr. 13 EStG nicht abziehbar (ausserbilanzielle Hinzurechnung). Nicht zu verwechseln mit Paragraf 340g HGB (Fonds fuer allgemeine Bankrisiken, Ergebnisverwendung) oder mit der Einlagensicherung. Zur Verfassungsmaessigkeit laeuft 2 BvR 926/21.",
+    "folgefragen": [
+      {
+        "frage": "Welche steuerliche Folge hat die Bankenabgabe konkret fuer das zvE?",
+        "antwort": "Der als Aufwand gebuchte Beitrag wird nach Paragraf 4 Abs. 5 Nr. 13 EStG ausserbilanziell hinzugerechnet und erhoeht das zvE."
+      },
+      {
+        "frage": "Ist die Verfassungsmaessigkeit der Bankenabgabe geklaert?",
+        "antwort": "Nein, dazu ist eine Verfassungsbeschwerde beim Bundesverfassungsgericht anhaengig (2 BvR 926/21)."
       }
     ]
   }
