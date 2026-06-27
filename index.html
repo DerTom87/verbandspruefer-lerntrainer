@@ -134,10 +134,19 @@
   .calcwrap{margin-top:10px}
   .calc-toggle{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:.85rem;font-weight:600;color:var(--accent);cursor:pointer}
   .calc-toggle:hover{border-color:var(--accent)}
-  .calc{display:none;margin-top:8px;max-width:260px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+  .calc{display:none;margin-top:8px;width:100%;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+  .calc .hist{font-family:'DejaVu Sans Mono',monospace;font-size:.78rem;color:var(--muted);text-align:right;line-height:1.5;margin-bottom:4px;min-height:1.2em;white-space:pre-wrap;word-break:break-all}
+  .calc .hist div{opacity:.55}
+  .calc .hist div:last-child{opacity:.85}
+  .calcwrap.full .calc-toggle{width:100%;text-align:center}
+  .noteswrap{margin-top:10px}
+  .notes-toggle{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:.85rem;font-weight:600;color:var(--accent);cursor:pointer}
+  .notes-toggle:hover{border-color:var(--accent)}
+  textarea.notes{display:none;margin-top:8px;width:100%;min-height:90px;font-family:'DejaVu Sans Mono',monospace;font-size:.9rem;border:1.5px dashed var(--line);border-radius:11px;padding:12px;background:#fffdf5}
+  textarea.notes.show{display:block}
   .calc.show{display:block}
   .calc .disp{width:100%;text-align:right;font-size:1.25rem;font-family:'DejaVu Sans Mono',monospace;border:1.5px solid var(--line);border-radius:8px;padding:8px 10px;margin-bottom:8px;background:#fff;color:var(--ink);min-height:1.6em;overflow-x:auto}
-  .calc .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+  .calc .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;max-width:340px;margin:0 auto}
   .calc button{padding:11px 0;font-size:1rem;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer;color:var(--ink)}
   .calc button:hover{background:var(--accent-soft)}
   .calc button.op{background:var(--bg);font-weight:600}
@@ -975,7 +984,7 @@ const Q_RECHT = [
     "vertiefung": "§127 HGB stellt den Neugesellschafter den Altgesellschaftern gleich: Er haftet auch für Verbindlichkeiten, die vor seinem Eintritt begründet wurden, sogar wenn er sie nicht kannte. Ein Haftungsausschluss gegenüber Dritten ist nicht möglich (vgl. §126 Abs. 2 HGB). Praxisbezug Sparkasse: Bei Gesellschafterwechsel haftet der Eintretende für den Altkredit voll mit, was die Bonitätsprüfung erleichtert. Klausurfehler ist die Annahme, nur künftige Schulden seien erfasst.",
     "folgefragen": [
       {
-        "frage": "Kann der Eintretende seine Haftung für Altschulden durch Vereinbarung mit den Mitgesellschaftern ausschliessen?",
+        "frage": "Kann der Eintretende seine Haftung für Altschulden durch Vereinbarung mit den Mitgesellschaftern ausschließen?",
         "antwort": "Nur im Innenverhältnis; gegenüber dem Gläubiger ist ein Ausschluss nach §126 Abs. 2 HGB unwirksam."
       },
       {
@@ -1160,7 +1169,7 @@ const Q_RECHT = [
     "folgefragen": [
       {
         "frage": "Schadet es dem Dritten, wenn er das Handelsregister hätte einsehen können, dies aber unterliess?",
-        "antwort": "Nein, eine Einsichtsobliegenheit besteht nicht; nur positive Kenntnis der wahren Tatsache schliesst den Schutz aus."
+        "antwort": "Nein, eine Einsichtsobliegenheit besteht nicht; nur positive Kenntnis der wahren Tatsache schließt den Schutz aus."
       },
       {
         "frage": "Welcher Maßstab gilt dagegen beim gutgläubigen Erwerb nach §932 BGB?",
@@ -1208,7 +1217,7 @@ const Q_RECHT = [
     ],
     "richtig": 3,
     "erkl": "§ 171 Abs. 1 HGB: Haftung bis zur Höhe der Hafteinlage; ist die Einlage geleistet (§ 172 Abs. 1 HGB), ist die persönliche Haftung ausgeschlossen – außer bei Rückgewähr (§ 172 Abs. 4 HGB).",
-    "vertiefung": "Die Kommanditistenhaftung folgt einem Zwei-Schritt: §171 Abs. 1 HGB ordnet die Haftung bis zur Hafteinlage an, §172 Abs. 1 HGB schliesst sie aus, soweit die Einlage geleistet ist. Lebt die Haftung wieder auf, ist §172 Abs. 4 HGB zu prüfen (verdeckte Rückgewähr, z.B. Gewinnentnahmen bei nicht gedecktem Kapitalanteil). Klausurfehler ist die Gleichsetzung von Pflichteinlage (Innenverhältnis) und Hafteinlage (Aussenverhältnis, Registerbetrag). Praxisbezug: Die Sparkasse prüft die im Register eingetragene Hafteinlage.",
+    "vertiefung": "Die Kommanditistenhaftung folgt einem Zwei-Schritt: §171 Abs. 1 HGB ordnet die Haftung bis zur Hafteinlage an, §172 Abs. 1 HGB schließt sie aus, soweit die Einlage geleistet ist. Lebt die Haftung wieder auf, ist §172 Abs. 4 HGB zu prüfen (verdeckte Rückgewähr, z.B. Gewinnentnahmen bei nicht gedecktem Kapitalanteil). Klausurfehler ist die Gleichsetzung von Pflichteinlage (Innenverhältnis) und Hafteinlage (Aussenverhältnis, Registerbetrag). Praxisbezug: Die Sparkasse prüft die im Register eingetragene Hafteinlage.",
     "folgefragen": [
       {
         "frage": "Was passiert mit der Kommanditistenhaftung, wenn die Einlage später zurückgewährt wird?",
@@ -1275,10 +1284,10 @@ const Q_RECHT = [
     ],
     "richtig": 3,
     "erkl": "Vertragliche Ansprüche zuerst, weil sie andere beeinflussen: GoA/Bereicherung setzen gerade das Fehlen eines Rechtsverhältnisses voraus; ein Vertrag kann die Rechtswidrigkeit einer unerlaubten Handlung (§§ 823 ff. BGB) ausschließen oder den Verschuldensmaßstab ändern.",
-    "vertiefung": "Der Vorrang des Vertrags hat materielle Gründe: GoA und Bereicherung setzen das Fehlen eines Rechtsgrundes voraus, ein wirksamer Vertrag schliesst sie also aus. Zudem kann der Vertrag den Verschuldensmaßstab modifizieren (§§276, 278 BGB) oder Haftungsausschlüsse enthalten, die auch auf das Deliktsrecht ausstrahlen. Klausurfehler ist das isolierte Prüfen des Deliktsrechts ohne Beachtung vertraglicher Wertungen. Praxisbezug: Bei Bankgeschäften prägen AGB und Vertrag die Haftung weitreichend.",
+    "vertiefung": "Der Vorrang des Vertrags hat materielle Gründe: GoA und Bereicherung setzen das Fehlen eines Rechtsgrundes voraus, ein wirksamer Vertrag schließt sie also aus. Zudem kann der Vertrag den Verschuldensmaßstab modifizieren (§§276, 278 BGB) oder Haftungsausschlüsse enthalten, die auch auf das Deliktsrecht ausstrahlen. Klausurfehler ist das isolierte Prüfen des Deliktsrechts ohne Beachtung vertraglicher Wertungen. Praxisbezug: Bei Bankgeschäften prägen AGB und Vertrag die Haftung weitreichend.",
     "folgefragen": [
       {
-        "frage": "Warum schliesst ein wirksamer Vertrag die Leistungskondiktion aus?",
+        "frage": "Warum schließt ein wirksamer Vertrag die Leistungskondiktion aus?",
         "antwort": "Weil der Vertrag den Rechtsgrund für die Leistung bildet; §812 Abs. 1 BGB setzt aber gerade das Fehlen eines Rechtsgrundes voraus."
       },
       {
@@ -1413,7 +1422,7 @@ const Q_RECHT = [
       },
       {
         "frage": "Warum ist §826 BGB bei reinen Vermögensschäden besonders wichtig?",
-        "antwort": "Weil §823 Abs. 1 BGB das Vermögen nicht schützt; §826 BGB schliesst diese Lücke, allerdings nur bei vorsätzlich-sittenwidrigem Verhalten."
+        "antwort": "Weil §823 Abs. 1 BGB das Vermögen nicht schützt; §826 BGB schließt diese Lücke, allerdings nur bei vorsätzlich-sittenwidrigem Verhalten."
       }
     ]
   },
@@ -1594,7 +1603,7 @@ const Q_RECHT = [
     "folgefragen": [
       {
         "frage": "Kann eine Bürgschaft in elektronischer Form (§126a BGB) erteilt werden?",
-        "antwort": "Nein, §766 S. 2 BGB schliesst die elektronische Form ausdrücklich aus; erforderlich ist die eigenhändige Schriftform (Ausnahme: Kaufmann, §350 HGB)."
+        "antwort": "Nein, §766 S. 2 BGB schließt die elektronische Form ausdrücklich aus; erforderlich ist die eigenhändige Schriftform (Ausnahme: Kaufmann, §350 HGB)."
       },
       {
         "frage": "Wie wird ein ursprünglicher Formmangel der Bürgschaft geheilt?",
@@ -1620,7 +1629,7 @@ const Q_RECHT = [
     "folgefragen": [
       {
         "frage": "Muss der Gläubiger die Annahme der Bürgschaft dem Bürgen zugehen lassen?",
-        "antwort": "Nein, nach §151 S. 1 BGB ist der Zugang der Annahme entbehrlich, da sie ausschliesslich dem Bürgen günstig ist."
+        "antwort": "Nein, nach §151 S. 1 BGB ist der Zugang der Annahme entbehrlich, da sie ausschließlich dem Bürgen günstig ist."
       },
       {
         "frage": "Unterliegt auch die Annahmeerklärung des Gläubigers der Schriftform des §766 BGB?",
@@ -1812,7 +1821,7 @@ const Q_RECHT = [
     ],
     "richtig": 1,
     "erkl": "Großer Senat 1997: Bei nachträglicher Übersicherung besteht ein ermessensunabhängiger Freigabeanspruch (§§ 138, 157, 242 BGB) auch ohne ausdrückliche Klausel. Deckungsgrenze 110% der gesicherten Forderung; Auslösegrenze (realisierbarer Wert) 150%.",
-    "vertiefung": "Der Grosse Senat (1997) hat zwei Grenzen festgelegt: Die Deckungsgrenze (110% der gesicherten Forderung) bestimmt, wieviel Sicherheit angemessen ist; die Auslosegrenze (150% des realisierbaren Werts) markiert, ab wann der ermessensunabhängige Freigabeanspruch entsteht. Wichtig: Dieser Anspruch besteht auch ohne ausdrückliche Freigabeklausel, abgeleitet aus §§138, 157, 242 BGB. Klausurfehler ist die Verwechslung von anfänglicher (führt zur Nichtigkeit §138 BGB) und nachträglicher Übersicherung (führt zum Freigabeanspruch).",
+    "vertiefung": "Der Große Senat (1997) hat zwei Grenzen festgelegt: Die Deckungsgrenze (110% der gesicherten Forderung) bestimmt, wieviel Sicherheit angemessen ist; die Auslosegrenze (150% des realisierbaren Werts) markiert, ab wann der ermessensunabhängige Freigabeanspruch entsteht. Wichtig: Dieser Anspruch besteht auch ohne ausdrückliche Freigabeklausel, abgeleitet aus §§138, 157, 242 BGB. Klausurfehler ist die Verwechslung von anfänglicher (führt zur Nichtigkeit §138 BGB) und nachträglicher Übersicherung (führt zum Freigabeanspruch).",
     "folgefragen": [
       {
         "frage": "Worin unterscheidet sich anfängliche von nachträglicher Übersicherung?",
@@ -1820,7 +1829,7 @@ const Q_RECHT = [
       },
       {
         "frage": "Braucht der Freigabeanspruch eine ausdrückliche Klausel im Sicherungsvertrag?",
-        "antwort": "Nein, er besteht nach dem Grossen Senat auch ohne ausdrückliche Freigabeklausel kraft ergänzender Auslegung (§§157, 242 BGB)."
+        "antwort": "Nein, er besteht nach dem Großen Senat auch ohne ausdrückliche Freigabeklausel kraft ergänzender Auslegung (§§157, 242 BGB)."
       }
     ]
   },
@@ -1985,7 +1994,7 @@ const Q_RECHT = [
     "vertiefung": "§25 Abs. 1 HGB ordnet beim Unternehmenskauf mit Firmenfortführung die Erwerberhaftung für Altverbindlichkeiten an. Sie kann nur durch Eintragung und Bekanntmachung (oder Mitteilung an den Dritten) ausgeschlossen werden (§25 Abs. 2 HGB). Der Veräußerer enthaftet nach §26 HGB in fünf Jahren. Beim Erbfall gilt die Parallele des §27 HGB. Klausurfehler ist die Annahme, ein blosser Vertrag zwischen Veräußerer und Erwerber genüge für den Haftungsausschluss; gegenüber Dritten wirkt nur die Eintragung. Praxisbezug Sparkasse: Beim Asset Deal ist die Firmenfortführung haftungsrelevant.",
     "folgefragen": [
       {
-        "frage": "Wie kann der Erwerber die Haftung nach §25 Abs. 1 HGB ausschliessen?",
+        "frage": "Wie kann der Erwerber die Haftung nach §25 Abs. 1 HGB ausschließen?",
         "antwort": "Nur durch Eintragung und Bekanntmachung des Haftungsausschlusses im Handelsregister oder durch Mitteilung an den jeweiligen Dritten (§25 Abs. 2 HGB)."
       },
       {
@@ -2034,7 +2043,7 @@ const Q_RECHT = [
     ],
     "richtig": 2,
     "erkl": "§ 366 HGB erweitert den gutgläubigen Erwerb vom Kaufmann: Geschützt wird der gute Glaube an die Verfügungsbefugnis (z.B. beim Kommissionär oder verlängerten EV), während § 932 BGB nur den guten Glauben an das Eigentum schützt.",
-    "vertiefung": "§366 HGB erweitert den gutgläubigen Erwerb: Während §932 BGB nur den guten Glauben an das Eigentum schützt, schützt §366 HGB beim Erwerb von einem Kaufmann auch den guten Glauben an die Verfügungsbefugnis. Das ist praktisch wichtig beim Kommissionär oder beim verlängerten Eigentumsvorbehalt, wo der Veräußerer befugt, aber nicht Eigentümer ist. Klausurfehler ist die Anwendung des §366 HGB ausserhalb des Handelsverkehrs; der Veräußerer muss Kaufmann sein und im Betrieb seines Handelsgewerbes handeln.",
+    "vertiefung": "§366 HGB erweitert den gutgläubigen Erwerb: Während §932 BGB nur den guten Glauben an das Eigentum schützt, schützt §366 HGB beim Erwerb von einem Kaufmann auch den guten Glauben an die Verfügungsbefugnis. Das ist praktisch wichtig beim Kommissionär oder beim verlängerten Eigentumsvorbehalt, wo der Veräußerer befugt, aber nicht Eigentümer ist. Klausurfehler ist die Anwendung des §366 HGB außerhalb des Handelsverkehrs; der Veräußerer muss Kaufmann sein und im Betrieb seines Handelsgewerbes handeln.",
     "folgefragen": [
       {
         "frage": "Welchen guten Glauben schützt §932 BGB, welchen §366 HGB?",
@@ -2068,7 +2077,7 @@ const Q_RECHT = [
       },
       {
         "frage": "Warum verlangt die Sparkasse trotz Trennungsprinzip persönliche Bürgschaften?",
-        "antwort": "Weil die Gesellschafter sonst nicht persönlich haften; die Bürgschaft schafft einen zusätzlichen Schuldner ausserhalb des Haftungsprivilegs."
+        "antwort": "Weil die Gesellschafter sonst nicht persönlich haften; die Bürgschaft schafft einen zusätzlichen Schuldner außerhalb des Haftungsprivilegs."
       }
     ]
   },
@@ -2604,7 +2613,7 @@ const Q_RECHT = [
       },
       {
         "frage": "Wäre die mündliche Bürgschaft einer GbR für einen Kredit wirksam?",
-        "antwort": "Grundsätzlich nicht, da die GbR (ausser bei eigenem Handelsgewerbe als OHG) kein Kaufmann ist; es bleibt bei der Schriftform des §766 BGB."
+        "antwort": "Grundsätzlich nicht, da die GbR (außer bei eigenem Handelsgewerbe als OHG) kein Kaufmann ist; es bleibt bei der Schriftform des §766 BGB."
       }
     ]
   },
@@ -2656,7 +2665,7 @@ const Q_RECHT = [
       },
       {
         "frage": "Worin liegt der Unterschied zur Haftung des Bürgen?",
-        "antwort": "Der Gesellschafter haftet primär (sofortiger Zugriff), der Bürge kann grundsätzlich die Einrede der Vorausklage (§771 BGB) erheben (ausser §349 HGB/§773 BGB)."
+        "antwort": "Der Gesellschafter haftet primär (sofortiger Zugriff), der Bürge kann grundsätzlich die Einrede der Vorausklage (§771 BGB) erheben (außer §349 HGB/§773 BGB)."
       }
     ]
   },
@@ -8964,12 +8973,12 @@ const Q_STEUER = [
     "frage": "Wie wird die Zuführung zum Fonds für allgemeine Bankrisiken (§ 340g HGB) steuerlich behandelt?",
     "optionen": [
       "Steuerfrei und ohne Auswirkung auf das Einkommen",
-      "Keine Betriebsausgabe → ausserbilanziell hinzurechnen",
+      "Keine Betriebsausgabe → außerbilanziell hinzurechnen",
       "In vollem Umfang als Betriebsausgabe abzugsfähig",
       "Zur Hälfte als Betriebsausgabe abzugsfähig"
     ],
     "richtig": 1,
-    "erkl": "§ 340g HGB-Zuführung ist KEINE Betriebsausgabe -> ausserbilanziell hinzurechnen (§ 8 Abs. 3 S. 1 KStG, Einkommensverwendung).",
+    "erkl": "§ 340g HGB-Zuführung ist KEINE Betriebsausgabe -> außerbilanziell hinzurechnen (§ 8 Abs. 3 S. 1 KStG, Einkommensverwendung).",
     "vertiefung": "Die Zuführung zum Fonds für allgemeine Bankrisiken (§340g HGB) ist handelsrechtlich Aufwand, steuerlich aber Einkommensverwendung und damit keine Betriebsausgabe – sie ist außerbilanziell nach §8 Abs.3 S.1 KStG hinzuzurechnen. Hintergrund: §340g schafft offene Vorsorgereserven, deren Bildung das zu versteuernde Einkommen nicht mindern soll. Merke den Gegensatz: §340g-Zuführung = hinzurechnen (steuerneutral), spätere Auflösung = außerbilanziell kürzen. Abgrenzung zu §340f (stille Reserven), das eine andere Korrektursystematik hat.",
     "folgefragen": [
       {
@@ -8990,12 +8999,12 @@ const Q_STEUER = [
     "frage": "Wie wirkt die AUFLÖSUNG der Vorsorgereserve nach § 340f HGB steuerlich?",
     "optionen": [
       "Zusätzlich in vollem Umfang körperschaftsteuerpflichtig",
-      "Erhöht den HB-Gewinn, steuerlich bereits erfasst → ausserbilanzielle Kürzung",
+      "Erhöht den HB-Gewinn, steuerlich bereits erfasst → außerbilanzielle Kürzung",
       "Vollständig steuerfrei ohne jede außerbilanzielle Korrektur",
       "Wie eine § 340g-Zuführung zum Sonderposten zu behandeln"
     ],
     "richtig": 1,
-    "erkl": "§ 340f-Reserven sind versteuerte stille Reserven; ihre Auflösung ist steuerlich neutral -> ausserbilanzielle Korrektur (anders als § 340g).",
+    "erkl": "§ 340f-Reserven sind versteuerte stille Reserven; ihre Auflösung ist steuerlich neutral -> außerbilanzielle Korrektur (anders als § 340g).",
     "vertiefung": "§340f-HGB-Reserven sind stille Vorsorgereserven, die durch zulässige Unterbewertung von Forderungen und bestimmten Wertpapieren gebildet werden; ihre Bildung war seinerzeit aus versteuertem Einkommen erfolgt. Wird die Reserve aufgelöst, erhöht das den Handelsbilanzgewinn, ist aber steuerlich bereits erfasst – deshalb außerbilanzielle Kürzung, um Doppelbesteuerung zu vermeiden. Merke den Kontrast zu §340g: Dort ist die ZUFÜHRUNG hinzuzurechnen, hier die AUFLÖSUNG zu kürzen. Typischer Fehler: §340f und §340g in der Korrekturrichtung verwechseln.",
     "folgefragen": [
       {
@@ -9144,11 +9153,11 @@ const Q_STEUER = [
     "schwer": 3,
     "thema": "Ertragsteuer-vGA",
     "frage": "[Klausur-nah] Die Sparkasse verkauft ein Gebäude mit Verkehrswert 2.000 TEUR für 1.000 TEUR (= Buchwert) an ihren Träger. Nehmen Sie Stellung.",
-    "muster": "Verkauf unter Verkehrswert an den Träger = verdeckte Gewinnausschüttung (vGA, § 8 Abs. 3 S. 2 KStG). Die Differenz Verkehrswert - Verkaufspreis (1.000 TEUR) mindert das Einkommen nicht -> ausserbilanzielle Hinzurechnung. Veranlassung durch das Gesellschaftsverhältnis (Träger).",
+    "muster": "Verkauf unter Verkehrswert an den Träger = verdeckte Gewinnausschüttung (vGA, § 8 Abs. 3 S. 2 KStG). Die Differenz Verkehrswert - Verkaufspreis (1.000 TEUR) mindert das Einkommen nicht -> außerbilanzielle Hinzurechnung. Veranlassung durch das Gesellschaftsverhältnis (Träger).",
     "checkliste": [
       "vGA § 8 Abs. 3 S. 2 KStG",
       "Differenz Verkehrswert - Preis = 1.000 TEUR",
-      "ausserbilanzielle Hinzurechnung",
+      "außerbilanzielle Hinzurechnung",
       "Veranlassung durch Träger"
     ]
   },
@@ -9191,7 +9200,7 @@ const Q_STEUER = [
       "Steuerfrei und ohne Auswirkung"
     ],
     "richtig": 0,
-    "erkl": "Die Bankenabgabe (Restrukturierungsfonds) ist als nichtabziehbare Betriebsausgabe ausserbilanziell hinzuzurechnen.",
+    "erkl": "Die Bankenabgabe (Restrukturierungsfonds) ist als nichtabziehbare Betriebsausgabe außerbilanziell hinzuzurechnen.",
     "vertiefung": "Die Bankenabgabe (Beitrag zum Restrukturierungs-/Abwicklungsfonds, §12 Abs.2 RStruktFG) ist eine nicht abziehbare Betriebsausgabe und außerbilanziell hinzuzurechnen. Der Gesetzgeber hat das Abzugsverbot bewusst angeordnet, damit die Abgabe ihre Lenkungs- und Sanktionswirkung nicht durch Steuerersparnis verliert. Merke: „Bankenabgabe = nicht abziehbar, wie eine Strafe.“ Abgrenzung: Anders als die KSt (§10 Nr.2) folgt das Abzugsverbot hier aus der spezialgesetzlichen Regelung des RStruktFG bzw. der entsprechenden EStG/KStG-Systematik nicht abziehbarer Aufwendungen.",
     "folgefragen": [
       {
@@ -10539,12 +10548,12 @@ const Q_STEUER = [
     "frage": "Eine Sparkasse hält eine Streubesitzbeteiligung (unter 15 Prozent) an einer Kapitalgesellschaft und erhält eine Dividende, die körperschaftsteuerlich nach § 8b KStG zu 95 Prozent steuerfrei blieb. Wie wird dieser Vorgang gewerbesteuerlich behandelt?",
     "optionen": [
       "Die gesamte Dividende wird nach § 9 Nr. 2a GewStG vom Gewerbeertrag gekürzt",
-      "Der steuerfreie Teil bleibt auch gewerbesteuerlich ausser Ansatz, eine Korrektur unterbleibt",
+      "Der steuerfreie Teil bleibt auch gewerbesteuerlich außer Ansatz, eine Korrektur unterbleibt",
       "Der steuerpflichtige Teil von 5 Prozent wird nach § 8 Nr. 1 GewStG hinzugerechnet",
       "Der steuerfreie Teil der Dividende wird nach § 8 Nr. 5 GewStG dem Gewerbeertrag wieder hinzugerechnet"
     ],
     "richtig": 3,
-    "erkl": "Da das Schachtelprivileg des § 9 Nr. 2a GewStG bei Streubesitz (unter 15 Prozent) nicht greift, wird der körperschaftsteuerlich freigestellte Teil über § 8 Nr.",
+    "erkl": "Da das Schachtelprivileg des § 9 Nr. 2a GewStG bei Streubesitz (unter 15 Prozent) nicht greift, wird der körperschaftsteuerlich freigestellte Teil über § 8 Nr. 5 GewStG wieder hinzugerechnet - die Dividende ist gewerbesteuerlich damit voll steuerpflichtig.",
     "vertiefung": "Systematik der GewSt-Korrekturen bei Dividenden: § 9 Nr. 2a GewStG (Schachtelprivileg, ab 15 Prozent) KUERZT, § 8 Nr. 5 GewStG RECHNET die KSt-Freistellung WIEDER HINZU, wenn das Schachtelprivileg nicht greift. Bei Streubesitz ist die Dividende somit voll gewerbesteuerpflichtig - im Gegensatz zur KSt, wo § 8b KStG (mit 5 Prozent nicht abziehbarer BA) wirkt. Merke die Brücke: § 8 Nr. 5 GewStG knüpft an die nach § 8b KStG steuerfrei gebliebenen Bezüge an.",
     "folgefragen": [
       {
@@ -10640,7 +10649,7 @@ const Q_STEUER = [
     "typ": "mc",
     "schwer": 2,
     "thema": "Ertragsteuer-Schema",
-    "frage": "Ausgangsgröße für die Ermittlung des zu versteuernden Einkommens einer Sparkasse ist der handelsrechtliche Jahresüberschuss. Welche der folgenden Korrekturen erfolgt typischerweise AUSSERBILANZIELL (also ausserhalb der Steuerbilanz)?",
+    "frage": "Ausgangsgröße für die Ermittlung des zu versteuernden Einkommens einer Sparkasse ist der handelsrechtliche Jahresüberschuss. Welche der folgenden Korrekturen erfolgt typischerweise AUSSERBILANZIELL (also außerhalb der Steuerbilanz)?",
     "optionen": [
       "Der Ansatz des niedrigeren Teilwerts festverzinslicher Wertpapiere nach § 6 EStG",
       "Die Aktivierung anschaffungsnaher Herstellungskosten nach § 6 Abs. 1 Nr. 1a EStG",
@@ -10648,15 +10657,15 @@ const Q_STEUER = [
       "Die Bildung einer § 6b-Rücklage zur Übertragung stiller Reserven"
     ],
     "richtig": 2,
-    "erkl": "Die nichtabziehbare Körperschaftsteuer (§ 10 Nr. 2 KStG) mindert zwar den Jahresüberschuss als Aufwand, ist aber steuerlich nicht abziehbar und wird daher ausserbilanziell wieder hinzugerechnet.",
-    "vertiefung": "Das KSt-Ermittlungsschema baut auf der Maßgeblichkeit (§ 5 Abs. 1 EStG) auf: HB-Jahresüberschuss, Korrektur auf Steuerbilanzgewinn (bilanzielle Vorbehalte, z. B. § 6, § 6b), dann AUSSERBILANZIELLE Korrekturen zum Einkommen. Ausserbilanziell hinzu: § 10 Nr. 2 KStG (KSt, Soli, §-233a-Zinsen), § 4 Abs. 5b EStG (GewSt), § 8b Abs. 5 KStG (5 Prozent), vGA § 8 Abs. 3 S. 2 KStG. Ausserbilanziell ab: § 8b Abs. 1/2 KStG (95 Prozent steuerfrei). Trennscharf bilanziell von ausserbilanziell unterscheiden ist klausurentscheidend.",
+    "erkl": "Die nichtabziehbare Körperschaftsteuer (§ 10 Nr. 2 KStG) mindert zwar den Jahresüberschuss als Aufwand, ist aber steuerlich nicht abziehbar und wird daher außerbilanziell wieder hinzugerechnet.",
+    "vertiefung": "Das KSt-Ermittlungsschema baut auf der Maßgeblichkeit (§ 5 Abs. 1 EStG) auf: HB-Jahresüberschuss, Korrektur auf Steuerbilanzgewinn (bilanzielle Vorbehalte, z. B. § 6, § 6b), dann AUSSERBILANZIELLE Korrekturen zum Einkommen. Außerbilanziell hinzu: § 10 Nr. 2 KStG (KSt, Soli, §-233a-Zinsen), § 4 Abs. 5b EStG (GewSt), § 8b Abs. 5 KStG (5 Prozent), vGA § 8 Abs. 3 S. 2 KStG. Außerbilanziell ab: § 8b Abs. 1/2 KStG (95 Prozent steuerfrei). Trennscharf bilanziell von außerbilanziell unterscheiden ist klausurentscheidend.",
     "folgefragen": [
       {
-        "frage": "Nennen Sie zwei weitere typische ausserbilanzielle Hinzurechnungen.",
+        "frage": "Nennen Sie zwei weitere typische außerbilanzielle Hinzurechnungen.",
         "antwort": "Die nichtabziehbare Gewerbesteuer (§ 4 Abs. 5b EStG) und die 5 Prozent nichtabziehbaren Betriebsausgaben nach § 8b Abs. 5 KStG."
       },
       {
-        "frage": "Was ist eine typische ausserbilanzielle Kürzung?",
+        "frage": "Was ist eine typische außerbilanzielle Kürzung?",
         "antwort": "Die 95-prozentige Steuerfreistellung von Dividenden und Veräußerungsgewinnen nach § 8b Abs. 1 und 2 KStG."
       }
     ]
@@ -10723,7 +10732,7 @@ const Q_STEUER = [
     "optionen": [
       "Er mindert unmittelbar die festgesetzte Körperschaftsteuer als Steuergutschrift",
       "Er wird dem Gewerbeertrag nach § 8 GewStG hinzugerechnet und dort neutralisiert",
-      "Er kann ausschliesslich mit Gewinnen derselben Einkunftsart und nur im Folgejahr verrechnet werden",
+      "Er kann ausschließlich mit Gewinnen derselben Einkunftsart und nur im Folgejahr verrechnet werden",
       "Er wird über den Verlustrücktrag und -vortrag nach § 10d EStG vom Gesamtbetrag der Einkünfte abgezogen"
     ],
     "richtig": 3,
@@ -10779,7 +10788,7 @@ const Q_STEUER = [
       "Bis 97, da der Börsenkurs am Stichtag maßgeblich ist"
     ],
     "richtig": 2,
-    "erkl": "Nach dem BMF-Schreiben vom 2.9.2016 und § 6 Abs. 1 Nr.",
+    "erkl": "Nach dem BMF-Schreiben vom 2.9.2016 und § 6 Abs. 1 Nr. 2 S. 2 EStG ist bei rein zinsbedingtem Kursrückgang festverzinslicher Wertpapiere die Teilwertabschreibung nur bis zum Nennwert (100) zulässig, weil insoweit keine dauernde Wertminderung vorliegt.",
     "vertiefung": "Kern des BMF-Schreibens vom 2.9.2016 (Rz. 21 ff.): Bei festverzinslichen WP fehlt es bei rein ZINSBEDINGTEM Kursrückgang an einer dauernden Wertminderung, soweit der Kurs unter den Nennwert fällt - denn bei Fälligkeit wird der Nennwert eingelöst. Teilwertabschreibung daher nur bis zum Nennwert (§ 6 Abs. 1 Nr. 2 S. 2 EStG). Anders bei BONITAETSbedingter Minderung: dann dauerhaft bis zum Kurs. Liegt der Kurs über dem Nennwert, ist die Differenz AK zu Kurs stets dauerhaft. Die Tabelle aus dem Handout immer mit dieser Logik durchspielen.",
     "folgefragen": [
       {
@@ -10806,11 +10815,11 @@ const Q_STEUER = [
       "Rechtsfolge: Aktivierung als anschaffungsnahe Herstellungskosten (§ 6 Abs. 1 Nr. 1a EStG)",
       "Zu aktivieren ist der Gesamtbetrag einschliesslich Umsatzsteuer: 107.100 EUR"
     ],
-    "vertiefung": "Aus dem KSt/BilSt-Handout: Die 15-Prozent-Grenze wird mit den Netto-Aufwendungen geprüft (90.000 gegen 75.000). Wird sie überschritten, sind die Aufwendungen als Herstellungskosten zu aktivieren und nicht sofort abziehbar. Achtung: Erweiterungsaufwand, üblicher jährlicher Erhaltungsaufwand und Aufwand ausserhalb des Dreijahreszeitraums bleiben bei der Prüfung aussen vor.",
+    "vertiefung": "Aus dem KSt/BilSt-Handout: Die 15-Prozent-Grenze wird mit den Netto-Aufwendungen geprüft (90.000 gegen 75.000). Wird sie überschritten, sind die Aufwendungen als Herstellungskosten zu aktivieren und nicht sofort abziehbar. Achtung: Erweiterungsaufwand, üblicher jährlicher Erhaltungsaufwand und Aufwand außerhalb des Dreijahreszeitraums bleiben bei der Prüfung aussen vor.",
     "folgefragen": [
       {
-        "frage": "Welcher Aufwand bleibt bei der 15-Prozent-Prüfung ausser Ansatz?",
-        "antwort": "Erweiterungen i.S.d. § 255 Abs. 2 HGB, jährlich üblicher Erhaltungsaufwand und Maßnahmen ausserhalb der ersten drei Jahre nach Erwerb."
+        "frage": "Welcher Aufwand bleibt bei der 15-Prozent-Prüfung außer Ansatz?",
+        "antwort": "Erweiterungen i.S.d. § 255 Abs. 2 HGB, jährlich üblicher Erhaltungsaufwand und Maßnahmen außerhalb der ersten drei Jahre nach Erwerb."
       },
       {
         "frage": "Welche verfahrensrechtliche Folge nennt das Handout, wenn die Grenze erst später überschritten wird?",
@@ -10858,7 +10867,7 @@ const Q_STEUER = [
     ],
     "richtig": 2,
     "erkl": "Rückstellungen für drohende Verluste aus schwebenden Geschäften duerfen steuerlich nicht gebildet werden (§ 5 Abs. 4a EStG).",
-    "vertiefung": "§ 5 Abs. 4a EStG ist ein klassisches Auseinanderfallen von HB und StB: Die handelsrechtlich (IDW BFA 3, verlustfreie Bewertung des Bankbuchs) gebotene Drohverlustrückstellung darf steuerlich nicht passiviert werden. Folge: ausserbilanzielle Neutralisierung, kein zvE-Effekt. Abzugrenzen von der zulässigen Verbindlichkeitsrückstellung (ungewisse Verbindlichkeit) und von der Teilwertabschreibung bei dauernder, bonitätsbedingter Wertminderung der Forderungen, die steuerlich anerkannt werden kann.",
+    "vertiefung": "§ 5 Abs. 4a EStG ist ein klassisches Auseinanderfallen von HB und StB: Die handelsrechtlich (IDW BFA 3, verlustfreie Bewertung des Bankbuchs) gebotene Drohverlustrückstellung darf steuerlich nicht passiviert werden. Folge: außerbilanzielle Neutralisierung, kein zvE-Effekt. Abzugrenzen von der zulässigen Verbindlichkeitsrückstellung (ungewisse Verbindlichkeit) und von der Teilwertabschreibung bei dauernder, bonitätsbedingter Wertminderung der Forderungen, die steuerlich anerkannt werden kann.",
     "folgefragen": [
       {
         "frage": "Wie kann die Sparkasse dem Verlustrisiko steuerlich dennoch begegnen?",
@@ -10883,7 +10892,7 @@ const Q_STEUER = [
       "Es besteht ein striktes Wertaufholungsgebot bis höchstens zu den fortgeführten Anschaffungskosten"
     ],
     "richtig": 3,
-    "erkl": "Sowohl handelsrechtlich (§ 253 Abs. 5 HGB) als auch steuerlich (§ 6 Abs.",
+    "erkl": "Sowohl handelsrechtlich (§ 253 Abs. 5 HGB) als auch steuerlich (§ 6 Abs. 1 Nr. 1 S. 4 EStG) gilt das Wertaufholungsgebot: Entfällt der Grund der Wertminderung, ist zwingend bis zu den fortgeführten Anschaffungs-/Herstellungskosten zuzuschreiben.",
     "vertiefung": "Das Wertaufholungsgebot (§ 253 Abs. 5 HGB / § 6 Abs. 1 Nr. 1 S. 4, Nr. 2 S. 3 EStG) zwingt zur Zuschreibung, wenn der Abschreibungsgrund entfällt - Obergrenze sind die fortgeführten AK/HK. Es ist ein GEBOT, kein Wahlrecht. Besonderheit bei Kapitalgesellschaftsanteilen: Die Zuschreibung bleibt nach § 8b Abs. 2/3 KStG zu 95 Prozent steuerfrei, 5 Prozent gelten als nicht abziehbare BA. Deshalb empfiehlt das Handout, auf Anteile gar keine Teilwertabschreibung vorzunehmen, um spätere 5-Prozent-Besteuerung zu vermeiden.",
     "folgefragen": [
       {
@@ -10909,7 +10918,7 @@ const Q_STEUER = [
       "Ja, weil der Ertragswert (2.500.000) den halben Restbuchwert (3.040.000) unterschreitet"
     ],
     "richtig": 3,
-    "erkl": "Bei abnutzbarem Anlagevermögen ist von einer voraussichtlich dauernden Wertminderung auszugehen, wenn der Wert mindestens für die halbe Restnutzungsdauer unter dem planmäßigen Restbuchwert liegt; als Faustregel prüft Bader, ob der Teil-/Ertragswert den halben Restbuchwert unterschreitet. Da 2.500.000 unter 3.040.000 liegt, ist die Teilwertabschreibung zulässig (§ 6 Abs.",
+    "erkl": "Bei abnutzbarem Anlagevermögen ist von einer voraussichtlich dauernden Wertminderung auszugehen, wenn der Wert mindestens für die halbe Restnutzungsdauer unter dem planmäßigen Restbuchwert liegt; als Faustregel prüft Bader, ob der Teil-/Ertragswert den halben Restbuchwert unterschreitet. Da 2.500.000 unter 3.040.000 liegt, ist die Teilwertabschreibung zulässig (§ 6 Abs. 1 Nr. 1 S. 2 EStG).",
     "vertiefung": "Die Bader-Faustregel zur dauernden Wertminderung bei abnutzbarem Anlagevermögen (gestützt auf BMF 2.9.2016): dauernd, wenn der Wert mindestens für die halbe Restnutzungsdauer unter dem planmäßigen Restbuchwert liegt - praktisch geprüft, ob Teil-/Ertragswert den halben Restbuchwert unterschreitet. Hier 2.500.000 unter 3.040.000 -> Teilwertabschreibung bis 2.500.000 zulässig (Wahlrecht, § 6 Abs. 1 Nr. 1 S. 2 EStG). Bei Grund und Boden (nicht abnutzbar) gilt § 6 Abs. 1 Nr. 2 S. 2 EStG analog.",
     "folgefragen": [
       {
@@ -10936,7 +10945,7 @@ const Q_STEUER = [
     ],
     "richtig": 2,
     "erkl": "Eine vGA ist eine Vermögensminderung oder verhinderte Vermögensmehrung, die durch das Gesellschafts- bzw. Trägerverhältnis veranlasst ist, sich auf das Einkommen auswirkt und nicht auf einem ordnungsgemäßen Gewinnverwendungsbeschluss beruht.",
-    "vertiefung": "vGA-Prüfschema (§ 8 Abs. 3 S. 2 KStG): (1) Vermögensminderung oder verhinderte Vermögensmehrung, (2) Veranlassung durch das Gesellschafts-/Trägerverhältnis (Fremdvergleich: ordentlicher gewissenhafter Geschäftsleiter), (3) Auswirkung auf das Einkommen, (4) kein ordnungsgemäßer Gewinnverwendungsbeschluss. Rechtsfolge: ausserbilanzielle Hinzurechnung. Bei der Sparkasse typisch: Geschäfte mit dem Träger zu nicht fremdüblichen Konditionen. Zusätzlich Kapitalertragsteuerpflicht (15 Prozent) + SolZ.",
+    "vertiefung": "vGA-Prüfschema (§ 8 Abs. 3 S. 2 KStG): (1) Vermögensminderung oder verhinderte Vermögensmehrung, (2) Veranlassung durch das Gesellschafts-/Trägerverhältnis (Fremdvergleich: ordentlicher gewissenhafter Geschäftsleiter), (3) Auswirkung auf das Einkommen, (4) kein ordnungsgemäßer Gewinnverwendungsbeschluss. Rechtsfolge: außerbilanzielle Hinzurechnung. Bei der Sparkasse typisch: Geschäfte mit dem Träger zu nicht fremdüblichen Konditionen. Zusätzlich Kapitalertragsteuerpflicht (15 Prozent) + SolZ.",
     "folgefragen": [
       {
         "frage": "Worin liegt der Unterschied zur offenen Gewinnausschüttung?",
@@ -10953,16 +10962,16 @@ const Q_STEUER = [
     "typ": "rechnen",
     "schwer": 2,
     "thema": "Ertragsteuer-vGA",
-    "frage": "Eine Sparkasse verkauft ein Gebäude mit einem unstrittigen Verkehrswert von 2.000.000 EUR für 500.000 EUR (= Buchwert) an ihren Träger. In welcher Höhe ist eine verdeckte Gewinnausschüttung ausserbilanziell dem Gewinn der Sparkasse hinzuzurechnen?",
+    "frage": "Eine Sparkasse verkauft ein Gebäude mit einem unstrittigen Verkehrswert von 2.000.000 EUR für 500.000 EUR (= Buchwert) an ihren Träger. In welcher Höhe ist eine verdeckte Gewinnausschüttung außerbilanziell dem Gewinn der Sparkasse hinzuzurechnen?",
     "loesung": "1500000",
     "einheit": "EUR",
     "schritte": [
       "Verkauf unter Verkehrswert an den Träger -> verhinderte Vermögensmehrung",
       "Höhe der vGA = Verkehrswert - tatsächlicher Verkaufspreis = 2.000.000 - 500.000",
       "vGA = 1.500.000 EUR",
-      "Dieser Betrag ist nach § 8 Abs. 3 Satz 2 KStG ausserbilanziell hinzuzurechnen"
+      "Dieser Betrag ist nach § 8 Abs. 3 Satz 2 KStG außerbilanziell hinzuzurechnen"
     ],
-    "vertiefung": "Aus dem KSt/BilSt-Handout (Beispiel 1). Der zu geringe Verkaufspreis ist eine durch das Trägerverhältnis veranlasste verhinderte Vermögensmehrung. Die Differenz zum Verkehrswert (1.500.000 EUR) wird dem Gewinn ausserbilanziell hinzugerechnet. Zusätzlich ist auf die vGA Kapitalertragsteuer (15 Prozent) zuzüglich Soli einzubehalten.",
+    "vertiefung": "Aus dem KSt/BilSt-Handout (Beispiel 1). Der zu geringe Verkaufspreis ist eine durch das Trägerverhältnis veranlasste verhinderte Vermögensmehrung. Die Differenz zum Verkehrswert (1.500.000 EUR) wird dem Gewinn außerbilanziell hinzugerechnet. Zusätzlich ist auf die vGA Kapitalertragsteuer (15 Prozent) zuzüglich Soli einzubehalten.",
     "folgefragen": [
       {
         "frage": "Welche zusätzliche steuerliche Pflicht löst die vGA aus?",
@@ -10982,17 +10991,17 @@ const Q_STEUER = [
     "frage": "Was ist die zentrale steuerliche Rechtsfolge einer festgestellten verdeckten Gewinnausschüttung auf Ebene der Sparkasse?",
     "optionen": [
       "Der Betrag bleibt nach § 8b Abs. 1 KStG zu 95 Prozent steuerfrei",
-      "Der Betrag wird ausserbilanziell dem Gewinn hinzugerechnet und erhöht das zvE",
+      "Der Betrag wird außerbilanziell dem Gewinn hinzugerechnet und erhöht das zvE",
       "Der Betrag wird über zehn Jahre verteilt dem Einkommen zugerechnet",
       "Der Betrag mindert als Betriebsausgabe das zu versteuernde Einkommen"
     ],
     "richtig": 1,
-    "erkl": "Die vGA darf das Einkommen nicht mindern; soweit sie den handelsrechtlichen Gewinn gemindert oder eine Mehrung verhindert hat, ist sie nach § 8 Abs. 3 Satz 2 KStG ausserbilanziell dem Gewinn hinzuzurechnen und erhöht damit das zu versteuernde Einkommen.",
-    "vertiefung": "Die vGA wirkt allein ausserbilanziell: Der Steuerbilanzgewinn bleibt unverändert, nur das Einkommen wird um die vGA erhöht (§ 8 Abs. 3 S. 2 KStG). Sie darf das Einkommen nicht mindern. Spiegelbildlich löst die vGA Kapitalertragsteuer (15 Prozent) zzgl. SolZ aus, wobei die übernommene KESt/SolZ das Einkommen ebenfalls nicht mindern darf (Bruttohochrechnung). Auf Ebene des Trägers ist der Vorteil als Kapitalertrag zu erfassen.",
+    "erkl": "Die vGA darf das Einkommen nicht mindern; soweit sie den handelsrechtlichen Gewinn gemindert oder eine Mehrung verhindert hat, ist sie nach § 8 Abs. 3 Satz 2 KStG außerbilanziell dem Gewinn hinzuzurechnen und erhöht damit das zu versteuernde Einkommen.",
+    "vertiefung": "Die vGA wirkt allein außerbilanziell: Der Steuerbilanzgewinn bleibt unverändert, nur das Einkommen wird um die vGA erhöht (§ 8 Abs. 3 S. 2 KStG). Sie darf das Einkommen nicht mindern. Spiegelbildlich löst die vGA Kapitalertragsteuer (15 Prozent) zzgl. SolZ aus, wobei die übernommene KESt/SolZ das Einkommen ebenfalls nicht mindern darf (Bruttohochrechnung). Auf Ebene des Trägers ist der Vorteil als Kapitalertrag zu erfassen.",
     "folgefragen": [
       {
         "frage": "Wirkt sich die vGA auf den Steuerbilanzgewinn aus?",
-        "antwort": "Nein, die Korrektur erfolgt ausserbilanziell; der Steuerbilanzgewinn bleibt unverändert, nur das Einkommen wird erhöht."
+        "antwort": "Nein, die Korrektur erfolgt außerbilanziell; der Steuerbilanzgewinn bleibt unverändert, nur das Einkommen wird erhöht."
       },
       {
         "frage": "Mindert die übernommene Kapitalertragsteuer auf die vGA das Einkommen?",
@@ -11031,14 +11040,14 @@ const Q_STEUER = [
     "typ": "rechnen",
     "schwer": 2,
     "thema": "Ertragsteuer-10",
-    "frage": "Eine Sparkasse hat an ihre durch Wahl bestellten Verwaltungsratsmitglieder Sitzungsgelder von insgesamt 80.000 EUR gezahlt; daneben wurden nachgewiesene Fahrtkosten von 6.000 EUR gesondert erstattet. In welcher Höhe ist eine ausserbilanzielle Hinzurechnung nach § 10 Nr. 4 KStG vorzunehmen?",
+    "frage": "Eine Sparkasse hat an ihre durch Wahl bestellten Verwaltungsratsmitglieder Sitzungsgelder von insgesamt 80.000 EUR gezahlt; daneben wurden nachgewiesene Fahrtkosten von 6.000 EUR gesondert erstattet. In welcher Höhe ist eine außerbilanzielle Hinzurechnung nach § 10 Nr. 4 KStG vorzunehmen?",
     "loesung": "40000",
     "einheit": "EUR",
     "schritte": [
-      "Nachgewiesene Fahrtkosten (6.000 EUR) fallen nicht unter das Abzugsverbot -> ausser Ansatz",
+      "Nachgewiesene Fahrtkosten (6.000 EUR) fallen nicht unter das Abzugsverbot -> außer Ansatz",
       "Maßgebliche Vergütung = Sitzungsgelder 80.000 EUR",
       "Nicht abziehbar sind 50 Prozent: 80.000 x 50 Prozent = 40.000 EUR",
-      "Ausserbilanzielle Hinzurechnung: 40.000 EUR"
+      "Außerbilanzielle Hinzurechnung: 40.000 EUR"
     ],
     "vertiefung": "Aus dem KSt/BilSt-Handout: Sitzungsgelder und vergleichbare Vergütungen an gewählte Verwaltungsräte sind zur Hälfte nicht abziehbar. Gesondert erstattete, nachgewiesene Auslagen bleiben dagegen voll abziehbar und sind aus der Bemessung herauszunehmen. Pauschale Sachkostenerstattungen wären dagegen als Vergütung mitzurechnen.",
     "folgefragen": [
@@ -11047,8 +11056,8 @@ const Q_STEUER = [
         "antwort": "Als Vergütung i.S.d. § 10 Nr. 4 KStG; sie unterliegen ebenfalls dem hälftigen Abzugsverbot."
       },
       {
-        "frage": "Warum erfolgt die Korrektur ausserbilanziell?",
-        "antwort": "Der Aufwand ist handelsrechtlich zu Recht gebucht; nur die steuerliche Abziehbarkeit ist beschränkt, daher Korrektur ausserhalb der Bilanz beim Einkommen."
+        "frage": "Warum erfolgt die Korrektur außerbilanziell?",
+        "antwort": "Der Aufwand ist handelsrechtlich zu Recht gebucht; nur die steuerliche Abziehbarkeit ist beschränkt, daher Korrektur außerhalb der Bilanz beim Einkommen."
       }
     ]
   },
@@ -11060,13 +11069,13 @@ const Q_STEUER = [
     "frage": "Eine Sparkasse hat Körperschaftsteuer-Vorauszahlungen und Nachzahlungszinsen nach § 233a AO als Aufwand gebucht. Wie sind diese Beträge steuerlich zu behandeln?",
     "optionen": [
       "Sie mindern unmittelbar die festzusetzende Körperschaftsteuer",
-      "Sie sind nach § 10 Nr. 2 KStG nicht abziehbar und ausserbilanziell hinzuzurechnen",
+      "Sie sind nach § 10 Nr. 2 KStG nicht abziehbar und außerbilanziell hinzuzurechnen",
       "Sie sind voll abziehbare Betriebsausgaben und mindern das zvE",
       "Sie sind nur zur Hälfte abziehbar entsprechend § 10 Nr. 4 KStG"
     ],
     "richtig": 1,
     "erkl": "Die Körperschaftsteuer selbst und die darauf entfallenden Nebenleistungen, insbesondere die Nachzahlungszinsen nach § 233a AO, sind nach § 10 Nr. 2 KStG nicht abziehbar.",
-    "vertiefung": "§ 10 Nr. 2 KStG: Die KSt selbst, sonstige Personensteuern und die Nebenleistungen - insbesondere Nachzahlungszinsen nach § 233a AO - sind nicht abziehbar und ausserbilanziell hinzuzurechnen. Spiegelbildlich sind Erstattungszinsen steuerpflichtig (erhöhen das Einkommen). Die GewSt selbst fällt unter § 4 Abs. 5b EStG. Im Bader-Schema werden KSt-/GewSt-Vorauszahlungen und -Nachzahlungen sowie die §-233a-Zinsen konsequent dem Gewinn wieder hinzugerechnet.",
+    "vertiefung": "§ 10 Nr. 2 KStG: Die KSt selbst, sonstige Personensteuern und die Nebenleistungen - insbesondere Nachzahlungszinsen nach § 233a AO - sind nicht abziehbar und außerbilanziell hinzuzurechnen. Spiegelbildlich sind Erstattungszinsen steuerpflichtig (erhöhen das Einkommen). Die GewSt selbst fällt unter § 4 Abs. 5b EStG. Im Bader-Schema werden KSt-/GewSt-Vorauszahlungen und -Nachzahlungen sowie die §-233a-Zinsen konsequent dem Gewinn wieder hinzugerechnet.",
     "folgefragen": [
       {
         "frage": "Wie werden die Erstattungszinsen nach § 233a AO behandelt?",
@@ -11088,11 +11097,11 @@ const Q_STEUER = [
       "Er ist nach § 7 EStG auf einen Zeitraum von fünf Jahren verteilt abziehbar",
       "Er ist nach § 4 Abs. 4 EStG als laufender Betriebsaufwand in voller Höhe abziehbar",
       "Er ist nach § 10 Nr. 4 KStG nur zur Hälfte als Betriebsausgabe abziehbar",
-      "Er ist nach § 4 Abs. 5 Nr. 13 EStG nicht abziehbar und ausserbilanziell hinzuzurechnen"
+      "Er ist nach § 4 Abs. 5 Nr. 13 EStG nicht abziehbar und außerbilanziell hinzuzurechnen"
     ],
     "richtig": 3,
-    "erkl": "Der Jahresbeitrag nach § 12 Abs. 2 RStruktFG (Bankenabgabe) darf den Gewinn nach § 4 Abs.",
-    "vertiefung": "§ 4 Abs. 5 Nr. 13 EStG stellt den Jahresbeitrag nach § 12 RStruktFG (Bankenabgabe) als nicht abziehbare Betriebsausgabe ein - ausserbilanzielle Hinzurechnung. Die Bankenabgabe ist neben GewSt (§ 4 Abs. 5b EStG) und KSt/§-233a-Zinsen (§ 10 Nr. 2 KStG) eine sparkassentypische Abzugsbeschränkung. Zur Verfassungsmäßigkeit ist eine Verfassungsbeschwerde anhängig (2 BvR 926/21); im Examen ist die Nichtabziehbarkeit dennoch anzusetzen.",
+    "erkl": "Der Jahresbeitrag nach § 12 Abs. 2 RStruktFG (Bankenabgabe) darf den Gewinn nach § 4 Abs. 5 Nr. 13 EStG nicht mindern - er ist nicht abziehbar und außerbilanziell hinzuzurechnen.",
+    "vertiefung": "§ 4 Abs. 5 Nr. 13 EStG stellt den Jahresbeitrag nach § 12 RStruktFG (Bankenabgabe) als nicht abziehbare Betriebsausgabe ein - außerbilanzielle Hinzurechnung. Die Bankenabgabe ist neben GewSt (§ 4 Abs. 5b EStG) und KSt/§-233a-Zinsen (§ 10 Nr. 2 KStG) eine sparkassentypische Abzugsbeschränkung. Zur Verfassungsmäßigkeit ist eine Verfassungsbeschwerde anhängig (2 BvR 926/21); im Examen ist die Nichtabziehbarkeit dennoch anzusetzen.",
     "folgefragen": [
       {
         "frage": "Welche andere praxisrelevante nicht abziehbare Aufwendung betrifft Sparkassen besonders?",
@@ -11138,12 +11147,12 @@ const Q_STEUER = [
     "frage": "Ist die Bildung von Vorsorgereserven nach § 340f HGB (stille Reserven durch Unterbewertung von Forderungen und Wertpapieren) in der Steuerbilanz zulässig, wenn lediglich eine zinsbedingte, nicht dauerhafte Wertminderung vorliegt?",
     "optionen": [
       "Ja, in der Steuerbilanz besteht insoweit ein eigenständiges, von der Handelsbilanz unabhängiges Wahlrecht",
-      "Nein, da § 340f HGB ausschliesslich für die Aufstellung der Konzernbilanz Anwendung findet",
+      "Nein, da § 340f HGB ausschließlich für die Aufstellung der Konzernbilanz Anwendung findet",
       "Ja, jedoch der Höhe nach begrenzt auf höchstens vier Prozent des Buchwerts der Forderungen und Wertpapiere",
       "Nein, es fehlt an einer dauernden Wertminderung nach § 6 Abs. 1 Nr. 2 S. 2 EStG"
     ],
     "richtig": 3,
-    "erkl": "Vorsorgereserven nach § 340f HGB beruhen auf einer rein handelsrechtlich zulässigen Unterbewertung. Steuerlich ist eine Teilwertabschreibung nur bei voraussichtlich dauernder Wertminderung möglich (§ 6 Abs.",
+    "erkl": "Vorsorgereserven nach § 340f HGB beruhen auf einer rein handelsrechtlich zulässigen Unterbewertung. Steuerlich ist eine Teilwertabschreibung nur bei voraussichtlich dauernder Wertminderung möglich (§ 6 Abs. 1 Nr. 2 S. 2 EStG); eine rein zinsbedingte, nicht dauerhafte Minderung rechtfertigt sie nicht.",
     "vertiefung": "§ 340f HGB erlaubt Kreditinstituten stille Vorsorgereserven durch Unterbewertung von Forderungen und Wertpapieren der Liquiditätsreserve (handelsrechtliches Sonderrecht). Steuerlich ist das irrelevant: Eine Teilwertabschreibung setzt voraussichtlich DAUERNDE Wertminderung voraus (§ 6 Abs. 1 Nr. 2 S. 2 EStG). Fehlt sie, ist die Reserve in der StB unzulässig; die Bildung wirkt nicht und auch die spätere Auflösung ist steuerneutral. Anders bei Bonitäts-/Liquiditätsrisiko - dann dauerhaft und Teilwertabschreibung möglich.",
     "folgefragen": [
       {
@@ -11195,12 +11204,12 @@ const Q_STEUER = [
       "Auf § 8b KStG (Steuerfreistellung von Beteiligungserträgen)"
     ],
     "richtig": 0,
-    "erkl": "Die Bankenabgabe wird als Jahresbeitrag nach § 12 RStruktFG erhoben. Steuerlich ist der Beitrag nach § 4 Abs.",
-    "vertiefung": "Die Bankenabgabe ist der Jahresbeitrag zum Restrukturierungs-/Abwicklungsfonds nach § 12 RStruktFG; sie finanziert die geordnete Abwicklung von Instituten. Steuerlich ist sie nach § 4 Abs. 5 Nr. 13 EStG nicht abziehbar (ausserbilanzielle Hinzurechnung). Nicht zu verwechseln mit § 340g HGB (Fonds für allgemeine Bankrisiken, Ergebnisverwendung) oder mit der Einlagensicherung. Zur Verfassungsmäßigkeit läuft 2 BvR 926/21.",
+    "erkl": "Die Bankenabgabe wird als Jahresbeitrag nach § 12 RStruktFG erhoben. Steuerlich ist der Beitrag nach § 4 Abs. 5 Nr. 13 EStG nicht abziehbar (außerbilanzielle Hinzurechnung).",
+    "vertiefung": "Die Bankenabgabe ist der Jahresbeitrag zum Restrukturierungs-/Abwicklungsfonds nach § 12 RStruktFG; sie finanziert die geordnete Abwicklung von Instituten. Steuerlich ist sie nach § 4 Abs. 5 Nr. 13 EStG nicht abziehbar (außerbilanzielle Hinzurechnung). Nicht zu verwechseln mit § 340g HGB (Fonds für allgemeine Bankrisiken, Ergebnisverwendung) oder mit der Einlagensicherung. Zur Verfassungsmäßigkeit läuft 2 BvR 926/21.",
     "folgefragen": [
       {
         "frage": "Welche steuerliche Folge hat die Bankenabgabe konkret für das zvE?",
-        "antwort": "Der als Aufwand gebuchte Beitrag wird nach § 4 Abs. 5 Nr. 13 EStG ausserbilanziell hinzugerechnet und erhöht das zvE."
+        "antwort": "Der als Aufwand gebuchte Beitrag wird nach § 4 Abs. 5 Nr. 13 EStG außerbilanziell hinzugerechnet und erhöht das zvE."
       },
       {
         "frage": "Ist die Verfassungsmäßigkeit der Bankenabgabe geklärt?",
@@ -11276,7 +11285,7 @@ const Q_STEUER = [
     "vertiefung": "Die Differenz zwischen KSt- und GewSt-Teilfreistellung beruht allein auf der Hälftelung nach § 20 Abs. 5 InvStG. Sie entspricht exakt der GewSt-Quote (20 Prozent) der Ausschüttung.",
     "folgefragen": [
       {
-        "frage": "Wie gross ist der steuerpflichtige Anteil bei der GewSt?",
+        "frage": "Wie groß ist der steuerpflichtige Anteil bei der GewSt?",
         "antwort": "80 Prozent der Ausschüttung, hier 140.000 EUR."
       },
       {
@@ -11522,7 +11531,7 @@ const Q_STEUER = [
     "typ": "rechnen",
     "schwer": 2,
     "thema": "Ertragsteuer-Schema",
-    "frage": "Eine Sparkasse weist einen handelsrechtlichen Jahresüberschuss von 14.000.000 EUR aus. Darin sind als Aufwand enthalten: Körperschaftsteuer-Vorauszahlungen 1.000.000 EUR und Gewerbesteuer-Vorauszahlungen 1.200.000 EUR (beide nicht abziehbar, § 10 Nr. 2 KStG bzw. § 4 Abs. 5b EStG). Ausserdem wurde dem Fonds für allgemeine Bankrisiken nach § 340g HGB ein Betrag von 800.000 EUR zugeführt (Zuführung steuerlich nicht abziehbar). Wie hoch ist das vorläufige zu versteuernde Einkommen nach diesen Korrekturen?",
+    "frage": "Eine Sparkasse weist einen handelsrechtlichen Jahresüberschuss von 14.000.000 EUR aus. Darin sind als Aufwand enthalten: Körperschaftsteuer-Vorauszahlungen 1.000.000 EUR und Gewerbesteuer-Vorauszahlungen 1.200.000 EUR (beide nicht abziehbar, § 10 Nr. 2 KStG bzw. § 4 Abs. 5b EStG). Außerdem wurde dem Fonds für allgemeine Bankrisiken nach § 340g HGB ein Betrag von 800.000 EUR zugeführt (Zuführung steuerlich nicht abziehbar). Wie hoch ist das vorläufige zu versteuernde Einkommen nach diesen Korrekturen?",
     "loesung": "17000000",
     "einheit": "EUR",
     "schritte": [
@@ -11666,7 +11675,7 @@ function seenCount(q){ const p=progress[qid(q)]; return p?p.seen:0; }
 // ---- Quiz-Ablauf ----
 function startSession(){
   session.items = buildSession();
-  session.idx=0; session.correct=0; session.answered=0;
+  session.idx=0; session.correct=0; session.answered=0; session.notes={};
   if(session.items.length===0){ alert("Keine Fragen für diese Auswahl."); return; }
   document.getElementById('setup').style.display='none';
   document.getElementById('result').style.display='none';
@@ -11674,31 +11683,14 @@ function startSession(){
   renderQ();
 }
 
-function renderQ(){
-  const q=session.items[session.idx];
-  const total=session.items.length;
-  document.getElementById('qCount').textContent=`${session.idx+1} / ${total}`;
-  document.getElementById('progFill').style.width=((session.idx)/total*100)+"%";
-  const card=document.getElementById('qCard');
-
-  let typLabel = q.typ==="mc"?"Multiple Choice":q.typ==="rechnen"?"Rechnen":"Wissensfrage";
-  let html = `<div class="qmeta">
-      <span class="badge f" data-f="${q.fach}">${q.fach}</span>
-      <span class="badge thema">${q.thema}</span>
-      <span class="badge t">${typLabel}</span>
-    </div>
-    <div class="qtext">${q.frage}</div>`;
-
-  if(q.typ==="mc"){
-    html+=`<div id="opts">`;
-    q._opts.forEach((o,i)=>{ html+=`<button class="opt" data-i="${i}">${o.t}</button>`; });
-    html+=`</div><div class="reveal" id="rev"><h4>Erläuterung</h4><div class="body" id="revBody"></div></div>`;
-  } else if(q.typ==="rechnen"){
-    html+=`<input class="num" id="numIn" inputmode="decimal" placeholder="Ergebnis eingeben${q.einheit?' ('+q.einheit+')':''}">
-      <div class="btnrow"><button class="btn primary" id="checkBtn">Prüfen</button>
-      <button class="btn ghost" id="showBtn">Rechenweg zeigen</button></div>
-      <div class="calcwrap"><button type="button" class="calc-toggle" id="calcToggle">🧮 Taschenrechner</button>
+function toolsHTML(){
+  return `
+      <div class="noteswrap"><button type="button" class="notes-toggle" id="notesToggle">📝 Notizfeld (Zwischenergebnisse)</button>
+        <textarea class="notes" id="notesArea" placeholder="Hier Zwischenergebnisse notieren …"></textarea>
+      </div>
+      <div class="calcwrap full"><button type="button" class="calc-toggle" id="calcToggle">🧮 Taschenrechner</button>
         <div class="calc" id="calcBox">
+          <div class="hist" id="calcHist"></div>
           <div class="disp" id="calcDisp">0</div>
           <div class="grid">
             <button type="button" class="clr" data-k="C">C</button>
@@ -11723,7 +11715,41 @@ function renderQ(){
             <button type="button" class="eq" data-k="=">=</button>
           </div>
         </div>
-      </div>
+      </div>`;
+}
+function initNotes(q){
+  const tg=document.getElementById('notesToggle'); const ta=document.getElementById('notesArea');
+  if(!tg||!ta) return;
+  const id=qid(q);
+  if(session.notes && session.notes[id]!=null){ ta.value=session.notes[id]; }
+  tg.onclick=()=>{ const open=ta.classList.toggle('show'); if(open) ta.focus(); };
+  ta.addEventListener('input',()=>{ if(!session.notes)session.notes={}; session.notes[id]=ta.value; });
+}
+function renderQ(){
+  const q=session.items[session.idx];
+  const total=session.items.length;
+  document.getElementById('qCount').textContent=`${session.idx+1} / ${total}`;
+  document.getElementById('progFill').style.width=((session.idx)/total*100)+"%";
+  const card=document.getElementById('qCard');
+
+  let typLabel = q.typ==="mc"?"Multiple Choice":q.typ==="rechnen"?"Rechnen":"Wissensfrage";
+  let html = `<div class="qmeta">
+      <span class="badge f" data-f="${q.fach}">${q.fach}</span>
+      <span class="badge thema">${q.thema}</span>
+      <span class="badge t">${typLabel}</span>
+    </div>
+    <div class="qtext">${q.frage}</div>`;
+
+  if(q.typ==="mc"){
+    html+=`<div id="opts">`;
+    q._opts.forEach((o,i)=>{ html+=`<button class="opt" data-i="${i}">${o.t}</button>`; });
+    html+=`</div><div class="reveal" id="rev"><h4>Erläuterung</h4><div class="body" id="revBody"></div></div>`;
+    html+=toolsHTML();
+  } else if(q.typ==="rechnen"){
+    html+=`<input class="num" id="numIn" inputmode="decimal" placeholder="Ergebnis eingeben${q.einheit?' ('+q.einheit+')':''}">
+      <div class="btnrow"><button class="btn primary" id="checkBtn">Prüfen</button>
+      <button class="btn ghost" id="showBtn">Rechenweg zeigen</button></div>
+      ${toolsHTML()}
       <div class="reveal" id="rev"><h4>Rechenweg</h4><ol class="steps" id="revSteps"></ol></div>`;
   } else { // frei
     html+=`<textarea id="freeIn" rows="4" placeholder="Antwort frei formulieren (zur Selbstkontrolle) …"></textarea>
@@ -11757,6 +11783,7 @@ function wireQ(q){
         addNext();
       };
     });
+    initCalc(); initNotes(q);
   } else if(q.typ==="rechnen"){
     const check=()=>{
       const raw=(document.getElementById('numIn').value||"").replace(/\./g,'').replace(',','.').replace(/[^\d.\-]/g,'');
@@ -11766,8 +11793,8 @@ function wireQ(q){
       showCalc(q, ok, true);
     };
     document.getElementById('checkBtn').onclick=check;
-    initCalc();
-    document.getElementById('showBtn').onclick=()=>showCalc(q,null,false);
+    initCalc(); initNotes(q);
+    document.getElementById('showBtn').onclick=()=>showAnsatz(q);
     document.getElementById('numIn').addEventListener('keydown',e=>{if(e.key==='Enter')check();});
   } else {
     document.getElementById('showBtn').onclick=()=>{
@@ -11784,6 +11811,25 @@ function wireQ(q){
   }
 }
 
+function showAnsatz(q){
+  // Rechenweg-Hilfe VOR dem Prüfen: nur Formeln + Ansatzhinweis, OHNE Lösung/Zahlenergebnis
+  const rev=document.getElementById('rev');
+  const ol=document.getElementById('revSteps'); ol.innerHTML="";
+  const isLoesungszeile=(s)=>{
+    const t=(s||"").trim().toLowerCase();
+    return t.startsWith('einsetzen')||t.startsWith('ergebnis')||t.startsWith('lösung')||t.startsWith('loesung')||t.startsWith('=');
+  };
+  let formeln=(q.schritte||[]).filter(s=>!isLoesungszeile(s));
+  // Falls dadurch nichts übrig bleibt, wenigstens die erste Zeile (i.d.R. die Formel) zeigen
+  if(formeln.length===0 && q.schritte && q.schritte.length){ formeln=[q.schritte[0]]; }
+  formeln.forEach(s=>{ const li=document.createElement('li'); li.textContent=s; ol.appendChild(li); });
+  if(q.ansatz){ const li=document.createElement('li'); li.className='ansatz'; li.textContent='Ansatz: '+q.ansatz; ol.appendChild(li); }
+  const hint=document.createElement('li'); hint.style.listStyle='none'; hint.style.color='var(--muted)'; hint.style.fontStyle='italic';
+  hint.textContent='Jetzt selbst einsetzen und rechnen — die Lösung erscheint nach „Prüfen".';
+  ol.appendChild(hint);
+  rev.classList.add('show'); rev.classList.remove('ok','bad','info'); rev.classList.add('info');
+  rev.querySelector('h4').textContent="Rechenweg — Formel & Ansatz";
+}
 function showCalc(q, ok, counts){
   const rev=document.getElementById('rev');
   const ol=document.getElementById('revSteps'); ol.innerHTML="";
@@ -11848,9 +11894,12 @@ function renderVertiefung(q){
 
 function initCalc(){
   const tg=document.getElementById('calcToggle'); const box=document.getElementById('calcBox'); const disp=document.getElementById('calcDisp');
+  const histEl=document.getElementById('calcHist');
   if(!tg||!box||!disp) return;
-  let expr="";
-  const render=()=>{ disp.textContent = expr===""?"0":expr.replace(/\*/g,"×").replace(/\//g,"÷").replace(/\./g,","); };
+  let expr=""; let hist=[];
+  const fmt=(s)=>s.replace(/\*/g,"×").replace(/\//g,"÷").replace(/\./g,",");
+  const render=()=>{ disp.textContent = expr===""?"0":fmt(expr); };
+  const renderHist=()=>{ if(!histEl)return; histEl.innerHTML = hist.slice(-4).map(h=>'<div>'+fmt(h)+'</div>').join(''); };
   tg.onclick=()=>{ box.classList.toggle('show'); };
   box.querySelectorAll('button[data-k]').forEach(b=>{ b.onclick=()=>{
     const k=b.getAttribute('data-k');
@@ -11858,18 +11907,18 @@ function initCalc(){
     if(k==='='){
       try{
         let e=expr.replace(/×/g,'*').replace(/÷/g,'/').replace(/,/g,'.');
-        // Prozent: "x%" -> "(x/100)"
         e=e.replace(/(\d+(?:\.\d+)?)%/g,'($1/100)');
         if(!/^[0-9+\-*/().% ]*$/.test(e)){ disp.textContent="Fehler"; return; }
         let r=Function('"use strict";return ('+e+')')();
-        expr=(Math.round((r+Number.EPSILON)*1e6)/1e6).toString();
-        render();
+        const res=(Math.round((r+Number.EPSILON)*1e6)/1e6).toString();
+        if(expr!==""){ hist.push(expr+" = "+res); renderHist(); }
+        expr=res; render();
       }catch(err){ disp.textContent="Fehler"; }
       return;
     }
     expr+=k; render();
   };});
-  render();
+  render(); renderHist();
 }
 
 function addNext(){
