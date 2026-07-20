@@ -187,6 +187,33 @@
   .kwrong .kq{font-weight:600;font-size:.9rem;margin-bottom:4px}
   .kwrong .ka{font-size:.85rem;color:var(--ok)}
   .kwrong .km{font-size:.82rem;color:var(--muted);margin-top:4px}
+  body.dark{--bg:#16171a;--card:#1f2126;--ink:#e9e7e2;--muted:#a3a09a;--line:#33363d;--accent-soft:#3a2426;--ok-soft:#1e3326;--warn-soft:#332c17;--bad-soft:#3a2422}
+  body.dark .calc button,body.dark .calc .disp,body.dark .pm{background:var(--card);color:var(--ink)}
+  body.dark .heatcell.g{background:#1e3a29;border-color:#2f6b45;color:#9fe0b6}
+  body.dark .heatcell.y{background:#3a3320;border-color:#7a6428;color:#e8cf8f}
+  body.dark .heatcell.r{background:#3a2422;border-color:#7d3a36;color:#f0a9a4}
+  .toprow{display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+  .tbtn{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:.78rem;font-weight:600;color:var(--accent);cursor:pointer}
+  .tbtn:hover{border-color:var(--accent)}
+  .intro-box{background:var(--accent-soft);border:1px solid var(--accent);border-radius:14px;padding:16px 18px;margin-top:16px}
+  .intro-box h3{font-size:.95rem;margin-bottom:8px;color:var(--accent)}
+  .intro-box ul{margin:0 0 10px 18px;font-size:.88rem;line-height:1.6}
+  .searchwrap{margin-top:4px}
+  .searchwrap input{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:11px 14px;font-size:.95rem;font-family:inherit;background:var(--card);color:var(--ink)}
+  .sres{margin-top:10px;max-height:420px;overflow:auto}
+  .sitem{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:8px;background:var(--card);cursor:pointer}
+  .sitem:hover{border-color:var(--accent)}
+  .sitem .sq{font-size:.9rem;font-weight:600;color:var(--ink)}
+  .sitem .sa{font-size:.85rem;color:var(--ok);margin-top:4px;display:none}
+  .sitem .se{font-size:.82rem;color:var(--muted);margin-top:4px;display:none}
+  .sitem.open .sa,.sitem.open .se{display:block}
+  .sitem .sm{font-size:.72rem;color:var(--muted)}
+  .reportwrap{margin-top:12px}
+  .report-toggle{background:none;border:none;color:var(--muted);font-size:.78rem;cursor:pointer;text-decoration:underline}
+  .report-body{display:none;margin-top:8px}
+  .report-body.show{display:block}
+  .report-body textarea{width:100%;min-height:70px;border:1.5px solid var(--line);border-radius:10px;padding:10px;font-family:inherit;font-size:.88rem;background:var(--card);color:var(--ink)}
+  .okmsg{font-size:.8rem;color:var(--ok);margin-top:6px}
 </style>
 </head>
 <body>
@@ -195,10 +222,33 @@
     <h1>Verbandsprüfer Lerntrainer</h1>
     <div class="sub">Examen 2026 · alle 5 Fächer · Schwerpunkte aus dem Repetitorium</div>
     <div class="countdown" id="countdown"></div>
+    <div class="toprow">
+      <button class="tbtn" id="themeBtn">Nachtmodus</button>
+      <button class="tbtn" id="helpBtn">? Kurzanleitung</button>
+      <button class="tbtn" id="expBtn">Lernstand sichern</button>
+      <button class="tbtn" id="impBtn">Laden</button>
+      <input type="file" id="impFile" accept="application/json" style="display:none">
+    </div>
   </header>
 
   <!-- SETUP -->
   <div id="setup">
+    <div class="intro-box" id="introBox" style="display:none">
+      <h3>Kurzanleitung</h3>
+      <ul>
+        <li><b>Quiz</b> - normales Lernen mit Erklärung, Vertiefung und Selbsteinschätzung.</li>
+        <li><b>Fehler-Box</b> - Wiedervorlage: falsch beantwortete Fragen kommen nach 1, 3, 7 und 14 Tagen automatisch zurück.</li>
+        <li><b>Klausur-Simulation</b> - 60 oder 120 Minuten mit Countdown, ohne Feedback; Auswertung mit Zeit pro Aufgabe und Fehlerliste am Ende.</li>
+        <li><b>§-Trainer</b> - Gesetzeswortlaut lernen: Wortlaut verdecken, Beispiel und Merksatz aufklappen, "Sitzt" markieren.</li>
+        <li>Bei Rechenaufgaben gibt es einen <b>Taschenrechner</b> und ein <b>Notizfeld</b>; die Heatmap zeigt deine schwächsten Themen.</li>
+      </ul>
+      <button class="tbtn" id="introOk">Verstanden</button>
+    </div>
+    <div class="panel">
+      <h2>Nachschlagen</h2>
+      <div class="searchwrap"><input id="searchIn" placeholder="Suche in Fragen und §§ (z. B. § 18 KWG, Großkredit)"></div>
+      <div class="sres" id="searchRes"></div>
+    </div>
     <div class="panel">
       <h2>Lernart</h2>
       <div class="chips" id="lernartChips">
@@ -279,6 +329,8 @@
     <h2>Session abgeschlossen</h2>
     <div class="ring" id="resRing"></div>
     <div class="resbar" id="resBar"></div>
+    <div class="toprow"><button class="tbtn" id="shareBtn">Ergebnis kopieren</button></div>
+    <div class="okmsg" id="shareMsg" style="text-align:center"></div>
     <button class="startbtn" id="againBtn">Neue Session</button>
   </div>
 
@@ -12896,8 +12948,9 @@ function renderQ(){
         <div class="muster" id="revMuster"></div>
         <ul class="check" id="revCheck"></ul></div>`;
   }
+  html+=reportHTML();
   card.innerHTML=html;
-  wireQ(q);
+  wireQ(q); wireReport(q);
 }
 
 function wireQ(q){
@@ -13263,6 +13316,144 @@ function finishKlausur(auto){
   refreshStats();
 }
 
+
+// ---- Komfort-Features: Dark Mode, Kurzanleitung, Suche, Melden, Teilen, Backup ----
+function copyText(txt, msgEl){
+  const done=()=>{ if(msgEl){ msgEl.textContent="In die Zwischenablage kopiert."; setTimeout(()=>{msgEl.textContent="";},3000);} };
+  try{
+    if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done,()=>fallback()); }
+    else fallback();
+  }catch(e){ fallback(); }
+  function fallback(){
+    const ta=document.createElement('textarea'); ta.value=txt; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    let okc=false;
+    try{ okc=document.execCommand('copy'); }catch(e){ okc=false; }
+    document.body.removeChild(ta);
+    if(okc){ done(); return; }
+    // Notfall: Text sichtbar zum manuellen Kopieren anbieten
+    if(msgEl){
+      let m=msgEl.parentNode.querySelector('.manualcopy');
+      if(!m){ m=document.createElement('textarea'); m.className='manualcopy';
+        m.style.cssText='width:100%;min-height:90px;margin-top:6px;border:1.5px solid var(--line);border-radius:10px;padding:8px;font-size:.82rem;background:var(--card);color:var(--ink)';
+        msgEl.parentNode.appendChild(m); }
+      m.value=txt; m.select();
+      msgEl.textContent="Zwischenablage blockiert - Text unten markieren und kopieren.";
+    }
+  }
+}
+
+function initTheme(){
+  const b=document.getElementById('themeBtn'); if(!b) return;
+  let dark=false;
+  try{ dark=localStorage.getItem('vp_theme')==='dark'; }catch(e){}
+  const apply=()=>{ document.body.classList.toggle('dark',dark); b.textContent=dark?'Tagmodus':'Nachtmodus'; };
+  apply();
+  b.onclick=()=>{ dark=!dark; try{localStorage.setItem('vp_theme',dark?'dark':'light');}catch(e){} apply(); };
+}
+
+function initIntro(){
+  const box=document.getElementById('introBox'), ok=document.getElementById('introOk'), hb=document.getElementById('helpBtn');
+  if(!box) return;
+  let seen=false;
+  try{ seen=localStorage.getItem('vp_intro_seen')==='1'; }catch(e){}
+  if(!seen) box.style.display='';
+  if(ok) ok.onclick=()=>{ box.style.display='none'; try{localStorage.setItem('vp_intro_seen','1');}catch(e){} };
+  if(hb) hb.onclick=()=>{ box.style.display = box.style.display==='none' ? '' : 'none'; if(box.style.display==='' && box.scrollIntoView) { try{ box.scrollIntoView({behavior:'smooth',block:'nearest'}); }catch(e){} } };
+}
+
+function initSearch(){
+  const inp=document.getElementById('searchIn'), res=document.getElementById('searchRes');
+  if(!inp||!res) return;
+  const norm=s=>(s||'').toLowerCase().replace(/\u00a0/g,' ');
+  inp.oninput=()=>{
+    const q=norm(inp.value).trim();
+    if(q.length<3){ res.innerHTML= q.length?'<div class="sm" style="color:var(--muted);font-size:.8rem">Mindestens 3 Zeichen eingeben.</div>':''; return; }
+    const hitsQ=ALL_QUESTIONS.filter(x=>norm(x.frage).includes(q)||norm(x.thema).includes(q)||norm(x.erkl).includes(q)).slice(0,25);
+    const hitsP=ALL_PARAS.filter(p=>norm(p.norm).includes(q)||norm(p.titel).includes(q)||norm(p.kern).includes(q)||norm(p.wortlaut).includes(q)).slice(0,15);
+    let html='';
+    hitsP.forEach((p,i)=>{
+      html+='<div class="sitem" data-t="p" data-i="'+i+'"><div class="sm">'+p.fach+' · §-Trainer</div>'+
+            '<div class="sq">'+p.norm+' - '+p.titel+'</div>'+
+            '<div class="sa">'+p.wortlaut+'</div><div class="se">'+p.kern+'</div></div>';
+    });
+    hitsQ.forEach((x,i)=>{
+      let loes = x.typ==='mc' ? x.optionen[x.richtig] : (x.typ==='rechnen' ? (x.loesung+(x.einheit?' '+x.einheit:'')) : (x.muster||''));
+      html+='<div class="sitem" data-t="q" data-i="'+i+'"><div class="sm">'+x.fach+' · '+x.thema+'</div>'+
+            '<div class="sq">'+x.frage+'</div>'+
+            '<div class="sa">Antwort: '+loes+'</div>'+(x.erkl?'<div class="se">'+x.erkl+'</div>':'')+'</div>';
+    });
+    res.innerHTML = html || '<div style="color:var(--muted);font-size:.85rem">Kein Treffer.</div>';
+    res.querySelectorAll('.sitem').forEach(el=>{ el.onclick=()=>el.classList.toggle('open'); });
+  };
+}
+
+function reportHTML(){
+  return '<div class="reportwrap"><button type="button" class="report-toggle" id="repToggle">Fehler in dieser Frage melden</button>'+
+         '<div class="report-body" id="repBody"><textarea id="repTxt" placeholder="Was stimmt nicht? (z. B. falsche Lösung, veralteter Wert, unklare Formulierung)"></textarea>'+
+         '<div class="toprow" style="justify-content:flex-start"><button type="button" class="tbtn" id="repCopy">Meldung kopieren</button>'+
+         '<button type="button" class="tbtn" id="repMail">Als E-Mail</button></div><div class="okmsg" id="repMsg"></div></div></div>';
+}
+function wireReport(q){
+  const t=document.getElementById('repToggle'); if(!t) return;
+  const body=document.getElementById('repBody');
+  t.onclick=()=>{ body.classList.toggle('show'); };
+  const build=()=>{
+    const c=(document.getElementById('repTxt').value||'').trim();
+    let loes = q.typ==='mc' ? q.optionen[q.richtig] : (q.typ==='rechnen' ? (q.loesung+(q.einheit?' '+q.einheit:'')) : '(Wissensfrage)');
+    return 'FEHLERMELDUNG Verbandsprüfer-Lerntrainer\n'+
+           'Fach: '+q.fach+'\nThema: '+q.thema+'\nTyp: '+q.typ+'\n'+
+           'Frage: '+q.frage+'\n'+
+           'Hinterlegte Lösung: '+loes+'\n'+
+           'Anmerkung: '+(c||'(keine)')+'\n'+
+           'Gemeldet am: '+new Date().toLocaleDateString('de-DE');
+  };
+  document.getElementById('repCopy').onclick=()=>copyText(build(), document.getElementById('repMsg'));
+  document.getElementById('repMail').onclick=()=>{
+    const s=encodeURIComponent('Fehlermeldung Lerntrainer - '+q.fach);
+    window.location.href='mailto:tom.pasemann@googlemail.com?subject='+s+'&body='+encodeURIComponent(build());
+  };
+}
+
+function initShare(){
+  const b=document.getElementById('shareBtn'); if(!b) return;
+  b.onclick=()=>{
+    const ring=document.getElementById('resRing').textContent;
+    const bar=document.getElementById('resBar').textContent.replace(/\s+/g,' ').trim();
+    const fae=[...sel.fächer].join(', ');
+    copyText('Verbandsprüfer-Lerntrainer\n'+fae+' · '+ring+'\n'+bar, document.getElementById('shareMsg'));
+  };
+}
+
+function initBackup(){
+  const e=document.getElementById('expBtn'), i=document.getElementById('impBtn'), f=document.getElementById('impFile');
+  if(!e||!i||!f) return;
+  e.onclick=()=>{
+    const data={v:1,stand:new Date().toISOString(),progress:progress,paraProg:paraProg,daily:daily};
+    const blob=new Blob([JSON.stringify(data)],{type:'application/json'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='Lernstand_'+new Date().toISOString().slice(0,10)+'.json';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  };
+  i.onclick=()=>f.click();
+  f.onchange=()=>{
+    const file=f.files&&f.files[0]; if(!file) return;
+    const r=new FileReader();
+    r.onload=()=>{
+      try{
+        const d=JSON.parse(r.result);
+        if(d.progress){ progress=d.progress; saveProg(progress); }
+        if(d.paraProg){ paraProg=d.paraProg; saveParaProg(); }
+        if(d.daily){ daily=d.daily; saveDaily(); }
+        refreshStats();
+        alert('Lernstand geladen.');
+      }catch(err){ alert('Datei konnte nicht gelesen werden.'); }
+    };
+    r.readAsText(file);
+  };
+}
+
 // ---- Buttons ----
 document.getElementById('startBtn').onclick=startSession;
 document.getElementById('againBtn').onclick=()=>{ const kr=document.getElementById('kResult'); if(kr)kr.remove(); document.getElementById('result').style.display='none'; document.getElementById('setup').style.display='block'; refreshStats(); };
@@ -13271,6 +13462,7 @@ document.getElementById('resetBtn').onclick=()=>{ if(confirm("Gesamten Lernforts
 
 // ---- Init ----
 initChips(); updateStart(); refreshStats(); countdown();
+initTheme(); initIntro(); initSearch(); initShare(); initBackup();
 </script>
 </body>
 </html>
