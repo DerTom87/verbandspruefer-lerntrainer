@@ -168,6 +168,25 @@
   .pm.g.on{background:var(--ok);color:#fff;border-color:var(--ok)}
   .pm.r.on{background:var(--bad);color:#fff;border-color:var(--bad)}
   .para-disc{font-size:.68rem;color:var(--muted);text-align:center;margin-top:12px;line-height:1.4}
+  .goalbar{display:flex;align-items:center;gap:10px;margin-top:6px}
+  .goaltrack{flex:1;height:10px;background:var(--bg);border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+  .goaltrack i{display:block;height:100%;background:var(--accent);width:0}
+  .goaltxt{font-size:.8rem;color:var(--muted);white-space:nowrap}
+  .heat{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+  .heatcell{font-size:.72rem;padding:4px 8px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+  .heatcell.g{background:#e6f5ec;border-color:#8fce9f;color:#1e6b38}
+  .heatcell.y{background:#fdf3e0;border-color:#f0c674;color:#8a5b0a}
+  .heatcell.r{background:#fdeaea;border-color:#e9a1a1;color:#98292b}
+  .heatcell.n{opacity:.55}
+  .klausurbar{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .ktimer{font-family:'DejaVu Sans Mono',monospace;font-size:1.05rem;font-weight:700;color:var(--ink);padding:4px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+  .ktimer.warn{color:#fff;background:var(--bad);border-color:var(--bad)}
+  .kinfo{font-size:.8rem;color:var(--muted)}
+  .kresult{margin-top:10px}
+  .kwrong{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:8px;background:var(--card)}
+  .kwrong .kq{font-weight:600;font-size:.9rem;margin-bottom:4px}
+  .kwrong .ka{font-size:.85rem;color:var(--ok)}
+  .kwrong .km{font-size:.82rem;color:var(--muted);margin-top:4px}
 </style>
 </head>
 <body>
@@ -184,8 +203,11 @@
       <h2>Lernart</h2>
       <div class="chips" id="lernartChips">
         <div class="chip on" data-l="quiz">Quiz (Fragen)</div>
+        <div class="chip" data-l="box">Fehler-Box <span id="dueBadge"></span></div>
+        <div class="chip" data-l="klausur">Klausur-Simulation</div>
         <div class="chip" data-l="para">§-Trainer (Wortlaut)</div>
       </div>
+      <div class="goalbar"><div class="goaltrack"><i id="goalFill"></i></div><div class="goaltxt" id="goalTxt"></div></div>
     </div>
     <div class="panel">
       <h2>Fächer</h2>
@@ -213,6 +235,23 @@
         <div class="chip" data-prio="weak">Schwächen zuerst (✗/~)</div>
         <div class="chip" data-prio="new">Neue zuerst</div>
       </div>
+    </div>
+    <div class="panel" id="klausurPanel" style="display:none">
+      <h2>Klausur-Einstellungen</h2>
+      <div class="chips" id="kMinChips">
+        <div class="chip" data-km="60">60 Minuten</div>
+        <div class="chip on" data-km="120">120 Minuten</div>
+      </div>
+      <div class="chips" style="margin-top:10px" id="kCntChips">
+        <div class="chip" data-kc="20">20 Aufgaben</div>
+        <div class="chip on" data-kc="30">30 Aufgaben</div>
+        <div class="chip" data-kc="45">45 Aufgaben</div>
+      </div>
+      <div class="goaltxt" style="margin-top:8px">Kein Feedback zwischendurch - Auswertung erst am Ende.</div>
+    </div>
+    <div class="panel">
+      <h2>Themen-Heatmap</h2>
+      <div class="heat" id="heatBox"></div>
     </div>
     <div class="panel">
       <h2>Dein Fortschritt</h2>
@@ -12615,7 +12654,14 @@ let progress = loadProg(); // { qid: {self:'g'|'y'|'r', seen:n} }
 function qid(q){ return q.fach+"|"+q.frage.slice(0,50); }
 
 // ---- State ----
-let sel = { fächer:new Set(FAECHER), mode:"alle", count:20, prio:"mix", lernart:"quiz" };
+let sel = { fächer:new Set(FAECHER), mode:"alle", count:20, prio:"mix", lernart:"quiz", kMin:120, kCnt:30 };
+const DAY_MS=86400000;
+const BOX_IV=[1,3,7,14];
+function todayKey(){ const d=new Date(); return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate(); }
+let daily=(function(){try{const o=JSON.parse(localStorage.getItem("vp_daily")||"{}");return (o&&o.key===todayKey())?o:{key:todayKey(),n:0,goal:(o&&o.goal)||40};}catch(e){return {key:todayKey(),n:0,goal:40};}})();
+function saveDaily(){try{localStorage.setItem("vp_daily",JSON.stringify(daily));}catch(e){}}
+function bumpDaily(){ if(daily.key!==todayKey()){daily.key=todayKey();daily.n=0;} daily.n++; saveDaily(); renderGoal(); }
+function dueList(){ const now=Date.now(); return ALL_QUESTIONS.filter(q=>{const p=progress[qid(q)]; return p&&p.due&&p.due<=now;}); }
 let paraProg = (function(){try{return JSON.parse(localStorage.getItem("vp_paraprog")||"{}");}catch(e){return {};}})();
 function saveParaProg(){try{localStorage.setItem("vp_paraprog",JSON.stringify(paraProg));}catch(e){}}
 let paraSession = { items:[], idx:0 };
@@ -12639,11 +12685,19 @@ function initChips(){
   document.querySelectorAll('.chip[data-prio]').forEach(c=>{
     c.onclick=()=>{ document.querySelectorAll('.chip[data-prio]').forEach(x=>x.classList.remove('on')); c.classList.add('on'); sel.prio=c.dataset.prio; };
   });
+  document.querySelectorAll('#kMinChips .chip').forEach(c=>{
+    c.onclick=()=>{ document.querySelectorAll('#kMinChips .chip').forEach(x=>x.classList.remove('on')); c.classList.add('on'); sel.kMin=+c.dataset.km; };
+  });
+  document.querySelectorAll('#kCntChips .chip').forEach(c=>{
+    c.onclick=()=>{ document.querySelectorAll('#kCntChips .chip').forEach(x=>x.classList.remove('on')); c.classList.add('on'); sel.kCnt=+c.dataset.kc; };
+  });
   document.querySelectorAll('#lernartChips .chip').forEach(c=>{
     c.onclick=()=>{ document.querySelectorAll('#lernartChips .chip').forEach(x=>x.classList.remove('on')); c.classList.add('on'); sel.lernart=c.dataset.l;
-      const para=sel.lernart==='para';
-      const mp=document.getElementById('modePanel'); if(mp)mp.style.display=para?'none':'';
-      document.getElementById('startBtn').textContent=para?'§-Trainer starten':'Lernsession starten';
+      const la=sel.lernart;
+      const mp=document.getElementById('modePanel'); if(mp)mp.style.display=(la==='para'||la==='klausur')?'none':'';
+      const kp=document.getElementById('klausurPanel'); if(kp)kp.style.display=(la==='klausur')?'':'none';
+      const b=document.getElementById('startBtn');
+      b.textContent = la==='para' ? '§-Trainer starten' : (la==='klausur' ? 'Klausur starten' : (la==='box' ? 'Wiederholungen starten' : 'Lernsession starten'));
     };
   });
 }
@@ -12658,6 +12712,46 @@ function refreshStats(){
   document.getElementById('stSeen').textContent=seen;
   document.getElementById('stGood').textContent=good;
   document.getElementById('stWeak').textContent=weak;
+  renderGoal(); renderHeat(); renderDue();
+}
+
+function renderGoal(){
+  const f=document.getElementById('goalFill'), t=document.getElementById('goalTxt');
+  if(!f||!t) return;
+  if(daily.key!==todayKey()){ daily.key=todayKey(); daily.n=0; saveDaily(); }
+  const pct=Math.min(100, Math.round(daily.n/daily.goal*100));
+  f.style.width=pct+"%";
+  const d=Math.ceil((EXAM-new Date())/DAY_MS);
+  t.textContent="Heute "+daily.n+" / "+daily.goal+(d>0?" · noch "+d+" Tage":"");
+}
+
+function renderDue(){
+  const b=document.getElementById('dueBadge'); if(!b) return;
+  const n=dueList().length;
+  b.textContent = n>0 ? "("+n+")" : "";
+}
+
+function renderHeat(){
+  const box=document.getElementById('heatBox'); if(!box) return;
+  const agg={};
+  ALL_QUESTIONS.forEach(q=>{
+    const t=(q.fach||"")+" · "+(q.thema||"?");
+    const a=agg[t]||(agg[t]={n:0,seen:0,good:0,weak:0});
+    a.n++;
+    const p=progress[qid(q)];
+    if(p&&p.seen){ a.seen++; if(p.self==='g')a.good++; if(p.self==='r'||p.self==='y')a.weak++; }
+  });
+  // nur bereits geübte Themen, schwächste zuerst, max 40 Kacheln
+  let keys=Object.keys(agg).filter(k=>agg[k].seen>0);
+  keys.sort((x,y)=>(agg[x].good/agg[x].seen)-(agg[y].good/agg[y].seen));
+  const total=keys.length;
+  keys=keys.slice(0,40);
+  if(total===0){ box.innerHTML='<span class="heatcell n">Noch keine Themen geübt - starte eine Lernsession.</span>'; return; }
+  box.innerHTML=keys.map(k=>{
+    const a=agg[k]; const r=a.good/a.seen;
+    const cls = r>=0.8?'g' : (r>=0.5?'y':'r');
+    return '<span class="heatcell '+cls+'" title="'+a.seen+' von '+a.n+' Fragen gesehen">'+k+' '+a.good+'/'+a.seen+'</span>';
+  }).join('') + (total>40?'<span class="heatcell n">… +'+(total-40)+' weitere</span>':'');
 }
 
 function countdown(){
@@ -12701,6 +12795,19 @@ function seenCount(q){ const p=progress[qid(q)]; return p?p.seen:0; }
 // ---- Quiz-Ablauf ----
 function startSession(){
   if(sel.lernart==='para'){ startParaSession(); return; }
+  if(sel.lernart==='klausur'){ startKlausur(); return; }
+  if(sel.lernart==='box'){
+    const due=dueList().filter(q=>sel.fächer.has(q.fach));
+    if(due.length===0){ alert('Aktuell sind keine Wiederholungen fällig. Super - komm später wieder.'); return; }
+    shuffle(due);
+    session.items = due.map(q=>{ if(q.typ==='mc'){ const o=q.optionen.map((t,i)=>({t,correct:i===q.richtig})); shuffle(o); return {...q,_opts:o}; } return {...q}; });
+    session.idx=0; session.correct=0; session.answered=0; session.notes={}; session.klausur=false;
+    document.getElementById('setup').style.display='none';
+    document.getElementById('result').style.display='none';
+    document.getElementById('quiz').style.display='block';
+    renderQ(); return;
+  }
+  session.klausur=false;
   session.items = buildSession();
   session.idx=0; session.correct=0; session.answered=0; session.notes={};
   if(session.items.length===0){ alert("Keine Fragen für diese Auswahl."); return; }
@@ -12760,7 +12867,11 @@ function renderQ(){
   const card=document.getElementById('qCard');
 
   let typLabel = q.typ==="mc"?"Multiple Choice":q.typ==="rechnen"?"Rechnen":"Wissensfrage";
-  let html = `<div class="qmeta">
+  let html = "";
+  if(session.klausur){
+    html += `<div class="klausurbar"><span class="ktimer" id="kTimer">--:--</span><span class="kinfo">Klausur · Aufgabe ${session.idx+1} von ${total} · kein Feedback</span></div>`;
+  }
+  html += `<div class="qmeta">
       <span class="badge f" data-f="${q.fach}">${q.fach}</span>
       <span class="badge thema">${q.thema}</span>
       <span class="badge t">${typLabel}</span>
@@ -12775,7 +12886,7 @@ function renderQ(){
   } else if(q.typ==="rechnen"){
     html+=`<input class="num" id="numIn" inputmode="decimal" placeholder="Ergebnis eingeben${q.einheit?' ('+q.einheit+')':''}">
       <div class="btnrow"><button class="btn primary" id="checkBtn">Prüfen</button>
-      <button class="btn ghost" id="showBtn">Rechenweg zeigen</button></div>
+      ${session.klausur?'':'<button class="btn ghost" id="showBtn">Rechenweg zeigen</button>'}</div>
       ${toolsHTML()}
       <div class="reveal" id="rev"><h4>Rechenweg</h4><ol class="steps" id="revSteps"></ol></div>`;
   } else { // frei
@@ -12794,6 +12905,12 @@ function wireQ(q){
     document.querySelectorAll('.opt').forEach(btn=>{
       btn.onclick=()=>{
         const i=+btn.dataset.i; const o=q._opts[i];
+        if(session.klausur){
+          document.querySelectorAll('.opt').forEach(b=>{ b.disabled=true; });
+          btn.style.borderColor='var(--accent)'; btn.style.fontWeight='600';
+          recordKlausur(q, o.correct, o.t);
+          addNext(); return;
+        }
         document.querySelectorAll('.opt').forEach((b,j)=>{
           b.disabled=true;
           if(q._opts[j].correct)b.classList.add('correct');
@@ -12817,11 +12934,17 @@ function wireQ(q){
       const val=parseFloat(raw); const target=parseFloat(q.loesung);
       const tol=q.toleranz||0.5;
       const ok=!isNaN(val)&&Math.abs(val-target)<=tol;
+      if(session.klausur){
+        const cb=document.getElementById('checkBtn'); if(cb)cb.disabled=true;
+        const ni=document.getElementById('numIn'); if(ni)ni.disabled=true;
+        recordKlausur(q, ok, raw);
+        addNext(); return;
+      }
       showCalc(q, ok, true);
     };
     document.getElementById('checkBtn').onclick=check;
     initCalc(); initNotes(q);
-    document.getElementById('showBtn').onclick=()=>showAnsatz(q);
+    const sb=document.getElementById('showBtn'); if(sb) sb.onclick=()=>showAnsatz(q);
     document.getElementById('numIn').addEventListener('keydown',e=>{if(e.key==='Enter')check();});
   } else {
     document.getElementById('showBtn').onclick=()=>{
@@ -12890,10 +13013,17 @@ function showSelf(q){
 function recordSelf(q, s, autoSeen){
   const id=qid(q); const p=progress[id]||{seen:0};
   p.seen=(p.seen||0)+(autoSeen?1:0);
+  // Leitner-Wiedervorlage: richtig -> Box hoch, falsch/teils -> zurueck auf 0
+  if(s==='g'){ p.box=Math.min((p.box||0)+1,3); }
+  else if(s==='r'){ p.box=0; }
+  else { p.box=Math.max((p.box||0)-1,0); }
+  p.due=Date.now()+BOX_IV[p.box||0]*DAY_MS;
+  p.last=Date.now();
   // Selbst-Einschätzung überschreibt (manuelle Eingabe hat Vorrang)
   if(!autoSeen||!p.self) p.self=s;
   if(!autoSeen) p.self=s;
   progress[id]=p; saveProg(progress);
+  if(autoSeen && !session.klausur) bumpDaily();
 }
 
 
@@ -12956,7 +13086,7 @@ function addNext(){
   row.innerHTML=`<button class="btn primary" id="nextBtn">${last?'Auswerten':'Nächste Frage →'}</button>`;
   card.appendChild(row);
   document.getElementById('nextBtn').onclick=()=>{
-    if(last){ finish(); } else { session.idx++; renderQ(); refreshStats(); }
+    if(last){ if(session.klausur){ finishKlausur(false); } else { finish(); } } else { session.idx++; renderQ(); if(!session.klausur) refreshStats(); }
   };
 }
 
@@ -13053,10 +13183,90 @@ function wirePara(p){
     else { document.getElementById('quiz').style.display='none'; document.getElementById('setup').style.display='block'; refreshStats(); } };
 }
 
+
+// ---- Klausur-Simulation ----
+let kTimer=null;
+function startKlausur(){
+  let pool = ALL_QUESTIONS.filter(q=>sel.fächer.has(q.fach) && (q.typ==='mc'||q.typ==='rechnen'));
+  if(pool.length===0){ alert("Keine Aufgaben für diese Auswahl."); return; }
+  shuffle(pool);
+  const n=Math.min(sel.kCnt,pool.length);
+  session.items = pool.slice(0,n).map(q=>{
+    if(q.typ==='mc'){ const o=q.optionen.map((t,i)=>({t,correct:i===q.richtig})); shuffle(o); return {...q,_opts:o}; }
+    return {...q};
+  });
+  session.idx=0; session.correct=0; session.answered=0; session.notes={};
+  session.klausur=true; session.kAnswers=[]; session.kStart=Date.now();
+  session.kEnd=Date.now()+sel.kMin*60000;
+  document.getElementById('setup').style.display='none';
+  document.getElementById('result').style.display='none';
+  document.getElementById('quiz').style.display='block';
+  if(kTimer) clearInterval(kTimer);
+  kTimer=setInterval(tickKlausur,1000);
+  renderQ();
+}
+function tickKlausur(){
+  if(!session.klausur){ clearInterval(kTimer); kTimer=null; return; }
+  const el=document.getElementById('kTimer'); if(!el) return;
+  let left=Math.max(0, session.kEnd-Date.now());
+  const m=Math.floor(left/60000), s=Math.floor((left%60000)/1000);
+  el.textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
+  if(left<=5*60000) el.classList.add('warn'); else el.classList.remove('warn');
+  if(left<=0){ clearInterval(kTimer); kTimer=null; finishKlausur(true); }
+}
+function recordKlausur(q, correct, given){
+  session.kAnswers.push({q:q, correct:correct, given:given||'', t:Date.now()});
+  session.answered++; if(correct) session.correct++;
+  recordSelf(q, correct?'g':'r', true);
+  bumpDaily();
+}
+function finishKlausur(auto){
+  session.klausur=false;
+  if(kTimer){ clearInterval(kTimer); kTimer=null; }
+  const total=session.items.length, ans=session.kAnswers.length;
+  const richtig=session.kAnswers.filter(a=>a.correct).length;
+  const usedMin=Math.round((Date.now()-session.kStart)/60000);
+  const pct= total? Math.round(richtig/total*100):0;
+  document.getElementById('quiz').style.display='none';
+  const res=document.getElementById('result'); res.style.display='block';
+  document.getElementById('resRing').textContent=pct+"%";
+  document.getElementById('resRing').style.color = pct>=70?'var(--ok)':pct>=50?'var(--warn)':'var(--bad)';
+  document.getElementById('resBar').innerHTML=
+    '<div><b>'+richtig+'</b>richtig</div>'+
+    '<div><b>'+ans+' / '+total+'</b>bearbeitet</div>'+
+    '<div><b>'+usedMin+'</b>Minuten</div>';
+  // Detailauswertung
+  let old=document.getElementById('kResult'); if(old) old.remove();
+  const box=document.createElement('div'); box.className='kresult'; box.id='kResult';
+  const proMin = ans? (usedMin/ans).toFixed(1):'-';
+  let html='<div class="goaltxt" style="margin-bottom:8px">'+(auto?'Zeit abgelaufen. ':'')+'Schnitt '+proMin+' Min pro Aufgabe'+(ans<total?' · '+(total-ans)+' unbearbeitet':'')+'</div>';
+  // pro Fach
+  const perF={};
+  session.kAnswers.forEach(a=>{ const f=a.q.fach; perF[f]=perF[f]||{n:0,r:0}; perF[f].n++; if(a.correct)perF[f].r++; });
+  html+='<div class="heat">'+Object.keys(perF).map(f=>{
+     const a=perF[f], r=a.r/a.n; const cls=r>=0.8?'g':(r>=0.5?'y':'r');
+     return '<span class="heatcell '+cls+'">'+f+' '+a.r+'/'+a.n+'</span>';
+  }).join('')+'</div>';
+  const wrong=session.kAnswers.filter(a=>!a.correct);
+  if(wrong.length){
+    html+='<h2 style="margin-top:14px">Falsch beantwortet ('+wrong.length+')</h2>';
+    wrong.forEach(a=>{
+      const q=a.q;
+      let loesung = q.typ==='mc' ? (q._opts?q._opts.filter(o=>o.correct)[0].t:q.optionen[q.richtig]) : (q.loesung+(q.einheit?' '+q.einheit:''));
+      html+='<div class="kwrong"><div class="kq">'+q.frage+'</div>'+
+            '<div class="ka">Richtig: '+loesung+'</div>'+
+            (q.erkl?'<div class="km">'+q.erkl+'</div>':'')+'</div>';
+    });
+  }
+  box.innerHTML=html;
+  res.insertBefore(box, document.getElementById('againBtn'));
+  refreshStats();
+}
+
 // ---- Buttons ----
 document.getElementById('startBtn').onclick=startSession;
-document.getElementById('againBtn').onclick=()=>{ document.getElementById('result').style.display='none'; document.getElementById('setup').style.display='block'; refreshStats(); };
-document.getElementById('exitBtn').onclick=()=>{ document.getElementById('quiz').style.display='none'; document.getElementById('setup').style.display='block'; refreshStats(); };
+document.getElementById('againBtn').onclick=()=>{ const kr=document.getElementById('kResult'); if(kr)kr.remove(); document.getElementById('result').style.display='none'; document.getElementById('setup').style.display='block'; refreshStats(); };
+document.getElementById('exitBtn').onclick=()=>{ if(kTimer){clearInterval(kTimer);kTimer=null;} session.klausur=false; document.getElementById('quiz').style.display='none'; document.getElementById('setup').style.display='block'; refreshStats(); };
 document.getElementById('resetBtn').onclick=()=>{ if(confirm("Gesamten Lernfortschritt in diesem Browser löschen?")){ progress={}; saveProg(progress); refreshStats(); } };
 
 // ---- Init ----
