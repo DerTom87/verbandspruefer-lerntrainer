@@ -237,6 +237,32 @@
   .heatfach-b{display:none;padding:0 12px 12px}
   .heatfach.open .heatfach-b{display:block}
   .heathint{font-size:.76rem;color:var(--muted);margin-bottom:8px}
+
+  /* ---------- Audio-Modus ---------- */
+  #audio{display:none}
+  .aucard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;min-height:320px;display:flex;flex-direction:column}
+  .austep{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+  .autext{font-size:1.2rem;line-height:1.5;font-weight:600;flex:1}
+  .autext.small{font-size:1rem;font-weight:400}
+  .auwave{display:flex;align-items:flex-end;gap:3px;height:18px;margin-bottom:10px}
+  .auwave i{width:3px;background:var(--accent);border-radius:2px;height:5px;animation:auw .9s ease-in-out infinite}
+  .auwave i:nth-child(2){animation-delay:.15s} .auwave i:nth-child(3){animation-delay:.3s}
+  .auwave i:nth-child(4){animation-delay:.45s} .auwave i:nth-child(5){animation-delay:.6s}
+  @keyframes auw{0%,100%{height:5px}50%{height:17px}}
+  .auwave.off i{animation:none;height:5px;background:var(--line)}
+  .authink{margin-top:14px}
+  .authink-track{height:8px;background:var(--bg);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .authink-track i{display:block;height:100%;background:var(--warn);width:100%}
+  .authink-txt{font-size:.8rem;color:var(--warn-text);font-weight:600;margin-top:6px;text-align:center}
+  .aubar{display:flex;gap:8px;margin-top:14px}
+  .aubtn{flex:1;border-radius:11px;padding:13px 6px;font-size:.9rem;font-weight:600;cursor:pointer;border:1.5px solid var(--line);background:var(--field);color:var(--ink)}
+  .aubtn:hover{border-color:var(--accent)}
+  .aubtn.wide{flex:2}
+  .auhint{font-size:.74rem;color:var(--muted);margin-top:10px;text-align:center;line-height:1.5}
+  .auwarn{background:var(--warn-soft);border:1px solid var(--warn-line);border-radius:10px;padding:10px 12px;font-size:.82rem;margin-top:10px}
+  .aurow{display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+  .aurow label{font-size:.82rem;color:var(--muted);min-width:88px}
+  .aurow select{flex:1;min-width:150px;border:1.5px solid var(--line);border-radius:10px;padding:8px 10px;font-size:.88rem;font-family:inherit;background:var(--field);color:var(--ink)}
   .toprow{display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap}
   .tbtn{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:.78rem;font-weight:600;color:var(--accent-text);cursor:pointer}
   .tbtn:hover{border-color:var(--accent)}
@@ -285,6 +311,7 @@
         <li><b>Fehler-Box</b> - Wiedervorlage: falsch beantwortete Fragen kommen nach 1, 3, 7 und 14 Tagen automatisch zurück.</li>
         <li><b>Klausur-Simulation</b> - 60 oder 120 Minuten mit Countdown, ohne Feedback; Auswertung mit Zeit pro Aufgabe und Fehlerliste am Ende.</li>
         <li><b>§-Trainer</b> - Gesetzeswortlaut lernen: Wortlaut verdecken, Beispiel und Merksatz aufklappen, "Sitzt" markieren.</li>
+        <li><b>Audio (freihändig)</b> - liest Frage vor, lässt dich denken, liest dann Lösung und Begründung. Für Bahn, Auto oder Spaziergang; Kopfhörer rein und laufen lassen.</li>
         <li>Bei Rechenaufgaben gibt es einen <b>Taschenrechner</b> und ein <b>Notizfeld</b>; die Heatmap zeigt deine schwächsten Themen.</li>
       </ul>
       <button class="tbtn" id="introOk">Verstanden</button>
@@ -301,6 +328,7 @@
         <div class="chip" data-l="box">Fehler-Box <span id="dueBadge"></span></div>
         <div class="chip" data-l="klausur">Klausur-Simulation</div>
         <div class="chip" data-l="para">§-Trainer (Wortlaut)</div>
+        <div class="chip" data-l="audio">🎧 Audio (freihändig)</div>
       </div>
       <div class="goalbar"><div class="goaltrack"><i id="goalFill"></i></div><div class="goaltxt" id="goalTxt"></div></div>
     </div>
@@ -344,6 +372,28 @@
       </div>
       <div class="goaltxt" style="margin-top:8px">Kein Feedback zwischendurch - Auswertung erst am Ende.</div>
     </div>
+    <div class="panel" id="audioPanel" style="display:none">
+      <h2>Audio-Einstellungen</h2>
+      <div class="chips" id="auPauseChips">
+        <div class="chip" data-ap="5">5 s denken</div>
+        <div class="chip on" data-ap="8">8 s denken</div>
+        <div class="chip" data-ap="12">12 s denken</div>
+        <div class="chip" data-ap="20">20 s denken</div>
+      </div>
+      <div class="aurow"><label for="auVoice">Stimme</label><select id="auVoice"></select></div>
+      <div class="aurow"><label for="auRate">Tempo</label><select id="auRate">
+        <option value="0.85">langsam</option>
+        <option value="1" selected>normal</option>
+        <option value="1.15">zügig</option>
+        <option value="1.3">schnell</option>
+      </select></div>
+      <div class="chips" style="margin-top:10px" id="auOptChips">
+        <div class="chip on" data-ao="opt">MC-Antworten mitlesen</div>
+        <div class="chip on" data-ao="erkl">Erklärung vorlesen</div>
+      </div>
+      <div class="auwarn" id="auSupport" style="display:none"></div>
+      <div class="goaltxt" style="margin-top:8px">Kopfhörer anschließen, Startknopf drücken - danach läuft es von allein.</div>
+    </div>
     <div class="panel">
       <h2>Themen-Heatmap</h2>
       <div class="heat" id="heatBox"></div>
@@ -367,6 +417,35 @@
       <div class="qcount" id="qCount"></div>
     </div>
     <div class="qcard" id="qCard"></div>
+  </div>
+
+  <!-- AUDIO -->
+  <div id="audio">
+    <div class="qbar">
+      <button class="qexit" id="auExit" title="Beenden">✕</button>
+      <div class="qprog"><i id="auProg"></i></div>
+      <div class="qcount" id="auCount"></div>
+    </div>
+    <div class="aucard">
+      <div class="auwave off" id="auWave"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="austep" id="auStep">Bereit</div>
+      <div class="autext" id="auText"></div>
+      <div class="authink" id="auThink" style="display:none">
+        <div class="authink-track"><i id="auThinkFill"></i></div>
+        <div class="authink-txt" id="auThinkTxt"></div>
+      </div>
+    </div>
+    <div class="aubar">
+      <button class="aubtn" id="auPrev" type="button">⏮ Zurück</button>
+      <button class="aubtn wide" id="auPlay" type="button">⏸ Pause</button>
+      <button class="aubtn" id="auNext" type="button">⏭ Weiter</button>
+    </div>
+    <div class="aubar" id="auSelfBar" style="display:none">
+      <button class="aubtn" id="auG" type="button">✓ Sitzt</button>
+      <button class="aubtn" id="auY" type="button">~ Unsicher</button>
+      <button class="aubtn" id="auR" type="button">✗ Nochmal</button>
+    </div>
+    <div class="auhint">Läuft weiter, solange der Bildschirm an ist. Auf dem iPhone bitte den Browser geöffnet lassen.</div>
   </div>
 
   <!-- RESULT -->
@@ -7490,6 +7569,12 @@ const Q_PW1 = [
   {"fach": "PW I", "typ": "mc", "schwer": 3, "thema": "Art. 5 EU-APrVO & Prüfungsstelle", "frage": "Wie wirkt das Verbot bestimmter Nichtprüfungsleistungen (Art. 5 EU-APrVO) auf die Prüfungsstelle eines Sparkassen- und Giroverbandes?", "optionen": ["Es gilt nach § 319a HGB uneingeschränkt für die Prüfungsstelle als Organisation.", "Es untersagt der integrierten Steuerstelle des Verbandes jede weitere Tätigkeit.", "Es verlangt die vollständige organisatorische und personelle Ausgliederung der Steuerstelle des Verbandes.", "Es gilt für die Prüfungsstelle selbst nicht, sondern nur personenbezogen."], "richtig": 3, "erkl": "§ 340k Abs. 3 S. 3 HGB: Auf die Prüfungsstelle selbst findet Art. 5 EU-APrVO keine Anwendung. Das Verbot wirkt nur personenbezogen für diejenigen, die das Prüfungsergebnis beeinflussen können. Eine integrierte Steuerstelle des Verbandes ist damit zulässig.", "vertiefung": "Ratio: Die Prüfungsstelle ist Teil eines Verbandes mit Bündelungsfunktion; ein pauschales Organisationsverbot würde die verbandliche Struktur sprengen. Entscheidend ist die personelle Trennung von Prüfung und Beratung.", "folgefragen": [{"frage": "Für wen gilt das Verbot dann konkret?", "antwort": "Personenbezogen für die am Prüfungsauftrag Beteiligten bzw. diejenigen, die das Ergebnis der Abschlussprüfung beeinflussen können."}]},
   {"fach": "PW I", "typ": "mc", "schwer": 3, "thema": "Umwidmung Wertpapiere (IDW RH HFA 1.014)", "frage": "Mit welchem Wertansatz erfolgt die zulässige Umwidmung von Wertpapieren aus der Liquiditätsreserve in das Anlagevermögen (IDW RH HFA 1.014)?", "optionen": ["Zum aktuellen Börsenkurs am Umwidmungstag, erfolgswirksam.", "Zum niedrigeren Wert aus Anschaffungskosten und Marktwert, erfolgswirksam.", "Ergebnisneutral zum letzten Buchwert, zu Beginn des Geschäftsjahres.", "Zu fortgeführten Anschaffungskosten unter erfolgswirksamer Auflösung früherer Abschreibungen."], "richtig": 2, "erkl": "Die Umwidmung erfolgt zum Beginn des laufenden Geschäftsjahres, ergebnisneutral mit dem letzten Buchwert (nicht dem aktuellen Kurs). Vorjahresabschreibungen dürfen nicht rückgängig gemacht werden; es bedarf eines ausdrücklichen Vorstandsbeschlusses.", "vertiefung": "FALLE: Eine Umwidmung IN den Handelsbestand ist generell unzulässig (§ 340e Abs. 3 S. 2 HGB). Maßgeblich für die Kategorie ist grundsätzlich die Zweckbestimmung beim Erwerb.", "folgefragen": [{"frage": "Welche Umwidmung ist ausnahmslos ausgeschlossen?", "antwort": "Die Umwidmung IN den Handelsbestand (§ 340e Abs. 3 S. 2 HGB) – wegen der ansonsten möglichen Ergebnissteuerung."}]},
   {"fach": "PW I", "typ": "mc", "schwer": 2, "thema": "Wertbegründung vs. Wertaufhellung", "frage": "Nach dem Stichtagsprinzip (§ 252 Abs. 1 Nr. 3 HGB): Wie ist ein erst nach dem Abschlussstichtag eintretendes, neues (wertbegründendes) Ereignis zu behandeln?", "optionen": ["Es bleibt unberücksichtigt, da es die Verhältnisse am Stichtag nicht betrifft.", "Es ist stets rückwirkend im bereits abgelaufenen Geschäftsjahr zu erfassen.", "Es ist nur dann zu erfassen, wenn es die Bonität eines betroffenen Schuldners nachweislich verbessert.", "Es ist als wertaufhellende Tatsache zwingend im Abschluss zu berücksichtigen."], "richtig": 0, "erkl": "Wertbegründende Ereignisse entstehen erst nach dem Stichtag und bleiben für den Abschluss unberücksichtigt. Nur wertaufhellende Erkenntnisse – über bereits am Stichtag vorhandene Verhältnisse – sind bis zur Aufstellung einzubeziehen.", "vertiefung": "Vietzes roter Faden: Die 'erhoffte Zukunft' des Vorstands zählt nie. Maßgeblich sind allein die Verhältnisse am Abschlussstichtag.", "folgefragen": [{"frage": "Bis zu welchem Zeitpunkt sind wertaufhellende Tatsachen zu berücksichtigen?", "antwort": "Bis zum Tag der Aufstellung (Beendigung) des Jahresabschlusses, soweit sie Verhältnisse am Stichtag betreffen."}]}
+,
+{"fach": "PW I", "typ": "frei", "schwer": 3, "thema": "Wesentlichkeitsbegriffe", "frage": "Wie viele Wesentlichkeitsgrößen kennt IDW PS 250 n.F. und welche sind es?", "muster": "Vier: (1) die Wesentlichkeit für den Abschluss als Ganzes, (2) die spezifische Wesentlichkeit für einzelne Arten von Geschäftsvorfällen, Kontensalden oder Anhang-/Lageberichtsangaben, (3) die Toleranzwesentlichkeit und (4) die Nichtaufgriffsgrenze. Werden spezifische Wesentlichkeiten festgelegt, sind hierfür auch eigene Toleranzwesentlichkeiten festzulegen.", "checkliste": ["Wesentlichkeit für den Abschluss als Ganzes", "spezifische Wesentlichkeit (§ Tz. 16)", "Toleranzwesentlichkeit", "Nichtaufgriffsgrenze", "spezifische Wesentlichkeit zieht eigene Toleranzwesentlichkeit nach sich"], "erkl": "Die spezifische Wesentlichkeit wird in Klausurantworten am häufigsten vergessen. Sie ist festzulegen, wenn zu erwarten ist, dass bereits Fehler unterhalb der Wesentlichkeit für den Abschluss als Ganzes die wirtschaftlichen Entscheidungen der Adressaten beeinflussen.", "vertiefung": "Beispiel bei einer Sparkasse: Angaben zur Organvergütung oder zu Geschäften mit nahestehenden Personen sind betragsmäßig klein, aber entscheidungserheblich - dort ist eine spezifische Wesentlichkeit angezeigt. Quelle: IDW PS 250 n.F. Tz. 16.", "folgefragen": [{"frage": "Was folgt zwingend, wenn eine spezifische Wesentlichkeit festgelegt wird?", "antwort": "Für diese ist ebenfalls eine eigene Toleranzwesentlichkeit festzulegen (IDW PS 250 n.F. Tz. 16)."}]},
+{"fach": "PW I", "typ": "mc", "schwer": 3, "thema": "Wesentlichkeitsbegriffe", "frage": "Ein Fehler liegt unterhalb der Nichtaufgriffsgrenze. Welche Aussage trifft zu?", "optionen": ["Er gilt als zweifelsfrei unbeachtlich und muss nicht zusammengestellt werden", "Er gilt als unwesentlich und ist in die Aufstellung nicht korrigierter Prüfungsdifferenzen aufzunehmen", "Er ist dem Aufsichtsorgan einzeln zu benennen, weil jede Feststellung berichtspflichtig ist", "Er führt zur Einschränkung des Bestätigungsvermerks, wenn er nicht korrigiert wird"], "richtig": 0, "erkl": "Unterhalb der Nichtaufgriffsgrenze gilt ein Fehler als zweifelsfrei unbeachtlich (IDW PS 250 n.F. Tz. 19); er muss nicht zusammengestellt und nicht in die Aufstellung nicht korrigierter Prüfungsdifferenzen aufgenommen werden (Tz. 24). Die Nichtaufgriffsgrenze hat damit den Charakter einer Dokumentationserleichterung.", "vertiefung": "Achtung auf die Wortwahl: 'Zweifelsfrei unbeachtlich' ist ausdrücklich kein anderer Ausdruck für 'nicht wesentlich'. Solche Sachverhalte haben eine erheblich kleinere Größenordnung als die Wesentlichkeit und sind einzeln und in Summe ohne praktische Folgen - unabhängig davon, ob man sie nach Größe, Art oder Umständen beurteilt.", "folgefragen": [{"frage": "Worin unterscheiden sich 'zweifelsfrei unbeachtlich' und 'nicht wesentlich'?", "antwort": "Nicht wesentliche Fehler sind zusammenzustellen, auf die Nachbuchungsliste zu nehmen und mit dem Aufsichtsorgan zu kommunizieren. Zweifelsfrei unbeachtliche Fehler liegen erheblich darunter und werden gar nicht erst erfasst."}]},
+{"fach": "PW I", "typ": "mc", "schwer": 3, "thema": "Wesentlichkeitsbegriffe", "frage": "Wozu dient die Toleranzwesentlichkeit nach IDW PS 250 n.F.?", "optionen": ["Sie misst, ob eine einzelne falsche Angabe für die Rechnungslegungsadressaten entscheidungserheblich ist", "Sie legt die Bagatellgrenze fest, unterhalb derer festgestellte Fehler weder erfasst noch dokumentiert werden", "Sie dient der Beurteilung der Fehlerrisiken und der Festlegung von Art, Zeitpunkt und Umfang der Prüfungshandlungen", "Sie bestimmt den Prozentsatz, der auf die gewählte Bezugsgröße des Abschlusses anzuwenden ist"], "richtig": 2, "erkl": "Die Toleranzwesentlichkeit ist eine Planungs- und Durchführungsgröße: Sie dient der Beurteilung der Risiken wesentlicher falscher Angaben sowie der Festlegung von Art, Zeitpunkt und Umfang der Prüfungshandlungen (IDW PS 250 n.F. Tz. 11). Die Entscheidungserheblichkeit für die Adressaten bildet dagegen die Wesentlichkeit für den Abschluss als Ganzes ab.", "vertiefung": "Der Puffer zwischen Toleranzwesentlichkeit und Wesentlichkeit deckt zwei Fehlerarten ab: nicht korrigierte UND nicht aufgedeckte falsche Angaben. Je höher das Fehlerrisiko, desto niedriger wird die Toleranzwesentlichkeit angesetzt.", "folgefragen": [{"frage": "Welche zwei Fehlerarten soll der Puffer abdecken?", "antwort": "Nicht korrigierte und nicht aufgedeckte falsche Angaben - ihre Summe soll die Wesentlichkeit für den Abschluss als Ganzes nicht überschreiten."}]},
+{"fach": "PW I", "typ": "mc", "schwer": 2, "thema": "Wesentlichkeitsbegriffe", "frage": "Welche Prozentsätze und Bezugsgrößen schreibt IDW PS 250 n.F. für die Wesentlichkeit vor?", "optionen": ["Ergebnis vor Steuern mit 5 Prozent als verbindlicher Regelwert", "Bilanzsumme mit 1 Prozent, bei Kreditinstituten abweichend 2 Prozent", "Eigenkapital mit 3 bis 5 Prozent je nach Rechtsform des Unternehmens", "Keine - Bezugsgröße und Prozentsatz liegen im pflichtgemäßen Ermessen des Abschlussprüfers"], "richtig": 3, "erkl": "IDW PS 250 n.F. Tz. 12 stellt ausdrücklich fest, dass allgemeingültige Bezugsgrößen und Prozentsätze nicht vorgegeben werden können; die Festlegung liegt im pflichtgemäßen Ermessen. Genannt werden lediglich Beispiele geeigneter Bezugsgrößen wie Ergebnis vor Steuern, Umsatzerlöse, Eigenkapital oder Bilanzsumme.", "vertiefung": "In der Praxis kursieren Werte wie 5 Prozent des Ergebnisses oder 50 bis 80 Prozent für die Toleranzwesentlichkeit. Das sind Erfahrungswerte der Prüfungspraxis, keine Normvorgabe - in der Klausur entsprechend kennzeichnen und nie als Standardvorgabe behaupten.", "folgefragen": [{"frage": "Welche Bezugsgrößen nennt der Standard beispielhaft?", "antwort": "Ergebnis vor Steuern, Umsatzerlöse, Eigenkapital oder Bilanzsumme (IDW PS 250 n.F. Tz. 12)."}]},
+{"fach": "PW I", "typ": "mc", "schwer": 3, "thema": "Wesentlichkeitsbegriffe", "frage": "Ein Fehler liegt betragsmäßig unter der Wesentlichkeitsgrenze, verschleiert aber eine Trendumkehr beim Betriebsergebnis. Wie ist er zu würdigen?", "optionen": ["Als unwesentlich, weil allein der Betrag über die Wesentlichkeit entscheidet", "Als wesentlich, weil die Umstände der Fehlerentstehung eine qualitative Wesentlichkeit begründen können", "Als zweifelsfrei unbeachtlich, sofern er unter der Toleranzwesentlichkeit bleibt", "Als wesentlich nur dann, wenn er zusammen mit anderen Fehlern die Grenze überschreitet"], "richtig": 1, "erkl": "Nach IDW PS 250 n.F. Tz. 26 sind auch die Umstände zu würdigen, unter denen ein Fehler aufgetreten ist. Das kann dazu führen, einen Fehler als wesentlich zu beurteilen, obwohl er unterhalb der Wesentlichkeitsgrenze liegt - etwa wenn er eine Änderung der Ertragslage oder anderer Trends verschleiert oder die Einhaltung vertraglicher Bedingungen berührt.", "vertiefung": "Neben der qualitativen Wesentlichkeit gibt es zwei weitere Durchbrechungen der reinen Betragsbetrachtung: die Summenwirkung mehrerer für sich unwesentlicher Fehler (Tz. 9) und die Regel, dass unterlassene Anhang- und Lageberichtsangaben grundsätzlich wesentlich sind (Tz. 27).", "folgefragen": [{"frage": "Warum sind unterlassene Anhangangaben grundsätzlich wesentlich?", "antwort": "Weil der Gesetzgeber mit der Angabepflicht die Entscheidungsrelevanz für die Adressaten bereits unterstellt hat (IDW PS 250 n.F. Tz. 27)."}]}
 ];
 // ============ PW II (Franzenburg: §25a/MaRisk, Risikokonzentration, RTF, WpHG) ============
 const Q_PW2 = [
@@ -12751,7 +12836,7 @@ let progress = loadProg(); // { qid: {self:'g'|'y'|'r', seen:n} }
 function qid(q){ return q.fach+"|"+q.frage.slice(0,50); }
 
 // ---- State ----
-let sel = { fächer:new Set(FAECHER), mode:"alle", count:20, prio:"mix", lernart:"quiz", kMin:120, kCnt:30 };
+let sel = { fächer:new Set(FAECHER), mode:"alle", count:20, prio:"mix", lernart:"quiz", kMin:120, kCnt:30, auPause:8, auRate:1, auVoice:"", auOpt:true, auErkl:true };
 const DAY_MS=86400000;
 const BOX_IV=[1,3,7,14];
 function todayKey(){ const d=new Date(); return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate(); }
@@ -12793,8 +12878,9 @@ function initChips(){
       const la=sel.lernart;
       const mp=document.getElementById('modePanel'); if(mp)mp.style.display=(la==='para'||la==='klausur')?'none':'';
       const kp=document.getElementById('klausurPanel'); if(kp)kp.style.display=(la==='klausur')?'':'none';
+      const ap=document.getElementById('audioPanel'); if(ap)ap.style.display=(la==='audio')?'':'none';
       const b=document.getElementById('startBtn');
-      b.textContent = la==='para' ? '§-Trainer starten' : (la==='klausur' ? 'Klausur starten' : (la==='box' ? 'Wiederholungen starten' : 'Lernsession starten'));
+      b.textContent = la==='para' ? '§-Trainer starten' : (la==='klausur' ? 'Klausur starten' : (la==='box' ? 'Wiederholungen starten' : (la==='audio' ? '🎧 Audio-Modus starten' : 'Lernsession starten')));
     };
   });
 }
@@ -12930,6 +13016,7 @@ function seenCount(q){ const p=progress[qid(q)]; return p?p.seen:0; }
 
 // ---- Quiz-Ablauf ----
 function startSession(){
+  if(sel.lernart==='audio'){ startAudio(); return; }
   if(sel.lernart==='para'){ startParaSession(); return; }
   if(sel.lernart==='klausur'){ startKlausur(); return; }
   if(sel.lernart==='box'){
@@ -13539,6 +13626,309 @@ function initBackup(){
 }
 
 // ---- Buttons ----
+
+// ============ AUDIO-MODUS (freihändiges Vorlesen) ============
+var au = { items:[], idx:0, step:0, playing:false, tick:null, keep:null, wake:null, chunks:[], ci:0 };
+
+// Abkürzungen so ersetzen, dass sie natürlich klingen (längste zuerst)
+var AU_MAP = [
+  [" "," "],
+  ["§§","Paragrafen "],["§","Paragraf "],
+  ["Art.","Artikel"],["Abs.","Absatz"],["Nr.","Nummer"],["Buchst.","Buchstabe"],
+  ["i. V. m.","in Verbindung mit"],["i.V.m.","in Verbindung mit"],
+  ["ff.","folgende"],["z. B.","zum Beispiel"],["z.B.","zum Beispiel"],
+  ["d. h.","das heißt"],["d.h.","das heißt"],["u. a.","unter anderem"],["u.a.","unter anderem"],
+  ["bzw.","beziehungsweise"],["ggf.","gegebenenfalls"],["inkl.","inklusive"],
+  ["grds.","grundsätzlich"],["vgl.","vergleiche"],["sog.","sogenannt"],["evtl.","eventuell"],
+  ["Tz.","Textziffer"],["Rn.","Randnummer"],
+  ["GewStG","Gewerbesteuergesetz"],["InvStG","Investmentsteuergesetz"],
+  ["KStG","Körperschaftsteuergesetz"],["EStG","Einkommensteuergesetz"],["UStG","Umsatzsteuergesetz"],
+  ["WpHG","Wertpapierhandelsgesetz"],["GmbHG","G-m-b-H-Gesetz"],["SolvV","Solvabilitätsverordnung"],
+  ["KWG","Kreditwesengesetz"],["HGB","Handelsgesetzbuch"],["BGB","Bürgerliches Gesetzbuch"],
+  ["GwG","Geldwäschegesetz"],["ZAG","Zahlungsdiensteaufsichtsgesetz"],
+  ["IDW PS","I-D-W Prüfungsstandard"],["IDW","I-D-W"],
+  ["GvK","Gruppe verbundener Kunden"],["RTF","Risikotragfähigkeit"],
+  ["EWB","Einzelwertberichtigung"],["PWB","Pauschalwertberichtigung"],
+  ["TEUR","Tausend Euro"],["Mio.","Millionen"],["Mrd.","Milliarden"],["Mio","Millionen"],["Mrd","Milliarden"],
+  ["EUR","Euro"],["€"," Euro"],["%"," Prozent"],["·"," "],["–","-"],["→"," ergibt "]
+];
+
+function auSpeakable(t){
+  if(!t) return "";
+  var x = String(t).replace(/<[^>]*>/g," ");
+  for(var i=0;i<AU_MAP.length;i++){ x = x.split(AU_MAP[i][0]).join(AU_MAP[i][1]); }
+  x = x.replace(/\bS\.\s*(\d)/g, "Satz $1");
+  x = x.replace(/\bHs\.\s*(\d)/g, "Halbsatz $1");
+  x = x.replace(/\bAlt\.\s*(\d)/g, "Alternative $1");
+  x = x.replace(/\bLit\.\s*([a-z])/g, "Buchstabe $1");
+  x = x.replace(/\s+/g," ").trim();
+  return x;
+}
+
+// lange Texte in Häppchen schneiden (Chrome bricht sonst ab)
+function auChunk(t){
+  var sent = t.match(/[^.!?:;]+[.!?:;]*\s*/g) || [t];
+  var out=[], cur="";
+  for(var i=0;i<sent.length;i++){
+    var piece=String(sent[i]).trim(); if(!piece) continue;
+    if((cur+" "+piece).length > 180 && cur){ out.push(cur.trim()); cur=piece; }
+    else { cur = cur ? cur+" "+piece : piece; }
+  }
+  if(cur.trim()) out.push(cur.trim());
+  return out.length ? out : [t];
+}
+
+function auSupported(){ return typeof window!=="undefined" && "speechSynthesis" in window && typeof window.SpeechSynthesisUtterance!=="undefined"; }
+
+function auVoiceObj(){
+  if(!auSupported()) return null;
+  var vs = window.speechSynthesis.getVoices()||[];
+  if(sel.auVoice){ for(var i=0;i<vs.length;i++){ if(vs[i].name===sel.auVoice) return vs[i]; } }
+  for(var j=0;j<vs.length;j++){ if((vs[j].lang||"").toLowerCase().indexOf("de")===0) return vs[j]; }
+  return vs[0]||null;
+}
+
+function auFillVoices(){
+  var selEl=document.getElementById('auVoice'); if(!selEl||!auSupported()) return;
+  var vs=(window.speechSynthesis.getVoices()||[]).filter(function(v){return (v.lang||"").toLowerCase().indexOf("de")===0;});
+  if(!vs.length) vs = window.speechSynthesis.getVoices()||[];
+  if(!vs.length) return;
+  selEl.innerHTML = vs.map(function(v){ return '<option value="'+v.name+'">'+v.name+' ('+v.lang+')</option>'; }).join("");
+  if(sel.auVoice) selEl.value=sel.auVoice; else sel.auVoice=selEl.value;
+}
+
+// --- Sprechen mit Verkettung ---
+function auSay(text, done){
+  if(!auSupported()){ done&&done(); return; }
+  var t=auSpeakable(text);
+  if(!t){ done&&done(); return; }
+  au.chunks=auChunk(t); au.ci=0;
+  auShowWave(true);
+  var next=function(){
+    if(!au.playing){ auShowWave(false); return; }
+    if(au.ci>=au.chunks.length){ auShowWave(false); done&&done(); return; }
+    var u=new window.SpeechSynthesisUtterance(au.chunks[au.ci++]);
+    u.lang="de-DE"; u.rate=sel.auRate||1; u.pitch=1;
+    var v=auVoiceObj(); if(v) u.voice=v;
+    u.onend=next;
+    u.onerror=function(){ auShowWave(false); done&&done(); };
+    try{ window.speechSynthesis.speak(u); }catch(e){ auShowWave(false); done&&done(); }
+  };
+  next();
+}
+function auShowWave(on){ var w=document.getElementById('auWave'); if(w) w.classList.toggle('off',!on); }
+function auShow(step,text,small){
+  var a=document.getElementById('auStep'), b=document.getElementById('auText');
+  if(a)a.textContent=step;
+  if(b){ b.textContent=text||""; b.classList.toggle('small',!!small); }
+}
+function auStopSpeech(){ try{ window.speechSynthesis.cancel(); }catch(e){} auShowWave(false); }
+
+// --- Denkpause ---
+function auThinkPause(secs, done){
+  var box=document.getElementById('auThink'), fill=document.getElementById('auThinkFill'), txt=document.getElementById('auThinkTxt');
+  if(box)box.style.display='block';
+  var left=secs;
+  var upd=function(){
+    if(txt)txt.textContent="Denkzeit … "+left+" s";
+    if(fill)fill.style.width=Math.round(left/secs*100)+"%";
+  };
+  upd();
+  au.tick=setInterval(function(){
+    if(!au.playing) return;
+    left--; upd();
+    if(left<=0){ clearInterval(au.tick); au.tick=null; if(box)box.style.display='none'; done&&done(); }
+  },1000);
+}
+function auClearTimers(){ if(au.tick){clearInterval(au.tick);au.tick=null;} var b=document.getElementById('auThink'); if(b)b.style.display='none'; }
+
+// --- Ablaufsteuerung ---
+function auAdvance(){ au.step++; auRun(); }
+
+function auRun(){
+  if(!au.playing) return;
+  if(au.idx>=au.items.length){ auFinish(); return; }
+  var q=au.items[au.idx];
+  auProgress();
+  switch(au.step){
+    case 0:
+      auShow("Aufgabe "+(au.idx+1)+" von "+au.items.length, q.fach+" · "+(q.thema||""), true);
+      auSay("Aufgabe "+(au.idx+1)+" von "+au.items.length+". "+q.fach+", Thema "+(q.thema||""), auAdvance);
+      break;
+    case 1:
+      auShow("Frage", q.frage);
+      auSay(q.frage, auAdvance);
+      break;
+    case 2:
+      if(q.typ==='mc' && sel.auOpt && q.optionen){
+        var L=["A","B","C","D","E","F"];
+        var txt=q.optionen.map(function(o,i){ return L[i]+": "+o; }).join(". ");
+        auShow("Antwortmöglichkeiten", txt, true);
+        auSay("Antwortmöglichkeiten. "+txt, auAdvance);
+      } else auAdvance();
+      break;
+    case 3:
+      auShow("Denk nach", q.frage);
+      auThinkPause(sel.auPause||8, auAdvance);
+      break;
+    case 4:
+      var loes=auLoesung(q);
+      auShow("Lösung", loes);
+      auSay(loes, auAdvance);
+      break;
+    case 5:
+      var e=auErklaerung(q);
+      if(sel.auErkl && e){ auShow("Begründung", e, true); auSay(e, auAdvance); }
+      else auAdvance();
+      break;
+    default:
+      audioSeen(q);
+      au.idx++; au.step=0;
+      if(au.idx>=au.items.length){ auFinish(); return; }
+      setTimeout(auRun, 600);
+  }
+}
+
+function auLoesung(q){
+  if(q.typ==='mc'){
+    var L=["A","B","C","D","E","F"];
+    return "Richtig ist "+L[q.richtig]+": "+q.optionen[q.richtig];
+  }
+  if(q.typ==='rechnen'){
+    return "Das Ergebnis lautet "+q.loesung+(q.einheit?(" "+q.einheit):"")+".";
+  }
+  return q.muster||"";
+}
+function auErklaerung(q){
+  if(q.typ==='rechnen'){
+    var st=(q.schritte||[]).join(". ");
+    return st ? ("Rechenweg. "+st) : "";
+  }
+  if(q.typ==='frei'){
+    var ck=(q.checkliste||[]).join(". ");
+    return ck ? ("Diese Punkte gehören hinein. "+ck) : "";
+  }
+  return q.erkl||"";
+}
+
+function auProgress(){
+  var f=document.getElementById('auProg'), c=document.getElementById('auCount');
+  if(f)f.style.width=Math.round(au.idx/Math.max(au.items.length,1)*100)+"%";
+  if(c)c.textContent=(au.idx+1)+" / "+au.items.length;
+}
+
+function audioSeen(q){
+  var id=qid(q); var p=progress[id]||{seen:0};
+  p.seen=(p.seen||0)+1; p.last=Date.now();
+  progress[id]=p; saveProg(progress); bumpDaily();
+}
+
+function auKeepAlive(on){
+  if(au.keep){ clearInterval(au.keep); au.keep=null; }
+  if(on && auSupported()){
+    au.keep=setInterval(function(){
+      try{ if(window.speechSynthesis.speaking){ window.speechSynthesis.pause(); window.speechSynthesis.resume(); } }catch(e){}
+    },9000);
+  }
+}
+function auWakeLock(on){
+  try{
+    if(on && navigator.wakeLock && navigator.wakeLock.request){
+      navigator.wakeLock.request('screen').then(function(w){ au.wake=w; }).catch(function(){});
+    } else if(!on && au.wake){ au.wake.release(); au.wake=null; }
+  }catch(e){}
+}
+
+function startAudio(){
+  if(!auSupported()){ alert("Dieser Browser kann keine Sprachausgabe. Bitte Safari (iPhone) oder Chrome (Android) verwenden."); return; }
+  var items=buildSession();
+  if(!items.length){ alert("Keine Fragen für diese Auswahl."); return; }
+  au.items=items; au.idx=0; au.step=0; au.playing=true;
+  document.getElementById('setup').style.display='none';
+  document.getElementById('result').style.display='none';
+  document.getElementById('quiz').style.display='none';
+  document.getElementById('audio').style.display='block';
+  document.getElementById('auSelfBar').style.display='flex';
+  document.getElementById('auPlay').textContent='⏸ Pause';
+  auKeepAlive(true); auWakeLock(true);
+  auRun();
+}
+
+function auFinish(){
+  au.playing=false; auStopSpeech(); auClearTimers(); auKeepAlive(false); auWakeLock(false);
+  auShow("Fertig","Alle "+au.items.length+" Aufgaben durchgehört.");
+  auSay("Geschafft. Du hast "+au.items.length+" Aufgaben durchgehört.", function(){});
+  setTimeout(function(){
+    document.getElementById('audio').style.display='none';
+    document.getElementById('setup').style.display='block';
+    refreshStats();
+  }, 2500);
+}
+
+function auExitNow(){
+  au.playing=false; auStopSpeech(); auClearTimers(); auKeepAlive(false); auWakeLock(false);
+  document.getElementById('audio').style.display='none';
+  document.getElementById('setup').style.display='block';
+  refreshStats();
+}
+
+function auJump(d){
+  auStopSpeech(); auClearTimers();
+  au.idx=Math.max(0, Math.min(au.items.length-1, au.idx+d));
+  au.step=0;
+  if(au.playing) auRun(); else { var q=au.items[au.idx]; auShow("Pausiert", q.frage); auProgress(); }
+}
+
+function auTogglePlay(){
+  var b=document.getElementById('auPlay');
+  if(au.playing){
+    au.playing=false; auStopSpeech(); auClearTimers(); auKeepAlive(false);
+    if(b)b.textContent='▶ Weiter';
+    var a=document.getElementById('auStep'); if(a)a.textContent='Pausiert';
+  } else {
+    au.playing=true; auKeepAlive(true);
+    if(b)b.textContent='⏸ Pause';
+    auRun();
+  }
+}
+
+function auMark(s){
+  var q=au.items[au.idx]; if(!q) return;
+  recordSelf(q, s, false);
+  auStopSpeech(); auClearTimers();
+  au.idx++; au.step=0;
+  if(au.idx>=au.items.length){ auFinish(); return; }
+  if(au.playing) auRun();
+}
+
+function initAudio(){
+  var warn=document.getElementById('auSupport');
+  if(!auSupported()){
+    if(warn){ warn.style.display='block'; warn.textContent='Dieser Browser unterstützt keine Sprachausgabe. Auf dem iPhone Safari verwenden, auf Android Chrome.'; }
+  } else {
+    auFillVoices();
+    try{ window.speechSynthesis.onvoiceschanged=auFillVoices; }catch(e){}
+  }
+  var vs=document.getElementById('auVoice'); if(vs) vs.onchange=function(){ sel.auVoice=vs.value; };
+  var rt=document.getElementById('auRate'); if(rt) rt.onchange=function(){ sel.auRate=parseFloat(rt.value)||1; };
+  document.querySelectorAll('#auPauseChips .chip').forEach(function(c){
+    c.onclick=function(){ document.querySelectorAll('#auPauseChips .chip').forEach(function(x){x.classList.remove('on');}); c.classList.add('on'); sel.auPause=+c.dataset.ap; };
+  });
+  document.querySelectorAll('#auOptChips .chip').forEach(function(c){
+    c.onclick=function(){ c.classList.toggle('on'); var on=c.classList.contains('on');
+      if(c.dataset.ao==='opt') sel.auOpt=on; else sel.auErkl=on; };
+  });
+  var g=function(id){ return document.getElementById(id); };
+  if(g('auPlay')) g('auPlay').onclick=auTogglePlay;
+  if(g('auNext')) g('auNext').onclick=function(){ auJump(1); };
+  if(g('auPrev')) g('auPrev').onclick=function(){ auJump(-1); };
+  if(g('auExit')) g('auExit').onclick=auExitNow;
+  if(g('auG')) g('auG').onclick=function(){ auMark('g'); };
+  if(g('auY')) g('auY').onclick=function(){ auMark('y'); };
+  if(g('auR')) g('auR').onclick=function(){ auMark('r'); };
+}
+
+
 document.getElementById('startBtn').onclick=startSession;
 document.getElementById('againBtn').onclick=()=>{ const kr=document.getElementById('kResult'); if(kr)kr.remove(); document.getElementById('result').style.display='none'; document.getElementById('setup').style.display='block'; refreshStats(); };
 document.getElementById('exitBtn').onclick=()=>{ if(kTimer){clearInterval(kTimer);kTimer=null;} session.klausur=false; document.getElementById('quiz').style.display='none'; document.getElementById('setup').style.display='block'; refreshStats(); };
@@ -13546,7 +13936,7 @@ document.getElementById('resetBtn').onclick=()=>{ if(confirm("Gesamten Lernforts
 
 // ---- Init ----
 initChips(); updateStart(); refreshStats(); countdown();
-initTheme(); initIntro(); initSearch(); wireHeat(); initShare(); initBackup();
+initTheme(); initIntro(); initSearch(); wireHeat(); initAudio(); initShare(); initBackup();
 </script>
 </body>
 </html>
