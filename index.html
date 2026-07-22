@@ -30,6 +30,20 @@
   header h1{font-size:1.45rem;letter-spacing:-.02em;font-weight:700}
   header .sub{color:var(--muted);font-size:.85rem;margin-top:2px}
   .countdown{display:inline-block;margin-top:8px;background:var(--accent-soft);color:var(--accent-text);font-weight:600;font-size:.8rem;padding:3px 12px;border-radius:20px}
+  .examdays{display:flex;justify-content:center;gap:5px;margin-top:8px;flex-wrap:nowrap;max-width:340px;margin-left:auto;margin-right:auto}
+  .examday{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:1px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 4px;text-align:center}
+  .examday .ed-d{font-size:.64rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+  .examday .ed-f{font-size:.72rem;font-weight:700;color:var(--ink);line-height:1.2}
+  .examday.today{background:var(--accent);border-color:var(--accent)}
+  .examday.today .ed-d,.examday.today .ed-f{color:#fff}
+  .examday.today .ed-luck{font-size:.72rem;font-weight:700;color:#fff;margin-top:1px}
+  .examday.past{opacity:.5}
+  .examday.past .ed-f{text-decoration:line-through}
+  .examdone{display:inline-block;margin-top:8px;background:var(--ok-soft);color:var(--ok-text);border:1px solid var(--ok-line);font-weight:700;font-size:.82rem;padding:5px 14px;border-radius:20px}
+  .phasemsg{display:none;max-width:520px;margin:9px auto 0;font-size:.86rem;line-height:1.5;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 15px}
+  .phasemsg.show{display:block}
+  .phasemsg.funmsg{background:var(--warn-soft);border-color:var(--warn-line)}
+  .phasemsg.luckmsg{background:var(--ok-soft);border-color:var(--ok-line);font-weight:600}
 
   .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:16px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
   .panel h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:12px;font-weight:700}
@@ -293,6 +307,8 @@
     <h1>Verbandsprüfer Lerntrainer</h1>
     <div class="sub">Examen 2026 · alle 5 Fächer · Schwerpunkte aus dem Repetitorium</div>
     <div class="countdown" id="countdown"></div>
+    <div class="examdays" id="examDays"></div>
+    <div class="phasemsg" id="phaseMsg"></div>
     <div class="toprow">
       <button class="tbtn" id="themeBtn">Nachtmodus</button>
       <button class="tbtn" id="helpBtn">? Kurzanleitung</button>
@@ -12976,9 +12992,122 @@ function wireHeat(){
   });
 }
 
+const EXAM_DAYS=[
+  {dow:"Mi", datum:"29.07.", d:new Date(2026,6,29), faecher:"PW I & BWL"},
+  {dow:"Do", datum:"30.07.", d:new Date(2026,6,30), faecher:"PW II & Recht"},
+  {dow:"Fr", datum:"31.07.", d:new Date(2026,6,31), faecher:"Steuerrecht"}
+];
+function sameDay(a,b){ return a.getFullYear()===b.getFullYear() && a.getMonth()===b.getMonth() && a.getDate()===b.getDate(); }
+function dOnly(x){ return new Date(x.getFullYear(),x.getMonth(),x.getDate()); }
+
+// ---- Phase 2: Warten auf die Ergebnisse ----
+const WAIT_START=new Date(2026,7,1);   // 01.08.2026, Tag nach der letzten Klausur
+const CALL_DAY=new Date(2026,8,8);     // 08.09.2026, "Anruftag"
+const RESULT_DAY=new Date(2026,8,9);   // 09.09.2026, Ergebnis
+const SPRUCHE=[
+ "Geschafft - die Klausuren liegen hinter dir. Jetzt darf der Kopf durchatmen.",
+ "Du hast wochenlang alles gegeben. Sei stolz auf den Weg, nicht nur aufs Ergebnis.",
+ "Das Warten ist die schwerste Prüfung - und die bestehst du mit Geduld.",
+ "Egal was kommt: Du kannst heute mehr als vor einem Jahr.",
+ "Ergebnisse ändern nicht, was du gelernt hast. Das Wissen bleibt.",
+ "Gönn dir heute etwas Schönes - du hast es dir verdient.",
+ "Ein Verbandsprüfer denkt in Wahrscheinlichkeiten. Deine stehen gut.",
+ "Kein Nachrechnen mehr nötig - die Arbeit ist getan.",
+ "Jeder große Abschluss braucht einen langen Atem. Du bist fast da.",
+ "Heute ist ein guter Tag, an etwas anderes als Paragrafen zu denken.",
+ "Das Schwierige hast du hinter dir. Der Rest ist Zuversicht.",
+ "Du hast dich vorbereitet wie kaum jemand. Vertrau darauf.",
+ "Warten heißt nicht Stillstand - es heißt, du hast geliefert.",
+ "Nur noch ein Schritt. Halt durch, es lohnt sich.",
+ "Erinnerst du dich, als die Marktzinsmethode endlich saß? Genau so fühlt sich Bestehen an.",
+ "Die beste Investition warst du selbst. Die Rendite kommt bald.",
+ "Nervosität ist nur Vorfreude im Arbeitskittel.",
+ "Auch die höchste Wesentlichkeitsgrenze wird mal überschritten - deine Geduld heute nicht.",
+ "Was du kannst, nimmt dir keiner mehr.",
+ "Kopf hoch: Die Ziellinie ist überquert, das Foto wird nur noch entwickelt.",
+ "Heute keine Norm, kein Schema - einfach mal leben.",
+ "Du warst gründlich, sorgfältig, ausdauernd. Das sind Prüfertugenden.",
+ "Ergebnis hin oder her - du hast bewiesen, dass du dranbleibst.",
+ "Ein bisschen Stolz steht dir gut. Trag ihn heute.",
+ "Die Zahlen sind eingereicht. Jetzt zählt nur noch dein Durchhaltevermögen.",
+ "Vertrau dem Prozess - du hast ihn selbst geprüft.",
+ "Jeder Tag Warten bringt dich einen Tag näher ans Ziel.",
+ "Du hast Nächte investiert, in denen andere geschlafen haben. Das zahlt sich aus.",
+ "Bald darfst du dich Verbandsprüfer nennen. Üb es ruhig schon mal.",
+ "Ruhe bewahren: Das Ergebnis steht längst, du musst es nur noch lesen.",
+ "Selbst wenn es knapp war - knapp bestanden ist bestanden.",
+ "Deine Vorbereitung war kein Zufall, sondern Methode. Das trägt.",
+ "Heute ein Spaziergang statt einer Klausur. Fühlt sich gut an, oder?",
+ "Du hast das Schwerste gemeistert: anfangen und nie aufhören.",
+ "Die Kommission bekommt heute deine Arbeit - du bekommst heute frei.",
+ "Zuversicht ist auch eine Form der Vorbereitung. Du hast beides.",
+ "Fast geschafft. Der letzte Kilometer läuft sich bergab am leichtesten.",
+ "Was auch kommt: Diesen Einsatz nimmt dir niemand.",
+ "Morgen ist bald. Heute noch einmal tief durchatmen.",
+ "Du hattest es in der Hand - und hast es gut gemacht."
+];
+
 function countdown(){
-  const d=Math.ceil((EXAM-new Date())/(1000*60*60*24));
-  document.getElementById('countdown').textContent = d>0 ? `noch ${d} Tage bis zur 1. Klausur (29.07.)` : "Prüfungswoche!";
+  const now=new Date();
+  const t=dOnly(now);
+  const cd=document.getElementById('countdown');
+  const msg=document.getElementById('phaseMsg');
+  const first=dOnly(EXAM_DAYS[0].d), last=dOnly(EXAM_DAYS[EXAM_DAYS.length-1].d);
+  const wait=dOnly(WAIT_START), call=dOnly(CALL_DAY), res=dOnly(RESULT_DAY);
+  const showBar=(v)=>{ const b=document.getElementById('examDays'); if(b) b.style.display=v?'flex':'none'; };
+  const setMsg=(txt,cls)=>{ if(!msg)return; if(txt){ msg.textContent=txt; msg.className='phasemsg show'+(cls?' '+cls:''); } else { msg.textContent=''; msg.className='phasemsg'; } };
+
+  // 1a) Ergebnistag 09.09.
+  if(sameDay(t,res)){
+    cd.className="examdone"; cd.textContent="Ergebnistag - Glückwunsch, Verbandsprüfer!";
+    showBar(false);
+    setMsg("Heute kommen die Ergebnisse. Du hast alles gegeben und den Weg bis zum Ende durchgehalten - trag den Titel mit Stolz. Herzlichen Glückwunsch!","luckmsg");
+    return;
+  }
+  // 1b) nach dem Ergebnistag
+  if(t.getTime()>res.getTime()){
+    cd.className="examdone"; cd.textContent="Glückwunsch, Verbandsprüfer!";
+    showBar(false);
+    setMsg("Das Examen liegt hinter dir - mit allem, was du investiert hast. Zeit, stolz zu sein und zu feiern.","luckmsg");
+    return;
+  }
+  // 2) Anruftag 08.09.
+  if(sameDay(t,call)){
+    cd.className="countdown"; cd.textContent="Morgen (09.09.) kommen die Ergebnisse";
+    showBar(false);
+    setMsg("Kleiner Aberglaube am Rande: Wer heute angerufen wird, soll es nicht geschafft haben. Unser Tipp - schalt einfach dein Telefon aus. Kein Anruf, kein Problem. Und wenn es doch klingelt, ist es bestimmt nur deine Mutter. Bis morgen!","funmsg");
+    return;
+  }
+  // 3) Wartephase 01.08. - 07.09.
+  if(t.getTime()>=wait.getTime() && t.getTime()<call.getTime()){
+    const dRes=Math.ceil((res-now)/(1000*60*60*24));
+    cd.className="countdown"; cd.textContent="noch "+dRes+" Tage bis zum Ergebnis (09.09.)";
+    showBar(false);
+    const idx=Math.round((t-wait)/(1000*60*60*24)) % SPRUCHE.length;
+    setMsg(SPRUCHE[idx]);
+    return;
+  }
+  // 4) Prüfungstage 29.-31.07.
+  if(t.getTime()>=first.getTime() && t.getTime()<=last.getTime()){
+    cd.className="countdown"; cd.textContent="Prüfungswoche - du schaffst das!";
+    showBar(true); setMsg(null); renderExamDays(now); return;
+  }
+  // 5) vor den Prüfungen
+  const d=Math.ceil((EXAM-now)/(1000*60*60*24));
+  cd.className="countdown"; cd.textContent="noch "+d+" Tage bis zur 1. Klausur (29.07.)";
+  showBar(true); setMsg(null); renderExamDays(now);
+}
+function renderExamDays(now){
+  const box=document.getElementById('examDays'); if(!box) return;
+  const midnight=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  box.innerHTML=EXAM_DAYS.map(e=>{
+    const isToday=sameDay(now,e.d);
+    const isPast=e.d<midnight;
+    let cls="examday"+(isToday?" today":"")+(isPast?" past":"");
+    let inner='<span class="ed-d">'+e.dow+' '+e.datum+'</span><span class="ed-f">'+e.faecher+'</span>';
+    if(isToday) inner+='<span class="ed-luck">Viel Erfolg!</span>';
+    return '<div class="'+cls+'">'+inner+'</div>';
+  }).join('');
 }
 
 // ---- Fragenauswahl ----
