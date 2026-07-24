@@ -299,6 +299,8 @@
   .report-body.show{display:block}
   .report-body textarea{width:100%;min-height:70px;border:1.5px solid var(--line);border-radius:10px;padding:10px;font-family:inherit;font-size:.88rem;background:var(--card);color:var(--ink)}
   .okmsg{font-size:.8rem;color:var(--ok-text);margin-top:6px}
+  .reveal .body p,.muster p,.vtief-body p,.folgefrage .fa p{margin:0 0 .55em}
+  .reveal .body p:last-child,.muster p:last-child,.vtief-body p:last-child,.folgefrage .fa p:last-child{margin-bottom:0}
 </style>
 </head>
 <body>
@@ -497,7 +499,7 @@ const Q_RECHT = [
     "typ": "frei",
     "schwer": 2,
     "thema": "Methode",
-    "frage": "[Klausur-Wortlaut] Welche vier klassischen Methoden sind bei der Auslegung von Gesetzen anzuwenden? Beschreiben Sie kurz die inhaltlichen Kriterien. In welchem Anwendungsverhältnis stehen diese Methoden zueinander?",
+    "frage": "Welche vier klassischen Methoden sind bei der Auslegung von Gesetzen anzuwenden? Beschreiben Sie kurz die inhaltlichen Kriterien. In welchem Anwendungsverhältnis stehen diese Methoden zueinander?",
     "muster": "(1) Grammatische Auslegung (Wortlaut/Wortsinn; Grenze der Auslegung). (2) Systematische Auslegung (Stellung der Norm, Vermeidung von Wertungswidersprüchen). (3) Historische/genetische Auslegung (Wille des Gesetzgebers aus Materialien). (4) Teleologische Auslegung (Sinn und Zweck, ratio legis). Anwendungsverhältnis: KEINE feste Rangfolge, die Methoden ergänzen einander; Ausgangspunkt und Grenze ist der Wortlaut (darüber hinaus nur Rechtsfortbildung: Analogie/teleologische Reduktion); teleologischer Auslegung kommt oft das größte Gewicht zu.",
     "checkliste": [
       "grammatisch (Wortlaut = Grenze)",
@@ -576,7 +578,7 @@ const Q_RECHT = [
     "typ": "frei",
     "schwer": 3,
     "thema": "Josten-Bürgschaft",
-    "frage": "[Klausur-Wortlaut] C übernahm formularmäßig die unbeschränkte selbstschuldnerische Bürgschaft für alle bestehenden und künftigen Ansprüchen der Sparkasse aus der Geschäftsverbindung mit der B-GmbH (Darlehen 60.000 + KK 10.000, befristet bis 30.6.2024). Die Sparkasse prolongierte beide bis 30.6.2025 ohne Zustimmung des C. Kann die Sparkasse den C wegen des Darlehens aus der Bürgschaft in Anspruch nehmen?",
+    "frage": "C übernahm formularmäßig die unbeschränkte selbstschuldnerische Bürgschaft für alle bestehenden und künftigen Ansprüchen der Sparkasse aus der Geschäftsverbindung mit der B-GmbH (Darlehen 60.000 + KK 10.000, befristet bis 30.6.2024). Die Sparkasse prolongierte beide bis 30.6.2025 ohne Zustimmung des C. Kann die Sparkasse den C wegen des Darlehens aus der Bürgschaft in Anspruch nehmen?",
     "muster": "Vorab Anlassrechtsprechung: Die formularmäßige weite Sicherungszweckerklärung ist nach §307 Abs. 2 Nr. 2 BGB unwirksam, soweit sie über den Anlass hinausgeht (Widerspruch zum Leitbild §767 Abs. 1 S. 3 BGB, Verbot der Fremddisposition). Die Bürgschaft wird auf die Anlassforderungen reduziert (Darlehen + KK in ursprünglicher Gestalt bis 30.6.2024). Das Darlehen war Anlassforderung, aber bis 30.6.2024 befristet. Die Prolongation bis 30.6.2025 erfolgte ohne Kenntnis/Zustimmung des C und war im Darlehensvertrag nicht angelegt → nachträgliche Fremddisposition (§767 Abs. 1 S. 3 BGB), die die Bürgenhaftung nicht erweitert. Ergebnis: Nein, C haftet nicht für das prolongierte Darlehen.",
     "checkliste": [
       "Anlass-Rspr. §307 Abs. 2 Nr. 2 BGB",
@@ -642,7 +644,7 @@ const Q_RECHT = [
     "typ": "frei",
     "schwer": 2,
     "thema": "Josten-Bürgschaft",
-    "frage": "[Klausur-Wortlaut] Welche Empfehlungen hätte man dem Bürgen C im Vorhinein geben können, um seine Haftung zu begrenzen?",
+    "frage": "Welche Empfehlungen hätte man dem Bürgen C im Vorhinein geben können, um seine Haftung zu begrenzen?",
     "muster": "(1) Höchstbetragsbürgschaft vereinbaren (betragliche Begrenzung). (2) Sicherungszweck eng/konkret auf die Anlassforderung beschränken (statt 'alle künftigen Forderungen'). (3) Befristung der Bürgschaft. (4) Zustimmungsvorbehalt für Prolongationen/Erweiterungen. (5) Keine selbstschuldnerische Bürgschaft (Einrede der Vorausklage erhalten).",
     "checkliste": [
       "Höchstbetragsbürgschaft",
@@ -681,7 +683,7 @@ const Q_RECHT = [
     "typ": "frei",
     "schwer": 3,
     "thema": "Josten-Sittenwidrigkeit",
-    "frage": "[Klausur-Wortlaut] Kann sich ein wirksam verpflichteter (Mit-)Darlehensnehmer auf die Sittenwidrigkeit nach § 138 BGB berufen, weil er von vornherein 'krass finanziell überfordert' ist?",
+    "frage": "Kann sich ein wirksam verpflichteter (Mit-)Darlehensnehmer auf die Sittenwidrigkeit nach § 138 BGB berufen, weil er von vornherein 'krass finanziell überfordert' ist?",
     "muster": "Entscheidend ist die Einordnung: Ein echter Mitdarlehensnehmer haftet für eine EIGENE Schuld, die er im eigenen Interesse und mit Mitentscheidungsmacht eingegangen ist → ihm fehlt die Schutzbedürftigkeit, er kann sich NICHT auf §138 BGB berufen (volle Haftung). Anders der bloße Mithaftende (z.B. naher Angehöriger ohne eigenes Interesse): Bei krasser finanzieller Überforderung greift die widerlegliche Vermutung der Sittenwidrigkeit (§138 BGB). Abgrenzung nach eigenem Interesse + Mitentscheidungsmacht.",
     "checkliste": [
       "Mitdarlehensnehmer = eigene Schuld/eigenes Interesse",
@@ -1005,7 +1007,7 @@ const Q_RECHT = [
     "typ": "frei",
     "schwer": 1,
     "thema": "Deckenbrock-Kaufmann",
-    "frage": "[Klausur-Wortlaut] Was ist ein Kaufmann? Worin unterscheidet er sich von einem Gewerbetreibenden?",
+    "frage": "Was ist ein Kaufmann? Worin unterscheidet er sich von einem Gewerbetreibenden?",
     "muster": "Kaufmann ist, wer ein Handelsgewerbe betreibt (§1 Abs. 1 HGB). Handelsgewerbe = jeder Gewerbebetrieb, es sei denn, das Unternehmen erfordert nach Art/Umfang keinen in kaufmännischer Weise eingerichteten Geschäftsbetrieb (§1 Abs. 2 HGB). Daneben Kannkaufmann (§§2,3 HGB), Formkaufmann (§6 HGB, AG/GmbH), Kaufmann kraft Eintragung (§5 HGB). Unterschied: Jeder Kaufmann ist Gewerbetreibender, aber nicht umgekehrt - erst das Handelsgewerbe (kaufmännischer Betrieb nach Art/Umfang) macht den Gewerbetreibenden zum Istkaufmann; Kleingewerbetreibende sind keine Istkaufleute.",
     "checkliste": [
       "Kaufmann = Handelsgewerbe §1 Abs. 1 HGB",
@@ -1084,7 +1086,7 @@ const Q_RECHT = [
     "typ": "frei",
     "schwer": 3,
     "thema": "Deckenbrock-377HGB",
-    "frage": "[Klausur-Wortlaut] Die 'X-GmbH' (tatsächlich nicht beurkundet/eingetragen, kein kaufmännischer Betrieb) liefert dem Kaufmann K nur 15 statt 20 Kartons. K rügt erst 3 Wochen später. Kann K Lieferung der fehlenden 5 Kartons verlangen?",
+    "frage": "Die 'X-GmbH' (tatsächlich nicht beurkundet/eingetragen, kein kaufmännischer Betrieb) liefert dem Kaufmann K nur 15 statt 20 Kartons. K rügt erst 3 Wochen später. Kann K Lieferung der fehlenden 5 Kartons verlangen?",
     "muster": "Erfüllungsanspruch aus §433 Abs. 1 S. 1 BGB (vollständige Lieferung 20 Kartons). Die 'X-GmbH' beruft sich sinngemäß auf die Rügeobliegenheit (§377 Abs. 2 HGB: nicht gerügte Mängel gelten als genehmigt). Diese setzt einen BEIDERSEITIGEN Handelskauf voraus (§343 HGB - beide Kaufleute). K ist Kaufmann; die 'X-GmbH' ist aber keine GmbH (keine Beurkundung/Eintragung) und mangels kaufmännischen Betriebs auch kein Istkaufmann → GbR/Vorgründungsgesellschaft, KEIN Kaufmann. Den Rechtsschein der GmbH-Firma kann sie nicht zu EIGENEN Gunsten einwenden (Rechtsschein wirkt nur zugunsten gutgläubiger Dritter). §377 HGB greift nicht. Ergebnis: K kann die 5 Kartons verlangen.",
     "checkliste": [
       "§433 Abs. 1 BGB Erfüllung",
@@ -1176,7 +1178,7 @@ const Q_RECHT = [
     "typ": "frei",
     "schwer": 3,
     "thema": "Deckenbrock-OHG",
-    "frage": "[Klausur-Wortlaut] OHG-Kredit 150.000 EUR (Okt. 2024, von A allein unterzeichnet). B wendet ein, er sei am Vertragsschluss nicht beteiligt gewesen und bei Fälligkeit nicht mehr Gesellschafter. Müssen A und B zahlen?",
+    "frage": "OHG-Kredit 150.000 EUR (Okt. 2024, von A allein unterzeichnet). B wendet ein, er sei am Vertragsschluss nicht beteiligt gewesen und bei Fälligkeit nicht mehr Gesellschafter. Müssen A und B zahlen?",
     "muster": "A: Die OHG ist durch die Unterschrift des allein vertretungsbefugten A wirksam verpflichtet (§124 HGB). A haftet als Gesellschafter persönlich, unbeschränkt und akzessorisch (§126 HGB, früher §128 HGB). B: Die Einzelvertretung durch A genügt (§124 HGB) - B muss nicht mitgewirkt haben. B war bei Vertragsschluss (Okt. 2024) Gesellschafter und haftet akzessorisch (§126 HGB). Das spätere Ausscheiden (Jan. 2025) befreit nicht: Nachhaftung 5 Jahre (§137 HGB) für die Altschuld. Ergebnis: A und B haften.",
     "checkliste": [
       "OHG verpflichtet durch A (§124 HGB Einzelvertretung)",
@@ -1215,7 +1217,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 2,
     "thema": "Deckenbrock-OHG",
-    "frage": "[Klausur-nah] C tritt nach Darlehensaufnahme in die OHG ein (HR-Eintrag). Haftet er für die Altschuld?",
+    "frage": "C tritt nach Darlehensaufnahme in die OHG ein (HR-Eintrag). Haftet er für die Altschuld?",
     "optionen": [
       "Nein, er haftet nur für die nach seinem Eintritt entstandenen Schulden",
       "Ja, der Eintretende haftet auch für die begründeten Altverbindlichkeiten",
@@ -1241,7 +1243,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 3,
     "thema": "Deckenbrock-OHG",
-    "frage": "['E-Trick'] E ist Juli 2024 ausgeschieden; weder Eintritt (Nov. 2022) noch Ausscheiden wurden eingetragen. Haftet E für den Okt.-2024-Kredit?",
+    "frage": "E ist Juli 2024 ausgeschieden; weder Eintritt (Nov. 2022) noch Ausscheiden wurden eingetragen. Haftet E für den Okt.-2024-Kredit?",
     "optionen": [
       "Nein, Eintritt und Ausscheiden waren beide nicht eingetragen und heben sich auf",
       "Ja, wegen der gesetzlich angeordneten fünfjährigen Nachhaftung nach § 137 HGB",
@@ -1267,7 +1269,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 2,
     "thema": "Deckenbrock-OHG",
-    "frage": "[Klausur-nah] D ist Juli 2024 ausgeschieden, Ausscheiden im Aug. 2024 eingetragen. Haftet D für den Okt.-2024-Kredit?",
+    "frage": "D ist Juli 2024 ausgeschieden, Ausscheiden im Aug. 2024 eingetragen. Haftet D für den Okt.-2024-Kredit?",
     "optionen": [
       "Nein, er war bei Vertragsschluss bereits ausgeschieden und eingetragen",
       "Ja, er haftet in vollem Umfang akzessorisch für die Gesellschaftsschuld",
@@ -1345,7 +1347,7 @@ const Q_RECHT = [
     "typ": "frei",
     "schwer": 3,
     "thema": "Deckenbrock-PartG",
-    "frage": "[Klausur-Wortlaut] Würde sich etwas ändern, wenn die Sparkasse den Darlehensvertrag mit der A & B PartG mbB geschlossen hätte? Die Partner berufen sich auf rechtsformbedingte Haftungsbeschränkung.",
+    "frage": "Würde sich etwas ändern, wenn die Sparkasse den Darlehensvertrag mit der A & B PartG mbB geschlossen hätte? Die Partner berufen sich auf rechtsformbedingte Haftungsbeschränkung.",
     "muster": "Nein, es ändert sich nichts. Die Haftungsbeschränkung der PartG mbB (§8 Abs. 4 PartGG) erfasst NUR Verbindlichkeiten aus fehlerhafter Berufsausübung (Berufshaftung). Für sonstige Verbindlichkeiten - insbesondere einen Darlehens-/Geschäftskredit - haften die Partner weiterhin persönlich und unbeschränkt. Die rechtsformbedingte Haftungsbeschränkung greift für den Bankkredit nicht. (Zudem ist die PartG nur freien Berufen zugänglich.)",
     "checkliste": [
       "§8 Abs. 4 PartGG nur Berufshaftung",
@@ -1475,7 +1477,7 @@ const Q_RECHT = [
     "typ": "frei",
     "schwer": 1,
     "thema": "Methode",
-    "frage": "[Klausur-Wortlaut] Wie lautet die Grundregel der 'Vier goldenen Ws', wenn der Sachverhalt keine konkrete Fallfrage vorgibt?",
+    "frage": "Wie lautet die Grundregel der 'Vier goldenen Ws', wenn der Sachverhalt keine konkrete Fallfrage vorgibt?",
     "muster": "'Wer will was von wem woraus?' – (1) WER ist Gläubiger/Anspruchsteller? (2) WAS ist das Anspruchsziel (z.B. Zahlung, Vertragserfüllung, Schadensersatz, Herausgabe, Duldung der Zwangsvollstreckung)? (3) VON WEM (Schuldner/Anspruchsgegner)? (4) WORAUS (Anspruchsgrundlage, die dem Anspruchsziel entspricht). Bei konkreter Frage ('Kann A Zahlung von B verlangen?') nur Ansprüche A gegen B; bei Frage nach 'der Rechtslage' alle wechselseitigen Ansprüche getrennt prüfen.",
     "checkliste": [
       "Wer = Gläubiger",
@@ -1814,7 +1816,7 @@ const Q_RECHT = [
     "typ": "frei",
     "schwer": 2,
     "thema": "Josten-Bürgschaft",
-    "frage": "[Anspruchsaufbau] Wie ist die ENTSTEHUNG des Bürgschaftsanspruchs (§ 765 BGB) im Gutachten zu prüfen? Nennen Sie die §§-Kette.",
+    "frage": "Wie ist die ENTSTEHUNG des Bürgschaftsanspruchs (§ 765 BGB) im Gutachten zu prüfen? Nennen Sie die §§-Kette.",
     "muster": "A. Entstehen des Anspruchs: (1) Wirksamer Bürgschaftsvertrag = Einigung Bürge/Gläubiger durch Angebot und Annahme (§§ 765, 145, 147 BGB); Zugang der Annahme entbehrlich (§ 151 S.1 BGB); Bestimmbarkeit von Hauptschuldner, Gläubiger, Hauptforderung. (2) Formwirksamkeit: Schriftform der Bürgschaftserklärung (§ 766 i.V.m. § 126 BGB); Verstoß → Nichtigkeit (§ 125 S.1 BGB); Heilung durch Erfüllung (§ 766 S.3 BGB); Ausnahme für Kaufleute: formfrei (§ 350 HGB). (3) Keine Sittenwidrigkeit (§ 138 BGB). (4) Bestehen der Hauptforderung (Akzessorietät, § 767; auch künftige/bedingte Forderungen § 765 II).",
     "checkliste": [
       "Einigung §§765, 145, 147",
@@ -2179,7 +2181,7 @@ const Q_RECHT = [
     "typ": "frei",
     "schwer": 3,
     "thema": "Deckenbrock-15HGB",
-    "frage": "Was besagt die 'Rosinentheorie' im Rahmen des § 15 HGB? (vom Skript als Klausurproblem markiert)",
+    "frage": "Was besagt die 'Rosinentheorie' im Rahmen des § 15 HGB?",
     "muster": "Der gutgläubige Dritte darf sich bezüglich ein und derselben eingetragenen Tatsache 'die Rosinen herauspicken' – also teils auf die Registerlage, teils auf die wahre Rechtslage berufen, je nachdem was für ihn günstiger ist (Prinzip der Meistbegünstigung; h.M./BGH). Die Gegenauffassung hält dies für widersprüchlich und versagt den Schutz, wenn der Dritte sich selbst widerspricht.",
     "checkliste": [
       "Meistbegünstigung des Dritten",
@@ -2452,7 +2454,7 @@ const Q_RECHT = [
     "typ": "frei",
     "schwer": 3,
     "thema": "Josten-SÜ",
-    "frage": "[PV-Anlage] Eine Sparkasse will eine Photovoltaik-Anlage sicherungsübereignen lassen. Wovon hängt ab, OB das überhaupt möglich ist? (§§ 93–95, 97 BGB)",
+    "frage": "Eine Sparkasse will eine Photovoltaik-Anlage sicherungsübereignen lassen. Wovon hängt ab, OB das überhaupt möglich ist? (§§ 93–95, 97 BGB)",
     "muster": "Vorfrage 'taugliches Sicherungsobjekt': Übereignet werden kann nur eine selbstständige bewegliche Sache. (1) Aufdach-Anlage auf Montagegestell, zerstörungsfrei demontierbar bzw. vom Pächter/Mieter zu vorübergehendem Zweck eingebaut → Scheinbestandteil (§ 95 BGB) → bleibt bewegliche Sache → Sicherungsübereignung MÖGLICH. (2) Dachintegrierte (Indach-)Anlage, die das Dach ersetzt / fest verbunden → wesentlicher Bestandteil des Grundstücks (§ 94 BGB) → nicht sonderrechtsfähig (§ 93 BGB) → KEINE isolierte SÜ; fällt unter die Grundpfandrechtshaftung (§§ 1120 ff. BGB). (3) Bleibt sie selbstständig, aber dient dem Grundstückszweck → Zubehör (§ 97 BGB) → Zubehörhaftung des Grundpfandrechts (§ 1120 BGB) → Kollision mit Grundschuld prüfen.",
     "checkliste": [
       "taugliches Sicherungsobjekt = bewegliche Sache",
@@ -2465,7 +2467,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 2,
     "thema": "Josten-SÜ",
-    "frage": "[PV-Anlage] Eine zerstörungsfrei demontierbare Aufdach-PV-Anlage ist sachenrechtlich …",
+    "frage": "Eine zerstörungsfrei demontierbare Aufdach-PV-Anlage ist sachenrechtlich …",
     "optionen": [
       "Scheinbestandteil (§ 95 BGB) – bewegliche Sache, sicherungsübereignbar",
       "wesentlicher Bestandteil (§ 94 BGB) – nicht sonderrechtsfähig",
@@ -2491,7 +2493,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 3,
     "thema": "Josten-SÜ",
-    "frage": "[PV-Anlage] Eine dachintegrierte PV-Anlage (ersetzt die Dacheindeckung) wird …",
+    "frage": "Eine dachintegrierte PV-Anlage (ersetzt die Dacheindeckung) wird …",
     "optionen": [
       "Scheinbestandteil und damit frei und isoliert sicherungsübereignbar",
       "wesentlicher Bestandteil des Grundstücks; keine isolierte SÜ möglich",
@@ -2725,7 +2727,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 2,
     "thema": "Deckenbrock-Kaufmann",
-    "frage": "[Fall I] Steuerberater S betreibt nebenberuflich eine kleine Kneipe. Ist er insoweit Gewerbetreibender?",
+    "frage": "Steuerberater S betreibt nebenberuflich eine kleine Kneipe. Ist er insoweit Gewerbetreibender?",
     "optionen": [
       "Nur dann, wenn er die Kneipe zusätzlich ins Handelsregister eintragen lässt",
       "Ja, die nebenberufliche Kneipe ist ein Gewerbe; die Haupttätigkeit ist irrelevant",
@@ -2751,7 +2753,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 3,
     "thema": "Deckenbrock-15HGB",
-    "frage": "[Fall II] Die Prokura des P war widerrufen, der Widerruf aber NICHT im HR eingetragen. Auch die Erteilung war nie eingetragen. Kann sich der gutgläubige Dritte auf § 15 Abs. 1 HGB berufen?",
+    "frage": "Die Prokura des P war widerrufen, der Widerruf aber NICHT im HR eingetragen. Auch die Erteilung war nie eingetragen. Kann sich der gutgläubige Dritte auf § 15 Abs. 1 HGB berufen?",
     "optionen": [
       "Nein, weil die Erteilung der Prokura selbst nie eingetragen worden war",
       "Ja, geschützt wird das Vertrauen, dass keine eintragungspflichtige Änderung eintrat",
@@ -2777,7 +2779,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 3,
     "thema": "Deckenbrock-GbR",
-    "frage": "[Fall III] W bringt seine Einzel-WP-Praxis in eine neue GbR mit J und K ein. Haften J und K für eine ALTverbindlichkeit aus W's Einzelpraxis nach § 28 HGB analog?",
+    "frage": "W bringt seine Einzel-WP-Praxis in eine neue GbR mit J und K ein. Haften J und K für eine ALTverbindlichkeit aus W's Einzelpraxis nach § 28 HGB analog?",
     "optionen": [
       "Ja, die Vorschrift gilt unmittelbar für jede Gründung einer Gesellschaft",
       "Nur, wenn die GbR zuvor ins Gesellschaftsregister eingetragen wurde",
@@ -2803,7 +2805,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 2,
     "thema": "Deckenbrock-GbR",
-    "frage": "[Fall III] Wie wird die GbR nach MoPeG im Grundsatz vertreten – und was muss die Sparkasse verlangen?",
+    "frage": "Wie wird die GbR nach MoPeG im Grundsatz vertreten – und was muss die Sparkasse verlangen?",
     "optionen": [
       "Keine wirksame Vertretung der GbR nach außen überhaupt möglich",
       "Gesamtvertretung aller Gesellschafter; Einzelvollmachten verlangen oder eGbR fordern",
@@ -2829,7 +2831,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 3,
     "thema": "Deckenbrock-OHG",
-    "frage": "[Fall IV] OHG-Gesellschafter X gibt MÜNDLICH eine Bürgschaft im Namen der OHG ab. Wirksam?",
+    "frage": "OHG-Gesellschafter X gibt MÜNDLICH eine Bürgschaft im Namen der OHG ab. Wirksam?",
     "optionen": [
       "Nein – Bürgschaft bedarf stets der Schriftform (§ 766 BGB)",
       "Ja – die OHG ist Kaufmann (§§ 6, 105 HGB), daher formfrei nach § 350 HGB",
@@ -2855,7 +2857,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 3,
     "thema": "Deckenbrock-OHG",
-    "frage": "[Fall IV/V] Ein OHG-Gesellschafter scheidet aus. Wie lange haftet er für eine ALTverbindlichkeit nach, und ab wann läuft die Frist?",
+    "frage": "Ein OHG-Gesellschafter scheidet aus. Wie lange haftet er für eine ALTverbindlichkeit nach, und ab wann läuft die Frist?",
     "optionen": [
       "10 Jahre Nachhaftung, gerechnet ab dem Schluss des Darlehensvertrages",
       "5 Jahre Nachhaftung, die Frist läuft ab Eintragung des Ausscheidens",
@@ -2881,7 +2883,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 2,
     "thema": "Deckenbrock-OHG",
-    "frage": "[Fall V] Wie haften die OHG-Gesellschafter für die Gesellschaftsschuld (Inhalt der Haftung)?",
+    "frage": "Wie haften die OHG-Gesellschafter für die Gesellschaftsschuld (Inhalt der Haftung)?",
     "optionen": [
       "Beschränkt allein bis zur Höhe der jeweils geleisteten Einlage",
       "Unmittelbar und primär, nicht subsidiär, persönlich, unbeschränkt und akzessorisch",
@@ -2907,7 +2909,7 @@ const Q_RECHT = [
     "typ": "mc",
     "schwer": 3,
     "thema": "Deckenbrock-377HGB",
-    "frage": "[Fall VII] Eine nicht eingetragene 'X-GmbH' (kein Notarvertrag) verlangt als VERKÄUFER Fälligkeitszinsen nach § 353 HGB. Geht das?",
+    "frage": "Eine nicht eingetragene 'X-GmbH' (kein Notarvertrag) verlangt als VERKÄUFER Fälligkeitszinsen nach § 353 HGB. Geht das?",
     "optionen": [
       "Ja, durch den Namenszusatz 'GmbH' gilt sie als vollwertiger Kaufmann",
       "Ja, die Zinsvorschrift gilt zugunsten jedes verkaufenden Unternehmens",
@@ -3386,7 +3388,6 @@ const Q_RECHT = [
   {"fach": "Recht", "typ": "mc", "schwer": 2, "thema": "HGB-Begruendung-Faelligkeit", "frage": "Ein Gesellschafter war bei Abschluss des Darlehensvertrags Gesellschafter, bei Fälligkeit der eingeklagten Rate aber bereits ausgeschieden. Haftet er?", "optionen": ["Ja, aber nur bis zur Höhe seines Anteils am Gesellschaftsvermögen", "Nein, maßgeblich ist der Zeitpunkt der Fälligkeit der jeweiligen Rate", "Nein, mit dem Ausscheiden erlischt die Haftung nach § 130 HGB", "Ja, maßgeblich ist der Zeitpunkt der Begründung der Verbindlichkeit"], "richtig": 3, "erkl": "§ 126 S. 1 HGB stellt auf den Zeitpunkt der Begründung der Gesellschaftsverbindlichkeit ab, nicht auf die Fälligkeit einzelner Raten. Wer bei Vertragsschluss Gesellschafter war, haftet — begrenzt nur durch die Nachhaftung nach § 137 Abs. 1 HGB.", "vertiefung": "Das ist der Kernsatz für alle Gesellschafterwechsel-Fälle: Begründung ist nicht gleich Fälligkeit. Bei zehnjähriger Tilgung bedeutet das eine Haftung für alle Raten, die in die Fünfjahresfrist fallen.", "folgefragen": [{"frage": "Wie haftet der Gesellschafter der Höhe nach?", "antwort": "Unbeschränkt mit seinem gesamten Privatvermögen, nicht begrenzt auf seinen Anteil. Bei der KG gilt das nur für den Komplementär; der Kommanditist haftet nach §§ 171, 172 HGB beschränkt auf seine Einlage."}]},
   {"fach": "Recht", "typ": "mc", "schwer": 3, "thema": "HGB-350-analog-Streit", "frage": "Ein OHG-Gesellschafter gibt im eigenen Namen eine mündliche Bürgschaft ab. Wie ist die Formfrage zu lösen?", "optionen": ["Wirksam, da die herrschende Ansicht ihm die Kaufmannseigenschaft zuspricht", "Nichtig nach § 125 S. 1 BGB, da nur die Gesellschaft Kaufmann ist", "Wirksam nur bei Handeln im Namen der Gesellschaft nach § 124 Abs. 1 HGB", "Schwebend unwirksam bis zur Genehmigung durch die Mitgesellschafter"], "richtig": 0, "erkl": "Nach der herrschenden Ansicht betreibt der persönlich haftende Gesellschafter das Unternehmen auf eigenes Risiko, sodass ihm die Kaufmannseigenschaft zukommt und § 350 HGB direkt gilt. Die Gegenauffassung verweist auf § 1 HGB — das Handelsgewerbe betreibt die Gesellschaft, die Gesellschafter sind nur organschaftliche Vertreter — lässt aber eine analoge Anwendung des § 350 HGB zu. Beide Wege führen zur Wirksamkeit.", "vertiefung": "Weil beide Ansichten zum selben Ergebnis führen, kannst du den Streit dahinstehen lassen — aber erst, nachdem du ihn dargestellt hast. Anders liegt es nach BGH beim Alleingesellschafter und Geschäftsführer einer GmbH.", "folgefragen": [{"frage": "Warum ergibt eine Bürgschaft der OHG für eine eigene Verbindlichkeit keinen Sinn?", "antwort": "Weil Bürge und Hauptschuldner dann identisch wären. § 765 BGB setzt Personenverschiedenheit voraus."}]},
   {"fach": "Recht", "typ": "mc", "schwer": 3, "thema": "HGB-Scheinkaufmann-Richtung", "frage": "Eine Vorgründungsgesellschaft firmiert unzutreffend mit dem Zusatz GmbH und verlangt vom kaufmännischen Käufer Fälligkeitszinsen nach § 353 HGB. Zu Recht?", "optionen": ["Ja, sie muss sich als Scheinkaufmann behandeln lassen, also auch mit Vorteilen", "Nein, der Scheinkaufmann darf nicht selbst von seiner Rechtsscheinstellung profitieren", "Ja, da der Rechtsformzusatz nach § 4 GmbHG die Kaufmannseigenschaft begründet", "Nein, da Fälligkeitszinsen nach § 352 HGB stets eine Vereinbarung voraussetzen"], "richtig": 1, "erkl": "§ 353 HGB setzt ein beiderseitiges Handelsgeschäft voraus. Die Gesellschaft ist mangels notariellen Vertrags weder GmbH noch Vor-GmbH, sondern Vorgründungsgesellschaft und damit GbR. Durch den Zusatz erweckt sie den Anschein der Kaufmannseigenschaft und ist Scheinkaufmann — der Rechtsschein wirkt aber nur gegen sie, nicht zu ihren Gunsten.", "vertiefung": "Merke die Dreistufigkeit der Gründung: Vorgründungsgesellschaft als GbR, dann Vor-GmbH ab notariellem Vertrag nach § 2 Abs. 1 i. V. m. § 3 GmbHG, dann GmbH ab Eintragung nach § 11 Abs. 1 GmbHG.", "folgefragen": [{"frage": "Bleibt der Gesellschaft ein Zinsanspruch?", "antwort": "Ja, Verzugszinsen nach §§ 286, 288 BGB. Verzug tritt durch Mahnung oder nach § 286 Abs. 2 Nr. 1 BGB bei kalendermäßig bestimmter Leistungszeit ein."}]},
-  {"fach": "Recht", "typ": "frei", "schwer": 2, "thema": "Hilfsmittel-Klebestreifen", "frage": "Was darf nach der Klarstellung vom 20.07.2026 auf den Klebestreifen im Gesetzbuch stehen, und wo liegt die Grenze?", "muster": "Auf dem Klebestreifen dürfen die Paragraphennummer, die Prüfungsreihenfolge in Form der Kreise und zusätzlich die amtliche Normüberschrift stehen, sofern das Gesetz eine solche vorsieht. Beispiel: § 398 Abtretung. Nicht erlaubt sind selbst formulierte Stichworte wie Bestimmtheit, Anlass-Rechtsprechung oder Fallnummern; diese gehören auf die Karteikarte. Zu beachten ist, dass zahlreiche HGB-Normen keine amtliche Überschrift haben, unter anderem §§ 1, 2, 5, 6, 15, 17, 19, 25 bis 29, 48, 49, 52 bis 54, 84, 161, 171, 172, 176, 343, 345, 349, 350, 352, 353, 354a und 377 HGB. Dort bleibt es bei Nummer und Kreisen. Amtliche Überschriften haben dagegen alle BGB-Normen sowie die durch das MoPeG neu gefassten §§ 105, 106, 107, 123 bis 128 und 137 HGB.", "checkliste": ["Paragraphennummer und Kreise wie bisher", "Amtliche Normüberschrift zusätzlich erlaubt", "Keine selbst formulierten Stichworte", "Viele alte HGB-Normen ohne amtliche Überschrift", "Redaktionelle Verlagsüberschriften sind kein Gesetzestext"], "vertiefung": "Redaktionelle Überschriften der Textausgaben stehen dort meist in eckigen Klammern und sind nicht amtlich. Ob sie übernommen werden dürfen, ist bislang nicht ausdrücklich geklärt.", "folgefragen": [{"frage": "Welche drei Ebenen der Markierung sind zu unterscheiden?", "antwort": "Erstens das Randfähnchen mit Nummer, Kreisen und amtlicher Überschrift. Zweitens die Markierung am Paragraphen auf der Seite mit den Verknüpfungen i. V. m. und den Ausschlüssen. Drittens die Karteikarte mit dem Warum, also Definitionen und Begründungen."}]},
   {"fach": "Recht", "typ": "frei", "schwer": 3, "thema": "Sicherheiten-Vergleich", "frage": "Vergleichen Sie Sicherungsübereignung, Sicherungsabtretung, Pfandrecht und Grundschuld hinsichtlich Akzessorietät, Besitzerfordernis und Kernproblem.", "muster": "Die Sicherungsübereignung erfasst bewegliche Sachen, ist fiduziarisch und nicht akzessorisch; der unmittelbare Besitz verbleibt beim Sicherungsgeber, da die Übergabe durch Besitzkonstitut nach § 930 BGB ersetzt wird. Kernproblem ist die Bestimmtheit. Die Sicherungsabtretung erfasst Forderungen und Rechte, ist ebenfalls fiduziarisch und nicht akzessorisch; ein Besitz ist begriffsnotwendig nicht erforderlich. Kernproblem sind Priorität und Kollision, etwa mit dem verlängerten Eigentumsvorbehalt. Das Pfandrecht ist streng akzessorisch und erfordert zwingend den unmittelbaren Besitz des Gläubigers nach § 1205 BGB; eine Parallelnorm zu § 930 BGB fehlt. Kernproblem ist daher die Besitzverschaffung. Die Grundschuld belastet ein Grundstück, ist nach § 1191 Abs. 1 BGB nicht akzessorisch — im Unterschied zur Hypothek nach § 1113 Abs. 1 BGB — und wird nur schuldrechtlich über die Sicherungsabrede mit der Forderung verknüpft. In der Insolvenz gewähren alle vier ein Absonderungsrecht.", "checkliste": ["Sicherungsübereignung: nicht akzessorisch, § 930 BGB, Bestimmtheit", "Sicherungsabtretung: nicht akzessorisch, Priorität und Kollision", "Pfandrecht: streng akzessorisch, unmittelbarer Besitz zwingend", "Grundschuld: nicht akzessorisch, Sicherungsabrede als Verknüpfung", "Abgrenzung Grundschuld zur Hypothek über den Gesetzeswortlaut", "Insolvenz: jeweils Absonderung"], "vertiefung": "Die Abgrenzung zur Hypothek ergibt sich unmittelbar aus dem Wortlaut: § 1113 Abs. 1 BGB nennt die Befriedigung wegen einer zustehenden Forderung, § 1191 Abs. 1 BGB nicht. Das ist die sauberste Begründung in der Klausur.", "folgefragen": [{"frage": "Welche drei Rechtsgeschäfte sind bei der Grundschuld zu trennen?", "antwort": "Erstens der schuldrechtliche Vertrag als Forderungsgeschäft, etwa das Darlehen. Zweitens der Sicherungsvertrag als atypischer Schuldvertrag nach §§ 311 Abs. 1, 241 BGB, der Rechtsgrund der Bestellung ist; bei Unwirksamkeit besteht ein Rückgewähranspruch aus § 812 Abs. 1 BGB. Drittens die Bestellung als dingliches Geschäft."}]},
   {"fach": "Recht", "typ": "mc", "schwer": 2, "thema": "Grundschuld-Zweiterwerb-Form", "frage": "Welche Form verlangt die Abtretung einer Grundschuld nach § 1154 Abs. 1 BGB?", "optionen": ["Notarielle Beurkundung der Abtretungserklärung des Zedenten", "Öffentliche Beglaubigung sämtlicher Erklärungen beider Beteiligter", "Schriftform der Abtretungserklärung, ersetzbar durch Eintragung", "Textform nach § 126b BGB, da es sich um ein Verkehrsgeschäft handelt"], "richtig": 2, "erkl": "§§ 1154 Abs. 1, 1192 Abs. 1 BGB verlangen Schriftform der Abtretungserklärung des Zedenten; sie kann nach § 1154 Abs. 2 BGB durch Eintragung im Grundbuch ersetzt werden. Bei der Briefgrundschuld tritt die Übergabe des Briefes hinzu, bei der Buchgrundschuld die Eintragung nach §§ 1154 Abs. 3, 873 BGB.", "vertiefung": "Die Briefgrundschuld ist nach §§ 1116 Abs. 1, 1192 Abs. 1 BGB der gesetzliche Regelfall; die Buchgrundschuld muss ausdrücklich vereinbart und eingetragen werden. In der Praxis dominiert die Buchgrundschuld — wer aus der Praxis argumentiert, schreibt das Gesetz falsch.", "folgefragen": [{"frage": "Was gilt vor Übergabe des Grundschuldbriefes?", "antwort": "Dann steht die Grundschuld nach §§ 1163 Abs. 2, 1177, 1192 Abs. 1 BGB dem Eigentümer als Eigentümergrundschuld zu."}]},
   {"fach": "Recht", "typ": "mc", "schwer": 3, "thema": "Grundschuld-1155", "frage": "Woran knüpft der gutgläubige Zweiterwerb einer Briefgrundschuld an?", "optionen": ["An die Vermutung des § 891 BGB zugunsten des eingetragenen Berechtigten", "An die Zustimmung des Eigentümers zur Abtretung nach § 1192 BGB", "An den Besitz des Grundschuldbriefes allein, § 1006 BGB analog", "An eine ununterbrochene Kette öffentlich beglaubigter Abtretungserklärungen"], "richtig": 3, "erkl": "Neben der Unrichtigkeit des Grundbuchs verlangt § 1155 BGB bei der Briefgrundschuld eine ununterbrochene Kette öffentlich beglaubigter Abtretungserklärungen, die vom Briefbesitzer auf den zuletzt eingetragenen Gläubiger zurückführt. Hinzu kommen das Verkehrsgeschäft, fehlende positive Kenntnis nach § 892 Abs. 1 BGB und das Fehlen eines Widerspruchs nach §§ 892 Abs. 1 S. 1, 899 BGB.", "vertiefung": "Beim gutgläubigen Ersterwerb genügt dagegen § 892 BGB mit Verkehrsgeschäft, Legitimation durch unrichtiges Grundbuch, fehlender positiver Kenntnis und fehlendem Widerspruch.", "folgefragen": [{"frage": "Wie weit reicht die Haftung der Grundschuld gegenständlich?", "antwort": "Nach § 1120 BGB auf Erzeugnisse, Bestandteile und Zubehör, nach § 1123 BGB auf Miet- und Pachtforderungen und nach § 1127 BGB auf Versicherungsforderungen — jeweils über § 1192 Abs. 1 BGB."}]}
@@ -4199,7 +4200,7 @@ const Q_BWL = [
     "typ": "rechnen",
     "schwer": 1,
     "thema": "Kostenrechnung",
-    "frage": "[Klausur-nah] Verkaufspreis 65 EUR, variable Kosten 40 EUR, Fixkosten 180.000 EUR/Monat. Gewinn bei 9.000 Stück?",
+    "frage": "Verkaufspreis 65 EUR, variable Kosten 40 EUR, Fixkosten 180.000 EUR/Monat. Gewinn bei 9.000 Stück?",
     "loesung": "45000",
     "einheit": "EUR",
     "schritte": [
@@ -4213,7 +4214,7 @@ const Q_BWL = [
     "typ": "rechnen",
     "schwer": 2,
     "thema": "Kostenrechnung",
-    "frage": "[Klausur-nah] Verkaufspreis 65 EUR, variable Kosten 40 EUR, Fixkosten 180.000 EUR. Break-even-Menge?",
+    "frage": "Verkaufspreis 65 EUR, variable Kosten 40 EUR, Fixkosten 180.000 EUR. Break-even-Menge?",
     "loesung": "7200",
     "einheit": "Stück",
     "schritte": [
@@ -4226,7 +4227,7 @@ const Q_BWL = [
     "typ": "rechnen",
     "schwer": 1,
     "thema": "Kostenrechnung",
-    "frage": "[Klausur-nah] Fixkosten 180.000 EUR, variable Kosten 40 EUR/Stück, Auslastung 90% von max. 15.000 Stück. Gesamtkosten?",
+    "frage": "Fixkosten 180.000 EUR, variable Kosten 40 EUR/Stück, Auslastung 90% von max. 15.000 Stück. Gesamtkosten?",
     "loesung": "720000",
     "einheit": "EUR",
     "schritte": [
@@ -4240,7 +4241,7 @@ const Q_BWL = [
     "typ": "rechnen",
     "schwer": 2,
     "thema": "Kostenrechnung",
-    "frage": "[Klausur-nah] Fixkosten 180.000 EUR, variable Kosten 40 EUR/Stück, 12.000 Stück. Vollkosten je Stück?",
+    "frage": "Fixkosten 180.000 EUR, variable Kosten 40 EUR/Stück, 12.000 Stück. Vollkosten je Stück?",
     "loesung": "55",
     "einheit": "EUR",
     "toleranz": 0.01,
@@ -4315,8 +4316,8 @@ const Q_BWL = [
       "Nein, der interne Zinsfuß liegt für eine Vorteilhaftigkeit deutlich zu niedrig"
     ],
     "richtig": 2,
-    "erkl": "IZF 21,86% > Kalkulationszins 8% → vorteilhaft. Kapitalwert (+1.624), Annuität (+490) und IZF führen hier zum selben Ergebnis: vorteilhaft.",
-    "vertiefung": "Mit IZF 21,86% gegen Kalkulationszins 8% liegt eine komfortable Sicherheitsmarge vor; alle drei Verfahren (Kapitalwert +1.624, Annuität +490, IZF) signalisieren übereinstimmend Vorteilhaftigkeit. Solche Einigkeit besteht bei Einzelinvestitionen mit normaler Zahlungsreihe immer – Konflikte entstehen erst beim Vergleich mehrerer Projekte. Merkhilfe: Annuität = Kapitalwert × Wiedergewinnungsfaktor = C0/RBF.",
+    "erkl": "IZF 21,86 % > Kalkulationszins 8 % → vorteilhaft. Nach der Methode des internen Zinsfußes ist eine Investition vorteilhaft, wenn ihr interner Zins über dem Kalkulationszins liegt - hier mit deutlichem Abstand.",
+    "vertiefung": "Mit IZF 21,86 % gegen Kalkulationszins 8 % liegt eine komfortable Sicherheitsmarge vor. Bei einer Einzelinvestition mit normaler Zahlungsreihe führen Kapitalwert-, Annuitäten- und IZF-Methode stets zum selben Vorteilhaftigkeitsurteil - Konflikte entstehen erst beim Vergleich mehrerer Projekte. Merkhilfe: Annuität = Kapitalwert × Wiedergewinnungsfaktor = C0 / RBF.",
     "folgefragen": [
       {
         "frage": "Wie hängen Kapitalwert und Annuität rechnerisch zusammen?",
@@ -7450,7 +7451,7 @@ const Q_PW1 = [
   {"fach": "PW I", "typ": "mc", "schwer": 3, "thema": "Kreditbasket", "frage": "Aus welchen zwei Komponenten besteht eine Credit Linked Note (CLN) im Kreditbasket?", "optionen": ["Aus einer Aktie und einer Kaufoption (Call)", "Aus einem Zinsswap und einer Garantie (Aval)", "Aus einer Anleihe und einem Credit Default Swap (CDS)", "Aus einer Bürgschaft und einem Schuldscheindarlehen (SSD)"], "richtig": 2, "erkl": "Die CLN ist eine Kombination aus Anleihe und Credit Default Swap (CDS). Bei Eintritt des Kreditereignisses leistet der Sicherungsgeber eine Ausgleichszahlung an den Sicherungsnehmer; bei der CLN wird dies über die geminderte Rückzahlung abgebildet.", "vertiefung": "Der CDS ist das eigentliche Risikotransfer-Instrument: Der Sicherungsgeber erhält eine Prämie und zahlt bei Eintritt des Kreditereignisses. In der CLN ist dieser CDS in eine Anleihe eingebettet, sodass die Rückzahlung der Anleihe um die Ausgleichsleistung gekürzt wird.", "folgefragen": [{"frage": "Was löst die Ausgleichszahlung beim CDS aus?", "antwort": "Der Eintritt eines vorab definierten Kreditereignisses (z.B. Insolvenz/Ausfall des Referenzschuldners)."}]},
   {"fach": "PW I", "typ": "mc", "schwer": 3, "thema": "Kreditbasket", "frage": "Die A-GmbH, deren unbesichertes Engagement (1 Mio. EUR) die Sparkasse in den Kreditbasket eingebracht hat, wird insolvent (keine Quote). Wie ist die eigene Forderung im Jahresabschluss zu behandeln?", "optionen": ["Sie wird sofort vollständig ausgebucht, da das Ausfallrisiko transferiert wurde", "Pauschalwertberichtigung in Höhe der historischen durchschnittlichen Ausfallquote", "Keine Berichtigung, da der Kreditbasket den Ausfall vollständig und endgültig deckt", "Einzelwertberichtigung voll; gegenläufig der Ausgleich aus der Sicherungsnehmer-Position"], "richtig": 3, "erkl": "Die Forderung bleibt in der Bilanz (kein Abgang) und ist in voller Höhe einzelwertzuberichtigen (Aufwand). Gegenläufig wirkt die Sicherungsnehmer-Position: Die begebene CLN ist in Höhe des Ausfalls nicht zurückzuzahlen - kompensierender Ertrag bis auf den eigenen Pool-/Selbstbehalt.", "vertiefung": "Wichtig ist die getrennte Betrachtung: Bruttoaufwand aus der EWB der eigenen Forderung, gegenläufiger Ertrag aus der Risikoabsicherung. Per saldo trägt die Sparkasse nur ihren anteiligen Pool-Verlust statt des vollen Eigenausfalls - genau der Diversifikationseffekt.", "folgefragen": [{"frage": "Was passiert, wenn bei einer ANDEREN teilnehmenden Sparkasse ein Totalausfall eintritt?", "antwort": "Dann ist 'Ihre' Sparkasse Sicherungsgeber und muss anteilig (nach Pool-Anteil) einstehen - die erworbene CLN mindert sich, was zu Aufwand führt."}]},
   {"fach": "PW I", "typ": "mc", "schwer": 2, "thema": "Kreditbasket", "frage": "Welches Ziel verfolgt eine Sparkasse typischerweise mit der Teilnahme an einer Kreditbasket-Transaktion?", "optionen": ["Diversifikation und Reduktion von Klumpen-/Konzentrationsrisiken im Kreditportfolio", "Erhöhung des bilanziellen Kreditvolumens durch gezielten Forderungsankauf am Markt", "Verbesserung des Zinsergebnisses durch verstärkte Fristentransformation im Bestand", "Umgehung der aufsichtlichen Großkreditobergrenzen nach der CRR (Art. 395)"], "richtig": 0, "erkl": "Ziel ist die Risikostreuung über ein breiteres, granulareres Portfolio (Branchen/Regionen) - ökonomische Entlastung beim Adressenausfallrisiko, ohne die Kundenbeziehung aufzugeben. Der Kredit bleibt bei der Sparkasse.", "vertiefung": "Gerade kleinere Sparkassen mit regionalen Klumpenrisiken profitieren: Statt eines großen Einzelausfalls tragen sie nur einen kleinen Anteil vieler Ausfälle. Das ist eine ökonomische, keine aufsichtsrechtliche Entlastung.", "folgefragen": [{"frage": "Bleibt die Kundenbeziehung bestehen?", "antwort": "Ja - der Kredit verbleibt bei der Sparkasse (kein True Sale), nur das Ausfallrisiko wird synthetisch gestreut. Der Kunde merkt nichts."}]},
-  {"fach": "PW I", "typ": "frei", "schwer": 3, "thema": "Kreditbasket", "frage": "[Klausur 2025] Erklären Sie den Begriff 'synthetischer Risikotransfer' am Beispiel des Sparkassen-Kreditbaskets und grenzen Sie ihn vom True Sale ab.", "muster": "Synthetischer Risikotransfer: Es wird nur das Ausfallrisiko (nicht die Forderung selbst) übertragen - über eine Zweckgesellschaft mittels CLN/CDS. Die Kredite verbleiben bilanziell bei den einbringenden Sparkassen. Beim True Sale dagegen würde die Forderung tatsächlich verkauft und ausgebucht (Eigentumsübergang). Im Basket: kein Abgang der Forderung, sondern gegenseitige Risikostreuung im Verbund.", "checkliste": ["Nur Risiko, nicht Forderung wird transferiert", "Kredite verbleiben in der Bilanz (kein Abgang)", "Instrument: CLN = Anleihe + CDS", "Zweckgesellschaft als Vehikel", "True Sale = echter Forderungsverkauf mit Ausbuchung", "Kundenbeziehung bleibt bestehen"], "vertiefung": "Die Abgrenzung True Sale / synthetisch ist klausurentscheidend: Sie bestimmt, ob die Forderung in der Bilanz bleibt (synthetisch) oder abgeht (True Sale). Daraus folgt die gesamte handelsrechtliche Behandlung (EWB der eigenen Forderung vs. Ausbuchung).", "folgefragen": [{"frage": "Warum ist die Unterscheidung für den Jahresabschluss entscheidend?", "antwort": "Weil bei synthetischem Transfer die Forderung bleibt und einzelwertzuberichtigen ist, während beim True Sale die Forderung ausgebucht wäre - völlig unterschiedliche GuV-Wirkung."}]},
+  {"fach": "PW I", "typ": "frei", "schwer": 3, "thema": "Kreditbasket", "frage": "Erklären Sie den Begriff 'synthetischer Risikotransfer' am Beispiel des Sparkassen-Kreditbaskets und grenzen Sie ihn vom True Sale ab.", "muster": "Synthetischer Risikotransfer: Es wird nur das Ausfallrisiko (nicht die Forderung selbst) übertragen - über eine Zweckgesellschaft mittels CLN/CDS. Die Kredite verbleiben bilanziell bei den einbringenden Sparkassen. Beim True Sale dagegen würde die Forderung tatsächlich verkauft und ausgebucht (Eigentumsübergang). Im Basket: kein Abgang der Forderung, sondern gegenseitige Risikostreuung im Verbund.", "checkliste": ["Nur Risiko, nicht Forderung wird transferiert", "Kredite verbleiben in der Bilanz (kein Abgang)", "Instrument: CLN = Anleihe + CDS", "Zweckgesellschaft als Vehikel", "True Sale = echter Forderungsverkauf mit Ausbuchung", "Kundenbeziehung bleibt bestehen"], "vertiefung": "Die Abgrenzung True Sale / synthetisch ist klausurentscheidend: Sie bestimmt, ob die Forderung in der Bilanz bleibt (synthetisch) oder abgeht (True Sale). Daraus folgt die gesamte handelsrechtliche Behandlung (EWB der eigenen Forderung vs. Ausbuchung).", "folgefragen": [{"frage": "Warum ist die Unterscheidung für den Jahresabschluss entscheidend?", "antwort": "Weil bei synthetischem Transfer die Forderung bleibt und einzelwertzuberichtigen ist, während beim True Sale die Forderung ausgebucht wäre - völlig unterschiedliche GuV-Wirkung."}]},
   {"fach": "PW I", "typ": "mc", "schwer": 2, "thema": "Nahestehende Personen", "frage": "§ 285 Nr. 21 HGB verlangt Anhangangaben zu Geschäften mit nahestehenden Personen/Unternehmen. In welche drei Gruppen werden diese nach der rechtlichen Beziehung zur Sparkasse eingeteilt?", "optionen": ["Inland, Ausland und EU-Ausland (grenzüberschreitende Verbundenheit)", "'Nach unten' (Beteiligungen), 'nach oben' (Träger) und 'seitlich' (Organmitglieder)", "Privatkunden, Firmenkunden und Kommunen (öffentliche Hand als Träger)", "Kurzfristig, mittelfristig und langfristig Verbundene (Gliederung nach Laufzeit)"], "richtig": 1, "erkl": "Die Systematik aus Sicht der Sparkasse: 'nach unten' = Unternehmen, auf die die Sparkasse Einfluss ausübt (Beteiligungen/Töchter); 'nach oben' = wer Einfluss auf die Sparkasse ausübt (Träger und dessen Unternehmen); 'seitlich' = wer innerhalb der Sparkasse Einfluss ausübt (Organmitglieder und nahe Angehörige).", "vertiefung": "Die Merkhilfe unten/oben/seitlich stammt aus dem Vietze-Skript. Angabepflichtig sind nach § 285 Nr. 21 HGB nur wesentliche und nicht zu marktüblichen Konditionen (Drittvergleich) abgeschlossene Geschäfte. Organbezüge laufen separat über § 285 Nr. 9 HGB; 100%-Töchter im Konzernabschluss sind ausgenommen.", "folgefragen": [{"frage": "Nennen Sie je ein typisches Beispiel pro Gruppe.", "antwort": "Unten: Sparkassen-Immobilien-GmbH (Tochter); oben: Trägerkommune/Zweckverband; seitlich: Vorstands-/Verwaltungsratsmitglied oder dessen naher Angehöriger."}]},
   {"fach": "PW I", "typ": "mc", "schwer": 3, "thema": "Nahestehende Personen", "frage": "Unter welcher Bedingung sind Geschäfte mit nahestehenden Personen nach § 285 Nr. 21 HGB überhaupt angabepflichtig?", "optionen": ["Immer, sobald überhaupt ein Geschäft mit einer nahestehenden Person besteht", "Nur bei Geschäften ab einem jährlichen Volumen von mehr als 1 Mio. EUR", "Nur wenn sie wesentlich sind und nicht zu marktüblichen Konditionen abgeschlossen wurden", "Nur dann, wenn der Verwaltungsrat dem konkreten Geschäft zuvor zugestimmt hat"], "richtig": 2, "erkl": "Angabepflicht besteht nur für wesentliche und nicht marktübliche Geschäfte (sog. Drittvergleich). Marktübliche Geschäfte sind nicht anzugeben, auch wenn sie mit nahestehenden Personen erfolgen.", "vertiefung": "Der Drittvergleich ('at arm's length') ist das Schlüsselkriterium: Wurde das Geschäft so abgeschlossen, wie es auch mit einem fremden Dritten zustande gekommen wäre? Wenn ja, keine Angabepflicht. Damit zielt die Norm auf potenziell verdeckte Vorteilsgewährung ab.", "folgefragen": [{"frage": "Worüber werden Organbezüge stattdessen angegeben?", "antwort": "Über § 285 Nr. 9 HGB (gesonderte Angabe der Gesamtbezüge der Organmitglieder)."}]},
   {"fach": "PW I", "typ": "mc", "schwer": 3, "thema": "Anschaffungsnebenkosten", "frage": "Eine Sparkasse zahlt beim Erwerb von Fondsanteilen 30 TEUR Beratungshonorar an eine Investmentbank. Wie sind diese Beratungskosten handelsrechtlich zu behandeln?", "optionen": ["Als Anschaffungsnebenkosten nach § 255 Abs. 1 HGB zu aktivieren", "Als aktiver Rechnungsabgrenzungsposten nach § 250 Abs. 1 HGB zu aktivieren", "Linear auf die Restlaufzeit der Anteile zu verteilen (§ 252 HGB)", "Sofort als Aufwand zu erfassen, da weder Anschaffungsnebenkosten noch RAP vorliegen"], "richtig": 3, "erkl": "Beratungskosten dienen der Entscheidungsvorbereitung und sind nicht erforderlich, um den Vermögensgegenstand zu erwerben und in betriebsbereiten Zustand zu versetzen - daher keine Anschaffungsnebenkosten i.S.d. § 255 Abs. 1 HGB. Ein aktiver RAP nach § 250 Abs. 1 HGB scheidet ebenfalls aus (kein transitorischer, zeitraumbezogener Aufwand). Folge: sofort Aufwand.", "vertiefung": "Anschaffungsnebenkosten sind nur Kosten, die dem Erwerb direkt zurechenbar und für die Versetzung in betriebsbereiten Zustand nötig sind (z.B. Transaktions-/Notargebühren). Allgemeine Beratungs-/Entscheidungskosten gehören nicht dazu. Der aktive RAP setzt eine Ausgabe VOR dem Stichtag für einen bestimmten Aufwand NACH dem Stichtag voraus - hier nicht gegeben.", "folgefragen": [{"frage": "Welche Kosten WÄREN typische Anschaffungsnebenkosten?", "antwort": "Transaktionsgebühren, Maklercourtage, Notar-/Grundbuchkosten - also dem Erwerb direkt zurechenbare Kosten zur Herstellung der Betriebsbereitschaft."}]},
@@ -7463,9 +7464,7 @@ const Q_PW1 = [
   {"fach": "PW I", "typ": "mc", "schwer": 3, "thema": "Unabhängigkeit", "frage": "Was unterscheidet die 'innere' von der 'äußeren' Unabhängigkeit des Abschlussprüfers?", "optionen": ["Innere = Vergütungshöhe des Prüfers; äußere = geografischer Standort des Prüfungsbüros", "Innere betrifft nur die Beratung, die äußere betrifft ausschließlich die eigentliche Prüfung", "Innere = Unbefangenheit/kritische Grundhaltung; äußere = Vermeidung schon des Anscheins der Befangenheit", "Es gibt keinen Unterschied, beide Begriffe werden im Ergebnis synonym verwendet"], "richtig": 2, "erkl": "Innere Unabhängigkeit ist die tatsächliche Unbefangenheit und kritische Grundhaltung des Prüfers. Äußere Unabhängigkeit meint die Vermeidung schon des Anscheins der Befangenheit gegenüber Dritten (§ 43 WPO, § 319 HGB, Art. 22 ff. EU-APrVO).", "vertiefung": "Beide Dimensionen müssen erfüllt sein: Es genügt nicht, tatsächlich unbefangen zu sein - es darf nach außen auch kein begründeter Anschein des Gegenteils entstehen. Deshalb führen schon Anscheinskonstellationen (persönliche Nähe) zum Prüferaustausch.", "folgefragen": [{"frage": "Nennen Sie zwei typische Gefährdungen der Unabhängigkeit.", "antwort": "Z.B. finanzielle/geschäftliche Beziehungen, Selbstprüfung, Eigeninteresse, persönliche/verwandtschaftliche Nähe."}]},
   {"fach": "PW I", "typ": "mc", "schwer": 3, "thema": "Beteiligung vs verbundenes Unternehmen", "frage": "Worin unterscheiden sich eine 'Beteiligung' und ein 'verbundenes Unternehmen' nach § 271 HGB?", "optionen": ["Eine Beteiligung (§ 271 Abs. 1 HGB) wird ab 20 % der Anteile vermutet; ein verbundenes Unternehmen (§ 271 Abs. 2 HGB) ergibt sich aus Konzernzugehörigkeit/Beherrschung", "Beide Begriffe (§ 271 HGB) setzen einheitlich eine Anteilsquote von über 50 % voraus", "Eine Beteiligung (§ 271 Abs. 1 HGB) erfordert Beherrschung, ein verbundenes Unternehmen (§ 271 Abs. 2 HGB) nur 10 % der Anteile", "Verbundene Unternehmen (§ 271 Abs. 2 HGB) sind stets börsennotiert, Beteiligungen (§ 271 Abs. 1 HGB) nie"], "richtig": 0, "erkl": "Die Beteiligung (§ 271 Abs. 1 HGB) wird ab 20 % der Anteile widerlegbar vermutet und dient dauerhaft dem eigenen Geschäftsbetrieb. Das verbundene Unternehmen (§ 271 Abs. 2 HGB) ergibt sich aus der Konzernzugehörigkeit/Beherrschung (§§ 290 ff. HGB) - nicht über eine Prozentschwelle.", "vertiefung": "Merke: Nur die Beteiligung hat eine Prozentschwelle (20 %-Vermutung). Das verbundene Unternehmen knüpft an das Konzern-/Beherrschungsverhältnis an, unabhängig von der Quote. Diese Abgrenzung war in Klausur 2025 Aufgabe 7a eine typische Stolperstelle.", "folgefragen": [{"frage": "Ist die 20 %-Grenze eine starre Grenze?", "antwort": "Nein, es ist eine widerlegbare Vermutung (§ 271 Abs. 1 S. 3 HGB) - maßgeblich ist die dauerhafte Verbindung zum eigenen Geschäftsbetrieb."}]},
   {"fach": "PW I", "typ": "mc", "schwer": 2, "thema": "Beteiligungskategorien", "frage": "Welche Aussage zur Einordnung von Anteilen an anderen Unternehmen bei einer Sparkasse trifft zu?", "optionen": ["Jede Beteiligung über 5 % ist ein verbundenes Unternehmen", "Eine Verbundbeteiligung ist immer eine Mehrheitsbeteiligung", "Eine 100 %-Beteiligung begründet ein Tochterunternehmen", "Beteiligungen werden grundsätzlich im Umlaufvermögen ausgewiesen"], "richtig": 2, "erkl": "Eine 100 %-Beteiligung (bzw. Mehrheit/Beherrschung) begründet ein Tochterunternehmen. Daneben gibt es die einfache Beteiligung (ab 20 % vermutet), das verbundene Unternehmen (Konzern) und die Verbundbeteiligung (z.B. an Verbundunternehmen der S-Finanzgruppe).", "vertiefung": "Beteiligungen sind regelmäßig dem Anlagevermögen zuzuordnen (dauernde Halteabsicht, § 247 Abs. 2 HGB) und werden nach dem gemilderten Niederstwertprinzip bewertet. Die Einordnung steuert sowohl Ausweis als auch Bewertung.", "folgefragen": [{"frage": "Nach welchem Prinzip werden Beteiligungen bewertet?", "antwort": "Als Anlagevermögen nach dem gemilderten Niederstwertprinzip: Abschreibung nur bei voraussichtlich dauernder Wertminderung zwingend, sonst Wahlrecht (§ 253 Abs. 3 S. 5/6 HGB)."}]},
-  {"fach": "PW I", "typ": "mc", "schwer": 1, "thema": "Klausurrelevanz PW I", "frage": "Welche drei Themengebiete sind laut Dozentenhinweis NICHT Gegenstand einer eigenen PW-I-Prüfungsklausur?", "optionen": ["HGB-Bilanzierung, Lagebericht und Anhang", "IFRS, Konzernrechnungslegung und Nachhaltigkeit", "Risikovorsorge, Pensionsrückstellungen und Bewertungseinheiten", "Internes Kontrollsystem, IDW PS und Prüfungsplanung"], "richtig": 1, "erkl": "IFRS, Konzernrechnungslegung und Nachhaltigkeit sind ausdrücklich als 'keine Prüfungsklausuren' markiert. Sie können allenfalls mündlich relevant sein - die schriftliche PW-I-Klausur prüft sie nicht.", "vertiefung": "Diese Eingrenzung ist eine wichtige Lern-Ökonomie-Information: Die Vorbereitungszeit gehört in HGB-Einzelabschluss, Bewertung, IDW-Prüfungsstandards und sparkassenspezifische Sonderfragen - nicht in IFRS/Konzern/ESG für die schriftliche Klausur.", "folgefragen": [{"frage": "Heißt das, diese Themen sind völlig irrelevant?", "antwort": "Nein - sie können in der mündlichen Prüfung vorkommen, nur nicht als eigene schriftliche PW-I-Klausuraufgabe."}]},
-  {"fach": "PW I", "typ": "mc", "schwer": 1, "thema": "Klausurtaktik", "frage": "Was bedeutet das Frageverb 'Nennen' in einer Prüfungsklausur für Umfang und Punkte?", "optionen": ["Mit ausführlicher Begründung und Herleitung antworten", "Eine Berechnung durchführen und das Ergebnis interpretieren", "Pro und Contra abwägen und ein Fazit ziehen", "Nur aufzählen, ohne Erläuterung - knapp und ohne Kontext"], "richtig": 3, "erkl": "'Nennen' verlangt nur das Aufzählen - keine Erläuterung. Zusätzlicher Kontext bringt hier keine Extrapunkte und kostet nur Zeit. Anders 'Erläutern'/'Begründen': Dort liegen die Punkte gerade in der Begründungstiefe.", "vertiefung": "Frageverben sind Punktesteuerung: 'Nennen' = Stichworte (schnell abhaken), 'Erläutern/Begründen' = ausführen mit Definition/Herleitung. Wer bei 'Nennen' ausschweift, verschenkt Zeit; wer bei 'Erläutern' nur aufzählt, verschenkt Punkte.", "folgefragen": [{"frage": "Was verlangt 'Erläutern' bzw. 'Begründen'?", "antwort": "Mit Kontext ausführen - Definition, Herleitung und Begründung liefern, nicht nur Stichworte. Hier liegen die meisten Punkte."}]},
-  {"fach": "PW I", "typ": "frei", "schwer": 2, "thema": "Beteiligung vs verbundenes Unternehmen", "frage": "[Klausur 2025] Grenzen Sie 'Beteiligung' und 'verbundenes Unternehmen' nach § 271 HGB voneinander ab.", "muster": "Beteiligung (§ 271 Abs. 1 HGB): Anteile an einem anderen Unternehmen, die dazu bestimmt sind, dem eigenen Geschäftsbetrieb dauerhaft zu dienen; ab 20 % der Anteile widerlegbar vermutet. Verbundenes Unternehmen (§ 271 Abs. 2 HGB): Unternehmen, das demselben Konzern angehört bzw. einem Beherrschungsverhältnis unterliegt (§§ 290 ff. HGB) - unabhängig von einer Prozentschwelle. Kernunterschied: Beteiligung = Quotenvermutung (20 %), verbundenes Unternehmen = Konzern-/Beherrschungskriterium.", "checkliste": ["Beteiligung = § 271 Abs. 1 HGB", "20 %-Vermutung (widerlegbar)", "dauerhaft dem eigenen Geschäftsbetrieb dienend", "verbundenes Unternehmen = § 271 Abs. 2 HGB", "Konzernzugehörigkeit/Beherrschung statt Prozentschwelle", "nur die Beteiligung hat eine Quotengrenze"], "vertiefung": "Diese Abgrenzung wirkt auf Ausweis (z.B. Anteile an verbundenen Unternehmen vs. Beteiligungen als eigene Bilanzposten) und auf die Angabepflichten zu nahestehenden Personen (§ 285 Nr. 21 HGB).", "folgefragen": [{"frage": "Wo schlägt sich die Unterscheidung in der Bilanz nieder?", "antwort": "In getrennten Posten: 'Anteile an verbundenen Unternehmen' und 'Beteiligungen' werden gesondert ausgewiesen."}]},
+  {"fach": "PW I", "typ": "frei", "schwer": 2, "thema": "Beteiligung vs verbundenes Unternehmen", "frage": "Grenzen Sie 'Beteiligung' und 'verbundenes Unternehmen' nach § 271 HGB voneinander ab.", "muster": "Beteiligung (§ 271 Abs. 1 HGB): Anteile an einem anderen Unternehmen, die dazu bestimmt sind, dem eigenen Geschäftsbetrieb dauerhaft zu dienen; ab 20 % der Anteile widerlegbar vermutet. Verbundenes Unternehmen (§ 271 Abs. 2 HGB): Unternehmen, das demselben Konzern angehört bzw. einem Beherrschungsverhältnis unterliegt (§§ 290 ff. HGB) - unabhängig von einer Prozentschwelle. Kernunterschied: Beteiligung = Quotenvermutung (20 %), verbundenes Unternehmen = Konzern-/Beherrschungskriterium.", "checkliste": ["Beteiligung = § 271 Abs. 1 HGB", "20 %-Vermutung (widerlegbar)", "dauerhaft dem eigenen Geschäftsbetrieb dienend", "verbundenes Unternehmen = § 271 Abs. 2 HGB", "Konzernzugehörigkeit/Beherrschung statt Prozentschwelle", "nur die Beteiligung hat eine Quotengrenze"], "vertiefung": "Diese Abgrenzung wirkt auf Ausweis (z.B. Anteile an verbundenen Unternehmen vs. Beteiligungen als eigene Bilanzposten) und auf die Angabepflichten zu nahestehenden Personen (§ 285 Nr. 21 HGB).", "folgefragen": [{"frage": "Wo schlägt sich die Unterscheidung in der Bilanz nieder?", "antwort": "In getrennten Posten: 'Anteile an verbundenen Unternehmen' und 'Beteiligungen' werden gesondert ausgewiesen."}]},
   {"fach": "PW I", "typ": "mc", "schwer": 2, "thema": "§ 249 HGB", "frage": "Was regelt § 249 Abs. 1 S. 1 HGB?", "optionen": ["Die Abzinsung von Rückstellungen mit einer Restlaufzeit von mehr als einem Jahr sowie den pauschalen Ansatz von Pensionsverpflichtungen.", "Die Pflicht zur Bildung von Rückstellungen für ungewisse Verbindlichkeiten und drohende Verluste aus schwebenden Geschäften.", "Die Höchstbewertung von Vermögensgegenständen zu Anschaffungs-/Herstellungskosten und den Ansatz von Verbindlichkeiten zum Erfüllungsbetrag.", "Die transitorische Abgrenzung von Ausgaben, die Aufwand für eine bestimmte Zeit nach dem Stichtag darstellen."], "richtig": 1, "erkl": "Richtig ist die Pflicht zur Bildung von Rückstellungen für ungewisse Verbindlichkeiten und drohende Verluste aus schwebenden Geschäften; § 249 ist die Rechtsgrundlage für die Bildung (Ansatz), nicht für die Bewertung.", "vertiefung": "Rechtsgrundlage für die BILDUNG (Ansatz) einer Pensionsrückstellung; nicht mit der Bewertung (§ 253) verwechseln. Beispiel: Pensionszusage an Vorstand = ungewisse Verbindlichkeit dem Grunde nach → Rückstellung nach § 249.", "folgefragen": [{"frage": "Wo ist geregelt, WIE die gebildete Rückstellung zu bewerten ist?", "antwort": "In § 253 HGB (Erfüllungsbetrag, Abzinsung); § 249 regelt nur den Ansatz dem Grunde nach."}]},
   {"fach": "PW I", "typ": "mc", "schwer": 2, "thema": "§ 253 Abs. 1 HGB", "frage": "Was regelt § 253 Abs. 1 HGB?", "optionen": ["Rückstellungen für ungewisse Verbindlichkeiten und drohende Verluste aus schwebenden Geschäften sind dem Grunde nach zwingend zu bilden.", "Vermögensgegenstände des Umlaufvermögens sind zum niedrigeren Börsen- oder Marktwert des Abschlussstichtags zwingend abzuschreiben.", "Vermögensgegenstände höchstens zu Anschaffungs-/Herstellungskosten, Verbindlichkeiten zum Erfüllungsbetrag, Rückstellungen zum Erfüllungsbetrag.", "Anhangangabe der Gesamtbezüge (Organbezüge) von Vorstand und Verwaltungsrat, jeweils getrennt nach Gruppen ausgewiesen."], "richtig": 2, "erkl": "Richtig ist die Zugangs-/Folgebewertung: Vermögensgegenstände höchstens zu AK/HK, Verbindlichkeiten zum Erfüllungsbetrag, Rückstellungen zum nach vernünftiger kaufmännischer Beurteilung notwendigen Erfüllungsbetrag inkl. künftiger Preis-/Kostensteigerungen.", "vertiefung": "Bei Pensionen sind künftige Gehalts- und Rententrends einzubeziehen. Beispiel: sachgerechter Gehaltstrend 1,5-3 % ist zu berücksichtigen; ein überhöhter 10 %-Trend ist Überbewertung → unzulässig.", "folgefragen": [{"frage": "Müssen bei der Rückstellungsbewertung künftige Preis- und Kostensteigerungen berücksichtigt werden?", "antwort": "Ja, der Erfüllungsbetrag umfasst künftige Preis- und Kostensteigerungen (z. B. Gehalts-/Rententrends)."}]},
   {"fach": "PW I", "typ": "mc", "schwer": 3, "thema": "§ 253 Abs. 2 HGB", "frage": "Was regelt § 253 Abs. 2 HGB?", "optionen": ["Rückstellungen mit Restlaufzeit über einem Jahr sind abzuzinsen; Pensionen pauschal mit dem 10-Jahres-Durchschnittszins bei 15 Jahren Restlaufzeit.", "Der Unterschiedsbetrag aus der Abzinsung von Pensionsrückstellungen über 10 vs. 7 Geschäftsjahre ist ausschüttungsgesperrt.", "Bei Vermögensgegenständen des Umlaufvermögens ist auf den niedrigeren Marktwert auch bei nur vorübergehender Wertminderung abzuschreiben.", "Beteiligungen sind Anteile an anderen Unternehmen, die durch eine dauernde Verbindung dem eigenen Geschäftsbetrieb dienen (ab 20 % vermutet)."], "richtig": 0, "erkl": "Richtig ist die Abzinsung: Rückstellungen mit Restlaufzeit über einem Jahr sind abzuzinsen; Pensionsrückstellungen dürfen pauschal mit dem durchschnittlichen Marktzins der letzten 10 Geschäftsjahre bei angenommener Restlaufzeit von 15 Jahren angesetzt werden (Zins von der Bundesbank veröffentlicht).", "vertiefung": "Anwendung Niedrigzins → niedriger Abzinssatz → höherer Barwert → höhere Rückstellung. Beispiel: fällt der 10-Jahres-Schnitt, steigt der Zuführungsaufwand in der GuV.", "folgefragen": [{"frage": "Welche pauschale Restlaufzeit darf bei Pensionsrückstellungen unterstellt werden?", "antwort": "15 Jahre."}]},
@@ -7660,7 +7659,7 @@ const Q_PW2 = [
     "typ": "frei",
     "schwer": 3,
     "thema": "Risikokonzentration",
-    "frage": "Folie-32-Aufgabe: Bei mehreren Bauträgerkrediten tritt derselbe Generalunternehmer A auf, der Baustoffe vom Händler B bezieht. Welche Maßnahmen sollte die Sparkasse ergreifen (Frage 3)?",
+    "frage": "Bei mehreren Bauträgerkrediten tritt derselbe Generalunternehmer A auf, der Baustoffe vom Händler B bezieht. Welche Maßnahmen sollte die Sparkasse ergreifen (Frage 3)?",
     "muster": "Engagement-/Klumpenidentifikation (gemeinsamer Risikotreiber A in mehreren Engagements), Limitierung der Konzentration, Berücksichtigung in der Risikotragfähigkeit (RTF), Aufnahme in Risikosteuerungs-/-controllingprozesse, Durchführung von Stresstests, ggf. Aussteuerung (eKRM-Aussteuerungsgrenze), Risikoberichterstattung an die Geschäftsleitung.",
     "checkliste": [
       "Klumpen identifizieren",
@@ -7766,7 +7765,7 @@ const Q_PW2 = [
     "typ": "mc",
     "schwer": 2,
     "thema": "RTF",
-    "frage": "Welche Risiken sind nach MaRisk AT 2.2 explizit einzubeziehen (Folie 141)?",
+    "frage": "Welche Risiken sind nach MaRisk AT 2.2 explizit einzubeziehen?",
     "optionen": [
       "Auch ESG-Risiken sind angemessen und explizit einzubeziehen und prüfen",
       "Über die bisherigen Risiken hinaus gar keine zusätzlichen Risikoarten",
@@ -7818,7 +7817,7 @@ const Q_PW2 = [
     "typ": "frei",
     "schwer": 3,
     "thema": "WpHG",
-    "frage": "Folie-152-Aufgabe: Ein Privatkunde erwirbt über seinen Bevollmächtigten (auch Privatkunde) im Rahmen einer Anlageberatung einen geschlossenen Immobilienfonds; die Sparkasse erhält eine Provision. Welche WpHG-Anforderungen sind zu prüfen?",
+    "frage": "Ein Privatkunde erwirbt über seinen Bevollmächtigten (auch Privatkunde) im Rahmen einer Anlageberatung einen geschlossenen Immobilienfonds; die Sparkasse erhält eine Provision. Welche WpHG-Anforderungen sind zu prüfen?",
     "muster": "Geeignetheitsprüfung bei Anlageberatung (§ 64 WpHG: Kenntnisse/Erfahrungen, finanzielle Verhältnisse, Anlageziele). Kundenkategorisierung des Bevollmächtigten (§ 67 WpHG, hier Privatkunde → höchstes Schutzniveau). Offenlegung der Zuwendungen/Provision (§ 70 WpHG). Allgemeine Informations- und Verhaltenspflichten (§ 63 WpHG). Geeignetheitserklärung.",
     "checkliste": [
       "Geeignetheit § 64 WpHG",
@@ -7987,7 +7986,7 @@ const Q_PW2 = [
     "typ": "frei",
     "schwer": 3,
     "thema": "Risikokonzentration",
-    "frage": "[Folie 32] Bei Bauträgerkrediten tritt derselbe Generalunternehmer A auf, der Baustoffe von Händler B bezieht. Frage 1: Kann es sich um eine GvK bzw. KNE handeln? Welche Voraussetzungen?",
+    "frage": "Bei Bauträgerkrediten tritt derselbe Generalunternehmer A auf, der Baustoffe von Händler B bezieht. Frage 1: Kann es sich um eine GvK bzw. KNE handeln? Welche Voraussetzungen?",
     "muster": "KNE (§ 19 Abs. 2 KWG): mehrere Personen als ein Kreditnehmer bei beherrschendem Einfluss (Mehrheitsbeteiligung, Stimmrechte, Beherrschungsvertrag). GvK (Art. 4 Abs. 1 Nr. 39 CRR): Beherrschung ODER wirtschaftliche Abhängigkeit. Hier sind A und B nur über das Liefergeschäft verbunden -> KNE/GvK nur, wenn beherrschender Einfluss ODER existenzielle wirtschaftliche Abhängigkeit nachweisbar (z.B. B verkauft fast ausschließlich an A).",
     "checkliste": [
       "KNE § 19 Abs. 2 KWG (Beherrschung)",
@@ -8221,7 +8220,7 @@ const Q_PW2 = [
     "typ": "mc",
     "schwer": 2,
     "thema": "WpHG",
-    "frage": "[Folie 152] Ein Anteil an einem geschlossenen Immobilienfonds (AIF) ist wertpapierrechtlich…",
+    "frage": "Ein Anteil an einem geschlossenen Immobilienfonds (AIF) ist wertpapierrechtlich…",
     "optionen": [
       "stets ein Wertpapier im Sinne des heute geltenden Depotgesetzes",
       "ein reiner Sachwert ganz ohne jeglichen wertpapierrechtlichen Bezug",
@@ -8247,7 +8246,7 @@ const Q_PW2 = [
     "typ": "mc",
     "schwer": 3,
     "thema": "WpHG",
-    "frage": "[Folie 152] Ein Bevollmächtigter (selbst Privatkunde) handelt für den Vertretenen. Auf wen stellt die Geeignetheitsprüfung ab?",
+    "frage": "Ein Bevollmächtigter (selbst Privatkunde) handelt für den Vertretenen. Auf wen stellt die Geeignetheitsprüfung ab?",
     "optionen": [
       "Nach einem freien Wahlrecht der beratenden Sparkasse im jeweiligen Einzelfall",
       "Vollständig und ausschließlich auf den handelnden Bevollmächtigten selbst",
@@ -8273,7 +8272,7 @@ const Q_PW2 = [
     "typ": "mc",
     "schwer": 2,
     "thema": "WpHG",
-    "frage": "[Folie 152] Welche Dokumentation ist dem Privatkunden bei Anlageberatung VOR Vertragsabschluss bereitzustellen?",
+    "frage": "Welche Dokumentation ist dem Privatkunden bei Anlageberatung VOR Vertragsabschluss bereitzustellen?",
     "optionen": [
       "Die Geeignetheitserklärung mit der Begründung der Eignung der Anlage",
       "Der zum Beratungszeitpunkt jeweils aktuelle Depotauszug des Kunden",
@@ -8299,7 +8298,7 @@ const Q_PW2 = [
     "typ": "mc",
     "schwer": 2,
     "thema": "WpHG",
-    "frage": "[Folie 152] Bei einem geschlossenen Immobilienfonds (PRIIP) ist zusätzlich auszuhändigen…",
+    "frage": "Bei einem geschlossenen Immobilienfonds (PRIIP) ist zusätzlich auszuhändigen…",
     "optionen": [
       "das PRIIPs-Basisinformationsblatt zu dem verpackten Anlageprodukt",
       "ein von der BaFin gebilligter ausführlicher Wertpapierprospekt",
@@ -8325,7 +8324,7 @@ const Q_PW2 = [
     "typ": "mc",
     "schwer": 3,
     "thema": "WpHG",
-    "frage": "[Folie 152] Die Sparkasse erhält von der Landesbank für die Vermittlung eine Provision. Wann ist diese Zuwendung nach § 70 WpHG zulässig?",
+    "frage": "Die Sparkasse erhält von der Landesbank für die Vermittlung eine Provision. Wann ist diese Zuwendung nach § 70 WpHG zulässig?",
     "optionen": [
       "Stets zulässig, weil die Zahlung rein konzernintern abgewickelt wird",
       "Ausschließlich nach einer vorherigen ausdrücklichen Genehmigung der BaFin",
@@ -8351,7 +8350,7 @@ const Q_PW2 = [
     "typ": "mc",
     "schwer": 3,
     "thema": "WpHG",
-    "frage": "[Folie 152] Die Sparkasse leitet den Auftrag zur Ausführung an die Landesbank weiter. Welche Vorgabe gilt für die 'bestmögliche Ausführung'?",
+    "frage": "Die Sparkasse leitet den Auftrag zur Ausführung an die Landesbank weiter. Welche Vorgabe gilt für die 'bestmögliche Ausführung'?",
     "optionen": [
       "Es gelten allein die Verhaltenspflichten der allgemeinen Wohlverhaltensregel",
       "Bei einer bloßen Weiterleitung besteht gar keine Best-Execution-Pflicht mehr",
@@ -8377,7 +8376,7 @@ const Q_PW2 = [
     "typ": "mc",
     "schwer": 2,
     "thema": "WpHG",
-    "frage": "[Folie 152] Unterliegt die telefonische Ordererteilung der Aufzeichnungspflicht (Taping)?",
+    "frage": "Unterliegt die telefonische Ordererteilung der Aufzeichnungspflicht (Taping)?",
     "optionen": [
       "Ja, erfasst sind Anlagevermittlung, Abschlussvermittlung und Auftragsannahme",
       "Nein, eine Aufzeichnung ist allein beim Eigenhandel des Instituts nötig",
@@ -9184,7 +9183,7 @@ const Q_PW2 = [
   {"fach": "PW II", "typ": "mc", "schwer": 3, "thema": "§18a KWG Immobiliardarlehen", "frage": "Welche Anforderung stellt § 18a KWG an die Kreditwürdigkeitsprüfung bei Immobiliar-Verbraucherdarlehen?", "optionen": ["Die Rückzahlung darf nicht hauptsächlich auf eine Wertsteigerung der Immobilie gestützt werden; maßgeblich ist die Kapitaldienstfähigkeit", "Es genügt, dass der Beleihungswert den Darlehensbetrag übersteigt", "Eine erneute Bewertung der Kreditwürdigkeit ist auch bei erheblicher Erhöhung des Nettodarlehensbetrags entbehrlich", "Die Kreditwürdigkeit ist ausschließlich anhand externer Ratings zu beurteilen"], "richtig": 0, "erkl": "Nach § 18a KWG darf bei Immobiliar-Verbraucherdarlehen die Rückzahlung nicht hauptsächlich auf einen den Darlehensbetrag übersteigenden Grundstückswert oder auf Wertsteigerungen gestützt werden (Ausnahme: Bau/Renovierung). Maßgeblich ist die ausreichende Kapitaldienstfähigkeit. Bei erheblicher Erhöhung des Nettodarlehensbetrags ist die Kreditwürdigkeit neu zu bewerten.", "vertiefung": "Damit setzt § 18a KWG die Wohnimmobilienkreditrichtlinie um und verlagert den Fokus von der Sicherheit auf die nachhaltige Rückzahlungsfähigkeit des Verbrauchers.", "folgefragen": [{"frage": "Welche Unterformen des Verbraucherdarlehens unterscheidet das Gesetz?", "antwort": "Den Allgemein-Verbraucherdarlehensvertrag und den Immobiliar-Verbraucherdarlehensvertrag."}]},
   {"fach": "PW II", "typ": "mc", "schwer": 3, "thema": "Sicherheitenwerte Definitionen", "frage": "Welche Definition des Realisationswertes einer Immobilie ist im Rahmen der Sicherheitenbewertung zutreffend?", "optionen": ["Der Wert, der im Abwicklungsfall bei zeitnah anzustrebender Verwertung erzielt werden kann, unter Berücksichtigung abwicklungsspezifischer Minderungen", "Der Betrag, der im gewöhnlichen Geschäftsverkehr nach angemessener Vermarktungszeit als Kaufpreis erzielt werden kann", "Der nachhaltig erzielbare Ertragswert unabhängig von konjunkturellen Schwankungen", "Der historische Anschaffungs- oder Herstellungswert abzüglich planmäßiger Abschreibungen"], "richtig": 0, "erkl": "Der Realisationswert ist der im Abwicklungsfall bei zeitnaher Verwertung erzielbare Wert; abwicklungsspezifische Minderungen (z. B. Wegfall der Nutzung, Erfordernis einer Zwangsversteigerung) sind zu berücksichtigen. Antwort 2 beschreibt den Beleihungswert, Antwort 3 den Verkehrs-/Marktwert.", "vertiefung": "Der Beleihungswert stellt auf die dauernden Eigenschaften ab, ohne vorübergehende Wertschwankungen; Obergrenze ist der Verkehrswert (vgl. § 16 PfandBG, § 194 BauGB). Für die Risikovorsorge ist der Realisationswert maßgeblich.", "folgefragen": [{"frage": "Welcher Wert bildet die Obergrenze des Beleihungswertes?", "antwort": "Der Verkehrswert (Marktwert) der Immobilie."}]},
   {"fach": "PW II", "typ": "mc", "schwer": 3, "thema": "Organkredite §33 PrüfbV", "frage": "Welche Regelung trifft § 33 PrüfbV zur Prüfung von Organkrediten?", "optionen": ["Organkredite sind generell von der Abschlussprüfung ausgenommen, da ihre Prüfung allein der Internen Revision des Instituts obliegt", "Es sind ausschließlich Organkredite an die Geschäftsleiter zu prüfen, nicht aber Kredite an Mitglieder des Aufsichtsorgans", "Sämtliche Organkredite sind in die Auswahl der zu prüfenden Kredite einzubeziehen, die Prüfung muss sich aber nicht auf alle Organkredite erstrecken", "Nur Organkredite oberhalb der Großkreditgrenze des Art. 392 CRR sind zwingend und vollständig zu prüfen"], "richtig": 2, "erkl": "Nach § 33 PrüfbV sind sämtliche Organkredite in die Auswahl der zu prüfenden Kredite einzubeziehen; die Prüfung selbst muss sich aber nicht auf alle erstrecken. Stets zu prüfen sind u.a. Kredite an Mitglieder des Verwaltungs-/Aufsichtsorgans, deren nahe Angehörige und bestimmte verbundene Unternehmen.", "vertiefung": "Der Prüfer hat zudem zu beurteilen, ob Anhaltspunkte für gravierende Interessenkonflikte bestehen. § 15 KWG wurde um Organgeschäfte erweitert: Geschäfte mit Organmitgliedern dürfen nur zu marktgerechten Konditionen abgeschlossen werden (§ 15 Abs. 6 KWG).", "folgefragen": [{"frage": "Was regelt § 34 PrüfbV ergänzend?", "antwort": "Die Berichterstattung über bemerkenswerte Kredite, u.a. Organkredite von außergewöhnlicher Bedeutung, Kredite mit erheblichem Risikovorsorgebedarf, erhöhten latenten Risiken oder außergewöhnlicher Sicherheitenstellung."}]},
-  {"fach": "PW II", "typ": "mc", "schwer": 2, "thema": "Dualismus Kreditprüfung", "frage": "Der Dozent spricht vom Dualismus der Kreditprüfung. Was ist damit gemeint?", "optionen": ["Es werden sowohl das Kundenkreditgeschäft als auch das Eigengeschäft der Sparkasse getrennt voneinander geprüft (Geschäftsfelddualismus)", "Sie dient der aufsichtsrechtlichen Prüfung nach § 29 KWG (kein Testat) und der Jahresabschlussprüfung (Testat nach IDW PS 400)", "Die Prüfung erfolgt einmal vorgezogen und einmal zum Bilanzstichtag, also in zeitlichem Dualismus nach § 320 HGB", "Die Kreditprüfung wird parallel von der Innenrevision und vom externen Prüfer durchgeführt (Prüferdualismus nach MaRisk)"], "richtig": 1, "erkl": "Der Dualismus beschreibt, dass die Kreditprüfung zwei Stoßrichtungen hat: die aufsichtsrechtliche Prüfung nach § 29 KWG mit Zusatzpflichten für den Prüfer (Urteil über Ordnungsmäßigkeit, kein Testat) und die gesetzliche Jahresabschlussprüfung nach §§ 316 ff. HGB (Testat nach IDW PS 400). Die MaRisk-Prüfung ist Teil beider.", "vertiefung": "Nach § 3 PrüfbV ist den Grundsätzen der risikoorientierten Prüfung und der Wesentlichkeit Rechnung zu tragen. Für die Adressenausfallrisiken ist der IDW PS 522 einschlägig.", "folgefragen": [{"frage": "Welcher Prüfungsstandard regelt die Prüfung des Adressenausfallrisikos?", "antwort": "Der IDW PS 522 (Prüfung des Adressenausfallrisikos und des Kreditgeschäfts)."}]},
+  {"fach": "PW II", "typ": "mc", "schwer": 2, "thema": "Dualismus Kreditprüfung", "frage": "Was bedeutet der Dualismus der Kreditprüfung?", "optionen": ["Es werden sowohl das Kundenkreditgeschäft als auch das Eigengeschäft der Sparkasse getrennt voneinander geprüft (Geschäftsfelddualismus)", "Sie dient der aufsichtsrechtlichen Prüfung nach § 29 KWG (kein Testat) und der Jahresabschlussprüfung (Testat nach IDW PS 400)", "Die Prüfung erfolgt einmal vorgezogen und einmal zum Bilanzstichtag, also in zeitlichem Dualismus nach § 320 HGB", "Die Kreditprüfung wird parallel von der Innenrevision und vom externen Prüfer durchgeführt (Prüferdualismus nach MaRisk)"], "richtig": 1, "erkl": "Der Dualismus beschreibt, dass die Kreditprüfung zwei Stoßrichtungen hat: die aufsichtsrechtliche Prüfung nach § 29 KWG mit Zusatzpflichten für den Prüfer (Urteil über Ordnungsmäßigkeit, kein Testat) und die gesetzliche Jahresabschlussprüfung nach §§ 316 ff. HGB (Testat nach IDW PS 400). Die MaRisk-Prüfung ist Teil beider.", "vertiefung": "Nach § 3 PrüfbV ist den Grundsätzen der risikoorientierten Prüfung und der Wesentlichkeit Rechnung zu tragen. Für die Adressenausfallrisiken ist der IDW PS 522 einschlägig.", "folgefragen": [{"frage": "Welcher Prüfungsstandard regelt die Prüfung des Adressenausfallrisikos?", "antwort": "Der IDW PS 522 (Prüfung des Adressenausfallrisikos und des Kreditgeschäfts)."}]},
   {"fach": "PW II", "typ": "mc", "schwer": 2, "thema": "Leitsatz Prüfungsplanung", "frage": "Wie lautet der Leitsatz der risikoorientierten Prüfungsplanung im Verhältnis von IKS-Verlässlichkeit und Prüfungsumfang?", "optionen": ["Bei verlässlichem IKS entfällt die Funktionsprüfung vollständig (Substitutionsprinzip)", "Je unzuverlässiger das IKS, umso höher ist der notwendige Umfang an ergebnisorientierten (aussagebezogenen) Prüfungshandlungen", "Je zuverlässiger das IKS, umso höher ist der notwendige Umfang an aussagebezogenen Prüfungshandlungen (Verstärkungsprinzip)", "Der Prüfungsumfang ist unabhängig von der Verlässlichkeit des IKS festzulegen (Pauschalprinzip)"], "richtig": 1, "erkl": "Je unzuverlässiger das interne Kontrollsystem beurteilt wird, desto größer muss der Umfang aussagebezogener (ergebnisorientierter) Prüfungshandlungen sein, um das Entdeckungsrisiko auf ein akzeptables Maß zu senken. Bei verlässlichem IKS kann sich der Prüfer stärker auf Funktionsprüfungen stützen und aussagebezogene Handlungen reduzieren.", "vertiefung": "Hintergrund ist das Prüfungsrisikomodell: Prüfungsrisiko = inhärentes Risiko x Kontrollrisiko x Entdeckungsrisiko. Der Prüfer steuert über Art und Umfang seiner Handlungen das Entdeckungsrisiko.", "folgefragen": [{"frage": "Was ist das Entdeckungsrisiko?", "antwort": "Das Risiko, dass wesentliche Fehler trotz der Prüfungshandlungen vom Prüfer nicht aufgedeckt werden und ein positives Prüfungsurteil trotz Fehler abgegeben wird."}]},
   {"fach": "PW II", "typ": "mc", "schwer": 3, "thema": "Eigenmittelstruktur CRR", "frage": "Aus welchen Bestandteilen setzen sich die Eigenmittel nach CRR in der richtigen Hierarchie zusammen?", "optionen": ["Hartes Kernkapital und Ergänzungskapital bilden das Kernkapital; das zusätzliche Kernkapital zählt zu den Drittrangmitteln", "Eigenmittel bestehen ausschließlich aus hartem Kernkapital; AT1 und Tier 2 sind nur ergänzende Puffer", "Hartes Kernkapital (CET1) und zusätzliches Kernkapital (AT1) bilden das Kernkapital (Tier 1); zusammen mit dem Ergänzungskapital (Tier 2) ergeben sie die Eigenmittel", "Ergänzungskapital (Tier 2) und zusätzliches Kernkapital (AT1) bilden das Kernkapital; zusammen mit dem harten Kernkapital ergeben sie die Eigenmittel"], "richtig": 2, "erkl": "Nach CRR bilden hartes Kernkapital (CET1) und zusätzliches Kernkapital (AT1) das Kernkapital (Tier 1). Kernkapital und Ergänzungskapital (Tier 2) ergeben zusammen die anrechenbaren Eigenmittel. Drittrangmittel existieren in der CRR nicht mehr.", "vertiefung": "Die Mindestquoten betragen 4,5 % CET1, 6 % Tier 1 und 8 % Eigenmittel der RWA (Art. 92 CRR). Im adversen Szenario können Verluste zunächst Ergänzungskapital und dann hartes Kernkapital aufzehren.", "folgefragen": [{"frage": "Welche Mindestquote gilt für das gesamte Kernkapital (Tier 1)?", "antwort": "6 % der risikogewichteten Aktiva (RWA) nach Art. 92 CRR."}]},
   {"fach": "PW II", "typ": "rechnen", "schwer": 2, "thema": "Harte Kernkapitalquote", "frage": "Ein Institut weist hartes Kernkapital von 450 Mio. EUR bei einem Gesamtrisikobetrag von 3.000 Mio. EUR aus. Wie hoch ist die harte Kernkapitalquote (CET1-Quote) in Prozent?", "loesung": "15", "einheit": "%", "schritte": ["Formel: CET1-Quote = hartes Kernkapital / RWA x 100", "Einsetzen: 450 / 3000 x 100", "Ergebnis: 15,0 %"], "vertiefung": "Die CET1-Mindestquote beträgt 4,5 % (Art. 92 CRR), zuzüglich Kapitalerhaltungspuffer von 2,5 % also 7 % hartes Kernkapital, bevor SREP-Zuschlag und weitere Puffer hinzukommen. 15 % liegen komfortabel darüber.", "folgefragen": [{"frage": "Welche Rolle spielt die CET1-Quote in der normativen Perspektive?", "antwort": "Sie ist eine zentrale Steuerungs- und Planungsgröße; die Ist-/Plan-Quote wird im Plan- und im adversen Szenario gegen die Soll-Mindestanforderung abgeglichen."}]},
@@ -9308,7 +9307,6 @@ const Q_PW2 = [
   {"fach": "PW II", "typ": "mc", "schwer": 2, "thema": "Wesentlichkeit einer Auslagerung (MaRisk AT 9 Tz. 2)", "frage": "Wie bestimmt ein Institut, ob eine Auslagerung wesentlich ist?", "optionen": ["Anhand der zivilrechtlichen Bezeichnung des zugrunde liegenden Dienstleistungsvertrags", "Ausschließlich anhand des vereinbarten jährlichen Auftragsvolumens in Euro", "Anhand einer eigenverantwortlichen, dokumentierten Risikoanalyse des Instituts", "Nach der Einstufung, die der beauftragte Dienstleister selbst vornimmt"], "richtig": 2, "erkl": "Die Wesentlichkeit ergibt sich aus der eigenverantwortlichen, dokumentierten Risikoanalyse des Instituts (AT 9 Tz. 2) - regelmäßig und anlassbezogen -, nicht aus der Vertragsbezeichnung.", "vertiefung": "Die Interne Revision ist in die Risikoanalyse einzubeziehen. Auch die Frage, OB überhaupt eine Auslagerung vorliegt, richtet sich nach dem Inhalt (AT 9 Tz. 1), nicht nach der Bezeichnung: die dauerhafte Wahrnehmung einer MaRisk-Funktion durch Dritte ist Auslagerung, keine 'sonstige Dienstleistung'.", "folgefragen": ["Wer ist in die Risikoanalyse einzubeziehen?", "Ist die dauerhafte Vertretung einer Kontrollfunktion eine Auslagerung?"]},
   {"fach": "PW II", "typ": "frei", "schwer": 2, "thema": "Anforderungen an den Verwaltungsrat (§ 25d KWG)", "frage": "Nennen Sie die zentralen aufsichtlichen Anforderungen an die Mitglieder des Verwaltungs-/Aufsichtsorgans nach § 25d KWG.", "muster": "1) Zuverlässigkeit (Abs. 1). 2) Erforderliche Sachkunde zur Wahrnehmung der Kontrollfunktion (Abs. 1). 3) Ausreichend Zeit für die Mandatswahrnehmung (Abs. 1). 4) Kollektive Eignung: das Gremium muss in seiner Gesamtheit die notwendigen Kenntnisse, Fähigkeiten und Erfahrungen haben (Abs. 2). 5) Mandatsbegrenzung bei bedeutenden Instituten (Abs. 3).", "checkliste": ["Zuverlässigkeit", "Sachkunde", "Ausreichend Zeit", "Kollektive Eignung des Gremiums", "Mandatsbegrenzung"], "vertiefung": "Mehrere Mandate bei Unternehmen desselben institutsbezogenen Sicherungssystems (Sparkassen-Finanzgruppe) gelten als EIN Mandat. Bedeutende Institute haben nach Abs. 7 ff. zwingend Risiko-, Prüfungs-, Nominierungs- und Vergütungskontrollausschuss zu bilden.", "folgefragen": ["Wie werden Mandate im Verbund gezählt?", "Welche Ausschüsse sind bei bedeutenden Instituten zwingend?"]},
   {"fach": "PW II", "typ": "mc", "schwer": 2, "thema": "Corporate Governance der Sparkasse", "frage": "Welcher Governance-Kodex ist für eine kommunale Sparkasse maßgeblich?", "optionen": ["Der Deutsche Corporate Governance Kodex (DCGK) in seiner jeweils aktuell geltenden Fassung für börsennotierte Gesellschaften", "Der DCGK, sinngemäß angepasst für nicht börsennotierte öffentlich-rechtliche Institute", "Ausschließlich die MaRisk als aufsichtlicher Governance-Rahmen der Sparkasse", "Kein DCGK; maßgeblich sind Landesrecht/Sparkassengesetze und ggf. ein Public Corporate Governance Kodex"], "richtig": 3, "erkl": "Der DCGK gilt nur für börsennotierte Gesellschaften. Für Sparkassen ist er nicht einschlägig; ihre Corporate Governance wird durch Landesrecht (Sparkassengesetze), Trägervorgaben und ggf. einen Public Corporate Governance Kodex ausgestaltet.", "vertiefung": "Corporate Governance ist der Ordnungsrahmen für Leitung UND Überwachung: gesetzt durch Gesetzgeber und Träger, ausgestaltet durch Verwaltungsrat und Vorstand. Ergänzend wirken die aufsichtlichen Anforderungen des § 25d KWG.", "folgefragen": ["Was ist Corporate Governance im Kern?", "Welche KWG-Norm konkretisiert die VR-Eignung?"]},
-  {"fach": "PW II", "typ": "frei", "schwer": 2, "thema": "Hilfsmittelstrategie PW II", "frage": "Welche Inhalte müssen Sie in PW II auswendig können und welche sind im zugelassenen Hilfsmittel nachschlagbar?", "muster": "Auswendig (nicht im Hilfsmittel): KWG (z. B. § 13 Großkredit-Beschluss, § 15 Organkredit, § 18, § 24 Abs. 1 Nr. 4, § 25a, § 25d) und die MaRisk als 'Landkarte', dazu die RTF-Systematik und die Stresstest-Arten. Nachschlagbar: die CRR-Anker im EU-Bankrecht - Großkredit Art. 392/395, GvK Art. 4 Abs. 1 Nr. 39, Eigenmittel Art. 25 ff., Ausfall Art. 178 - sowie das WpHG im Kapitalmarktrecht. Die Sammlung 'Aktuelle Wirtschaftsgesetze 2026' ist NUR in PW I und Wirtschaftsrecht zugelassen, NICHT in PW II.", "checkliste": ["Auswendig: KWG-Kernnormen", "Auswendig: MaRisk-Landkarte", "Auswendig: RTF + Stresstest-Arten", "Nachschlagbar: CRR-Anker (EU-Bankrecht)", "Nachschlagbar: WpHG (Kapitalmarktrecht)", "Aktuelle Wirtschaftsgesetze 2026 nur in PW I/Wirtschaftsrecht"], "vertiefung": "In PW II sind nur EU-Bankrecht und Kapitalmarktrecht zugelassen. Wer die MaRisk- und KWG-Struktur nicht im Kopf hat, verliert Zeit - CRR und WpHG lassen sich dagegen gezielt nachschlagen, wenn man die Fundstelle kennt.", "folgefragen": ["Welche zwei Rechtsgebiete sind in PW II das Hilfsmittel?", "Warum ist die MaRisk-Landkarte so wichtig?"]},
   {"fach": "PW II", "typ": "mc", "schwer": 3, "thema": "Organkredit § 15 KWG - Nr. 7 vs. Nr. 8", "frage": "Wodurch unterscheiden sich die Organkredit-Tatbestände des § 15 Abs. 1 Nr. 7 und Nr. 8 KWG?", "optionen": ["Nr. 7 betrifft ausschließlich natürliche Personen als Kreditnehmer, während Nr. 8 ausschließlich juristische Personen und Personenhandelsgesellschaften erfasst und damit anders behandelt werden", "Nr. 7 gilt nur für Kredite oberhalb von 1 Mio. EUR, Nr. 8 nur für Kredite unterhalb dieser Betragsgrenze", "Nr. 7: Institutsleitung ist Vertreter/Aufsichtsrat eines Kreditnehmer-Unternehmens; Nr. 8: Institutsaufsichtsrat ist dort leitender Angestellter/Gesellschafter", "Nr. 7 betrifft ausschließlich besicherte Kredite, Nr. 8 ausschließlich unbesicherte Blankokredite"], "richtig": 2, "erkl": "Nr. 7 knüpft an Personen der Leitungsebene des Instituts an, die in einem Kreditnehmer-Unternehmen Vertreter/Aufsichtsrat sind; Nr. 8 knüpft an Aufsichtsratsmitglieder des Instituts an, die im Kreditnehmer-Unternehmen leitender Angestellter/Gesellschafter sind. Die Blickrichtung kehrt sich um.", "vertiefung": "Falle: Ein VR-Mitglied der Sparkasse, das nur im Aufsichtsrat eines Kreditnehmer-Unternehmens sitzt (nicht leitender Angestellter/Gesellschafter), fällt durch beide Raster - kein Organkredit nach Nr. 7/8. Zu prüfen bleibt dann Nr. 9 (bedeutende Beteiligung).", "folgefragen": ["Wann greift § 15 Abs. 1 Nr. 9 KWG?", "Welche Beschlussanforderung gilt für Organkredite?"]},
   {"fach": "PW II", "typ": "mc", "schwer": 3, "thema": "Organkredit § 15 Abs. 1 Nr. 9 KWG - bedeutende Beteiligung", "frage": "Ab welcher Beteiligung eines Organmitglieds an einem Unternehmen liegt ein Organkredit nach § 15 Abs. 1 Nr. 9 KWG vor?", "optionen": ["Ab einer qualifizierten Mehrheitsbeteiligung von mehr als 50 % der Kapital- oder Stimmrechtsanteile", "Ab einer Sperrminorität von 25 % des Kapitals oder der Stimmrechte des Unternehmens", "Bei jeder noch so geringen Beteiligung, unabhängig von ihrer prozentualen Höhe", "Ab einer bedeutenden Beteiligung von mindestens 10 % des Kapitals oder der Stimmrechte"], "richtig": 3, "erkl": "Eine bedeutende Beteiligung liegt bei mindestens 10 % des Kapitals ODER der Stimmrechte vor (§ 1 Abs. 9 KWG i. V. m. Art. 4 Abs. 1 Nr. 36 CRR). Hält ein Organmitglied eine solche Beteiligung (oder ist es persönlich haftender Gesellschafter), ist der Kredit an das Unternehmen ein Organkredit.", "vertiefung": "Beispiel: Ein VR-Mitglied ist alleiniger Gesellschafter (100 % > 10 %) einer GmbH - Kredite an die GmbH sind Organkredite, auch ohne dass eine der Konstellationen der Nr. 7/8 vorliegt. Die 10-%-Schwelle gilt bereits ohne beherrschenden Einfluss.", "folgefragen": ["Wie ist die bedeutende Beteiligung definiert?", "Welche Beschlussanforderung löst ein Organkredit aus?"]},
   {"fach": "PW II", "typ": "mc", "schwer": 2, "thema": "Externe Ratings in der Kreditentscheidung (BTO 1.2)", "frage": "Entbindet die Verwendung eines externen Bonitätsratings das Institut von der eigenen Beurteilung des Kreditnehmers?", "optionen": ["Nein, die Verwendung externer Bonitätseinschätzungen enthebt nicht von der eigenen Urteilsbildung", "Ja, ein von einer bei der ESMA registrierten Ratingagentur erstelltes Rating ersetzt die eigene Urteilsbildung vollständig", "Ja, sofern das Rating von einer nach der CRA-Verordnung registrierten Ratingagentur stammt", "Nur bei Krediten oberhalb der Großkreditgrenze nach Art. 395 CRR ist ein eigenes Urteil erforderlich"], "richtig": 0, "erkl": "Nach BTO 1.2 Tz. 5 MaRisk enthebt die Verwendung externer Bonitätseinschätzungen das Institut nicht von der eigenen Urteilsbildung bei der Kreditentscheidung.", "vertiefung": "Analogie zum Auslagerungsgrundsatz: verwerten/beschaffen ja, delegieren nein. Ein eigenes formales Rating ist nicht zwingend, wohl aber ein eigenes Urteil. Eine Vier-Augen-Übernahme ist Erfassungs-, keine Beurteilungskontrolle.", "folgefragen": ["Wie hängt das mit dem Auslagerungsgrundsatz zusammen?", "Ist ein eigenes formales Rating zwingend?"]},
@@ -9503,7 +9501,7 @@ const Q_STEUER = [
     "typ": "frei",
     "schwer": 3,
     "thema": "InvStG-Mischfonds",
-    "frage": "[Klausur-Wortlaut] Die Sparkasse A ist in der Liquiditätsreserve an einem Publikumsfonds (Mischfonds mit inländischen Aktien) beteiligt. Ausschüttung 230.000 EUR. Ermitteln Sie die Höhe des körperschaftsteuerlichen sowie gewerbesteuerlichen Ergebnisses der erfolgten Ausschüttung. Nennen Sie auch die maßgeblichen Rechtsvorschriften aus dem InvStG.",
+    "frage": "Die Sparkasse A ist in der Liquiditätsreserve an einem Publikumsfonds (Mischfonds mit inländischen Aktien) beteiligt. Ausschüttung 230.000 EUR. Ermitteln Sie die Höhe des körperschaftsteuerlichen sowie gewerbesteuerlichen Ergebnisses der erfolgten Ausschüttung. Nennen Sie auch die maßgeblichen Rechtsvorschriften aus dem InvStG.",
     "muster": "Mischfonds -> Teilfreistellung 40% KSt / 20% GewSt (§ 20 Abs. 1 i.V.m. Abs. 5 InvStG). KSt: 230.000 x (1-40%) = 138.000 EUR steuerpflichtig (92.000 EUR steuerfrei). GewSt: 230.000 x (1-20%) = 184.000 EUR steuerpflichtig (46.000 EUR steuerfrei).",
     "checkliste": [
       "Mischfonds 40%/20%",
@@ -9581,7 +9579,7 @@ const Q_STEUER = [
     "typ": "frei",
     "schwer": 3,
     "thema": "InvStG-Mischfonds",
-    "frage": "[Klausur-Wortlaut] Nehmen Sie zur Abschreibung (dauernde Wertminderung 1.000.000 EUR) in der Handels- und Steuerbilanz Stellung, soweit Wahlmöglichkeiten bestehen. Stellen Sie die Auswirkung auf das KSt- sowie GewSt-Ergebnis dar (Mischfonds).",
+    "frage": "Nehmen Sie zur Abschreibung (dauernde Wertminderung 1.000.000 EUR) in der Handels- und Steuerbilanz Stellung, soweit Wahlmöglichkeiten bestehen. Stellen Sie die Auswirkung auf das KSt- sowie GewSt-Ergebnis dar (Mischfonds).",
     "muster": "Handelsbilanz: Abschreibungspflicht, da Umlaufvermögen/Liquiditätsreserve -> strenges Niederstwertprinzip (§ 253 Abs. 4 HGB). Steuerbilanz: Wahlrecht zur Teilwertabschreibung (§ 6 Abs. 1 Nr. 2 S. 2 EStG; Voraussetzung dauernde WM + Verzeichnis), unabhängig von HB. Bei Ausübung: § 21 InvStG Teilabzugsverbot -> KSt: 40% von 1.000.000 = 400.000 EUR unbeachtlich, 600.000 EUR wirksam. GewSt: 20% = 200.000 EUR unbeachtlich, 800.000 EUR wirksam.",
     "checkliste": [
       "HB Pflicht strenges NWP § 253 Abs. 4 HGB",
@@ -10203,7 +10201,7 @@ const Q_STEUER = [
     "typ": "frei",
     "schwer": 3,
     "thema": "Ertragsteuer-vGA",
-    "frage": "[Klausur-nah] Die Sparkasse verkauft ein Gebäude mit Verkehrswert 2.000 TEUR für 1.000 TEUR (= Buchwert) an ihren Träger. Nehmen Sie Stellung.",
+    "frage": "Die Sparkasse verkauft ein Gebäude mit Verkehrswert 2.000 TEUR für 1.000 TEUR (= Buchwert) an ihren Träger. Nehmen Sie Stellung.",
     "muster": "Verkauf unter Verkehrswert an den Träger = verdeckte Gewinnausschüttung (vGA, § 8 Abs. 3 S. 2 KStG). Die Differenz Verkehrswert - Verkaufspreis (1.000 TEUR) mindert das Einkommen nicht -> außerbilanzielle Hinzurechnung. Veranlassung durch das Gesellschaftsverhältnis (Träger).",
     "checkliste": [
       "vGA § 8 Abs. 3 S. 2 KStG",
@@ -10544,7 +10542,7 @@ const Q_STEUER = [
     "typ": "mc",
     "schwer": 2,
     "thema": "InvStG-Teilfreistellung",
-    "frage": "[Bader Üb.1] Welche Teilfreistellungssätze gelten bei einem Mischfonds (§ 20 Abs. 2 InvStG)?",
+    "frage": "Welche Teilfreistellungssätze gelten bei einem Mischfonds (§ 20 Abs. 2 InvStG)?",
     "optionen": [
       "KSt 40% / GewSt 20%",
       "KSt 100% / GewSt 50%",
@@ -10570,7 +10568,7 @@ const Q_STEUER = [
     "typ": "rechnen",
     "schwer": 2,
     "thema": "InvStG-Teilfreistellung",
-    "frage": "[Bader Üb.1] Ausschüttung Mischfonds 230.000 EUR. Wie hoch ist der körperschaftsteuerpflichtige Teil (Teilfreistellung 40%)?",
+    "frage": "Ausschüttung Mischfonds 230.000 EUR. Wie hoch ist der körperschaftsteuerpflichtige Teil (Teilfreistellung 40%)?",
     "loesung": "138000",
     "einheit": "EUR",
     "schritte": [
@@ -10583,7 +10581,7 @@ const Q_STEUER = [
     "typ": "rechnen",
     "schwer": 3,
     "thema": "InvStG-Teilfreistellung",
-    "frage": "[Bader Üb.1] Refinanzierungskosten 25.000 EUR auf den Mischfondsanteil. Wie hoch ist der körperschaftsteuerlich abzugsfähige Teil (§ 21 InvStG)?",
+    "frage": "Refinanzierungskosten 25.000 EUR auf den Mischfondsanteil. Wie hoch ist der körperschaftsteuerlich abzugsfähige Teil (§ 21 InvStG)?",
     "loesung": "15000",
     "einheit": "EUR",
     "schritte": [
@@ -10596,7 +10594,7 @@ const Q_STEUER = [
     "typ": "mc",
     "schwer": 2,
     "thema": "InvStG-Teilfreistellung",
-    "frage": "[Bader Üb.1] Abschreibung des Fondsanteils (Umlaufvermögen) bei dauernder Wertminderung – welche Norm gilt handelsrechtlich?",
+    "frage": "Abschreibung des Fondsanteils (Umlaufvermögen) bei dauernder Wertminderung – welche Norm gilt handelsrechtlich?",
     "optionen": [
       "Es greift unmittelbar § 21 InvStG als handelsrechtliche Norm",
       "Maßgeblich ist § 6 Abs. 1 Nr. 1 EStG für das Anlagevermögen",
@@ -10622,7 +10620,7 @@ const Q_STEUER = [
     "typ": "mc",
     "schwer": 2,
     "thema": "Umsatzsteuer",
-    "frage": "[Bader Üb.2] Bei welchem Mieter ist die USt-Option (§ 9 UStG) NICHT möglich?",
+    "frage": "Bei welchem Mieter ist die USt-Option (§ 9 UStG) NICHT möglich?",
     "optionen": [
       "Bei der Wirtschaftsprüfungs-GmbH als Mieterin nicht möglich",
       "Beim Steuerberater als Mieter ist die Option nicht möglich",
@@ -10648,7 +10646,7 @@ const Q_STEUER = [
     "typ": "rechnen",
     "schwer": 3,
     "thema": "Umsatzsteuer",
-    "frage": "[Bader Üb.2] Gebäude HK netto 10 Mio EUR, 4 Etagen (je 25%): EG Sparkasse-Eigennutzung (Bankenschlüssel 10%), 1.OG StB + 3.OG WP-GmbH (Option), 2.OG Krankenkasse (keine Option). Höchstmöglicher Vorsteuerabzug?",
+    "frage": "Gebäude HK netto 10 Mio EUR, 4 Etagen (je 25%): EG Sparkasse-Eigennutzung (Bankenschlüssel 10%), 1.OG StB + 3.OG WP-GmbH (Option), 2.OG Krankenkasse (keine Option). Höchstmöglicher Vorsteuerabzug?",
     "loesung": "997500",
     "einheit": "EUR",
     "schritte": [
@@ -10663,7 +10661,7 @@ const Q_STEUER = [
     "typ": "mc",
     "schwer": 2,
     "thema": "Umsatzsteuer",
-    "frage": "[Bader Üb.2] Welche Norm bestimmt, dass die nicht abziehbare Vorsteuer zu den Herstellungskosten gehört?",
+    "frage": "Welche Norm bestimmt, dass die nicht abziehbare Vorsteuer zu den Herstellungskosten gehört?",
     "optionen": [
       "§ 15 Abs. 4 UStG",
       "§ 6 Abs. 1 Nr. 1a EStG",
@@ -10689,7 +10687,7 @@ const Q_STEUER = [
     "typ": "mc",
     "schwer": 2,
     "thema": "Ertragsteuer-340",
-    "frage": "[Bader Üb.3] Die Zuführung zum Fonds für allgemeine Bankrisiken (§ 340g HGB) wird körperschaftsteuerlich…",
+    "frage": "Die Zuführung zum Fonds für allgemeine Bankrisiken (§ 340g HGB) wird körperschaftsteuerlich…",
     "optionen": [
       "Sie wird als Einkommensverwendung außerbilanziell hinzugerechnet",
       "Sie wird als steuerfreier Beteiligungsertrag behandelt",
@@ -10715,7 +10713,7 @@ const Q_STEUER = [
     "typ": "mc",
     "schwer": 3,
     "thema": "Ertragsteuer-8b",
-    "frage": "[Bader Üb.3] Beteiligung an C-GmbH 12,5% (≥10%), Ausschüttung 500.000 EUR. Wie wird das körperschaftsteuerlich behandelt?",
+    "frage": "Beteiligung an C-GmbH 12,5% (≥10%), Ausschüttung 500.000 EUR. Wie wird das körperschaftsteuerlich behandelt?",
     "optionen": [
       "Voll steuerpflichtig, weil eine Streubesitzbeteiligung vorliegt",
       "Steuerfrei in vollem Umfang ohne jede außerbilanzielle Korrektur",
@@ -10741,7 +10739,7 @@ const Q_STEUER = [
     "typ": "mc",
     "schwer": 3,
     "thema": "Ertragsteuer-8b",
-    "frage": "[Bader Üb.3] Streubesitzdividende Verbandsbeteiligung 2,0% (<10%) – körperschaftsteuerlich?",
+    "frage": "Streubesitzdividende Verbandsbeteiligung 2,0% (<10%) – körperschaftsteuerlich?",
     "optionen": [
       "Zu vierzig Prozent steuerfrei nach dem Teileinkünfteverfahren",
       "Voll körperschaftsteuerpflichtig, da Streubesitz unter zehn Prozent",
@@ -10767,7 +10765,7 @@ const Q_STEUER = [
     "typ": "mc",
     "schwer": 2,
     "thema": "Ertragsteuer-Schema",
-    "frage": "[Bader Üb.3] Gezahlte Gewerbesteuer (Vorauszahlung + Nachzahlung) ist ertragsteuerlich…",
+    "frage": "Gezahlte Gewerbesteuer (Vorauszahlung + Nachzahlung) ist ertragsteuerlich…",
     "optionen": [
       "Sie ist nur zur Hälfte abziehbar, der Rest wird hinzugerechnet",
       "Sie ist in voller Höhe als laufende Betriebsausgabe abziehbar",
@@ -10793,7 +10791,7 @@ const Q_STEUER = [
     "typ": "rechnen",
     "schwer": 2,
     "thema": "Gewerbesteuer",
-    "frage": "[Bader Üb.3] GewSt-Hinzurechnung Mieten: Immobilie 500.000 (50%), Fuhrpark 300.000 (20%), Freibetrag 200.000, davon 25%. Hinzurechnungsbetrag?",
+    "frage": "GewSt-Hinzurechnung Mieten: Immobilie 500.000 (50%), Fuhrpark 300.000 (20%), Freibetrag 200.000, davon 25%. Hinzurechnungsbetrag?",
     "loesung": "27500",
     "einheit": "EUR",
     "schritte": [
@@ -12646,7 +12644,7 @@ const Q_STEUER = [
   {"fach": "Steuerrecht", "typ": "rechnen", "schwer": 2, "thema": "Bilanzsteuer", "frage": "Ein Institut erwirbt ein Mehrfamilienhaus (Gebäudeanteil 1.000.000 EUR) und wendet innerhalb von drei Jahren 214.200 EUR brutto für Instandsetzung auf. Wie hoch ist der für die 15 %-Prüfung maßgebende Nettobetrag?", "loesung": "180000", "einheit": "EUR", "schritte": ["Die Grenze des § 6 Abs. 1 Nr. 1a S. 1 EStG bezieht sich auf Beträge ohne Umsatzsteuer", "Nettobetrag: 214.200 / 1,19 = 180.000 EUR", "Grenze: 1.000.000 × 15 % = 150.000 EUR", "180.000 > 150.000 → anschaffungsnahe Herstellungskosten, Aktivierung mit dem Bruttobetrag von 214.200 EUR"], "vertiefung": "Aktiviert wird brutto, weil bei steuerfreier Wohnraumvermietung (§ 4 Nr. 12 S. 1 lit. a UStG) kein Vorsteuerabzug besteht und die Umsatzsteuer nach § 9b Abs. 1 EStG zu den Herstellungskosten gehört.", "folgefragen": [{"frage": "Warum wird für die Prüfung netto, für die Aktivierung aber brutto gerechnet?", "antwort": "Das Gesetz nennt für die Grenze ausdrücklich Beträge ohne Umsatzsteuer; die Aktivierung folgt dagegen dem allgemeinen Grundsatz des § 9b Abs. 1 EStG."}, {"frage": "Wie wirkt sich die Aktivierung aus?", "antwort": "Die Beträge erhöhen die Bemessungsgrundlage der Gebäudeabschreibung nach § 7 Abs. 4 EStG."}]},
   {"fach": "Steuerrecht", "typ": "rechnen", "schwer": 3, "thema": "Ertragsteuer-vGA", "frage": "Ein Institut veräußert seinem Träger ein Gebäude 1.000.000 EUR unter dem Verkehrswert und übernimmt die Kapitalertragsteuer. Wie hoch ist die einzubehaltende Kapitalertragsteuer (15 %, ohne Solidaritätszuschlag)?", "loesung": "176470.59", "einheit": "EUR", "schritte": ["Die verdeckte Gewinnausschüttung führt zu Einkünften nach § 20 Abs. 1 Nr. 10 lit. a EStG", "Übernimmt der Schuldner die Steuer, gehört sie zur Bemessungsgrundlage", "Bruttobetrag: 1.000.000 / (1 ./. 0,15) = 1.176.470,59 EUR", "Kapitalertragsteuer: 1.176.470,59 × 15 % = 176.470,59 EUR"], "vertiefung": "Rechtsgrundlagen für den Einbehalt sind § 43 Abs. 1 S. 1 Nr. 7b i. V. m. § 43a Abs. 1 S. 1 Nr. 2 EStG. Die übernommene Kapitalertragsteuer darf das Einkommen des Instituts nicht mindern.", "folgefragen": [{"frage": "Wie hoch ist die außerbilanzielle Hinzurechnung der vGA selbst?", "antwort": "1.000.000 EUR nach § 8 Abs. 3 S. 2 KStG – die verhinderte Vermögensmehrung."}, {"frage": "Welcher Maßstab entscheidet über die Veranlassung?", "antwort": "Der Fremdvergleich: Einem fremden Dritten gegenüber wäre zum Verkehrswert veräußert worden."}]},
   {"fach": "Steuerrecht", "typ": "rechnen", "schwer": 2, "thema": "Gewerbesteuer", "frage": "Der Gewerbeertrag eines Instituts beträgt nach Hinzurechnungen und Kürzungen 13.055.000 EUR. Wie hoch ist der Gewerbesteuermessbetrag bei Ansatz des Freibetrags?", "loesung": "456750", "einheit": "EUR", "schritte": ["Abrundung auf volle 100 EUR (§ 11 Abs. 1 S. 3 GewStG): 13.055.000 EUR", "Freibetrag § 11 Abs. 1 S. 3 Nr. 2 GewStG: ./. 5.000 EUR → 13.050.000 EUR", "Steuermesszahl § 11 Abs. 2 GewStG: 3,5 %", "Messbetrag: 13.050.000 × 3,5 % = 456.750 EUR"], "vertiefung": "Bei einem Hebesatz von 400 % ergibt sich daraus eine Gewerbesteuer von 1.827.000 EUR. Wer den Freibetrag vergisst, kommt auf 456.925 EUR und 1.827.700 EUR.", "folgefragen": [{"frage": "In welcher Reihenfolge wird gerechnet?", "antwort": "Erst abrunden, dann Freibetrag abziehen, dann Messzahl anwenden, zuletzt Hebesatz."}, {"frage": "Wo ist der Hebesatz geregelt?", "antwort": "In § 16 Abs. 1 GewStG; er wird von der hebeberechtigten Gemeinde bestimmt."}]},
-  {"fach": "Steuerrecht", "typ": "rechnen", "schwer": 3, "thema": "Verlustabzug", "frage": "Ein Institut erzielt im Veranlagungszeitraum 2023 ein Einkommen von ./. 3.027.750 EUR; im Vorjahr betrug das Einkommen 2.000.000 EUR. Wie hoch ist die Körperschaftsteuererstattung aus dem maximalen Verlustrücktrag?", "loesung": "300000", "einheit": "EUR", "schritte": ["Höchstbetrag § 10d Abs. 1 S. 1 EStG für den Veranlagungszeitraum 2023: 10 Mio EUR (§ 52 Abs. 18b EStG)", "Begrenzung daher nicht durch den Höchstbetrag, sondern durch das Einkommen des Rücktragsjahres", "Rücktrag: 2.000.000 EUR", "Erstattung: 2.000.000 × 15 % (§ 23 Abs. 1 KStG) = 300.000 EUR"], "vertiefung": "Der verbleibende Verlustvortrag beträgt 1.027.750 EUR und ist nach § 10d Abs. 4 EStG gesondert festzustellen. Gewerbesteuerlich gibt es keinen Rücktrag; dort verbleibt der volle Fehlbetrag als Vortrag nach § 10a GewStG.", "folgefragen": [{"frage": "Was gälte für den Veranlagungszeitraum 2025?", "antwort": "Dort greift wieder der Höchstbetrag von 1 Mio EUR, der Rücktrag wäre also auf 1.000.000 EUR begrenzt."}, {"frage": "Warum wird der Rücktrag hier maximal ausgeschöpft?", "antwort": "Weil die Aufgabenstellung ein möglichst hohes Handelsbilanzergebnis vorgibt und die Erstattung als Forderung zu aktivieren ist."}]},
+  {"fach": "Steuerrecht", "typ": "rechnen", "schwer": 3, "thema": "Verlustabzug", "frage": "Ein Institut erzielt im Veranlagungszeitraum 2023 ein Einkommen von./. 3.027.750 EUR; im Vorjahr betrug das Einkommen 2.000.000 EUR. Wie hoch ist die Körperschaftsteuererstattung aus dem maximalen Verlustrücktrag?", "loesung": "300000", "einheit": "EUR", "schritte": ["Höchstbetrag § 10d Abs. 1 S. 1 EStG für den Veranlagungszeitraum 2023: 10 Mio EUR (§ 52 Abs. 18b EStG)", "Begrenzung daher nicht durch den Höchstbetrag, sondern durch das Einkommen des Rücktragsjahres", "Rücktrag: 2.000.000 EUR", "Erstattung: 2.000.000 × 15 % (§ 23 Abs. 1 KStG) = 300.000 EUR"], "vertiefung": "Der verbleibende Verlustvortrag beträgt 1.027.750 EUR und ist nach § 10d Abs. 4 EStG gesondert festzustellen. Gewerbesteuerlich gibt es keinen Rücktrag; dort verbleibt der volle Fehlbetrag als Vortrag nach § 10a GewStG.", "folgefragen": [{"frage": "Was gälte für den Veranlagungszeitraum 2025?", "antwort": "Dort greift wieder der Höchstbetrag von 1 Mio EUR, der Rücktrag wäre also auf 1.000.000 EUR begrenzt."}, {"frage": "Warum wird der Rücktrag hier maximal ausgeschöpft?", "antwort": "Weil die Aufgabenstellung ein möglichst hohes Handelsbilanzergebnis vorgibt und die Erstattung als Forderung zu aktivieren ist."}]},
   {"fach": "Steuerrecht", "typ": "rechnen", "schwer": 2, "thema": "Gewerbesteuer", "frage": "Ein Institut zahlt 500.000 EUR Miete für Geschäftsräume und 300.000 EUR für den Fuhrpark. Wie hoch ist die Hinzurechnung nach § 8 Nr. 1 GewStG?", "loesung": "27500", "einheit": "EUR", "schritte": ["Unbewegliche Wirtschaftsgüter (lit. e): 500.000 × 50 % = 250.000 EUR", "Bewegliche Wirtschaftsgüter (lit. d): 300.000 × 20 % = 60.000 EUR", "Summe der Finanzierungsanteile: 310.000 EUR", "Freibetrag: ./. 200.000 EUR → 110.000 EUR", "Hinzurechnung: ein Viertel von 110.000 = 27.500 EUR"], "vertiefung": "Der Freibetrag von 200.000 EUR gilt für die Summe aller Positionen des § 8 Nr. 1 GewStG und wird vor der Anwendung des Viertels abgezogen. Zinsaufwand eines Kreditinstituts bleibt wegen § 19 Abs. 1 GewStDV regelmäßig außen vor.", "folgefragen": [{"frage": "Was besagt das Bankenprivileg genau?", "antwort": "§ 19 Abs. 1 GewStDV begrenzt den Ansatz auf den Betrag, um den das dort genannte Anlagevermögen das Eigenkapital übersteigt – es ist keine pauschale Befreiung."}, {"frage": "Mit welchem Anteil gehen Lizenzen ein?", "antwort": "Mit einem Viertel der Aufwendungen nach § 8 Nr. 1 lit. f GewStG, bevor der Gesamtbetrag nochmals geviertelt wird."}]},
   {"fach": "Steuerrecht", "typ": "frei", "schwer": 3, "thema": "Ertragsteuer-6b", "frage": "Nennen Sie die Voraussetzungen des § 6b Abs. 4 EStG und erläutern Sie, auf welche Wirtschaftsgüter ein Veräußerungsgewinn übertragen werden darf.", "muster": "Voraussetzungen nach § 6b Abs. 4 S. 1 Nr. 1 bis 5 EStG: Gewinnermittlung durch Betriebsvermögensvergleich nach § 5 EStG; das veräußerte Wirtschaftsgut gehörte im Zeitpunkt der Veräußerung mindestens sechs Jahre ununterbrochen zum inländischen Anlagevermögen; das angeschaffte Wirtschaftsgut gehört zum Anlagevermögen einer inländischen Betriebsstätte; der Veräußerungsgewinn unterliegt der Besteuerung im Inland; die Bildung und Auflösung der Rücklage kann in der Buchführung verfolgt werden. Übertragung: Ein Gewinn aus der Veräußerung von Grund und Boden darf auf Grund und Boden oder auf Gebäude übertragen werden; ein Gewinn aus der Veräußerung eines Gebäudes darf nur auf Gebäude übertragen werden. Die Rücklage ist nach § 6b Abs. 3 EStG spätestens am Ende des vierten Folgejahres gewinnerhöhend aufzulösen, zuzüglich des Gewinnzuschlags nach § 6b Abs. 7 EStG.", "checkliste": ["Gewinnermittlung nach § 5 EStG", "Sechs Jahre im inländischen Anlagevermögen", "Ersatzwirtschaftsgut im inländischen Anlagevermögen", "Veräußerungsgewinn unterliegt der Besteuerung", "Verfolgbarkeit in der Buchführung", "Boden auf Boden und Gebäude, Gebäude nur auf Gebäude", "Auflösungsfrist vier Jahre und Gewinnzuschlag § 6b Abs. 7 EStG"], "vertiefung": "Wirtschaftlich handelt es sich um eine Steuerstundung, nicht um eine Steuerbefreiung: Die Übertragung mindert die Anschaffungskosten des Ersatzwirtschaftsguts und führt dort zu einer Minder-Abschreibung. Der Gewinn wird also über die Nutzungsdauer nachversteuert.", "folgefragen": [{"frage": "Was passiert, wenn der Gebäudegewinn den Kaufpreis des neuen Gebäudes übersteigt?", "antwort": "Der übersteigende Teil bleibt in der Rücklage und ist spätestens nach vier Jahren gewinnerhöhend aufzulösen, zuzüglich Gewinnzuschlag."}, {"frage": "Wie wirkt sich die Übertragung im Folgejahr auf das Einkommen aus?", "antwort": "Zunächst gar nicht: Der Auflösungsertrag und die Minderung der Anschaffungskosten gleichen sich aus."}]},
   {"fach": "Steuerrecht", "typ": "frei", "schwer": 3, "thema": "Ertragsteuer-vGA", "frage": "Skizzieren Sie das Prüfschema der verdeckten Gewinnausschüttung am Beispiel eines verbilligten Grundstücksverkaufs an den Träger.", "muster": "Zu prüfen sind: eine Vermögensminderung oder verhinderte Vermögensmehrung – hier entgeht dem Institut der Unterschied zwischen Verkehrswert und vereinbartem Kaufpreis; die Veranlassung durch das Träger- beziehungsweise Gesellschaftsverhältnis, gemessen am Fremdvergleich, weil einem fremden Dritten gegenüber zum Verkehrswert veräußert worden wäre; die Auswirkung auf das Einkommen, das ohne die Verbilligung entsprechend höher gewesen wäre; und das Fehlen eines Zusammenhangs mit einer offenen Gewinnausschüttung, also kein Ausschüttungsbeschluss. Rechtsfolge ist die außerbilanzielle Hinzurechnung nach § 8 Abs. 3 S. 2 KStG. Zusätzlich liegen Einkünfte nach § 20 Abs. 1 Nr. 10 lit. a EStG vor, auf die nach § 43 Abs. 1 S. 1 Nr. 7b i. V. m. § 43a Abs. 1 S. 1 Nr. 2 EStG Kapitalertragsteuer einzubehalten ist; eine vom Institut übernommene Kapitalertragsteuer erhöht die Bemessungsgrundlage und darf das Einkommen nicht mindern.", "checkliste": ["Vermögensminderung oder verhinderte Vermögensmehrung", "Veranlassung durch das Trägerverhältnis, Fremdvergleich", "Auswirkung auf das Einkommen", "Kein Zusammenhang mit einer offenen Ausschüttung", "Rechtsfolge § 8 Abs. 3 S. 2 KStG", "Kapitalertragsteuer nach § 43 Abs. 1 S. 1 Nr. 7b EStG", "Übernommene Kapitalertragsteuer mindert das Einkommen nicht"], "vertiefung": "Die Hinzurechnung erfolgt außerbilanziell, weil die Bilanz den tatsächlich vereinbarten Kaufpreis zutreffend abbildet. Korrigiert wird nur das Einkommen, nicht der Bilanzansatz.", "folgefragen": [{"frage": "Warum wird nicht der Bilanzansatz korrigiert?", "antwort": "Weil das Rechtsgeschäft zivilrechtlich wirksam ist und die Handelsbilanz den tatsächlichen Vorgang zutreffend abbildet."}, {"frage": "Wirkt die vGA auch gewerbesteuerlich?", "antwort": "Ja, über § 7 S. 1 GewStG, weil sie bereits im Gewinn aus Gewerbebetrieb enthalten ist."}]},
@@ -13187,7 +13185,7 @@ function wireQ(q){
         const ok=o.correct;
         if(ok)session.correct++;
         session.answered++;
-        document.getElementById('revBody').textContent=q.erkl||"";
+        document.getElementById('revBody').innerHTML=fmtAntwort(q.erkl);
         const rev=document.getElementById('rev'); rev.classList.add('show','reveal');
         rev.classList.add(ok?'ok':'bad');
         recordSelf(q, ok?'g':'r', true);
@@ -13216,7 +13214,7 @@ function wireQ(q){
     document.getElementById('numIn').addEventListener('keydown',e=>{if(e.key==='Enter')check();});
   } else {
     document.getElementById('showBtn').onclick=()=>{
-      document.getElementById('revMuster').textContent=q.muster;
+      document.getElementById('revMuster').innerHTML=fmtAntwort(q.muster);
       const ul=document.getElementById('revCheck'); ul.innerHTML="";
       (q.checkliste||[]).forEach(c=>{ const li=document.createElement('li'); li.textContent=c; li.onclick=()=>li.classList.toggle('done'); ul.appendChild(li); });
       document.getElementById('rev').classList.add('show');
@@ -13295,17 +13293,34 @@ function recordSelf(q, s, autoSeen){
 }
 
 
+function escHtml(t){ return String(t==null?"":t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+// Wandelt Aufzaehlungen in Absaetze: (1)/1)/1. , a)/b) , Bindestrich-Listen
+function fmtAntwort(t){
+  if(t==null) return "";
+  var x=escHtml(t).trim();
+  if(!x) return "";
+  // Vor Nummerierungen im Fliesstext einen Umbruch setzen (nicht am Anfang)
+  x=x.replace(/\s+(\((?:[0-9]{1,2}|[a-hA-H])\)\s)/g, "\n$1");      // (1) (2) a)
+  x=x.replace(/\s+([0-9]{1,2}\)\s)/g, "\n$1");                        // 1) 2)
+  x=x.replace(/\s+([0-9]{1,2}\.\s+[A-ZÄÖÜ])/g, "\n$1");             // 1. Text (nur vor Grossbuchstabe)
+  x=x.replace(/\s+([a-hA-H]\)\s)/g, "\n$1");                          // a) b)
+  x=x.replace(/\s+[-–]\s+(?=[A-ZÄÖÜ0-9])/g, "\n- ");                  // - Listenpunkte
+  var teile=x.split(/\n+/).map(function(z){return z.trim();}).filter(Boolean);
+  if(teile.length<=1) return "<p>"+x.replace(/\n+/g," ")+"</p>";
+  return teile.map(function(z){return "<p>"+z+"</p>";}).join("");
+}
+
 function renderVertiefung(q){
   if(!q.vertiefung && !(q.folgefragen&&q.folgefragen.length)) return;
   const rev=document.getElementById('rev'); if(!rev) return;
   if(rev.querySelector('.vtief')) return; // nicht doppelt
   const wrap=document.createElement('div'); wrap.className='vtief';
   let inner='<button class="vtief-toggle" type="button">▸ Mehr dazu / vertiefen</button><div class="vtief-body">';
-  if(q.vertiefung){ inner+='<h5>Vertiefung</h5><div>'+q.vertiefung+'</div>'; }
+  if(q.vertiefung){ inner+='<h5>Vertiefung</h5><div>'+fmtAntwort(q.vertiefung)+'</div>'; }
   if(q.folgefragen&&q.folgefragen.length){
     inner+='<h5>Weiterdenken</h5>';
     q.folgefragen.forEach((ff,k)=>{
-      inner+='<div class="folgefrage"><button type="button" data-k="'+k+'">'+ff.frage+'</button><div class="fa">'+ff.antwort+'</div></div>';
+      inner+='<div class="folgefrage"><button type="button" data-k="'+k+'">'+escHtml(ff.frage)+'</button><div class="fa">'+fmtAntwort(ff.antwort)+'</div></div>';
     });
   }
   inner+='</div>';
