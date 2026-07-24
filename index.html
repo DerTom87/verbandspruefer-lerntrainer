@@ -13124,6 +13124,15 @@ function initNotes(q){
   tg.onclick=()=>{ const open=ta.classList.toggle('show'); if(open) ta.focus(); };
   ta.addEventListener('input',()=>{ if(!session.notes)session.notes={}; session.notes[id]=ta.value; });
 }
+function scrollToQuizTop(){
+  try{
+    var el=document.getElementById('quiz');
+    var vis = el && el.style.display!=='none';
+    var tgt = vis ? el : (document.getElementById('audio') && document.getElementById('audio').style.display!=='none' ? document.getElementById('audio') : el);
+    if(tgt && tgt.scrollIntoView){ tgt.scrollIntoView({behavior:'auto',block:'start'}); }
+    else { window.scrollTo(0,0); }
+  }catch(e){ try{ window.scrollTo(0,0);}catch(_){}}
+}
 function renderQ(){
   const q=session.items[session.idx];
   const total=session.items.length;
@@ -13369,7 +13378,7 @@ function addNext(){
   row.innerHTML=`<button class="btn primary" id="nextBtn">${last?'Auswerten':'Nächste Frage →'}</button>`;
   card.appendChild(row);
   document.getElementById('nextBtn').onclick=()=>{
-    if(last){ if(session.klausur){ finishKlausur(false); } else { finish(); } } else { session.idx++; renderQ(); if(!session.klausur) refreshStats(); }
+    if(last){ if(session.klausur){ finishKlausur(false); } else { finish(); } } else { session.idx++; renderQ(); if(!session.klausur) refreshStats(); scrollToQuizTop(); }
   };
 }
 
@@ -13461,8 +13470,8 @@ function wirePara(p){
   // Navigation
   const prev=document.getElementById('paraPrev'); const next=document.getElementById('paraNext');
   prev.disabled = paraSession.idx===0;
-  prev.onclick=()=>{ if(paraSession.idx>0){ paraSession.idx--; renderPara(); } };
-  next.onclick=()=>{ if(paraSession.idx<paraSession.items.length-1){ paraSession.idx++; renderPara(); }
+  prev.onclick=()=>{ if(paraSession.idx>0){ paraSession.idx--; renderPara(); scrollToQuizTop(); } };
+  next.onclick=()=>{ if(paraSession.idx<paraSession.items.length-1){ paraSession.idx++; renderPara(); scrollToQuizTop(); }
     else { document.getElementById('quiz').style.display='none'; document.getElementById('setup').style.display='block'; refreshStats(); } };
 }
 
